@@ -185,7 +185,7 @@
                     </a>
                     <ul class="submenu">
                         <li><a href="yeni-urun-ekle.php">Yeni Ürün Ekle</a></li>
-                        <li><a href="urun-listesi.php">Ürün listesi </a></li>
+                        <li><a href="<?php echo base_url("product")?>"">Ürün listesi </a></li>
                     </ul>
                 </li>
 
