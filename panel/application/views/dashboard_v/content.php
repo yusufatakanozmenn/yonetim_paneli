@@ -86,7 +86,6 @@
                 </div>
             </div><!-- .row -->
 
-            <div class="row">
                 <div class="col-md-12">
                     <div class="widget row no-gutter p-lg">
                         <div class="col-md-5 col-sm-5">
@@ -133,9 +132,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!-- .widget -->
+                    </div> .widget 
                 </div>
-            </div><!-- .row -->
+            </div> -->
 
             <div class="row">
                 <div class="col-md-7">
