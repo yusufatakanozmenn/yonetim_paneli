@@ -5,10 +5,14 @@ class General_Settings extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->viewFolder = "general_settings_v";
+		$this->viewFolder = "site_settings_v";
 	}
     public function index(){
-        echo "urunler index";
+        $viewData = new stdClass();
+        $viewData->viewFolder=$this->viewFolder;
+        $viewData->subViewFolder="update";
+
+        $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
     }
 
 
