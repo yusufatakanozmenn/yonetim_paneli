@@ -70,7 +70,7 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="genel-ayarlar.php">Genel Ayarlar</a></li>
+                        <li><a href="<?php echo base_url("general_settings")?>">Genel Ayarlar</a></li>
                         <li><a href="acilir-mesaj.php">Açılır Mesaj</a></li>
                         <li><a href="api-ayarlari.php">API Ayarları</a></li>
                         <li><a href="iletisim-ayarlari.php">İletişim Ayarları</a></li>
