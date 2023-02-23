@@ -1,16 +1,16 @@
 <?php
-class Product extends CI_Controller {
+class General_Settings extends CI_Controller {
 
 	public $viewFolder = "";
 	public function __construct()
 	{
 		parent::__construct();
-		$this->viewFolder = "product_v";
+		$this->viewFolder = "general_settings_v";
 	}
     public function index(){
         $viewData = new stdClass();
         $viewData->viewFolder=$this->viewFolder;
-        $viewData->subViewFolder="list";
+        $viewData->subViewFolder="update";
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
     }
