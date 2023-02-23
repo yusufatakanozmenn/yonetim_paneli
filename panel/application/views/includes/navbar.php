@@ -41,8 +41,7 @@
 
             <ul class="nav navbar-toolbar navbar-toolbar-right navbar-right">
                 <li class="nav-item nav-search d-none d-lg-block">
-                    <a href="../" target="_blank" class="btn btn-primary btn-sm"><i
-                            class="mdi mdi-home-outline font-13"></i> Siteyi Görüntüle</a>
+                    <a href="../" target="_blank" role="button"> Siteyi Görüntüle</a>
                 </li>
 
                 <li class="dropdown">
