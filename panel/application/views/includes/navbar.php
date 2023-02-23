@@ -40,11 +40,9 @@
             </ul>
 
             <ul class="nav navbar-toolbar navbar-toolbar-right navbar-right">
-                <li class="nav-item dropdown hidden-float">
-                    <a href="javascript:void(0)" data-toggle="collapse" data-target="#navbar-search"
-                        aria-expanded="false">
-                        <i class="zmdi zmdi-hc-lg zmdi-search"></i>
-                    </a>
+                <li class="nav-item nav-search d-none d-lg-block">
+                    <a href="../" target="_blank" class="btn btn-primary btn-sm"><i
+                            class="mdi mdi-home-outline font-13"></i> Siteyi Görüntüle</a>
                 </li>
 
                 <li class="dropdown">
@@ -130,10 +128,10 @@
                     </ul>
                 </li>
 
-                <li class="dropdown">
+                <!-- <li class="dropdown">
                     <a href="javascript:void(0)" class="side-panel-toggle" data-toggle="class" data-target="#side-panel"
                         data-class="open" role="button"><i class="zmdi zmdi-hc-lg zmdi-apps"></i></a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div><!-- navbar-container -->

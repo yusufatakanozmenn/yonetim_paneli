@@ -16,7 +16,7 @@
 <!--========== END app aside -->
 
 <!-- navbar search -->
-<?php $this->load->view('includes/navbar_search'); ?>
+<!-- <?php $this->load->view('includes/navbar_search'); ?> -->
 <!-- .navbar-search -->
 
 <!-- APP MAIN ==========-->
