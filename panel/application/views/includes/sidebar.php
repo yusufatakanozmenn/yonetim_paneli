@@ -72,7 +72,7 @@
                     </a>
                     <ul class="submenu">
                         <li><a href="<?php echo base_url("general_settings")?>">Genel Ayarlar</a></li>
-                        <li><a href="acilir-mesaj.php">Açılır Mesaj</a></li>
+                        <li><a href="<?php echo base_url("popup_message")?>">Açılır Mesaj</a></li>
                         <li><a href="api-ayarlari.php">API Ayarları</a></li>
                         <li><a href="iletisim-ayarlari.php">İletişim Ayarları</a></li>
                         <li><a href="sosyal-medya.php">Sosyal Medya Ayarları</a></li>
