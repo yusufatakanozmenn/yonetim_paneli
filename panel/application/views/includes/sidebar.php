@@ -55,7 +55,7 @@
         <div class="menubar-scroll-inner">
             <ul class="app-menu">
                 <li class="has-submenu">
-                    <a href="javascript:void(0)" class="submenu-toggle">
+                    <a href="<?php echo base_url();?>" class="submenu-toggle">
                         <i class="menu-icon zmdi zmdi-view-dashboard zmdi-hc-lg"></i>
                         <span class="menu-text">Anasayfa</span>
                         <i class="menu-caret zmdi zmdi-hc-sm "></i>
@@ -94,9 +94,9 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="yeni-dil-ekle.php">Yeni Dil Ekle</a></li>
-                        <li><a href="dil-listesi.php">Dil Listesi</a></li>
-                        <li><a href="admin-dil-ayarlari.php">Admin Panel Dil Ayarı</a></li>
+                        <li><a href="<?php echo base_url("language_add_new")?>">Yeni Dil Ekle</a></li>
+                        <li><a href="<?php echo base_url("language_list")?>">Dil Listesi</a></li>
+                        <li><a href="<?php echo base_url("language_admin")?>">Admin Panel Dil Ayarı</a></li>
                     </ul>
                 </li>
 
