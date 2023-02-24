@@ -54,8 +54,8 @@
     <div class="menubar-scroll">
         <div class="menubar-scroll-inner">
             <ul class="app-menu">
-                <li class="has-submenu">
-                    <a href="<?php echo base_url();?>" class="submenu-toggle">
+                <li class="">
+                    <a href="<?php echo base_url();?>" class="">
                         <i class="menu-icon zmdi zmdi-view-dashboard zmdi-hc-lg"></i>
                         <span class="menu-text">Anasayfa</span>
                         <i class="menu-caret zmdi zmdi-hc-sm "></i>
@@ -109,9 +109,9 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="header-menu.php">Header Menü</a></li>
-                        <li><a href="footer.php">Footer Menü</a></li>
-                        <li><a href="sabit-linkler.php">Sabit Linkler</a></li>
+                        <li><a href="<?php echo base_url("header_menu")?>">Header Menü</a></li>
+                        <li><a href="<?php echo base_url("footer_menu")?>">Footer Menü</a></li>
+                        <li><a href="<?php echo base_url("persistent_links")?>">Sabit Linkler</a></li>
                     </ul>
                 </li>
 
@@ -122,10 +122,10 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="rehberim.php">Rehberim</a></li>
-                        <li><a href="toplu-email.php">Toplu E-mail Gönder</a></li>
-                        <li><a href="toplu-sms.php">Toplu SMS Gönder</a></li>
-                        <li><a href="bildirim-sablonlari.php">Bildirim Şablonları</a></li>
+                        <li><a href="<?php echo base_url("my_contacts")?>">Rehberim</a></li>
+                        <li><a href="<?php echo base_url("send_bulk_mail")?>">Toplu E-mail Gönder</a></li>
+                        <li><a href="<?php echo base_url("send_bulk_sms")?>">Toplu SMS Gönder</a></li>
+                        <li><a href="<?php echo base_url("notification_templates")?>">Bildirim Şablonları</a></li>
                     </ul>
                 </li>
 

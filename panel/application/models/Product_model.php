@@ -8,8 +8,8 @@ class Product_model extends CI_Model{
     }
 
     /** Tüm kayıtları bana getirecek olan metot..*/
-    public function __get($key)
+    public function get_all()
     {
-
+        return $this->db->get($this->tableName)->result();
     }
 }
