@@ -73,16 +73,16 @@
                     <ul class="submenu">
                         <li><a href="<?php echo base_url("general_settings")?>">Genel Ayarlar</a></li>
                         <li><a href="<?php echo base_url("popup_message")?>">Açılır Mesaj</a></li>
-                        <li><a href="api-ayarlari.php">API Ayarları</a></li>
-                        <li><a href="iletisim-ayarlari.php">İletişim Ayarları</a></li>
-                        <li><a href="sosyal-medya.php">Sosyal Medya Ayarları</a></li>
-                        <li><a href="modul-ayarlari.php">Modül Ayarları</a></li>
-                        <li><a href="anasayfa-modul.php">Anasayfa Modül Sıralama</a></li>
-                        <li><a href="limit-ayarlari.php">Limit Ayarları</a></li>
-                        <li><a href="site-bakim.php">Site Bakım Modu</a></li>
-                        <li><a href="mail-ayarlari.php">Mail Ayarları</a></li>
-                        <li><a href="sms-ayarlari.php">SMS Ayarları</a></li>
-                        <li><a href="arka-plan-ayarlari.php">Arka Plan Görselleri</a></li>
+                        <li><a href="<?php echo base_url("api_settings")?>">API Ayarları</a></li>
+                        <li><a href="<?php echo base_url("contact_settings")?>">İletişim Ayarları</a></li>
+                        <li><a href="<?php echo base_url("social_media_settings")?>">Sosyal Medya Ayarları</a></li>
+                        <li><a href="<?php echo base_url("module_settings")?>">Modül Ayarları</a></li>
+                        <li><a href="<?php echo base_url("homepage_module_settings")?>">Anasayfa Modül Sıralama</a></li>
+                        <li><a href="<?php echo base_url("limit_settings")?>">Limit Ayarları</a></li>
+                        <li><a href="<?php echo base_url("site_on_construction_settings")?>">Site Bakım Modu</a></li>
+                        <li><a href="<?php echo base_url("mail_settings")?>">Mail Ayarları</a></li>
+                        <li><a href="<?php echo base_url("sms_settings")?>">SMS Ayarları</a></li>
+                        <li><a href="<?php echo base_url("background_images_settings")?>">Arka Plan Görselleri</a></li>
                     </ul>
                 </li>
 
