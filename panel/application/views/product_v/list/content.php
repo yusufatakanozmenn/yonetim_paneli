@@ -3,9 +3,8 @@
         <h4 class="m-b-lg">
             Ürün Listesi
         </h4>
-
         <h4>
-            <a href="<?php echo base_url("product/new_form"); ?>" class="btn btn-outline btn-primary btn-sm">
+            <a href="<?php echo base_url("product/"); ?>" class="btn btn-outline btn-primary btn-sm">
                 <i class="fa fa-plus-circle"></i> Yeni Ekle</a>
             <a href="javascript:void(0)" class="dropdown-toggle btn btn-outline btn-primary btn-sm"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

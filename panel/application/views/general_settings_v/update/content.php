@@ -3,6 +3,7 @@
         <div class="col-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
+                    <?php foreach ($items as $item) { ?>
                     <form class="forms-sample" method="post" action="../_class/yonetim_islem.php"
                         enctype="multipart/form-data">
                         <div class="row">
@@ -70,7 +71,7 @@
                         <div class="form-group">
                             <label for="site_url">Site Url</label>
                             <input type="text" class="form-control form-control-sm" name="site_url" id="site_url"
-                                value="">
+                                value="<?php echo $item->site_url ?>">
                         </div>
                         <div class="form-group">
                             <label for="site_title">Site Title</label>
@@ -115,6 +116,7 @@
 
                         </small>
                     </form>
+                    <?php } ?> 
                 </div><small>
                 </small>
             </div><small>
