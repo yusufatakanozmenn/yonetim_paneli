@@ -1,52 +1,116 @@
-<div class="row">
-    <div class="col-12 grid-margin stretch-card">
-        <div class="card">
-            <div class="card-body">
-                <form class="forms-sample" method="post" action="../_class/yonetim_islem.php"
-                    enctype="multipart/form-data">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="site_url">Site Açılış Tarihi</label>
-                                <div id="datepicker-popup" class="input-group date datepicker">
-                                    <input type="text" class="form-control" name="acilis_tarih" value="26-09-2022">
-                                    <span class="input-group-addon input-group-append border-left">
-                                        <span class="mdi mdi-calendar input-group-text"></span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="site_url">Site Açılış Zamanı</label>
-                                <div class="input-group date" id="timepicker-example" data-target-input="nearest">
-                                    <div class="input-group" data-target="#timepicker-example"
-                                        data-toggle="datetimepicker">
-                                        <input type="text" name="acilis_zaman" class="form-control datetimepicker-input"
-                                            value="10:10" data-target="#timepicker-example">
-                                        <div class="input-group-addon input-group-append"><i
-                                                class="mdi mdi-clock input-group-text"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="baslik">Başlık</label>
-                        <input type="text" class="form-control form-control-sm" name="baslik" id="baslik"
-                            value="SİTEMİZ BAKIMDADIR">
-                    </div>
-                    <div class="form-group">
-                        <label for="aciklama">Açıklama</label>
-                        <textarea id="aciklama" name="aciklama" class="form-control"
-                            rows="4">Şu anda bakımdayız. Kısa süre sonra geri döneceğiz .Daha sonra yeniden deneyiniz.</textarea>
-                    </div>
-                    <button type="submit" name="site_bakim_modu" class="btn btn-success btn-icon-text btn-sm">
-                        <i class="mdi mdi-spin mdi-loading"></i>
-                        GÜNCELLE
-                    </button>
-                </form>
+<div class="col-9">
+    <div class="">
+        <div class="" id="urun-bilgileri" role="tabpanel" aria-labelledby="home-tab-vertical">
+            <div class="form-group">
+                <label for="sira">Sıra</label>
+                <input type="number" class="form-control form-control-sm" min="0" name="sira" id="sira" value="">
             </div>
+            <div class="form-group">
+                <label for="adi">Başlık</label>
+                <input type="text" class="form-control form-control-sm" name="adi" id="adi" value="">
+            </div>
+            <div class="form-group">
+                <label>Ürün Kodu</label>
+                <input type="text" class="form-control form-control-sm" name="urun_kodu" id="urun_kodu" value="">
+            </div>
+            <div class="form-group">
+                <label>Fiyat</label>
+                <input type="text" class="form-control form-control-sm" name="fiyat" value="">
+            </div>
+            <!-- /.form-group -->
+            <div class="form-group">
+                <label>İndirimli Fiyat</label>
+                <input type="text" class="form-control form-control-sm" name="ifiyat" value="">
+            </div>
+            <div class="form-group">
+                <label for="stok">Stok</label>
+                <select class="form-control w-100" name="stok" id="stok" required="">
+                    <option value="0" selected="">Stokta Var</option>
+                    <option value="1">Tükendi</option>
+                </select>
+            </div>
+            <!-- /.form-group -->
+            <div class="form-group">
+                <label for="secenek">Kategori</label>
+                <select class="js-example-basic-multiple form-control-sm select2-hidden-accessible" name="kategori"
+                    id="secenek" required="" style="width:100%" tabindex="-1" aria-hidden="true">
+                    <option value="41">Ürünler</option>
+                </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                    style="width: 100%;"><span class="selection"><span
+                            class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                            aria-expanded="false" tabindex="0" aria-labelledby="select2-secenek-container"><span
+                                class="select2-selection__rendered" id="select2-secenek-container"
+                                title="Ürünler">Ürünler</span><span class="select2-selection__arrow"
+                                role="presentation"><b role="presentation"></b></span></span></span><span
+                        class="dropdown-wrapper" aria-hidden="true"></span></span>
+            </div>
+
+            <div class="form-group row col-md-6">
+                <label>Listeleme Görseli</label>
+                <input type="file" name="resim" class="file-upload-default">
+                <div class="input-group col-xs-12">
+
+                </div>
+            </div>
+            <div class="form-group row col-md-6">
+                <label>Fotoğraflar</label>
+                <input type="file" name="resimler[]" multiple="" class="file-upload-default">
+                <div class="input-group col-xs-12">
+
+                </div>
+            </div>
+            <div class="form-group row col-md-6">
+                <label>Teknik Döküman</label>
+                <input type="file" name="dokuman" class="file-upload-default">
+                <div class="input-group col-xs-12">
+
+                </div>
+            </div>
+            <div class="form-group row col-md-6">
+                <label>E-Katalog</label>
+                <input type="file" name="katalog" class="file-upload-default">
+                <div class="input-group col-xs-12">
+
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="spot">Spot Metin <i class="icon-info text-info" data-toggle="popover"
+                        data-content="Spot metin, içeriğinizi özetleyen bir ya da iki cümlelik metindir. 180 karakteri geçmemesi gerekmektedir.  Spot metinde de tamamen BÜYÜK harften kaçınmalı ve çift tırnak kullanılmamalıdır."
+                        data-trigger="hover" data-original-title="Spot Metin"></i></label>
+                <textarea id="spot" name="spot" class="form-control" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Açıklama</label>
+                <textarea name="description" class="m-0" data-plugin="summernote"
+                    data-options="{height: 250}"></textarea>
+            </div>
+
+        </div>
+        <div class="" id="urun-ozellikleri" role="tabpanel" aria-labelledby="contact-tab-vertical">
+
+            <div class="tab-pane" id="ozellikler">
+                <div id="secyaz"></div>
+            </div>
+
+        </div>
+
+        <div class="" id="seo-ayarlari" role="tabpanel" aria-labelledby="contact-tab-vertical">
+
+            <div class="form-group">
+                <label for="maxlength-textarea">SEO Açıklama (Description)</label>
+                <textarea id="maxlength-textarea" name="description" class="form-control" maxlength="260"
+                    rows="2"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" name="popup_ayarlar" class="btn btn-success btn-icon-text btn-sm">
+                    <i class="mdi mdi-spin mdi-loading"></i>
+                    GÖNDER
+                </button>
+            </div>
+
         </div>
     </div>
 </div>
