@@ -137,8 +137,8 @@
                     </a>
                     <ul class="submenu">
                         <li><a href="<?php echo base_url("product")?>">Ürünler</a></li>
-                        <li><a href="urun-kategori.php">Ürün Kategorileri</a></li>
-                        <li><a href="ozellik-gruplari.php">Özellik Grupları</a></li>
+                        <li><a href="<?php echo base_url("product_category")?>">Ürün Kategorileri</a></li>
+                        <li><a href="<?php echo base_url("feature_groups")?>">Özellik Grupları</a></li>
                     </ul>
                 </li>
 
@@ -150,8 +150,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Projeler</a></li>
-                        <li><a href="proje-kategori.php">Proje Kategorileri</a></li>
+                        <li><a href="<?php echo base_url("project")?>">Projeler</a></li>
+                        <li><a href="<?php echo base_url("project_category")?>">Proje Kategorileri</a></li>
                     </ul>
                 </li>
 
