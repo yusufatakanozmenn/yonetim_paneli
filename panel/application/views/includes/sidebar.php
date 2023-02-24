@@ -54,8 +54,8 @@
     <div class="menubar-scroll">
         <div class="menubar-scroll-inner">
             <ul class="app-menu">
-                <li class="has-submenu">
-                    <a href="<?php echo base_url();?>" class="submenu-toggle">
+                <li class="">
+                    <a href="<?php echo base_url();?>" class="">
                         <i class="menu-icon zmdi zmdi-view-dashboard zmdi-hc-lg"></i>
                         <span class="menu-text">Anasayfa</span>
                         <i class="menu-caret zmdi zmdi-hc-sm "></i>
