@@ -15,6 +15,12 @@
                                         <div class="form-group">
                                             <input type="file" name="resim" class="file-upload-default">
                                             <div class="input-group col-xs-12">
+                                                <div class="col-md-6 col-sm-6">
+                                                    <a href="#" class="thumbnail white">
+                                                        <img src="<?php echo base_url("assets");?>/assets/images/alva_favicon.svg"
+                                                            alt="...">
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -29,6 +35,12 @@
                                         <div class="form-group">
                                             <input type="file" name="footer" class="file-upload-default">
                                             <div class="input-group col-xs-12">
+                                                <div class="col-md-6 col-sm-6">
+                                                    <a href="#" class="thumbnail white">
+                                                        <img src="<?php echo base_url("assets");?>/assets/images/alva_favicon.svg"
+                                                            alt="...">
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -43,6 +55,12 @@
                                         <div class="form-group">
                                             <input type="file" name="favicon" class="file-upload-default">
                                             <div class="input-group col-xs-12">
+                                                <div class="col-md-6 col-sm-6">
+                                                    <a href="#" class="thumbnail white">
+                                                        <img src="<?php echo base_url("assets");?>/assets/images/alva_favicon.svg"
+                                                            alt="...">
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -79,7 +97,7 @@
                                 <input type="text" class="form-control form-control-sm" name="yonetim" id="yonetim"
                                     value="">
                             </div>
-                           
+
                             <div class="form-group">
                                 <label for="maxlength-textarea">SEO Açıklama (Description)</label>
                                 <textarea id="maxlength-textarea" name="site_desc" class="form-control" maxlength="260"

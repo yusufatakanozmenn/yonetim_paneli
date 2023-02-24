@@ -4,8 +4,8 @@
             <div class="widget stats-widget">
                 <div class="widget-body clearfix">
                     <div class="pull-left">
-                        <h3 class="widget-title text-primary"><span class="counter"
-                                data-plugin="counterUp">0</span> Kişi</h3>
+                        <h3 class="widget-title text-primary"><span class="counter" data-plugin="counterUp">0</span>
+                            Kişi</h3>
                         <small class="text-color">Online</small>
                     </div>
                     <span class="pull-right big-icon watermark"><i class="fa fa-paperclip"></i></span>
@@ -22,7 +22,8 @@
             <div class="widget stats-widget">
                 <div class="widget-body clearfix">
                     <div class="pull-left">
-                        <h3 class="widget-title text-danger"><span class="counter" data-plugin="counterUp">14</span> Kişi
+                        <h3 class="widget-title text-danger"><span class="counter" data-plugin="counterUp">14</span>
+                            Kişi
                         </h3>
                         <small class="text-color">Bugün</small>
                     </div>
@@ -167,7 +168,7 @@
                 </header>
                 <hr class="widget-separator" />
                 <div class="widget-body">
-                   
+
                 </div>
             </div><!-- .widget -->
         </div>
