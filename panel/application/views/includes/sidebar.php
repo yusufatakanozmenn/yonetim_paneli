@@ -109,9 +109,9 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="header-menu.php">Header Menü</a></li>
-                        <li><a href="footer.php">Footer Menü</a></li>
-                        <li><a href="sabit-linkler.php">Sabit Linkler</a></li>
+                        <li><a href="<?php echo base_url("header_menu")?>">Header Menü</a></li>
+                        <li><a href="<?php echo base_url("footer_menu")?>">Footer Menü</a></li>
+                        <li><a href="<?php echo base_url("persistent_links")?>">Sabit Linkler</a></li>
                     </ul>
                 </li>
 
