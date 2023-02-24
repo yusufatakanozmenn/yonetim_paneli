@@ -5,7 +5,7 @@
         </h4>
         <h4>
 
-            <a href="<?php echo base_url("product_add"); ?>" class="btn btn-outline btn-primary btn-sm">
+            <a href="<?php echo base_url("product/new_form"); ?>" class="btn btn-outline btn-primary btn-sm">
 
                 <i class="fa fa-plus-circle"></i> Yeni Ekle</a>
             <a href="javascript:void(0)" class="dropdown-toggle btn btn-outline btn-primary btn-sm"
@@ -30,7 +30,7 @@
                 <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-info"></i>privacy</a>
                 </li>
             </div>
-            <a href="<?php echo base_url("product/new_form"); ?>" class="btn btn-outline btn-danger btn-sm">
+            <a href="#" class="btn btn-outline btn-danger btn-sm">
                 <i class="fa fa-trash"></i> Tüm Veriyi Sil</a>
         </h4>
     </div><!-- END column -->
@@ -40,7 +40,8 @@
             <?php
             //if (empty($items)) { ?>
             <div class="alert alert-info text-center">
-                <p>Burada herhangi bir veri bulunmamaktadır. Eklemek için lütfen <a href="#">tıklayınız</a></p>
+                <p>Burada herhangi bir veri bulunmamaktadır. Eklemek için lütfen <a
+                        href="<?php echo base_url("product/new_form"); ?>">tıklayınız</a></p>
             </div>
             <?php //} else { ?>
 

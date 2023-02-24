@@ -6,12 +6,12 @@ class Product extends CI_Controller {
 	{
 		parent::__construct();
 		$this->viewFolder = "product_v";
-        $this->load->model("Product_model");
+        $this->load->model("product_model");
 	}
     public function index(){
         $viewData = new stdClass();
         /** Tablodaki tüm kayıtları getiriyoruz.. */
-        $items = $this->Product_model->get_all();
+        $items = $this->product_model->get_all();
         /** View'e gönderilecek değişkenler.. */
         $viewData->viewFolder=$this->viewFolder;
         $viewData->subViewFolder="list";
@@ -20,6 +20,28 @@ class Product extends CI_Controller {
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
     }
 
+    public function new_form()
+    {
+        $viewData = new stdClass();
+        /** View'e gönderilecek değişkenler.. */
+        $viewData->viewFolder=$this->viewFolder;
+        $viewData->subViewFolder="add";
+
+        $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
+    }
+
+   public function save(){
+    $this->product_model->add(
+        array(
+            "title" => "Deneme Ürünü",
+            "description" => "Deneme Ürünü Açıklaması",
+            "url" => "deneme-urunu",
+            "rank" => 0,
+            "isActive" => 1,
+            "createdAt" => date("Y-m-d H:i:s")
+        )
+        );
+   }
 
 
 

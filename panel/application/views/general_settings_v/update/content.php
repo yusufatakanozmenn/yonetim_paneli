@@ -3,7 +3,7 @@
         <div class="col-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <?php foreach ($items as $item) { ?>
+
                     <form class="forms-sample" method="post" action="../_class/yonetim_islem.php"
                         enctype="multipart/form-data">
                         <div class="row">
@@ -18,7 +18,7 @@
                                             <div class="input-group col-xs-12">
                                                 <div class="col-md-6 col-sm-6">
                                                     <a href="#" class="thumbnail white">
-                                                        <img src="<?php echo base_url("assets");?>/assets/images/alva_favicon.svg"
+                                                        <img src="<?php echo base_url("assets"); ?>/assets/images/alva_favicon.svg"
                                                             alt="...">
                                                     </a>
                                                 </div>
@@ -38,7 +38,7 @@
                                             <div class="input-group col-xs-12">
                                                 <div class="col-md-6 col-sm-6">
                                                     <a href="#" class="thumbnail white">
-                                                        <img src="<?php echo base_url("assets");?>/assets/images/alva_favicon.svg"
+                                                        <img src="<?php echo base_url("assets"); ?>/assets/images/alva_favicon.svg"
                                                             alt="...">
                                                     </a>
                                                 </div>
@@ -58,7 +58,7 @@
                                             <div class="input-group col-xs-12">
                                                 <div class="col-md-6 col-sm-6">
                                                     <a href="#" class="thumbnail white">
-                                                        <img src="<?php echo base_url("assets");?>/assets/images/alva_favicon.svg"
+                                                        <img src="<?php echo base_url("assets"); ?>/assets/images/alva_favicon.svg"
                                                             alt="...">
                                                     </a>
                                                 </div>
@@ -71,7 +71,7 @@
                         <div class="form-group">
                             <label for="site_url">Site Url</label>
                             <input type="text" class="form-control form-control-sm" name="site_url" id="site_url"
-                                value="<?php echo $item->site_url ?>">
+                                value="">
                         </div>
                         <div class="form-group">
                             <label for="site_title">Site Title</label>
@@ -116,7 +116,7 @@
 
                         </small>
                     </form>
-                    <?php } ?> 
+
                 </div><small>
                 </small>
             </div><small>

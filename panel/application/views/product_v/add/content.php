@@ -3,24 +3,24 @@
         <div class="" id="urun-bilgileri" role="tabpanel" aria-labelledby="home-tab-vertical">
             <div class="form-group">
                 <label for="sira">Sıra</label>
-                <input type="number" class="form-control form-control-sm" min="0" name="sira" id="sira" value="">
+                <input type="number" class="form-control form-control-sm" min="0" placeholder="Sıra" name="sira" id="sira" value="">
             </div>
             <div class="form-group">
                 <label for="adi">Başlık</label>
-                <input type="text" class="form-control form-control-sm" name="adi" id="adi" value="">
+                <input type="text" class="form-control form-control-sm" placeholder="Başlık" name="adi" id="adi" value="">
             </div>
             <div class="form-group">
                 <label>Ürün Kodu</label>
-                <input type="text" class="form-control form-control-sm" name="urun_kodu" id="urun_kodu" value="">
+                <input type="text" class="form-control form-control-sm" placeholder="Ürün Kodu" name="urun_kodu" id="urun_kodu" value="">
             </div>
             <div class="form-group">
                 <label>Fiyat</label>
-                <input type="text" class="form-control form-control-sm" name="fiyat" value="">
+                <input type="text" class="form-control form-control-sm" placeholder="Fiyat" name="fiyat" value="">
             </div>
             <!-- /.form-group -->
             <div class="form-group">
                 <label>İndirimli Fiyat</label>
-                <input type="text" class="form-control form-control-sm" name="ifiyat" value="">
+                <input type="text" class="form-control form-control-sm" placeholder="İndirimli Fiyat" name="ifiyat" value="">
             </div>
             <div class="form-group">
                 <label for="stok">Stok</label>
