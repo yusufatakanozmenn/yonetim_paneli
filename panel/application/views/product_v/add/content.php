@@ -3,13 +3,13 @@
     <div class="" id="urun-bilgileri" role="tabpanel" aria-labelledby="home-tab-vertical">
         <div class="form-group">
             <label for="sira">Başlık</label>
-            <input type="text" class="form-control form-control-sm" min="0" name="sira" id="sira" value="">
+            <input type="text" class="form-control form-control-sm" min="0" name="adi" id="adi" value="">
         </div>
         <div class="col-sm-6">
             <div class="form-group">
 
                 <label for="adi">Sıra</label>
-                <input type="number" class="form-control form-control-sm" name="adi" id="adi" value="">
+                <input type="number" class="form-control form-control-sm" name="sira" id="sira" value="">
 
             </div>
         </div>
@@ -112,7 +112,7 @@
 
         <div class="form-group">
             <label for="maxlength-textarea">SEO Açıklama (Description)</label>
-            <textarea id="maxlength-textarea" name="description" class="form-control" maxlength="260"
+            <textarea id="maxlength-textarea" name="seo_description" class="form-control" maxlength="260"
                 rows="2"></textarea>
         </div>
         <div class="form-group">

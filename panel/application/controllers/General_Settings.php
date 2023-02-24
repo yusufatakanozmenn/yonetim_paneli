@@ -20,6 +20,8 @@ class General_Settings extends CI_Controller
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
 
+    
+
 
 
 
