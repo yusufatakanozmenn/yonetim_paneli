@@ -132,11 +132,11 @@
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
                         <i class="menu-icon zmdi zmdi-view-dashboard zmdi-hc-lg"></i>
-                        <span class="menu-text">Hizmet Yönetimi</span>
+                        <span class="menu-text">Ürün Yönetimi</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="urunler.php">Ürünler</a></li>
+                        <li><a href="<?php echo base_url("product")?>">Ürünler</a></li>
                         <li><a href="urun-kategori.php">Ürün Kategorileri</a></li>
                         <li><a href="ozellik-gruplari.php">Özellik Grupları</a></li>
                     </ul>
@@ -181,12 +181,12 @@
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
                         <i class="menu-icon zmdi zmdi-pin zmdi-hc-lg"></i>
-                        <span class="menu-text">Ürün Yönetimi</span>
+                        <span class="menu-text">Hizmetlerimiz</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="yeni-urun-ekle.php">Yeni Ürün Ekle</a></li>
-                        <li><a href="<?php echo base_url("product")?>"">Ürün listesi </a></li>
+                        <li><a href="#">Yeni Hizmet Ekle</a></li>
+                        <li><a href="#"">Hizmet listesi </a></li>
                     </ul>
                 </li>
 
