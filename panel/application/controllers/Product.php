@@ -56,12 +56,8 @@ class Product extends CI_Controller
             )
         );
         if($insert){
-            echo "
-            <script>
-                alert('Urun eklendi!);
-                window.location.href='/product'
-            </script>
-            ";
+                echo "Kayıt Eklendi";
+
         }
         else{
             echo "Kayıt Eklenemedi";
