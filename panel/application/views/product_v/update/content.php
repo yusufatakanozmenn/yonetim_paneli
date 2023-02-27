@@ -1,41 +1,44 @@
 <div class="col-sm-12" style="padding: 10px;">
 
     <div class="" id="urun-bilgileri" role="tabpanel" aria-labelledby="home-tab-vertical">
-        <form action="<?php echo base_url("product/save"); ?>" method="post">
+        <form action="<?php echo base_url("product/update/$item->id"); ?>" method="post">
             <div class="form-group">
                 <label for="sira">Başlık</label>
-                <input type="text" class="form-control form-control-sm" min="0" name="adi" id="adi" value="">
+                <input type="text" class="form-control form-control-sm" min="0" name="adi" id="adi" value="<?php echo $item->adi; ?>">
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
                     <label for="adi">Sıra</label>
-                    <input type="number" class="form-control form-control-sm" name="sira" id="sira" value="">
+                    <input type="number" class="form-control form-control-sm" name="sira" id="sira" value="<?php echo $item->sira; ?>">
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
                     <label>Ürün Kodu</label>
-                    <input type="text" class="form-control form-control-sm" name="urun_kodu" id="urun_kodu" value="">
+                    <input type="text" class="form-control form-control-sm" name="urun_kodu" id="urun_kodu" value="<?php echo $item->urun_kodu; ?>">
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
                     <label>Fiyat</label>
-                    <input type="text" class="form-control form-control-sm" name="fiyat" value="">
+                    <input type="text" class="form-control form-control-sm" name="fiyat" value="<?php echo $item->fiyat; ?>">
                 </div>
             </div>
             <div class="col-sm-6">
                 <!-- /.form-group -->
                 <div class="form-group">
                     <label>İndirimli Fiyat</label>
-                    <input type="text" class="form-control form-control-sm" name="ifiyat" value="">
+                    <input type="text" class="form-control form-control-sm" name="ifiyat" value="<?php echo $item->ifiyat; ?>">
                 </div>
             </div>
             <div class="form-group">
                 <label for="stok">Stok</label>
                 <select class="form-control w-100" name="stok" id="stok" required="">
-                    <option value="1" selected>Stokta Var</option>
-                    <option value="0">Tükendi</option>
+                   <?php if($item->stok) {
+                        echo '<option value="1" selected>Stokta Var</option>';
+                   }else{
+                        echo '<option value="0" selected>Tükendi</option>' ;
+                   }  ?>
                 </select>
             </div>
             <!-- /.form-group -->
@@ -43,7 +46,7 @@
                 <label for="secenek">Kategori</label>
                 <select class="js-example-basic-multiple form-control-sm select2-hidden-accessible" name="kategori"
                     id="secenek" required style="width:100%" tabindex="-1" aria-hidden="true">
-                    <option value="41">Ürünler</option>
+                    <option value="<?php echo $item->kategori; ?>">Urunler</option>
                 </select><span class="select2 select2-container select2-container--default" dir="ltr"
                     style="width: 100%;"><span class="selection"><span
                             class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
@@ -89,12 +92,12 @@
                 <label for="spot">Spot Metin <i class="icon-info text-info" data-toggle="popover"
                         data-content="Spot metin, içeriğinizi özetleyen bir ya da iki cümlelik metindir. 180 karakteri geçmemesi gerekmektedir.  Spot metinde de tamamen BÜYÜK harften kaçınmalı ve çift tırnak kullanılmamalıdır."
                         data-trigger="hover" data-original-title="Spot Metin"></i></label>
-                <textarea id="spot" name="spot" class="form-control" rows="4"></textarea>
+                <textarea id="spot" name="spot" class="form-control" rows="4"><?php echo $item->spot; ?></textarea>
             </div>
             <div class="form-group">
                 <label>Açıklama</label>
                 <textarea name="aciklama" class="m-0" data-plugin="summernote"
-                    data-options="{height: 250}"></textarea>
+                    data-options="{height: 250}"><?php echo $item->aciklama; ?></textarea>
             </div>
 
     </div>
@@ -111,11 +114,11 @@
         <div class="form-group">
             <label for="maxlength-textarea">SEO Açıklama (Description)</label>
             <textarea id="maxlength-textarea" name="seo" class="form-control" maxlength="260"
-                rows="2"></textarea>
+                rows="2"><?php echo $item->seo; ?></textarea>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-success btn-icon-text btn-sm"> GÖNDER </button>
-            <a href="<?php echo base_url("product_model/add"); ?>"></a>
+            <button type="submit" class="btn btn-success btn-icon-text btn-sm"> GÜNCELLE </button>
+            <a href="<?php echo base_url("product"); ?>"></a>
             </form>
         </div>
 
