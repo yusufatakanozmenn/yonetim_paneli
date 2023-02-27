@@ -9,23 +9,23 @@
             <form>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Facebook Sayfa URL</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1">
+                    <input type="text" class="form-control" name="facebook" value="<?php echo $item->facebook; ?>">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Twitter Sayfa URL</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <input type="text" class="form-control" name="twitter" value="<?php echo $item->twitter; ?>">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Instagram Sayfa URL</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <input type="text" class="form-control" name="instagram" value="<?php echo $item->instagram; ?>">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">LinkedIn Sayfa URL</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <input type="text" class="form-control" name="linkedin" value="<?php echo $item->linkedin; ?>">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Youtube Sayfa URL</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <input type="text" class="form-control" name="youtube" value="<?php echo $item->youtube; ?>">
                 </div>
 
                 <button type="button" class="btn rounded mw-md btn-success">Güncelle</button>
