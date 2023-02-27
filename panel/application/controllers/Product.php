@@ -56,7 +56,7 @@ class Product extends CI_Controller
             )
         );
         if($insert){
-                echo "Kayıt Eklendi";
+            redirect(base_url("product"));
 
         }
         else{
