@@ -81,9 +81,10 @@
                             data-switchery 
                             data-color="#10c469"
                             <?php echo ($item->durum) ? "checked" : "";  ?>/>
+
                         </td>
                         <td>
-                            <a href="#" class="btn btn-sm btn-danger btn-outline"><i class="fa fa-trash"></i>
+                            <a href="<?php echo base_url("product/delete/$item->id");?>" class="btn btn-sm btn-danger btn-outline"><i class="fa fa-trash"></i>
                                 Sil</a>
                             <a href="<?php echo base_url("product/update_form/$item->id");?>" class="btn btn-sm btn-info btn-outline"><i class="fa fa-pencil-square-o"></i>
                                 Düzenle</a>
