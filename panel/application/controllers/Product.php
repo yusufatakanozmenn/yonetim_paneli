@@ -35,31 +35,34 @@ class Product extends CI_Controller
     {
         $insert = $this->product_model->add(
             array(
-                "sira" => "",
+                "sira" => $this->input->post("sira"),
                 "kategori" => $this->input->post("kategori"),
-                "ozellik" => "deneme-urunu",
                 "adi" => $this->input->post("adi"),
-                "urun_kodu" => "deneme-urunu",
-                "fiyat" => "deneme-urunu",
-                "ifiyat" => "deneme-urunu",
-                "seo" => $this->input->post("seo_description"),
-                "description" => "deneme-urunu",
-                "keywords" => "deneme-urunu",
-                "spot" => "deneme-urunu",
-                "aciklama" => $this->input->post("description"),
-                "kapak" => "deneme-urunu",
-                "dokuman" => "deneme-urunu",
-                "katalog" => "deneme-urunu",
-                "durum" => 1,
-                "anasayfa" => "deneme-urunu",
-                "yeni" => "deneme-urunu",
-                "stok" => 1,
+                "urun_kodu" => $this->input->post("urun_kodu"),
+                "fiyat" => $this->input->post("fiyat"),
+                "ifiyat" => $this->input->post("ifiyat"),
+                "seo" => $this->input->post("seo"),
+                "spot" => $this->input->post("spot"),
+                "aciklama" => $this->input->post("aciklama"),
+                "kapak" => $this->input->post("kapak"),
+                "dokuman" => $this->input->post("dokuman"),
+                "katalog" => $this->input->post("katalog"),
+                "durum" => $this->input->post("durum"),
+                "anasayfa" => $this->input->post("anasayfa"),
+                "yeni" => $this->input->post("yeni"),
+                "stok" => $this->input->post("kategori"),
                 "tarih" => date("Y-m-d H:i:s"),
                 "dil" => 0,
             )
         );
         if($insert){
-            echo "Kayıt Eklendi";}
+            echo "
+            <script>
+                alert('Urun eklendi!);
+                window.location.href='/product'
+            </script>
+            ";
+        }
         else{
             echo "Kayıt Eklenemedi";
         }

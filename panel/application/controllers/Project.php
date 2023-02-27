@@ -32,14 +32,7 @@ class Project extends CI_Controller {
 
    public function save(){
     $this->product_model->add(
-        array(
-            "title" => "Deneme Ürünü",
-            "description" => "Deneme Ürünü Açıklaması",
-            "url" => "deneme-urunu",
-            "rank" => 0,
-            "isActive" => 1,
-            "createdAt" => date("Y-m-d H:i:s")
-        )
+        array()
         );
    }
 

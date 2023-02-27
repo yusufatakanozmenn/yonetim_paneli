@@ -4,12 +4,12 @@
         <form action="<?php echo base_url("product/save"); ?>" method="post">
             <div class="form-group">
                 <label for="sira">Başlık</label>
-                <input type="text" class="form-control form-control-sm" min="0" name="sira" id="sira" value="">
+                <input type="text" class="form-control form-control-sm" min="0" name="adi" id="adi" value="">
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
                     <label for="adi">Sıra</label>
-                    <input type="number" class="form-control form-control-sm" name="adi" id="adi" value="">
+                    <input type="number" class="form-control form-control-sm" name="sira" id="sira" value="">
                 </div>
             </div>
             <div class="col-sm-6">
@@ -34,15 +34,15 @@
             <div class="form-group">
                 <label for="stok">Stok</label>
                 <select class="form-control w-100" name="stok" id="stok" required="">
-                    <option value="0" selected="">Stokta Var</option>
-                    <option value="1">Tükendi</option>
+                    <option value="1" selected>Stokta Var</option>
+                    <option value="0">Tükendi</option>
                 </select>
             </div>
             <!-- /.form-group -->
             <div class="form-group">
                 <label for="secenek">Kategori</label>
                 <select class="js-example-basic-multiple form-control-sm select2-hidden-accessible" name="kategori"
-                    id="secenek" required="" style="width:100%" tabindex="-1" aria-hidden="true">
+                    id="secenek" required style="width:100%" tabindex="-1" aria-hidden="true">
                     <option value="41">Ürünler</option>
                 </select><span class="select2 select2-container select2-container--default" dir="ltr"
                     style="width: 100%;"><span class="selection"><span
@@ -93,7 +93,7 @@
             </div>
             <div class="form-group">
                 <label>Açıklama</label>
-                <textarea name="description" class="m-0" data-plugin="summernote"
+                <textarea name="aciklama" class="m-0" data-plugin="summernote"
                     data-options="{height: 250}"></textarea>
             </div>
 
@@ -110,16 +110,15 @@
 
         <div class="form-group">
             <label for="maxlength-textarea">SEO Açıklama (Description)</label>
-            <textarea id="maxlength-textarea" name="description" class="form-control" maxlength="260"
+            <textarea id="maxlength-textarea" name="seo" class="form-control" maxlength="260"
                 rows="2"></textarea>
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-success btn-icon-text btn-sm"> GÖNDER </button>
-            <a href="<?php echo base_url("product"); ?>"></a>
+            <a href="<?php echo base_url("product_model/add"); ?>"></a>
             </form>
         </div>
 
     </div>
 
 </div>
-

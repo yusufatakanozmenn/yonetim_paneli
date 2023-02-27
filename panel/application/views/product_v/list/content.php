@@ -53,11 +53,11 @@
                             <label for="checkbox-demo-1"></label>
                         </div>
                     </th>
-                    <th>Foto</th>
+                    <th>Sıra</th>
                     <th>Başlık</th>
-                    <th>Kategori</th>
-                    <th>Yeni Ürün</th>
-                    <th>Anasayfa</th>
+                    <th>Ürün Kodu</th>
+                    <th>Fiyat</th>
+                    <th>Açıklama</th>
                     <th>Durumu</th>
                     <th>İşlem</th>
                 </thead>
@@ -70,11 +70,11 @@
                                 <label for="checkbox-demo-1"></label>
                             </div>
                         </td>
-                        <td>#<?php echo $item->id;?></td>
+                        <td><?php echo $item->sira;?></td>
                         <td><?php echo $item->adi;?></td>
-                        <td><?php echo $item->kategori;?></td>
-                        <td><?php echo $item->spot;?></td>
-                        <td><?php echo $item->description;?></td>
+                        <td><?php echo $item->urun_kodu;?></td>
+                        <td><?php echo $item->fiyat;?></td>
+                        <td><?php echo $item->aciklama;?></td>
                         <td>
                             <input id="switch-2-2" 
                             type="checkbox" 
