@@ -19,4 +19,18 @@ class Popup_Message extends CI_Controller {
 
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
     }
+
+    public function update($id){
+        $this->load->library("form_validation");
+        //kurallar yazılır
+        $this->form_validation->set_rules("adi","Mesaj Adı","required|trim");
+        $this->form_validation->set_rules("url","Mesaj Url","required|trim");
+        $this->form_validation->set_message(
+            array(
+                "required" => "<b>{field}</b> alanı doldurulmalıdır."
+            )
+        );
+        $validate = $this->form_validation->run();
+        if ($validate)
+    }
 }
