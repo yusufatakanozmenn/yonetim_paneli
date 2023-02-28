@@ -22,15 +22,6 @@ class Product extends CI_Controller
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
 
-    public  function  new_form(){
-        $viewData = new stdClass();
-        /** View'e gönderilecek değişkenler.. */
-        $viewData->viewFolder = $this->viewFolder;
-        $viewData->subViewFolder = "add";
-        $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
-    }
-
-    
     public function save()
     {
         $insert = $this->product_model->add(
@@ -81,7 +72,6 @@ class Product extends CI_Controller
         $viewData->item = $item;
 
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
-
 
     }
     public function delete($id){
