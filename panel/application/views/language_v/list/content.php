@@ -61,17 +61,7 @@
                                                         style="width: 997px;">
                                                         <thead class="headbg">
                                                             <tr role="row">
-                                                                <th class="noshort sorting_disabled"
-                                                                    style="width: 38.8px;" data-toggle="tooltip"
-                                                                    data-placement="top" title="Tümünü Seç" rowspan="1"
-                                                                    colspan="1" aria-label="">
-                                                                    <input id="checkbox-4"
-                                                                        class="select-all checkbox-custom"
-                                                                        type="checkbox" style="width:100px;">
-                                                                    <label for="checkbox-4"
-                                                                        class="checkbox-custom-label mb-0"><span
-                                                                            class="checktext"></span></label>
-                                                                </th>
+                                                                
                                                                 <th class="secili sorting" tabindex="0"
                                                                     aria-controls="order-listingg" rowspan="1"
                                                                     colspan="1" style="width: 428.8px;"
