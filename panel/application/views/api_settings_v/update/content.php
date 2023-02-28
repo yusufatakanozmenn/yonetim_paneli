@@ -1,3 +1,4 @@
+<form action="<?php echo base_url("api_settings/update/$item->id")?>" method="post" id="api_form">
 <div class="main-panel">
     <div class="form-group m-b-0">
         <label for="maxlength-demo-4">Whatsapp Kodu</label>
@@ -29,7 +30,11 @@
         <textarea id="maxlength-demo-4" name="rcaptha" maxlength="200" class="form-control" data-plugin="maxlength"
             data-options="{ alwaysShow: true, threshold: 10, warningClass: 'label label-warning', limitReachedClass: 'label label-danger', placement: 'bottom', message: 'used %charsTyped% of %charsTotal% chars.' }"><?php echo $item->rcaptha;?></textarea>
     </div>
+    </form>
     <div>
-        <button type="button" class="btn rounded mw-md btn-success">Güncelle</button>
+        <button 
+        class="btn rounded mw-md btn-success update-btn">
+        Güncelle
+        </button>
     </div>
 </div>

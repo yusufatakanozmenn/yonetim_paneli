@@ -27,14 +27,14 @@ class General_Settings extends CI_Controller
     {
 
         $insert = $this->General_Settings_model->update(
+            array("id" => 1),
             array(
                 "site_url" => $this->input->post("site_url"),
-                "site_baslik" => $this->input->post("site_title"),
-                "site_keyw" => $this->input->post("site_keywords"),
-                "pbirimi" => $this->input->post("pbirimi"),
+                "site_baslik" => $this->input->post("site_baslik"),
+                "pbirim" => $this->input->post("pbirim"),
                 "yonetim" => $this->input->post("yonetim"),
                 "site_desc" => $this->input->post("site_desc"),
-                "id" => 1,
+                "copyright" => $this->input->post("copyright")
             )
         );
       
@@ -71,38 +71,5 @@ class General_Settings extends CI_Controller
         redirect(base_url("general_settings"));
 
         die();
-
-
-
     }
-
-    public function update_form($id)
-    {
-
-        $viewData = new stdClass();
-
-        /** Tablodan Verilerin Getirilmesi.. */
-        $item = $this->General_Settings_model->get(
-            array(
-                "id" => $id,
-            )
-        );
-
-        /** View'e gönderilecek Değişkenlerin Set Edilmesi.. */
-        $viewData->viewFolder = $this->viewFolder;
-        $viewData->subViewFolder = "update";
-        $viewData->item = $item;
-
-        $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
-
-
-    }
-
-
-
-
-
-
-
-
 }
