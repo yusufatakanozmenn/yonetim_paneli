@@ -15,15 +15,6 @@ class Product_Add extends CI_Controller {
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
     }
-
-    public function product_add(){
-        $viewData = new stdClass();
-        $viewData->viewFolder=$this->viewFolder;
-        $viewData->subViewFolder="add";
-
-
-        $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
-    }
     public function save(){
         $this->load->library("form_validation");
         $this->form_validation->set_rules("adi","Ürün Adı","required|trim");
