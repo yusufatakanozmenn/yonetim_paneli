@@ -19,4 +19,23 @@ class Popup_Message extends CI_Controller {
 
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
     }
+    public function update(){
+        $insert = $this->Popup_Message_model->update(
+            array(
+                "id" => 1
+            ),
+            array(
+                "adi" => $this->input->post("adi"),
+                "url" => $this->input->post("url"),
+                "durum" => $this->input->post("durum")
+            )
+            );
+
+        if ($insert){
+            redirect(base_url("popup_message"));
+        }
+        else{
+            echo "Kayit eklenemedi";
+        }
+    }
 }
