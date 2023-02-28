@@ -14,31 +14,16 @@ class General_Settings extends CI_Controller
         $viewData = new stdClass();
 
         /** Tablodan Verilerin Getirilmesi.. */
-        $item = $this->General_Settings_model->get();
-
-        if($item)
-            $viewData->subViewFolder = "update";
-        else
-            $viewData->subViewFolder = "no_content";
-
+        $item = $this->General_Settings_model->get(array("id" => 1));
+        $viewData->subViewFolder = "update";
         /** View'e gönderilecek Değişkenlerin Set Edilmesi.. */
         $viewData->viewFolder = $this->viewFolder;
         $viewData->item = $item;
 
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
-    public function new_form(){
 
-        $viewData = new stdClass();
-
-        /** View'e gönderilecek Değişkenlerin Set Edilmesi.. */
-        $viewData->viewFolder = $this->viewFolder;
-        $viewData->subViewFolder = "add";
-
-        $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
-
-    }
-    public function save(){
+    public function update(){
 
             $this->load->library("form_validation");
 
@@ -48,7 +33,6 @@ class General_Settings extends CI_Controller
             $this->form_validation->set_rules("site_description", "site_description", "required|trim");
             $this->form_validation->set_rules("site_keywords", "site_keywords", "required|trim");
             $this->form_validation->set_rules("pbirimi", "pbirimi", "required|trim");
-            $this->form_validation->set_rules("video", "video", "required|trim");
             $this->form_validation->set_rules("yonetim", "yonetim", "required|trim");
             $this->form_validation->set_rules("site_desc", "site_desc", "required|trim");
             $this->form_validation->set_rules("copyright", "copyright", "required|trim");
@@ -57,14 +41,13 @@ class General_Settings extends CI_Controller
         $validate = $this->form_validation->run();
 
         if($validate){
-            $insert = $this->General_Settings_model->add(
+            $insert = $this->General_Settings_model->update(
                 array(
                     "site_url"          => $this->input->post("site_url"),
                     "site_title"        => $this->input->post("site_title"),
                     "site_description"  => $this->input->post("site_description"),
                     "site_keywords"     => $this->input->post("site_keywords"),
                     "pbirimi"           => $this->input->post("pbirimi"),
-                    "video"             => $this->input->post("video"),
                     "yonetim"           => $this->input->post("yonetim"),
                     "site_desc"         => $this->input->post("site_desc"),
 
@@ -93,7 +76,7 @@ class General_Settings extends CI_Controller
 
             $this->session->set_flashdata("alert", $alert);
 
-            redirect(base_url("settings"));
+            redirect(base_url("general_settings"));
 
             die();
 
@@ -103,7 +86,7 @@ class General_Settings extends CI_Controller
 
             /** View'e gönderilecek Değişkenlerin Set Edilmesi.. */
             $viewData->viewFolder = $this->viewFolder;
-            $viewData->subViewFolder = "add";
+            $viewData->subViewFolder = "update";
             $viewData->form_error = true;
 
             $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
