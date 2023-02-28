@@ -126,6 +126,13 @@
                         </li>
                     </ul>
                 </li>
+                <li>
+                                    <a href="logout.html">
+                                        <span class="m-r-xs"><i class="fa fa-power-off"></i></span>
+                                        <span>Çıkış</span>
+                                    </a>
+                                </li>
+
 
                 <!-- <li class="dropdown">
                     <a href="javascript:void(0)" class="side-panel-toggle" data-toggle="class" data-target="#side-panel"
