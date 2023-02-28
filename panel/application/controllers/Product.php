@@ -73,7 +73,6 @@ class Product extends CI_Controller
 
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
 
-
     }
     public function delete($id){
         $delete = $this->product_model->delete(
