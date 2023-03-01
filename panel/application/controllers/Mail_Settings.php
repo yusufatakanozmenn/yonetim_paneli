@@ -36,6 +36,7 @@ class Mail_Settings extends CI_Controller
         );
         $validate = $this->form_validation->run();
         if ($validate) {
+            $isActive = ($this->input->post("data") === "true") ? 1 : 0;
             $insert = $this->Mail_Settings_model->update(
                 array("id" => 1),
                 array(
@@ -44,7 +45,8 @@ class Mail_Settings extends CI_Controller
                     "m_sertifika" => $this->input->post("m_sertifika"),
                     "m_adresi" => $this->input->post("m_adresi"),
                     "m_parola" => $this->input->post("m_parola"),
-                    "m_kime" => $this->input->post("m_kime")
+                    "m_kime" => $this->input->post("m_kime"),
+                    "durum" => $isActive
                 )
             );
             // TODO Alert sistemi eklenecek...
@@ -79,23 +81,6 @@ class Mail_Settings extends CI_Controller
             redirect(base_url("mail_settings"));
         }
 
-    }
-    public function update_status($id)
-    {
-
-        if ($id) {
-            $isActive = ($this->input->post("data") === "true") ? 1 : 0;
-            $insert = $this->Mail_Settings_model->update(
-                array(
-                    "id" => $id
-                ),
-                array(
-                    "durum" => $isActive
-                )
-            );
-        } else {
-            echo 'Hatali islem';
-        }
     }
 
 
