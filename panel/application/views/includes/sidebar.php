@@ -184,34 +184,20 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="#">Yeni Hizmet Ekle</a></li>
-                        <li><a href="#"">Hizmet listesi </a></li>
+                        <li><a href="<?php echo base_url("ourservices/add_form")?>">Yeni Hizmet Ekle</a></li>
+                        <li><a href="<?php echo base_url("ourservices")?>">Hizmet listesi </a></li>
                     </ul>
                 </li>
-
-
-
+                
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
                         <i class="menu-icon zmdi zmdi-pin zmdi-hc-lg"></i>
-                        <span class="menu-text">Kutucuk Yönetimi</span>
+                        <span class="menu-text">S.S.S</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="yeni-urun-ekle.php">Yeni Kutucuk Ekle</a></li>
-                        <li><a href="urun-listesi.php">Kutucuk listesi </a></li>
-                    </ul>
-                </li>
-
-                <li class="has-submenu">
-                    <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-pin zmdi-hc-lg"></i>
-                        <span class="menu-text">Haber & Duyurular</span>
-                        <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="urun-listesi.php">Yeni Soru Ekle </a></li>
-                        <li><a href="yeni-urun-ekle.php">Sorular</a></li>
+                        <li><a href="<?php echo base_url("sss/add_form")?>">Yeni Soru Ekle </a></li>
+                        <li><a href="<?php echo base_url("sss")?>">Sorular</a></li>
                     </ul>
                 </li>
 
