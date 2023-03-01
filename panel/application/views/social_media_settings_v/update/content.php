@@ -6,7 +6,8 @@
         <hr class="widget-separator">
         <div class="widget-body">
 
-            <form>
+            <form class="forms-sample" method="post"
+                action="<?php echo base_url("social_media_settings/update/$item->id"); ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Facebook Sayfa URL</label>
                     <input type="text" class="form-control" name="facebook" value="<?php echo $item->facebook; ?>">
@@ -27,8 +28,12 @@
                     <label for="exampleInputPassword1">Youtube Sayfa URL</label>
                     <input type="text" class="form-control" name="youtube" value="<?php echo $item->youtube; ?>">
                 </div>
-
-                <button type="button" class="btn rounded mw-md btn-success">Güncelle</button>
+                <div class="form-group">
+                    <button type="submit" class="btn rounded mw-md btn-success">
+                        GÜNCELLE </button>
+                    <a href="<?php echo base_url("social_media_settings/update"); ?>"></a>
+                </div>
+                
             </form>
         </div><!-- .widget-body -->
     </div><!-- .widget -->
