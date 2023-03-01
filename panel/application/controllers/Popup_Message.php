@@ -1,36 +1,45 @@
 <?php
-class Popup_Message extends CI_Controller {
+class Popup_Message extends CI_Controller
+{
 
-	public $viewFolder = "";
-	public function __construct()
-	{
-		parent::__construct();
-		$this->viewFolder = "popup_message_v";
+    public $viewFolder = "";
+    public function __construct()
+    {
+        parent::__construct();
+        $this->viewFolder = "popup_message_v";
         $this->load->model("Popup_Message_model");
 
-        
-	}
-    public function index(){
+
+    }
+    public function index()
+    {
         $viewData = new stdClass();
         $item = $this->Popup_Message_model->get(array("id" => 1));
-        $viewData->viewFolder=$this->viewFolder;
-        $viewData->subViewFolder="update";
-        $viewData->item=$item;
+        $viewData->viewFolder = $this->viewFolder;
+        $viewData->subViewFolder = "update";
+        $viewData->item = $item;
 
-        $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
+        $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
 
-    public function update($id){
-        $this->load->library("form_validation");
-        //kurallar yazılır
-        $this->form_validation->set_rules("adi","Mesaj Adı","required|trim");
-        $this->form_validation->set_rules("url","Mesaj Url","required|trim");
-        $this->form_validation->set_message(
+    public function update()
+    {
+        $insert = $this->Popup_Message_model->update(
             array(
-                "required" => "<b>{field}</b> alanı doldurulmalıdır."
+                "id" => 1
+            ),
+            array(
+                "adi" => $this->input->post("adi"),
+                "url" => $this->input->post("url"),
+                "durum" => $this->input->post("durum")
             )
         );
-        $validate = $this->form_validation->run();
-        if ($validate)
+
+        if ($insert) {
+            redirect(base_url("popup_message"));
+        } else {
+            echo "Kayit eklenemedi";
+        }
+
     }
 }
