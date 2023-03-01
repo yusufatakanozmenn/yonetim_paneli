@@ -54,7 +54,7 @@ $(document).ready(function () {
     }
   })
   // Mail settings status change
-  $(".m_settings").change(function () {
+  $(".formIsActive").change(function () {
     let $data = $(this).prop("checked");
     let $data_url = $(this).data("url");
 

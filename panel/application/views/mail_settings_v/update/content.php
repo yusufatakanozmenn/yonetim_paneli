@@ -41,7 +41,7 @@
                         <label class="d-block" for="durum">Aktif / Pasif</label>
                         <div class="form-check">
                             <div class="m-b-lg m-r-xl inline-block">
-                                <input class="m_settings" id="durum" type="checkbox" data-switchery
+                                <input class="formIsActive" id="durum" type="checkbox" data-switchery
                                     data-color="#10c469" <?php echo ($item->durum) ? "checked" : ""; ?> />
                             </div>
                         </div>
