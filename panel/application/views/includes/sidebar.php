@@ -161,7 +161,7 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="paket.php">Paketler</a></li>
+                        <li><a href="<?php echo base_url("package")?>">Paketler</a></li>
                     </ul>
                 </li>
 
