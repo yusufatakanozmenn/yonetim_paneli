@@ -23,7 +23,7 @@
                                                                 <div class="input-group col-xs-12">
                                                                     <div class="col-md-6 col-sm-6">
                                                                         <a href="#" class="thumbnail white"><img
-                                                                                src="<?php echo base_url('assets'); ?>/assets/images/<?php echo $item->firma_logo; ?>"
+                                                                                src="<?php echo base_url('uploads'); ?>/general_settings_v/<?php echo $item->firma_logo; ?>"
                                                                                 alt="..."></a>
                                                                     </div>
                                                                 </div>
@@ -41,7 +41,7 @@
                                                                 <div class="input-group col-xs-12">
                                                                     <div class="col-md-6 col-sm-6">
                                                                         <a href="#" class="thumbnail white"><img
-                                                                                src="<?php echo base_url('assets'); ?>/assets/images/<?php echo $item->firma_footerlogo; ?>"
+                                                                                src="<?php echo base_url('uploads'); ?>/general_settings_v/<?php echo $item->firma_footerlogo; ?>"
                                                                                 alt="..."></a>
                                                                     </div>
                                                                 </div>
@@ -59,7 +59,7 @@
                                                                 <div class="input-group col-xs-12">
                                                                     <div class="col-md-6 col-sm-6">
                                                                         <a href="#" class="thumbnail white"><img
-                                                                                src="<?php echo base_url('assets'); ?>/assets/images/<?php echo $item->favicon; ?>"
+                                                                                src="<?php echo base_url('uploads'); ?>/general_settings_v/<?php echo $item->favicon; ?>"
                                                                                 alt="..."></a>
                                                                     </div>
                                                                 </div>

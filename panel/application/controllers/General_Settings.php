@@ -20,11 +20,50 @@ class General_Settings extends CI_Controller
         $viewData->viewFolder = $this->viewFolder;
         $viewData->item = $item;
 
+
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
 
     public function update($id)
     {
+
+        $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
+        $config["upload_path"] = "uploads/$this->viewFolder/";
+
+        $this->load->library("upload", $config);
+
+        $upload_logo = $this->upload->do_upload("firma_logo");
+        $upload_footerlogo = $this->upload->do_upload("firma_footerlogo");
+        $upload_favicon = $this->upload->do_upload("favicon");
+
+        if ($upload_logo) {
+            $uploaded_logo = $this->upload->data("file_name");
+            $this->General_Settings_model->update(
+                array("id" => 1),
+                array(
+                    "firma_logo" => $uploaded_logo,
+                )
+            );
+        }
+        if ($upload_footerlogo) {
+            $uploaded_footerlogo = $this->upload->data("file_name");
+            $this->General_Settings_model->update(
+                array("id" => 1),
+                array(
+                    "firma_footerlogo" => $uploaded_footerlogo,
+                )
+            );
+        }
+        if ($upload_favicon) {
+            $uploaded_favicon = $this->upload->data("file_name");
+            $this->General_Settings_model->update(
+                array("id" => 1),
+                array(
+                    "favicon" => $uploaded_favicon,
+                )
+            );
+        }
+
         $insert = $this->General_Settings_model->update(
             array("id" => 1),
             array(
@@ -33,10 +72,10 @@ class General_Settings extends CI_Controller
                 "pbirim" => $this->input->post("pbirim"),
                 "yonetim" => $this->input->post("yonetim"),
                 "site_desc" => $this->input->post("site_desc"),
-                "copyright" => $this->input->post("copyright")
+                "copyright" => $this->input->post("copyright"),
             )
         );
-      
+
 
         // TODO Alert sistemi eklenecek...
         if ($insert) {
@@ -70,12 +109,6 @@ class General_Settings extends CI_Controller
         redirect(base_url("general_settings"));
     }
 
-    public function img_upload(){
 
-        $this->load->library("upload");
-        $config["allowed_types"] = "jpg|jpeg|png";
-        $config["upload_path"]   = "uploads/$this->viewFolder/";
 
-    }
-    
 }
