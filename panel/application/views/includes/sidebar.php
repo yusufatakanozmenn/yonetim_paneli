@@ -137,8 +137,7 @@
                     </a>
                     <ul class="submenu">
                         <li><a href="<?php echo base_url("product")?>">Ürünler</a></li>
-                        <li><a href="<?php echo base_url("product_category")?>">Ürün Kategorileri</a></li>
-                        <li><a href="<?php echo base_url("feature_groups")?>">Özellik Grupları</a></li>
+                        <li><a href="<?php echo base_url("product_category")?>">Ürün Kategorileri</a></li>                       
                     </ul>
                 </li>
 

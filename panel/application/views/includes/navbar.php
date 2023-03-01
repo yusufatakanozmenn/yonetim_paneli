@@ -20,7 +20,7 @@
             <span class="zmdi zmdi-hc-lg zmdi-search"></span>
         </button>
 
-        <a href="../index.html" class="navbar-brand">
+        <a href="<?php echo base_url();?>" class="navbar-brand">
             <img class="img-responsive" src="<?php echo base_url("assets");?>/assets/images/alva_logo.svg" /></a>
         </a>
     </div><!-- .navbar-header -->
