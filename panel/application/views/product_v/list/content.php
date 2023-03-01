@@ -6,32 +6,9 @@
         <h4>
 
             <a href="<?php echo base_url("product_add"); ?>" class="btn btn-outline btn-primary btn-sm">
-
                 <i class="fa fa-plus-circle"></i> Yeni Ekle</a>
-            <a href="javascript:void(0)" class="dropdown-toggle btn btn-outline btn-primary btn-sm"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fa fa-ellipsis-v"></i> Seçilenlere Uygula </a>
-            <div class="media-group dropdown-menu animated flipInY" style="margin-left:5rem; ">
-                <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-account-box"></i>My
-                        Profile</a></li>
-                <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-balance-wallet"></i>Balance</a>
-                </li>
-                <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-info"></i>privacy</a>
-                </li>
-            </div>
-            <a href="javascript:void(0)" class="dropdown-toggle btn btn-outline btn-warning btn-sm"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fa fa-ellipsis-v"></i> Excel İşlemleri </a>
-            <div class="media-group dropdown-menu animated flipInY" style="margin-left:13rem; ">
-                <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-account-box"></i>My
-                        Profile</a></li>
-                <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-balance-wallet"></i>Balance</a>
-                </li>
-                <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-info"></i>privacy</a>
-                </li>
-            </div>
-            <a href="#" class="btn btn-outline btn-danger btn-sm">
-                <i class="fa fa-trash"></i> Tüm Veriyi Sil</a>
+            <!-- <a href="#" class="btn btn-outline btn-danger btn-sm">
+                <i class="fa fa-trash"></i> Tüm Veriyi Sil</a> -->
         </h4>
     </div><!-- END column -->
     <div class="col-md-12">
@@ -53,7 +30,7 @@
                             <label for="checkbox-demo-1"></label>
                         </div>
                     </th>
-                    <th>Sıra</th>
+                    <th>ID</th>
                     <th>Başlık</th>
                     <th>Ürün Kodu</th>
                     <th>Fiyat</th>
@@ -70,13 +47,16 @@
                                 <label for="checkbox-demo-1"></label>
                             </div>
                         </td>
-                        <td><?php echo $item->sira;?></td>
+                        <td><?php echo $item->id;?></td>
                         <td><?php echo $item->adi;?></td>
                         <td><?php echo $item->urun_kodu;?></td>
                         <td><?php echo $item->fiyat;?></td>
                         <td><?php echo $item->aciklama;?></td>
                         <td>
-                            <input id="switch-2-2" 
+                            <input 
+                            data-url="<?php echo base_url("product/update_status/$item->id");?>"
+                            class="isActive"
+                            id="switch-2-2" 
                             type="checkbox" 
                             data-switchery 
                             data-color="#10c469"
