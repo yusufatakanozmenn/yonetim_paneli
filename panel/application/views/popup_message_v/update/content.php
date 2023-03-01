@@ -31,12 +31,12 @@
                             </div>
                             <div class="form-group">
                                 <label for="adi">Mesaj Adı</label>
-                                <input type="text" class="form-control form-control-sm" name="adi" id="adi"
+                                <input type="text" class="form-control form-control-sm" name="adi" id="adi" plaseholder="Mesaj Adı"
                                     value="<?php echo $item->adi;?>">
 
                                 <div class="form-group">
                                     <label for="url">Mesaj Url</label>
-                                    <input type="text" class="form-control form-control-sm" name="url" id="url"
+                                    <input type="text" class="form-control form-control-sm" name="url" id="url" placeholder="Mesaj Url"
                                         value="<?php echo $item->url;?>">
                                 </div>
                                 <div class="form-group">
