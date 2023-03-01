@@ -3,13 +3,13 @@
     <div class="" id="urun-bilgileri" role="tabpanel" aria-labelledby="home-tab-vertical">
         <form action="<?php echo base_url("product/save"); ?>" method="post">
             <div class="form-group">
-                <label for="sira">Başlık</label>
-                <input type="text" class="form-control form-control-sm" min="0" name="sira" id="sira" value="">
+                <label for="adi">Başlık</label>
+                <input type="text" class="form-control form-control-sm" min="0" name="adi" id="adi" value="">
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label for="adi">Sıra</label>
-                    <input type="number" class="form-control form-control-sm" name="adi" id="adi" value="">
+                    <label for="sira">Sıra</label>
+                    <input type="number" class="form-control form-control-sm" name="sira" id="sira" value="">
                 </div>
             </div>
             <div class="col-sm-6">
@@ -93,7 +93,7 @@
             </div>
             <div class="form-group">
                 <label>Açıklama</label>
-                <textarea name="description" class="m-0" data-plugin="summernote"
+                <textarea name="aciklama" class="m-0" data-plugin="summernote"
                     data-options="{height: 250}"></textarea>
             </div>
 
