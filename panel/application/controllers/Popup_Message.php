@@ -19,23 +19,44 @@ class Popup_Message extends CI_Controller {
 
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
     }
-    public function update(){
-        $insert = $this->Popup_Message_model->update(
-            array(
-                "id" => 1
-            ),
-            array(
-                "adi" => $this->input->post("adi"),
-                "url" => $this->input->post("url"),
-                "durum" => $this->input->post("durum")
-            )
-            );
 
-        if ($insert){
+    public function update($id){
+        $this->load->library("form_validation");
+        //kurallar yazılır
+        $this->form_validation->set_rules("adi","Mesaj Adı","required|trim");
+        $this->form_validation->set_rules("url","Mesaj Url","required|trim");
+        $this->form_validation->set_message(
+            array(
+                "required" => "<b>{field}</b> alanı doldurulmalıdır."
+            )
+        );
+        $validate = $this->form_validation->run();
+        if ($validate){
+            $update = $this->Popup_Message_model->update(
+                array(
+                    "id" => $id
+                ),
+                array(
+                    "adi" => $this->input->post("adi"),
+                    "url" => $this->input->post("url"),
+                
+                )
+            );
+            if ($update){
+                $alert = array(
+                    "title" => "İşlem Başarılı",
+                    "text" => "Kayıt başarıyla güncellendi",
+                    "type" => "success"
+                );
+            }else{
+                $alert = array(
+                    "title" => "İşlem Başarısız",
+                    "text" => "Kayıt güncellenemedi",
+                    "type" => "error"
+                );
+            }
+            $this->session->set_flashdata("alert",$alert);
             redirect(base_url("popup_message"));
-        }
-        else{
-            echo "Kayit eklenemedi";
         }
     }
 }

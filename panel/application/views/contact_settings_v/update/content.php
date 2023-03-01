@@ -6,31 +6,41 @@
         <hr class="widget-separator">
         <div class="widget-body">
 
-            <form>
+            <form class="forms-sample" method="post"
+                action="<?php echo base_url("contact_settings/update/$item->id"); ?>" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Firma Ünvanı</label>
-                    <input type="email" class="form-control" name="firma_adi" value="<?php echo $item->firma_adi; ?>">
-                    
+                    <input type="text" class="form-control" name="firma_adi" value="<?php echo $item->firma_adi; ?>"
+                        placeholder="Firma Adı">
+
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Firma Telefon</label>
-                    <input type="text" class="form-control" name="firma_telefon" value="<?php echo $item->firma_telefon; ?>">
-                    
+                    <input type="text" class="form-control" name="firma_telefon"
+                        value="<?php echo $item->firma_telefon; ?>" placeholder="Firma Telefon">
+
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Firma Fax</label>
-                    <input type="text" class="form-control" name="firma_fax" value="<?php echo $item->firma_fax; ?>">
+                    <input type="text" class="form-control" name="firma_fax" value="<?php echo $item->firma_fax; ?>"
+                        placeholder="Firma Fax">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Firma E-Mail</label>
-                    <input type="email" class="form-control" name="firma_email" value="<?php echo $item->firma_email; ?>">
+                    <input type="email" class="form-control" name="firma_email"
+                        value="<?php echo $item->firma_email; ?>" placeholder="Firma E-mail">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Firma Adres</label>
-                    <input type="text" class="form-control" name="firma_adres" value="<?php echo $item->firma_adres; ?>">
+                    <input type="text" class="form-control" name="firma_adres" value="<?php echo $item->firma_adres; ?>"
+                        placeholder="Firma Adres">
                 </div>
 
-                <button type="button" class="btn rounded mw-md btn-success">Güncelle</button>
+                <div class="form-group">
+                    <button type="submit" class="btn rounded mw-md btn-success">
+                        GÜNCELLE </button>
+                    <a href="<?php echo base_url("contact_settings/update"); ?>"></a>
+                </div>
             </form>
         </div><!-- .widget-body -->
     </div><!-- .widget -->

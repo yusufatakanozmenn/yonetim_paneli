@@ -81,9 +81,13 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="pbirim">Para Birimi</label>
-                                                <select class="form-control form-control-sm" name="pbirim">
-                                                    <option selected="">
+                                                <select class="form-control form-control-sm" name="pbirim"
+                                                    value="<?php echo $item->pbirim ?>">
+                                                    <option selected style="display:none;">
                                                         <?php echo $item->pbirim ?>
+                                                    </option>
+                                                    <option>
+                                                        TL
                                                     </option>
                                                     <option>USD</option>
                                                     <option>EURO</option>
@@ -95,7 +99,8 @@
                                                             (Örnek:xyonetim, ypanel,yadminx, Not: TR Karekter
                                                             Kullanmayınız.!)</b></label>
                                                     <input type="text" class="form-control form-control-sm"
-                                                        name="yonetim" id="yonetim" value="<?php echo $item->yonetim ?>">
+                                                        name="yonetim" id="yonetim"
+                                                        value="<?php echo $item->yonetim ?>">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="maxlength-textarea">SEO Açıklama (Description)</label>
@@ -110,7 +115,7 @@
                                                         value="<?php echo $item->copyright ?>">
                                                 </div>
                                                 <div class="form-group">
-                                                    <button type="submit" class="btn btn-success btn-icon-text btn-sm">
+                                                    <button type="submit" class="btn rounded mw-md btn-success">
                                                         GÜNCELLE </button>
                                                     <a href="<?php echo base_url("general_settings/update"); ?>"></a>
                                                 </div>
