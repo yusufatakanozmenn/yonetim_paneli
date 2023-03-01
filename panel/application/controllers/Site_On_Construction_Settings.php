@@ -64,8 +64,4 @@ class Site_On_Construction_Settings extends CI_Controller
 
     }
 
-
-
-
-
 }
