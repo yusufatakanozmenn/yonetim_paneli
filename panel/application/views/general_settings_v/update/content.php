@@ -81,9 +81,13 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="pbirim">Para Birimi</label>
-                                                <select class="form-control form-control-sm" name="pbirim">
-                                                    <option selected="">
+                                                <select class="form-control form-control-sm" name="pbirim"
+                                                    value="<?php echo $item->pbirim ?>">
+                                                    <option selected style="display:none;">
                                                         <?php echo $item->pbirim ?>
+                                                    </option>
+                                                    <option>
+                                                        TL
                                                     </option>
                                                     <option>USD</option>
                                                     <option>EURO</option>
