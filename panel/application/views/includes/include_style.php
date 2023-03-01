@@ -10,6 +10,7 @@
 <!-- endbuild -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300">
 <script src="<?php echo base_url("assets");?>/libs/bower/breakpoints.js/dist/breakpoints.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.min.css">
 <script>
     Breakpoints();
 </script>
