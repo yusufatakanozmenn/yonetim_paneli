@@ -40,7 +40,6 @@
                                 <option value="2">Yıllık</option>
                             </select>
                         </div>
-
                     </div>
 					                  
 
