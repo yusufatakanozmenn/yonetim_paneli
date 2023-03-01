@@ -23,9 +23,8 @@ class General_Settings extends CI_Controller
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
 
-    public function update()
+    public function update($id)
     {
-
         $insert = $this->General_Settings_model->update(
             array("id" => 1),
             array(
@@ -69,6 +68,14 @@ class General_Settings extends CI_Controller
         $this->session->set_flashdata("alert", $alert);
 
         redirect(base_url("general_settings"));
+    }
+
+    public function img_upload(){
+
+        $this->load->library("upload");
+        $config["allowed_types"] = "jpg|jpeg|png";
+        $config["upload_path"]   = "uploads/$this->viewFolder/";
 
     }
+    
 }
