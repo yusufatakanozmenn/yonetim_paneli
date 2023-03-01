@@ -209,7 +209,7 @@
                     </a>
                     <ul class="submenu">
                     <li><a href="<?php echo base_url("reference/add_form")?>">Yeni Referans Ekle </a></li>
-                        <li><a href="<a href="<?php echo base_url("reference")?>>Referans listesi</a></li>
+                        <li><a href="<?php echo base_url("reference")?>">Referans listesi</a></li>
                     </ul>
                 </li>
 
@@ -221,8 +221,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="yeni-urun-ekle.php">Yeni Belge Ekle</a></li>
-                        <li><a href="urun-listesi.php">Belge listesi </a></li>
+                        <li><a href="<?php echo base_url("document/add_form")?>">Yeni Belge Ekle</a></li>
+                        <li><a href="<?php echo base_url("document")?>">Belge listesi </a></li>
                     </ul>
                 </li>
 
@@ -233,8 +233,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Yeni Katalog Ekle</a></li>
-                        <li><a href="proje-kategori.php">Katalog listesi </a></li>
+                        <li><a href="<?php echo base_url("e_catalog/add_form")?>">Yeni Katalog Ekle</a></li>
+                        <li><a href="<?php echo base_url("e_catalog")?>">Katalog listesi </a></li>
                     </ul>
                 </li>
 
@@ -245,8 +245,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Yeni Ekip Ekle</a></li>
-                        <li><a href="proje-kategori.php">Ekip listesi</a></li>
+                        <li><a href="<?php echo base_url("team/add_form")?>">Yeni Ekip Ekle</a></li>
+                        <li><a href="<?php echo base_url("team")?>">Ekip listesi</a></li>
                     </ul>
                 </li>
 
