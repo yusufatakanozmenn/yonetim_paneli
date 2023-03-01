@@ -208,8 +208,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="urun-listesi.php">Yeni Referans Ekle </a></li>
-                        <li><a href="yeni-urun-ekle.php">Referans listesi</a></li>
+                    <li><a href="<?php echo base_url("reference/add_form")?>">Yeni Referans Ekle </a></li>
+                        <li><a href="<a href="<?php echo base_url("reference")?>>Referans listesi</a></li>
                     </ul>
                 </li>
 
