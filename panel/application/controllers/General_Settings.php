@@ -70,6 +70,5 @@ class General_Settings extends CI_Controller
 
         redirect(base_url("general_settings"));
 
-        die();
     }
 }
