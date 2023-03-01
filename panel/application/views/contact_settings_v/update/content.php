@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-success btn-icon-text btn-sm">
+                    <button type="submit" class="btn rounded mw-md btn-success">
                         GÜNCELLE </button>
                     <a href="<?php echo base_url("contact_settings/update"); ?>"></a>
                 </div>

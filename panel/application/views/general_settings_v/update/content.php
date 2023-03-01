@@ -95,7 +95,8 @@
                                                             (Örnek:xyonetim, ypanel,yadminx, Not: TR Karekter
                                                             Kullanmayınız.!)</b></label>
                                                     <input type="text" class="form-control form-control-sm"
-                                                        name="yonetim" id="yonetim" value="<?php echo $item->yonetim ?>">
+                                                        name="yonetim" id="yonetim"
+                                                        value="<?php echo $item->yonetim ?>">
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="maxlength-textarea">SEO Açıklama (Description)</label>
@@ -110,7 +111,7 @@
                                                         value="<?php echo $item->copyright ?>">
                                                 </div>
                                                 <div class="form-group">
-                                                    <button type="submit" class="btn btn-success btn-icon-text btn-sm">
+                                                    <button type="submit" class="btn rounded mw-md btn-success">
                                                         GÜNCELLE </button>
                                                     <a href="<?php echo base_url("general_settings/update"); ?>"></a>
                                                 </div>
