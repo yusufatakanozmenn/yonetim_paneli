@@ -3,8 +3,7 @@
         <div class="col-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <form class="forms-sample" method="post" action="../_class/yonetim_islem.php"
-                        enctype="multipart/form-data">
+                    <form class="forms-sample" method="post" action="" enctype="multipart/form-data">
                         <input id="id" name="id" type="hidden" value="1">
                         <div class="row">
                             <div class="col-md-6">
@@ -12,7 +11,7 @@
                                 <div id="dragula-event-left" class="py-2">
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <div class="media-body">
                                                         <i
@@ -25,11 +24,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan1" id="alan1" checked=""
-                                                            value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                    <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan1" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan1) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -37,7 +35,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -49,11 +47,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan2" id="alan2" checked=""
-                                                            value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan2" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan2) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -61,7 +58,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -73,10 +70,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan3" id="alan3" value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan3" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan3) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -85,7 +82,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -97,10 +94,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan5" id="alan5" value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan3" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan3) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -109,7 +106,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -121,18 +118,17 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan6" id="alan6" checked=""
-                                                            value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan4" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan4) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -144,17 +140,17 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan7" id="alan7" value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan5" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan5) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -166,10 +162,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan16" id="alan16" value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan6" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan6) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -177,7 +173,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -190,11 +186,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan10" id="alan10" checked=""
-                                                            value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan7" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan7) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -202,7 +197,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -214,10 +209,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan11" id="alan11" value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan8" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan8) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -226,7 +221,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -238,10 +233,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan12" id="alan12" value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan9" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan9) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -250,7 +245,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -263,10 +258,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan14" id="alan14" value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan10" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan10) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -274,7 +269,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -287,10 +282,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan15" id="alan15" value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan11" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan11) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -298,7 +293,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -310,10 +305,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan17" id="alan17" value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan12" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan12) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -321,7 +316,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -333,10 +328,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan4" id="alan4" value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan13" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan13) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -352,7 +347,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -365,10 +360,10 @@
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
                                                     <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan19" id="alan19" checked=""
-                                                            value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                    <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan14" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan14) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -377,7 +372,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -389,10 +384,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan20" id="alan20" value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan15" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan15) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -400,7 +395,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -412,11 +407,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan21" id="alan21" checked=""
-                                                            value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan16" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan16) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -424,7 +418,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -437,10 +431,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan22" id="alan22" value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan17" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan17) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -448,7 +442,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -460,10 +454,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan25" id="alan25" value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan18" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan18) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -471,7 +465,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -484,10 +478,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan13" id="alan13" value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan19" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan19) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -496,7 +490,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -508,11 +502,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan26" id="alan26" checked=""
-                                                            value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan20" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan20) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -520,7 +513,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -532,11 +525,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan27" id="alan27" checked=""
-                                                            value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan21" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan21) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -544,7 +536,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -556,11 +548,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan28" id="alan28" checked=""
-                                                            value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan22" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan22) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -568,7 +559,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -581,10 +572,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan29" id="alan29" value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan23" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan23) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -592,7 +583,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -605,11 +596,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan23" id="alan23" checked=""
-                                                            value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan24" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan24) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -617,7 +607,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -629,10 +619,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan24" id="alan24" value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan25" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan25) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
@@ -640,7 +630,7 @@
 
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -652,18 +642,17 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan30" id="alan30" checked=""
-                                                            value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan26" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan26) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -676,18 +665,17 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan8" id="alan8" checked=""
-                                                            value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan27" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan27) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="card rounded border mb-2">
                                         <div class="card-body p-3">
-                                            <div class="media row">
+                                            <div class="media row module">
                                                 <div class="col-lg-9 col-md-9 col-sm-6">
                                                     <i
                                                         class="mdi float-left mt-2 mdi-check icon-sm text-primary align-self-center mr-3"></i>
@@ -699,24 +687,17 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-3 col-md-3 col-sm-6 text-right">
-                                                    <label class="switch mb-0" style="margin-top: 1px;">
-                                                        <input type="checkbox" name="alan9" id="alan9" value="1">
-                                                        <span class="slider"></span>
-                                                    </label>
+                                                <input
+                                                        data-url="<?php echo base_url("module_settings/update_status/$item->id"); ?>"
+                                                        class="isActiveModule" id="switch-2-2" name="alan28" type="checkbox" data-switchery
+                                                        data-color="#10c469" <?php echo ($item->alan28) ? "checked" : ""; ?> />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <input type="hidden" name="url" value="/yonetim/modul-ayarlari">
-                                <button type="submit" name="modul_guncelle"
-                                    class="btn btn-success btn-icon-text btn-sm">
-                                    <i class="mdi mdi-spin mdi-loading"></i>
-                                    GÜNCELLE
-                                </button>
-                            </div>
+
                         </div>
                     </form>
                 </div>

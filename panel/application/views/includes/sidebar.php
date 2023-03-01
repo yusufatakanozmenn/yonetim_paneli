@@ -161,7 +161,7 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="paket.php">Paketler</a></li>
+                        <li><a href="<?php echo base_url("package")?>">Paketler</a></li>
                     </ul>
                 </li>
 
@@ -172,8 +172,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Sayfa Ekle</a></li>
-                        <li><a href="proje-kategori.php">Sayfa listesi</a></li>
+                        <li><a href="<?php echo base_url("page_management/add")?>">Sayfa Ekle</a></li>
+                        <li><a href="<?php echo base_url("page_management")?>">Sayfa listesi</a></li>
                     </ul>
                 </li>
 

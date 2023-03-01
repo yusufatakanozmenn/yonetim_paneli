@@ -62,4 +62,22 @@ $(document).ready(function () {
       $.post($data_url, { data: $data }, function (response) {})
     }
   })
+  // Modules list status change
+  $(".isActiveModule").change(function(){
+    let $data = $(this).prop("checked");
+    let $data_url = $(this).data("url");
+    let $which_module = $(this).attr("name");
+
+    if (typeof $data !== "undefined" && typeof $data_url !== "undefined"){
+      $.post($data_url, {data : $data , which_module : $which_module}, function(response){
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Veriler güncellendi!',
+          showConfirmButton: false,
+          timer: 500
+        });
+      })
+    }
+  })
 })
