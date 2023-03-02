@@ -3,11 +3,12 @@
         <div class="row">
             <div class="col-md-12">
                 <h4 class="m-b-lg">
-                   Sabit Linkler
+                    Sabit Linkler
                 </h4>
-
                 <div class="card">
-                    <form action="../_class/yonetim_islem.php" method="POST">
+                    <form class="forms-sample" method="post"
+                        action="<?php echo base_url("persistent_links/update/$item->id"); ?>"
+                        enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-12 grid-margin stretch-card">
                                 <div class="card">
@@ -33,7 +34,8 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="anaurl" value="anasayfa">
+                                                                    name="anaurl"
+                                                                    value="<?php echo $item->anaurl ?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -45,7 +47,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="urunkategoriurl" value="urun-kategori">
+                                                                    name="urunkategoriurl" value="<?php echo $item->urunkategoriurl?>" >
                                                             </div>
                                                         </div>
                                                     </div>
@@ -57,7 +59,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="urunlerurl" value="urunler">
+                                                                    name="urunlerurl" value="<?php echo $item->urunlerurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -69,7 +71,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="urundetayurl" value="urun">
+                                                                    name="urundetayurl" value="<?php echo $item->urundetayurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -81,7 +83,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="projekategoriurl" value="proje-kategori">
+                                                                    name="projekategoriurl" value="<?php echo $item->projekategoriurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -93,7 +95,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="projelerurl" value="projeler">
+                                                                    name="projelerurl" value="<?php echo $item->projelerurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -105,7 +107,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="projedetayurl" value="proje">
+                                                                    name="projedetayurl" value="<?php echo $item->projedetayurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -117,7 +119,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="refurl" value="referanslar">
+                                                                    name="refurl" value="<?php echo $item->refurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -129,7 +131,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="refdetayurl" value="referans">
+                                                                    name="refdetayurl" value="<?php echo $item->refdetayurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -141,7 +143,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="musteriurl" value="musteri-gorusleri">
+                                                                    name="musteriurl" value="<?php echo $item->musteriurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -153,7 +155,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="belgeurl" value="belgelerimiz">
+                                                                    name="belgeurl" value="<?php echo $item->belgeurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -165,7 +167,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="subeurl" value="bayilerimiz">
+                                                                    name="subeurl" value="<?php echo $item->subeurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -177,7 +179,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="iletisimurl" value="iletisim">
+                                                                    name="iletisimurl" value="<?php echo $item->iletisimurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -189,7 +191,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="ekiburl" value="ekibimiz">
+                                                                    name="ekiburl" value="<?php echo $item->ekiburl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -201,7 +203,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="ekibdetayurl" value="ekip">
+                                                                    name="ekibdetayurl" value="<?php echo $item->ekibdetayurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -213,7 +215,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="katalogurl" value="e-katalog">
+                                                                    name="katalogurl" value="<?php echo $item->katalogurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -225,7 +227,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="fotourl" value="foto-galeri">
+                                                                    name="fotourl" value="<?php echo $item->fotourl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -237,7 +239,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="fotodetayurl" value="foto">
+                                                                    name="fotodetayurl" value="<?php echo $item->fotodetayurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -249,7 +251,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="videourl" value="video-galeri">
+                                                                    name="videourl" value="<?php echo $item->videourl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -261,7 +263,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="videodetayurl" value="video">
+                                                                    name="videodetayurl" value="<?php echo $item->videodetayurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -273,7 +275,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="hizmeturl" value="hizmetlerimiz">
+                                                                    name="hizmeturl" value="<?php echo $item->hizmeturl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -285,7 +287,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="hizmetdetayurl" value="hizmetdetay">
+                                                                    name="hizmetdetayurl" value="<?php echo $item->hizmetdetayurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -297,7 +299,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="haberurl" value="blog">
+                                                                    name="haberurl" value="<?php echo $item->haberurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -309,7 +311,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="haberdetayurl" value="blogdetay">
+                                                                    name="haberdetayurl" value="<?php echo $item->haberdetayurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -321,7 +323,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="sayfaurl" value="icerik">
+                                                                    name="sayfaurl" value="<?php echo $item->sayfaurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -333,7 +335,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="ikurl" value="insan-kaynaklari">
+                                                                    name="ikurl" value="<?php echo $item->ikurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -345,7 +347,7 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="sssurl" value="sss">
+                                                                    name="sssurl" value="<?php echo $item->sssurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -357,18 +359,18 @@
                                                         <div class="card-body p-3">
                                                             <div class="form-group mb-0">
                                                                 <input type="text" class="form-control form-control-sm"
-                                                                    name="bankahesapurl" value="banka-hesaplari">
+                                                                    name="bankahesapurl" value="<?php echo $item->bankahesapurl?>">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                             </div>
-                                            <button type="submit" name="sabit_url"
-                                                class="btn btn-success btn-icon-text btn-sm">
-                                                <i class="mdi mdi-spin mdi-loading"></i>
-                                                GÜNCELLE
-                                            </button>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn rounded mw-md btn-success">
+                                                    GÜNCELLE </button>
+                                                <a href="<?php echo base_url("persistent_links/update"); ?>"></a>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
