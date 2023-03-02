@@ -77,7 +77,7 @@
                         <li><a href="<?php echo base_url("contact_settings")?>">İletişim Ayarları</a></li>
                         <li><a href="<?php echo base_url("social_media_settings")?>">Sosyal Medya Ayarları</a></li>
                         <li><a href="<?php echo base_url("module_settings")?>">Modül Ayarları</a></li>
-                        <li><a href="<?php echo base_url("homepage_module_settings")?>">Anasayfa Modül Sıralama</a></li>
+                        <!-- <li><a href="<?php echo base_url("homepage_module_settings")?>">Anasayfa Modül Sıralama</a></li> -->
                         <li><a href="<?php echo base_url("limit_settings")?>">Limit Ayarları</a></li>
                         <li><a href="<?php echo base_url("site_on_construction_settings")?>">Site Bakım Modu</a></li>
                         <li><a href="<?php echo base_url("mail_settings")?>">Mail Ayarları</a></li>
