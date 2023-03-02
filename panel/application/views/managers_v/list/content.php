@@ -79,12 +79,12 @@
                                                                 style="width: 209.8px;"
                                                                 aria-label="İsim: artan sütun sıralamasını aktifleştir">
                                                                 İsim</th>
-                                                            <th class="secili sorting" tabindex="0"
+                                                            <th class="secili sorting" name="kadi" tabindex="0"
                                                                 aria-controls="order-listingg" rowspan="1" colspan="1"
                                                                 style="width: 321.8px;"
                                                                 aria-label="Kullanıcı Adı: artan sütun sıralamasını aktifleştir">
                                                                 Kullanıcı Adı</th>
-                                                            <th class="secili sorting" tabindex="0"
+                                                            <th class="secili sorting" name="son_giris" tabindex="0"
                                                                 aria-controls="order-listingg" rowspan="1" colspan="1"
                                                                 style="width: 380.8px;"
                                                                 aria-label="Son Giriş: artan sütun sıralamasını aktifleştir">
@@ -94,29 +94,36 @@
                                                                 colspan="1" aria-label="İşlem">İşlem</th>
                                                         </tr>
                                                     </thead>
+
+                                                    <?php foreach ($items as $item) { ?>
                                                     <tbody>
                                                         <tr role="row" class="odd">
                                                             <td class="sorting_1">
                                                                 <div class="form-check mb-0 mt-0"><label
                                                                         class="form-check-label"><input type="checkbox"
-                                                                            name="id[]" value="6"
+                                                                            name="id" value="6"
                                                                             class="form-check-input"><i
                                                                             class="input-helper"></i></label></div>
                                                             </td>
-                                                            <td class=" secili">1</td>
-                                                            <td class=" secili">Alva Grup</td>
-                                                            <td class=" secili">master</td>
-                                                            <td class=" secili">02 Mart 2023, 10:52</td>
+                                                            <td name="id"><?php echo $item->id;?></td>
+                                                            <td name="isim"><?php echo $item->isim;?></td>
+                                                            <td name="kadi"><?php echo $item->kadi;?></td>
+                                                            <td name="son_giris"><?php echo $item->son_giris;?></td>
                                                             <td>
-                                                                <a href="" class="btn btn-sm btn-danger btn-outline"><i
+                                                                <a href="<?php echo base_url("managers/delete/$item->id");?>" class="btn btn-sm btn-danger btn-outline"><i
                                                                         class="fa fa-trash"></i>
                                                                 </a>
-                                                                <a href="" class="btn btn-sm btn-info btn-outline"><i
+                                                                <a href="<?php echo base_url("managers/update/$item->id");?>" class="btn btn-sm btn-info btn-outline"><i
                                                                         class="fa fa-pencil-square-o"></i>
                                                                 </a>
                                                             </td>
                                                         </tr>
                                                     </tbody>
+                                                    <?php } ?>
+
+
+
+
                                                 </table>
                                                 <div id="order-listingg_processing" class="dataTables_processing card"
                                                     style="display: none;">İşleniyor...</div>

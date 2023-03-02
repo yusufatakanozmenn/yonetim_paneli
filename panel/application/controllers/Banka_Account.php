@@ -5,14 +5,17 @@ class Banka_Account extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->viewFolder = "bank_account_v";
+        $this->viewFolder = "banka_account_v";
+        $this->load->model("banka_account_model");
         
     }
     public function index()
     {
         $viewData = new stdClass();        
         $viewData->viewFolder = $this->viewFolder;
+        $items = $this->banka_account_model->get_all();
         $viewData->subViewFolder = "list";
+        $viewData->items = $items;
        
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
