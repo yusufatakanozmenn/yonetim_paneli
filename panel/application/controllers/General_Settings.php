@@ -26,40 +26,43 @@ class General_Settings extends CI_Controller
 
     public function update($id)
     {
+        
 
         $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
         $config["upload_path"] = "uploads/$this->viewFolder/";
-
+      
         $this->load->library("upload", $config);
+
 
         $upload_logo = $this->upload->do_upload("firma_logo");
         $upload_footerlogo = $this->upload->do_upload("firma_footerlogo");
         $upload_favicon = $this->upload->do_upload("favicon");
 
+        $logo_name = basename($_FILES["firma_logo"]["name"]);
+        $footerlogo_name= basename($_FILES["firma_footerlogo"]["name"]);
+        $favicon_name = basename($_FILES["favicon"]["name"]);
+
         if ($upload_logo) {
-            $uploaded_logo = $this->upload->data("file_name");
             $this->General_Settings_model->update(
                 array("id" => 1),
                 array(
-                    "firma_logo" => $uploaded_logo,
+                    "firma_logo" => $logo_name,
                 )
             );
         }
         if ($upload_footerlogo) {
-            $uploaded_footerlogo = $this->upload->data("file_name");
             $this->General_Settings_model->update(
                 array("id" => 1),
                 array(
-                    "firma_footerlogo" => $uploaded_footerlogo,
+                    "firma_footerlogo" => $footerlogo_name,
                 )
             );
         }
         if ($upload_favicon) {
-            $uploaded_favicon = $this->upload->data("file_name");
             $this->General_Settings_model->update(
                 array("id" => 1),
                 array(
-                    "favicon" => $uploaded_favicon,
+                    "favicon" => $favicon_name,
                 )
             );
         }

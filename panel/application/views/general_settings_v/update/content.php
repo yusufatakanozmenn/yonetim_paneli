@@ -18,17 +18,8 @@
                                                         <div class="card-header">Logo Yükle</div>
                                                         <div class="card-body">
                                                             <div class="form-group">
-                                                                <div class="form-group">
-                                                                    <input type="text"
-                                                                        class="form-control file-upload-info form-control-sm"
-                                                                        disabled=""
-                                                                        placeholder="Resim dosyası seçiniz"></input>
-                                                                    <button
-                                                                        class="file-upload-browse btn rounded mw-md btn-success"
-                                                                        type="button">
-                                                                        Dosya Seç</button>
-                                                                    <a href=""></a>
-                                                                </div>
+                                                                <input type="file" name="firma_logo"
+                                                                    class="file-upload-default">
                                                                 <div class="input-group col-xs-12">
                                                                     <div class="col-md-6 col-sm-6">
                                                                         <a href="#" class="thumbnail white"><img
@@ -45,14 +36,8 @@
                                                         <div class="card-header">Mail Şablonu ve Footer logo yükle</div>
                                                         <div class="card-body">
                                                             <div class="form-group">
-                                                                <label for="firma_footerlogo">
-                                                                    <?php echo $item->firma_footerlogo; ?>
-                                                                </label>
-                                                                <button type="file" name="firma_footerlogo"
-                                                                    id="firma_footerlogo"
-                                                                    class="btn rounded mw-md btn-success">
-                                                                    Dosya Yukle </button>
-                                                                <a href=""></a>
+                                                                <input type="file" name="firma_footerlogo"
+                                                                    class="file-upload-default">
                                                                 <div class="input-group col-xs-12">
                                                                     <div class="col-md-6 col-sm-6">
                                                                         <a href="#" class="thumbnail white"><img
@@ -69,13 +54,8 @@
                                                         <div class="card-header">Favicon Yükle</div>
                                                         <div class="card-body">
                                                             <div class="form-group">
-                                                                <label for="favicon">
-                                                                    <?php echo $item->favicon; ?>
-                                                                </label>
-                                                                <button type="file" name="favicon" id="favicon"
-                                                                    class="btn rounded mw-md btn-success">
-                                                                    Dosya Yukle </button>
-                                                                <a href=""></a>
+                                                                <input type="file" name="favicon"
+                                                                    class="file-upload-default">
                                                                 <div class="input-group col-xs-12">
                                                                     <div class="col-md-6 col-sm-6">
                                                                         <a href="#" class="thumbnail white"><img
