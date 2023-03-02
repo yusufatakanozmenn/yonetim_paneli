@@ -62,12 +62,12 @@
 									
 									
 								">
-                                                                <input id="checkbox-4"
+                                                                <!-- <input id="checkbox-4"
                                                                     class="select-all checkbox-custom" type="checkbox"
                                                                     style="width:100px;">
                                                                 <label for="checkbox-4"
                                                                     class="checkbox-custom-label mb-0"><span
-                                                                        class="checktext"></span></label>
+                                                                        class="checktext"></span></label> -->
                                                             </th>
                                                             <th style="width: 29.8px;" class="secili sorting"
                                                                 tabindex="0" aria-controls="order-listingg" rowspan="1"
