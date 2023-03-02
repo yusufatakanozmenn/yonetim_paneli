@@ -257,8 +257,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Yeni Bayi & Şube Ekle</a></li>
-                        <li><a href="projeler.php">Bayi & Şube listesi</a></li>
+                        <li><a href="<?php echo base_url("dealer_branch/add_form")?>">Yeni Bayi & Şube Ekle</a></li>
+                        <li><a href="<?php echo base_url("dealer_branch")?>">Bayi & Şube listesi</a></li>
                     </ul>
                 </li>
 
