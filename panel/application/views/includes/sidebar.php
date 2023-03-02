@@ -280,8 +280,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Yeni Slider Ekle</a></li>
-                        <li><a href="projeler.php">Slider Listesi</a></li>
+                        <li><a href="<?php echo base_url("slider/add_form")?>">Yeni Slider Ekle</a></li>
+                        <li><a href="<?php echo base_url("slider")?>">Slider Listesi</a></li>
                     </ul>
                 </li>
 
