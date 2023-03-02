@@ -18,7 +18,7 @@
             if (empty($items)) { ?>
             <div class="alert alert-info text-center">
                 <p>Burada herhangi bir veri bulunmamaktadır. Eklemek için lütfen <a
-                        href="<?php echo base_url("product/new_form"); ?>">tıklayınız</a></p>
+                        href="<?php echo base_url("page_management/add"); ?>">tıklayınız</a></p>
             </div>
             <?php } else { ?>
 

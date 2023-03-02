@@ -184,34 +184,20 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="#">Yeni Hizmet Ekle</a></li>
-                        <li><a href="#"">Hizmet listesi </a></li>
+                        <li><a href="<?php echo base_url("ourservices/add_form")?>">Yeni Hizmet Ekle</a></li>
+                        <li><a href="<?php echo base_url("ourservices")?>">Hizmet listesi </a></li>
                     </ul>
                 </li>
-
-
-
+                
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
                         <i class="menu-icon zmdi zmdi-pin zmdi-hc-lg"></i>
-                        <span class="menu-text">Kutucuk Yönetimi</span>
+                        <span class="menu-text">S.S.S</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="yeni-urun-ekle.php">Yeni Kutucuk Ekle</a></li>
-                        <li><a href="urun-listesi.php">Kutucuk listesi </a></li>
-                    </ul>
-                </li>
-
-                <li class="has-submenu">
-                    <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-pin zmdi-hc-lg"></i>
-                        <span class="menu-text">Haber & Duyurular</span>
-                        <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="urun-listesi.php">Yeni Soru Ekle </a></li>
-                        <li><a href="yeni-urun-ekle.php">Sorular</a></li>
+                        <li><a href="<?php echo base_url("sss/add_form")?>">Yeni Soru Ekle </a></li>
+                        <li><a href="<?php echo base_url("sss")?>">Sorular</a></li>
                     </ul>
                 </li>
 
@@ -222,8 +208,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="urun-listesi.php">Yeni Referans Ekle </a></li>
-                        <li><a href="yeni-urun-ekle.php">Referans listesi</a></li>
+                    <li><a href="<?php echo base_url("reference/add_form")?>">Yeni Referans Ekle </a></li>
+                        <li><a href="<?php echo base_url("reference")?>">Referans listesi</a></li>
                     </ul>
                 </li>
 
@@ -235,8 +221,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="yeni-urun-ekle.php">Yeni Belge Ekle</a></li>
-                        <li><a href="urun-listesi.php">Belge listesi </a></li>
+                        <li><a href="<?php echo base_url("document/add_form")?>">Yeni Belge Ekle</a></li>
+                        <li><a href="<?php echo base_url("document")?>">Belge listesi </a></li>
                     </ul>
                 </li>
 
@@ -247,8 +233,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Yeni Katalog Ekle</a></li>
-                        <li><a href="proje-kategori.php">Katalog listesi </a></li>
+                        <li><a href="<?php echo base_url("e_catalog/add_form")?>">Yeni Katalog Ekle</a></li>
+                        <li><a href="<?php echo base_url("e_catalog")?>">Katalog listesi </a></li>
                     </ul>
                 </li>
 
@@ -259,8 +245,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Yeni Ekip Ekle</a></li>
-                        <li><a href="proje-kategori.php">Ekip listesi</a></li>
+                        <li><a href="<?php echo base_url("team/add_form")?>">Yeni Ekip Ekle</a></li>
+                        <li><a href="<?php echo base_url("team")?>">Ekip listesi</a></li>
                     </ul>
                 </li>
 
@@ -271,8 +257,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Yeni Bayi & Şube Ekle</a></li>
-                        <li><a href="projeler.php">Bayi & Şube listesi</a></li>
+                        <li><a href="<?php echo base_url("dealer_branch/add_form")?>">Yeni Bayi & Şube Ekle</a></li>
+                        <li><a href="<?php echo base_url("dealer_branch")?>">Bayi & Şube listesi</a></li>
                     </ul>
                 </li>
 
@@ -283,8 +269,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Yeni Blog Ekle</a></li>
-                        <li><a href="projeler.php">Blog Listesi</a></li>
+                        <li><a href="<?php echo base_url("blog/add_form")?>">Yeni Blog Ekle</a></li>
+                        <li><a href="<?php echo base_url("blog")?>">Blog Listesi</a></li>
                     </ul>
                 </li>
                 <li class="has-submenu">
@@ -294,8 +280,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Yeni Slider Ekle</a></li>
-                        <li><a href="projeler.php">Slider Listesi</a></li>
+                        <li><a href="<?php echo base_url("slider/add_form")?>">Yeni Slider Ekle</a></li>
+                        <li><a href="<?php echo base_url("slider")?>">Slider Listesi</a></li>
                     </ul>
                 </li>
 
@@ -306,8 +292,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Yeni Fotoğraf Ekle</a></li>
-                        <li><a href="projeler.php">Galeri Listesi</a></li>
+                        <li><a href="<?php echo base_url("photo_gallery/add_form")?>">Yeni Fotoğraf Ekle</a></li>
+                        <li><a href="<?php echo base_url("photo_gallery")?>">Galeri Listesi</a></li>
                     </ul>
                 </li>
 
@@ -318,8 +304,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Yeni Video Ekle</a></li>
-                        <li><a href="projeler.php">Video Listesi</a></li>
+                        <li><a href="<?php echo base_url("video_gallery/add_form")?>">Yeni Video Ekle</a></li>
+                        <li><a href="<?php echo base_url("video_gallery")?>">Video Listesi</a></li>
                     </ul>
                 </li>
 
@@ -330,8 +316,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Yeni Banka Hesabı Ekle</a></li>
-                        <li><a href="projeler.php">Hesap Listesi</a></li>
+                        <li><a href="<?php echo base_url("banka_account/add_form")?>">Yeni Banka Hesabı Ekle</a></li>
+                        <li><a href="<?php echo base_url("banka_account")?>">Hesap Listesi</a></li>
                     </ul>
                 </li>
 
@@ -342,14 +328,14 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Yeni Yönetici Ekle</a></li>
-                        <li><a href="projeler.php">Yönetici Listesi</a></li>
+                        <li><a href="<?php echo base_url("managers/add_form")?>">Yeni Yönetici Ekle</a></li>
+                        <li><a href="<?php echo base_url("managers")?>">Yönetici Listesi</a></li>
                     </ul>
                 </li>
 
 
                 <li>
-                    <a href="javascript:void(0)">
+                    <a href="<?php echo base_url("messages")?>">
                         <i class="menu-icon zmdi zmdi-language-javascript zmdi-hc-lg"></i>
                         <span class="menu-text">Mesajlar</span>
                     </a>

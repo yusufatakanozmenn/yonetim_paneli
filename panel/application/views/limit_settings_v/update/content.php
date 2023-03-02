@@ -7,8 +7,7 @@
             <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <form class="forms-sample" method="post" action="../_class/yonetim_islem.php"
-                            enctype="multipart/form-data" autocomplete="off">
+                        <form action="<?php echo base_url("limit_settings/update/$item->id"); ?>" method="post">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="table-responsive">
@@ -24,41 +23,13 @@
                                                             <div
                                                                 class="form-check form-check-success d-inline-block mr-2 mb-1 mt-1">
                                                                 <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_belge" value="12">
-                                                                    1
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2 mb-1 mt-1">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_belge" value="6">
-                                                                    2
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2 mb-1 mt-1">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_belge" value="4">
-                                                                    3
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2 mb-1 mt-1">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_belge" value="3">
-                                                                    4
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2 mb-1 mt-1">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_belge" value="2" checked="">
-                                                                    6
+                                                                    <select class="form-check-input" name="limit_belge">
+                                                                    <option style="display:none;" selected><?php echo $item->limit_belge?></option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="6">6</option>
                                                                     <i class="input-helper"></i></label>
                                                             </div>
                                                         </div>
@@ -69,46 +40,18 @@
                                                         <i class="ti-layout-column2 text-c-red"></i> Ekibimiz
                                                     </td>
                                                     <td class="text-right">
-                                                    <div class="form-radio"
+                                                        <div class="form-radio"
                                                             style="display: flex;    justify-content: center;">
                                                             <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
+                                                                class="form-check form-check-success d-inline-block mr-2 mb-1 mt-1">
                                                                 <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_ekip" value="12">
-                                                                    1
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_ekip" value="6">
-                                                                    2
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_ekip" value="4">
-                                                                    3
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_ekip" value="3" checked="">
-                                                                    4
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_ekip" value="2">
-                                                                    6
+                                                                    <select class="form-check-input" name="limit_ekip">
+                                                                    <option style="display:none;" selected><?php echo $item->limit_ekip?></option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="6">6</option>
                                                                     <i class="input-helper"></i></label>
                                                             </div>
                                                         </div>
@@ -119,46 +62,18 @@
                                                         <i class="ti-layout-column2 text-c-red"></i> Referanslar
                                                     </td>
                                                     <td class="text-right">
-                                                    <div class="form-radio"
+                                                        <div class="form-radio"
                                                             style="display: flex;    justify-content: center;">
                                                             <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
+                                                                class="form-check form-check-success d-inline-block mr-2 mb-1 mt-1">
                                                                 <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_referanslar" value="12">
-                                                                    1
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_referanslar" value="6">
-                                                                    2
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_referanslar" value="4">
-                                                                    3
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_referanslar" value="3" checked="">
-                                                                    4
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_referanslar" value="2">
-                                                                    6
+                                                                    <select class="form-check-input" name="limit_referanslar">
+                                                                    <option style="display:none;" selected><?php echo $item->limit_referanslar?></option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="6">6</option>
                                                                     <i class="input-helper"></i></label>
                                                             </div>
                                                         </div>
@@ -170,46 +85,18 @@
                                                         <i class="ti-layout-column2 text-c-red"></i> Ana Ürünler
                                                     </td>
                                                     <td class="text-right">
-                                                    <div class="form-radio"
+                                                        <div class="form-radio"
                                                             style="display: flex;    justify-content: center;">
                                                             <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
+                                                                class="form-check form-check-success d-inline-block mr-2 mb-1 mt-1">
                                                                 <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_urun" value="12">
-                                                                    1
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_urun" value="6" checked="">
-                                                                    2
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_urun" value="4">
-                                                                    3
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_urun" value="3">
-                                                                    4
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_urun" value="2">
-                                                                    6
+                                                                    <select class="form-check-input" name="limit_urun">
+                                                                    <option style="display:none;" selected><?php echo $item->limit_urun?></option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="6">6</option>
                                                                     <i class="input-helper"></i></label>
                                                             </div>
                                                         </div>
@@ -222,46 +109,18 @@
                                                         Ürünler
                                                     </td>
                                                     <td class="text-right">
-                                                    <div class="form-radio"
+                                                        <div class="form-radio"
                                                             style="display: flex;    justify-content: center;">
                                                             <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
+                                                                class="form-check form-check-success d-inline-block mr-2 mb-1 mt-1">
                                                                 <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_urunler" value="12">
-                                                                    1
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_urunler" value="6">
-                                                                    2
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_urunler" value="4" checked="">
-                                                                    3
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_urunler" value="3">
-                                                                    4
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_urunler" value="2">
-                                                                    6
+                                                                    <select class="form-check-input" name="limit_urunler">
+                                                                    <option style="display:none;" selected><?php echo $item->limit_urunler?></option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="6">6</option>
                                                                     <i class="input-helper"></i></label>
                                                             </div>
                                                         </div>
@@ -273,46 +132,18 @@
                                                         <i class="ti-layout-column2 text-c-red"></i> Proje Kategori
                                                     </td>
                                                     <td class="text-right">
-                                                    <div class="form-radio"
+                                                        <div class="form-radio"
                                                             style="display: flex;    justify-content: center;">
                                                             <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
+                                                                class="form-check form-check-success d-inline-block mr-2 mb-1 mt-1">
                                                                 <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_proje" value="12">
-                                                                    1
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_proje" value="6">
-                                                                    2
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_proje" value="4" checked="">
-                                                                    3
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_proje" value="3">
-                                                                    4
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_proje" value="2">
-                                                                    6
+                                                                    <select class="form-check-input" name="limit_projeler">
+                                                                    <option style="display:none;" selected><?php echo $item->limit_projeler?></option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="6">6</option>
                                                                     <i class="input-helper"></i></label>
                                                             </div>
                                                         </div>
@@ -324,46 +155,18 @@
                                                         <i class="ti-layout-column2 text-c-red"></i> Projeler
                                                     </td>
                                                     <td class="text-right">
-                                                    <div class="form-radio"
+                                                        <div class="form-radio"
                                                             style="display: flex;    justify-content: center;">
                                                             <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
+                                                                class="form-check form-check-success d-inline-block mr-2 mb-1 mt-1">
                                                                 <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_projeler" value="12">
-                                                                    1
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_projeler" value="6">
-                                                                    2
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_projeler" value="4" checked="">
-                                                                    3
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_projeler" value="3">
-                                                                    4
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_projeler" value="2">
-                                                                    6
+                                                                    <select class="form-check-input" name="limit_proje">
+                                                                    <option style="display:none;" selected><?php echo $item->limit_proje?></option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="6">6</option>
                                                                     <i class="input-helper"></i></label>
                                                             </div>
                                                         </div>
@@ -375,46 +178,18 @@
                                                         <i class="ti-layout-column2 text-c-red"></i> Foto Galeri
                                                     </td>
                                                     <td class="text-right">
-                                                    <div class="form-radio"
+                                                        <div class="form-radio"
                                                             style="display: flex;    justify-content: center;">
                                                             <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
+                                                                class="form-check form-check-success d-inline-block mr-2 mb-1 mt-1">
                                                                 <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_foto" value="12">
-                                                                    1
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_foto" value="6">
-                                                                    2
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_foto" value="4" checked="">
-                                                                    3
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_foto" value="3">
-                                                                    4
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_foto" value="2">
-                                                                    6
+                                                                    <select class="form-check-input" name="limit_foto">
+                                                                    <option style="display:none;" selected><?php echo $item->limit_foto?></option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="6">6</option>
                                                                     <i class="input-helper"></i></label>
                                                             </div>
                                                         </div>
@@ -425,46 +200,18 @@
                                                         <i class="ti-layout-column2 text-c-red"></i> Video Galeri
                                                     </td>
                                                     <td class="text-right">
-                                                    <div class="form-radio"
+                                                        <div class="form-radio"
                                                             style="display: flex;    justify-content: center;">
                                                             <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
+                                                                class="form-check form-check-success d-inline-block mr-2 mb-1 mt-1">
                                                                 <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_video" value="12">
-                                                                    1
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_video" value="6">
-                                                                    2
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_video" value="4" checked="">
-                                                                    3
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_video" value="3">
-                                                                    4
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_video" value="2">
-                                                                    6
+                                                                    <select class="form-check-input" name="limit_video">
+                                                                    <option style="display:none;" selected><?php echo $item->limit_video?></option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="6">6</option>
                                                                     <i class="input-helper"></i></label>
                                                             </div>
                                                         </div>
@@ -476,46 +223,18 @@
                                                         <i class="ti-layout-column2 text-c-red"></i> Haberler
                                                     </td>
                                                     <td class="text-right">
-                                                    <div class="form-radio"
+                                                        <div class="form-radio"
                                                             style="display: flex;    justify-content: center;">
                                                             <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
+                                                                class="form-check form-check-success d-inline-block mr-2 mb-1 mt-1">
                                                                 <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_haber" value="12">
-                                                                    1
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_haber" value="6">
-                                                                    2
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_haber" value="4" checked="">
-                                                                    3
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_haber" value="3">
-                                                                    4
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_haber" value="2">
-                                                                    6
+                                                                    <select class="form-check-input" name="limit_haber">
+                                                                    <option style="display:none;" selected><?php echo $item->limit_haber?></option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="6">6</option>
                                                                     <i class="input-helper"></i></label>
                                                             </div>
                                                         </div>
@@ -528,46 +247,18 @@
                                                         <i class="ti-layout-column2 text-c-red"></i> Müşteri Görüşleri
                                                     </td>
                                                     <td class="text-right">
-                                                    <div class="form-radio"
+                                                        <div class="form-radio"
                                                             style="display: flex;    justify-content: center;">
                                                             <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
+                                                                class="form-check form-check-success d-inline-block mr-2 mb-1 mt-1">
                                                                 <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_yorum" value="12">
-                                                                    1
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_yorum" value="6" checked="">
-                                                                    2
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_yorum" value="4">
-                                                                    3
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_yorum" value="3">
-                                                                    4
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_yorum" value="2">
-                                                                    6
+                                                                    <select class="form-check-input" name="limit_yorum">
+                                                                    <option style="display:none;" selected><?php echo $item->limit_yorum?></option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="6">6</option>
                                                                     <i class="input-helper"></i></label>
                                                             </div>
                                                         </div>
@@ -579,46 +270,18 @@
                                                         <i class="ti-layout-column2 text-c-red"></i> E-Katalog
                                                     </td>
                                                     <td class="text-right">
-                                                    <div class="form-radio"
+                                                        <div class="form-radio"
                                                             style="display: flex;    justify-content: center;">
                                                             <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
+                                                                class="form-check form-check-success d-inline-block mr-2 mb-1 mt-1">
                                                                 <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_katalog" value="12">
-                                                                    1
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_katalog" value="6">
-                                                                    2
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_katalog" value="4" checked="">
-                                                                    3
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_katalog" value="3">
-                                                                    4
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_katalog" value="2">
-                                                                    6
+                                                                    <select class="form-check-input" name="limit_katalog">
+                                                                    <option style="display:none;" selected><?php echo $item->limit_katalog?></option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="6">6</option>
                                                                     <i class="input-helper"></i></label>
                                                             </div>
                                                         </div>
@@ -630,46 +293,18 @@
                                                         <i class="ti-layout-column2 text-c-red"></i> Hizmetlerimiz
                                                     </td>
                                                     <td class="text-right">
-                                                    <div class="form-radio"
+                                                        <div class="form-radio"
                                                             style="display: flex;    justify-content: center;">
                                                             <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
+                                                                class="form-check form-check-success d-inline-block mr-2 mb-1 mt-1">
                                                                 <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_hizmetler" value="12">
-                                                                    1
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_hizmetler" value="6">
-                                                                    2
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_hizmetler" value="4" checked="">
-                                                                    3
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_hizmetler" value="3">
-                                                                    4
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_hizmetler" value="2">
-                                                                    6
+                                                                    <select class="form-check-input" name="limit_hizmetler">
+                                                                    <option style="display:none;" selected><?php echo $item->limit_hizmetler?></option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="6">6</option>
                                                                     <i class="input-helper"></i></label>
                                                             </div>
                                                         </div>
@@ -681,46 +316,18 @@
                                                         <i class="ti-layout-column2 text-c-red"></i> Banka Hesapları
                                                     </td>
                                                     <td class="text-right">
-                                                    <div class="form-radio"
+                                                        <div class="form-radio"
                                                             style="display: flex;    justify-content: center;">
                                                             <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
+                                                                class="form-check form-check-success d-inline-block mr-2 mb-1 mt-1">
                                                                 <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_bhesaplari" value="12">
-                                                                    1
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_bhesaplari" value="6" checked="">
-                                                                    2
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_bhesaplari" value="4">
-                                                                    3
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_bhesaplari" value="3">
-                                                                    4
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_bhesaplari" value="2">
-                                                                    6
+                                                                    <select class="form-check-input" name="limit_bhesaplari">
+                                                                    <option style="display:none;" selected><?php echo $item->limit_bhesaplari?></option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="6">6</option>
                                                                     <i class="input-helper"></i></label>
                                                             </div>
                                                         </div>
@@ -732,46 +339,18 @@
                                                         <i class="ti-layout-column2 text-c-red"></i> Bayilerimiz
                                                     </td>
                                                     <td class="text-right">
-                                                    <div class="form-radio"
+                                                        <div class="form-radio"
                                                             style="display: flex;    justify-content: center;">
                                                             <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
+                                                                class="form-check form-check-success d-inline-block mr-2 mb-1 mt-1">
                                                                 <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_bayiler" value="12">
-                                                                    1
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_bayiler" value="6" checked="">
-                                                                    2
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_bayiler" value="4">
-                                                                    3
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_bayiler" value="3">
-                                                                    4
-                                                                    <i class="input-helper"></i></label>
-                                                            </div>
-                                                            <div
-                                                                class="form-check form-check-success d-inline-block mr-2">
-                                                                <label class="form-check-label">
-                                                                    <input type="radio" class="form-check-input"
-                                                                        name="limit_bayiler" value="2">
-                                                                    6
+                                                                    <select class="form-check-input" name="limit_bayiler">
+                                                                    <option style="display:none;" selected><?php echo $item->limit_bayiler?></option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="6">6</option>
                                                                     <i class="input-helper"></i></label>
                                                             </div>
                                                         </div>
@@ -794,7 +373,7 @@
                                                     </td>
                                                     <td>
                                                         <input class="form-control" maxlength="3"
-                                                            name="limit_sayfabelgeler" type="number" value="6"
+                                                            name="limit_sayfabelgeler" type="number" value="<?php echo $item->limit_sayfabelgeler?>"
                                                             required="">
                                                     </td>
                                                 </tr>
@@ -805,7 +384,7 @@
                                                     </td>
                                                     <td>
                                                         <input class="form-control" name="limit_sayfaekibimiz"
-                                                            type="number" value="4" required="">
+                                                            type="number" value="<?php echo $item->limit_sayfaekibimiz?>" required="">
                                                     </td>
                                                 </tr>
                                                 <tr style="height: 68px;">
@@ -815,7 +394,7 @@
                                                     </td>
                                                     <td>
                                                         <input class="form-control" name="limit_sayfareferans"
-                                                            type="number" value="12" required="">
+                                                            type="number" value="<?php echo $item->limit_sayfareferans?>" required="">
                                                     </td>
                                                 </tr>
                                                 <tr style="height: 75px;">
@@ -825,7 +404,7 @@
                                                     </td>
                                                     <td>
                                                         <input class="form-control" name="limit_sayfaurun" type="number"
-                                                            value="12" required="">
+                                                            value="<?php echo $item->limit_sayfaurun?>" required="">
                                                     </td>
                                                 </tr>
                                                 <tr style="height: 75px;">
@@ -835,7 +414,7 @@
                                                     </td>
                                                     <td>
                                                         <input class="form-control" name="limit_sayfaurunler"
-                                                            type="number" value="12" required="">
+                                                            type="number" value="<?php echo $item->limit_sayfaurunler?>" required="">
                                                     </td>
                                                 </tr>
                                                 <tr style="height: 68px;">
@@ -845,7 +424,7 @@
                                                     </td>
                                                     <td>
                                                         <input class="form-control" name="limit_sayfaproje"
-                                                            type="number" value="12" required="">
+                                                            type="number" value="<?php echo $item->limit_sayfaproje?>" required="">
                                                     </td>
                                                 </tr>
                                                 <tr style="height: 68px;">
@@ -855,7 +434,7 @@
                                                     </td>
                                                     <td>
                                                         <input class="form-control" name="limit_sayfaprojeler"
-                                                            type="number" value="12" required="">
+                                                            type="number" value="<?php echo $item->limit_sayfaprojeler?>" required="">
                                                     </td>
                                                 </tr>
                                                 <tr style="height: 68px;">
@@ -865,7 +444,7 @@
                                                     </td>
                                                     <td>
                                                         <input class="form-control" name="limit_sayfafoto" type="number"
-                                                            value="12" required="">
+                                                            value="<?php echo $item->limit_sayfafoto?>" required="">
                                                     </td>
                                                 </tr>
                                                 <tr style="height: 68px;">
@@ -875,7 +454,7 @@
                                                     </td>
                                                     <td>
                                                         <input class="form-control" name="limit_sayfavideo"
-                                                            type="number" value="12" required="">
+                                                            type="number" value="<?php echo $item->limit_sayfavideo?>" required="">
                                                     </td>
                                                 </tr>
                                                 <tr style="height: 68px;">
@@ -885,7 +464,7 @@
                                                     </td>
                                                     <td>
                                                         <input class="form-control" name="limit_sayfahaber"
-                                                            type="number" value="3" required="">
+                                                            type="number" value="<?php echo $item->limit_sayfahaber?>" required="">
                                                     </td>
                                                 </tr>
                                                 <tr style="height: 68px;">
@@ -895,7 +474,7 @@
                                                     </td>
                                                     <td>
                                                         <input class="form-control" name="limit_sayfayorumlar"
-                                                            type="number" value="12" required="">
+                                                            type="number" value="<?php echo $item->limit_sayfayorumlar?>" required="">
                                                     </td>
                                                 </tr>
                                                 <tr style="height: 68px;">
@@ -905,7 +484,7 @@
                                                     </td>
                                                     <td>
                                                         <input class="form-control" name="limit_sayfakatalog"
-                                                            type="number" value="3" required="">
+                                                            type="number" value="<?php echo $item->limit_sayfakatalog?>" required="">
                                                     </td>
                                                 </tr>
                                                 <tr style="height: 68px;">
@@ -915,7 +494,7 @@
                                                     </td>
                                                     <td>
                                                         <input class="form-control" name="limit_sayfahizmetler"
-                                                            type="number" value="12" required="">
+                                                            type="number" value="<?php echo $item->limit_sayfahizmetler?>" required="">
                                                     </td>
                                                 </tr>
                                                 <tr style="height: 75px;">
@@ -925,7 +504,7 @@
                                                     </td>
                                                     <td>
                                                         <input class="form-control" name="limit_sayfabhesaplari"
-                                                            type="number" value="12" required="">
+                                                            type="number" value="<?php echo $item->limit_sayfabhesaplari?>" required="">
                                                     </td>
                                                 </tr>
                                             </tbody>
