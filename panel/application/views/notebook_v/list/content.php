@@ -2,8 +2,7 @@
     <div class="col-md-12">
         <h4 class="m-b-lg">
             Not Defteri
-        </h4>
-      
+        </h4>     
 
             <div class="wrap">
                 <section class="app-content">
