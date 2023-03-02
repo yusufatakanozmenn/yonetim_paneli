@@ -10,8 +10,10 @@ class Managers extends CI_Controller
     }
     public function index()
     {
-        $viewData = new stdClass();        
+        $viewData = new stdClass();
+        
         $viewData->viewFolder = $this->viewFolder;
+        
         $viewData->subViewFolder = "list";
        
 
