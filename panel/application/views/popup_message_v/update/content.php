@@ -19,7 +19,7 @@
                                             <div class="input-group col-xs-6">
                                                 <div class="col-md-4 col-sm-4">
                                                     <a href="#" class="thumbnail white">
-                                                        <img src="<?php echo base_url("assets"); ?>/assets/images/<?php echo $item->resim; ?>"
+                                                        <img src="<?php echo base_url('uploads'); ?>/popup_message_v/<?php echo $item->resim; ?>"
                                                             alt="">
                                                     </a>
                                                 </div>

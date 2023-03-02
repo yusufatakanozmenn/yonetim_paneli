@@ -5,8 +5,6 @@
                 <h4 class="m-b-lg">
                     Ürün Listesi
                 </h4>
-
-
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-12 grid-margin stretch-card">

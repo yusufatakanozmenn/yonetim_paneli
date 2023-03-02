@@ -33,6 +33,7 @@ class Site_On_Construction_Settings extends CI_Controller
             )
         );
         $validate = $this->form_validation->run();
+
         if ($validate) {
             $update = $this->Site_On_Construction_Settings_model->update(
                 array(
