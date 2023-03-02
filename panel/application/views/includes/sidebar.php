@@ -292,8 +292,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Yeni Fotoğraf Ekle</a></li>
-                        <li><a href="projeler.php">Galeri Listesi</a></li>
+                        <li><a href="<?php echo base_url("photo_gallery/add_form")?>">Yeni Fotoğraf Ekle</a></li>
+                        <li><a href="<?php echo base_url("photo_gallery")?>">Galeri Listesi</a></li>
                     </ul>
                 </li>
 
@@ -304,8 +304,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Yeni Video Ekle</a></li>
-                        <li><a href="projeler.php">Video Listesi</a></li>
+                        <li><a href="<?php echo base_url("video_gallery/add_form")?>">Yeni Video Ekle</a></li>
+                        <li><a href="<?php echo base_url("video_gallery")?>">Video Listesi</a></li>
                     </ul>
                 </li>
 

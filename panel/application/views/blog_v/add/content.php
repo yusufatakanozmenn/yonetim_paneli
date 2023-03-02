@@ -62,67 +62,52 @@
                             <div class="form-group row col-md-6">
                                 <label>Listeleme Görseli</label>
                                 <div class="form-group">
-                                                                <input type="file" name="firma_footerlogo"
-                                                                    class="file-upload-default">
-                                                                <div class="input-group col-xs-12">
-                                                                    <div class="col-md-6 col-sm-6">
-                                                                        <a href="#" class="thumbnail white"><img
-                                                                                src=""
-                                                                                alt="..."></a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                    
+                                    <input type="file" name="firma_footerlogo" class="file-upload-default">
+                                    <div class="input-group col-xs-12">
+                                        <div class="col-md-6 col-sm-6">
+                                            <a href="#" class="thumbnail white"><img src="" alt="..."></a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group mb-2">
-                                <label class="switch">
-                                    <input type="checkbox" name="durum" id="durum" value="1" checked="">
-                                    <span class="slider"></span>
-                                </label>
-                                <label class="d-inline-block" style="line-height: 34px;" for="durum">Durum</label>
-                            </div>
-                            <div class="form-group mb-2">
-                                <label class="switch">
-                                    <input type="checkbox" name="anasayfa" id="anasayfa" value="1" checked="">
-                                    <span class="slider"></span>
-                                </label>
 
-                                <label class="d-inline-block" style="line-height: 34px;" for="anasayfa">Anasayfa'da
-                                    Gözüksün mü ?</label>
-                            </div> <div class="wrap">
-                                <section class="app-content">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="widget">
-                                                <header class="widget-header">
-                                                    <h4 class="widget-title">İçerik</h4>
-                                                </header><!-- .widget-header -->
-                                                <hr class="widget-separator">
-                                                <div class="widget-body">
-                                                    <div class="m-0" data-plugin="summernote"
-                                                        data-options="{height: 250}">Hello Summernote</div>
-                                                </div><!-- .widget-body -->
-                                            </div><!-- .widget -->
-                                        </div><!-- END column -->
-                                    </div>
-                                </section><!-- #dash-content -->
-                            </div><!-- .wrap -->
-                            <div class="form-group">
-                                <label for="spot">Spot Metin <i class="icon-info text-info" data-toggle="popover"
-                                        data-content="Spot metin, içeriğinizi özetleyen bir ya da iki cümlelik metindir. 180 karakteri geçmemesi gerekmektedir.  Spot metinde de tamamen BÜYÜK harften kaçınmalı ve çift tırnak kullanılmamalıdır."
-                                        data-trigger="hover" data-original-title="Spot Metin"></i></label>
-                                <textarea id="spot" name="spot" class="form-control" rows="4"></textarea>
                             </div>
-                           
-                            <div class="card mb-4">
-                                <div class="card-body">
-                                    <div class="form-group">
-                                        <label for="maxlength-textarea">SEO Açıklama (Description)</label>
-                                        <textarea id="maxlength-textarea" name="description" class="form-control"
-                                            maxlength="260" rows="2"></textarea>
-                                    </div>
-                                    <!-- <div class="form-group mb-0">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="switch">
+                            <input type="checkbox" name="durum" id="durum" value="1" checked="">
+                            <span class="slider"></span>
+                        </label>
+                        <label class="d-inline-block" style="line-height: 34px;" for="durum">Durum</label>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label class="switch">
+                            <input type="checkbox" name="anasayfa" id="anasayfa" value="1" checked="">
+                            <span class="slider"></span>
+                        </label>
+
+                        <label class="d-inline-block" style="line-height: 34px;" for="anasayfa">Anasayfa'da
+                            Gözüksün mü ?</label>
+                            <div class="form-group" >
+                            <label for="spot">Açıklama  <i class="icon-info text-info" data-toggle="popover ;
+                                    data-content="Spot metin, içeriğinizi özetleyen bir ya da iki cümlelik metindir. 180 karakteri geçmemesi gerekmektedir.  Spot metinde de tamamen BÜYÜK harften kaçınmalı ve çift tırnak kullanılmamalıdır."
+                                    data-trigger="hover" data-original-title="Spot Metin"></i></label>
+                            <textarea id="spot" name="spot" class="form-control" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="spot">Spot Metin <i class="icon-info text-info" data-toggle="popover"
+                                    data-content="Spot metin, içeriğinizi özetleyen bir ya da iki cümlelik metindir. 180 karakteri geçmemesi gerekmektedir.  Spot metinde de tamamen BÜYÜK harften kaçınmalı ve çift tırnak kullanılmamalıdır."
+                                    data-trigger="hover" data-original-title="Spot Metin"></i></label>
+                            <textarea id="spot" name="spot" class="form-control" rows="4"></textarea>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="maxlength-textarea">SEO Açıklama (Description)</label>
+                                    <textarea id="maxlength-textarea" name="description" class="form-control"
+                                        maxlength="260" rows="2"></textarea>
+                                </div>
+                                <!-- <div class="form-group mb-0">
                                         <label for="tags">SEO Kelimeler (Keywords) <small>(Kelimenin sonuna virgül
                                                 koyunuz)</small></label>
                                         <input name="keywords" id="tags" value="" data-tagsinput-init="true"
@@ -133,8 +118,8 @@
                                                     style="color: rgb(102, 102, 102); width: 68px;"></div>
                                             <div class="tags_clear"></div>
                                         </div>-->
-                                </div>
                             </div>
+                        </div>
                     </div>
                     <button type="submit" name="haber_ekle" class="btn btn-primary btn-icon-text btn-sm">
                         <i class="mdi mdi-file-check btn-icon-prepend"></i>
