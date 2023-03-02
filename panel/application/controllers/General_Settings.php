@@ -26,8 +26,6 @@ class General_Settings extends CI_Controller
 
     public function update($id)
     {
-        
-
         $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
         $config["upload_path"] = "uploads/$this->viewFolder/";
       
