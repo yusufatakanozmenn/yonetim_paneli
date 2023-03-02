@@ -5,7 +5,7 @@
 		</h4>
 		<h4>
 
-			<a href="<?php echo base_url("product_add"); ?>" class="btn btn-outline btn-primary btn-sm">
+			<a href="<?php echo base_url("project/new_form"); ?>" class="btn btn-outline btn-primary btn-sm">
 				<i class="fa fa-plus-circle"></i> Yeni Ekle</a>
 			<!-- <a href="#" class="btn btn-outline btn-danger btn-sm">
 				<i class="fa fa-trash"></i> Tüm Veriyi Sil</a> -->
@@ -18,7 +18,7 @@
 			if (empty($items)) { ?>
 				<div class="alert alert-info text-center">
 					<p>Burada herhangi bir veri bulunmamaktadır. Eklemek için lütfen <a
-							href="<?php echo base_url("product/new_form"); ?>">tıklayınız</a></p>
+							href="<?php echo base_url("project/new_form"); ?>">tıklayınız</a></p>
 				</div>
 			<?php } else { ?>
 

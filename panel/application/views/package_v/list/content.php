@@ -18,7 +18,7 @@
             if (empty($items)) { ?>
             <div class="alert alert-info text-center">
                 <p>Burada herhangi bir veri bulunmamaktadır. Eklemek için lütfen <a
-                        href="<?php echo base_url("product/new_form"); ?>">tıklayınız</a></p>
+                        href="<?php echo base_url("package/new_form"); ?>">tıklayınız</a></p>
             </div>
             <?php } else { ?>
 
@@ -29,8 +29,7 @@
                             <input type="checkbox" id="checkbox-demo-1" />
                             <label for="checkbox-demo-1"></label>
                         </div>
-                    </th>
-                    <th>ID</th>
+                    </th>                    
                     <th>Başlık</th>
                     <th>Tutar</th>
                     <th>Periyod</th>                    
@@ -38,7 +37,7 @@
                     <th>İşlem</th>
                 </thead>
                 <tbody>
-                    <!-- <?php foreach ($items as $item) { ?>
+                    <?php foreach ($items as $item) { ?>
                         <tr>
                         <td>
                             <div class="checkbox checkbox-primary">
@@ -46,11 +45,9 @@
                                 <label for="checkbox-demo-1"></label>
                             </div>
                         </td>
-                        <td><?php echo $item->id;?></td>
                         <td><?php echo $item->adi;?></td>
-                        <td><?php echo $item->urun_kodu;?></td>
                         <td><?php echo $item->fiyat;?></td>
-                        <td><?php echo $item->aciklama;?></td>
+                        <td><?php echo $item->periyod;?></td>                        
                         <td>
                             <input
                             data-url="<?php echo base_url("product/update_status/$item->id");?>"
@@ -63,14 +60,14 @@
 
                         </td>
                         <td>
-                            <a href="<?php echo base_url("product/delete/$item->id");?>" class="btn btn-sm btn-danger btn-outline"><i class="fa fa-trash"></i>
+                            <a href="<?php echo base_url("package/delete/$item->id");?>" class="btn btn-sm btn-danger btn-outline"><i class="fa fa-trash"></i>
                                 Sil</a>
-                            <a href="<?php echo base_url("product/update_form/$item->id");?>" class="btn btn-sm btn-info btn-outline"><i class="fa fa-pencil-square-o"></i>
+                            <a href="" class="btn btn-sm btn-info btn-outline"><i class="fa fa-pencil-square-o"></i>
                                 Düzenle</a>
                         </td>
                     </tr>
                     <?php } ?>
- -->
+
 
                 </tbody>
 
