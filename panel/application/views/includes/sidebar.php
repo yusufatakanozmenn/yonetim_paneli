@@ -269,8 +269,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Yeni Blog Ekle</a></li>
-                        <li><a href="projeler.php">Blog Listesi</a></li>
+                        <li><a href="<?php echo base_url("blog/add_form")?>">Yeni Blog Ekle</a></li>
+                        <li><a href="<?php echo base_url("blog")?>">Blog Listesi</a></li>
                     </ul>
                 </li>
                 <li class="has-submenu">
