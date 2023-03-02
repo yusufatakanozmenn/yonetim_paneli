@@ -6,12 +6,13 @@
         <h4>
 
             <div class="card">
-                <form action="../_class/yonetim_islem.php" method="POST">
+                <form action="" method="POST">
                     <div class="card-body">
                         <div class="row mb-3">
                             <div class="col-lg-12">
                                 <div class="btn-toolbar" role="toolbar">
-                                    <a href="<?php echo base_url("photo_gallery/add_form"); ?>" class="btn btn-primary btn-sm mr-1">
+                                    <a href="<?php echo base_url("banka_account/add_form"); ?>"
+                                        class="btn btn-primary btn-sm mr-1">
                                         <i class="icon-plus font-12"></i> Yeni Hesap Ekle </a>
                                     <div class="dropdown mr-1">
                                         <button class="btn btn-primary btn-sm dropdown-toggle" type="button"
@@ -58,18 +59,13 @@
                                                                 colspan="1" aria-label="						
 									
 								">
-                                                                <input id="checkbox-4"
-                                                                    class="select-all checkbox-custom" type="checkbox"
-                                                                    style="width:100px;">
-                                                                <label for="checkbox-4"
-                                                                    class="checkbox-custom-label mb-0"><span
-                                                                        class="checktext"></span></label>
+                                                               
                                                             </th>
                                                             <th class="secili sorting" tabindex="0"
                                                                 aria-controls="order-listingg" rowspan="1" colspan="1"
                                                                 style="width: 528.8px;"
                                                                 aria-label="Başlık: artan sütun sıralamasını aktifleştir">
-                                                                Başlık</th>
+                                                                Banka Adı</th>
                                                             <th class="secili sorting" tabindex="0"
                                                                 aria-controls="order-listingg" rowspan="1" colspan="1"
                                                                 style="width: 388.8px;"
@@ -86,35 +82,27 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody id="sortable" class="ui-sortable">
-                                                       
+
                                                         <tr id="item-8" role="row" class="odd">
                                                             <td>
                                                                 <div class="form-check mb-0 mt-0"><label
                                                                         class="form-check-label"><input type="checkbox"
-                                                                            name="id[]" value="8"
+                                                                            name="id" value=""
                                                                             class="form-check-input"><i
                                                                             class="input-helper"></i></label></div>
                                                             </td>
-                                                            <td class=" secili"><a href="galeri-duzenle/8"
-                                                                    class="renk_baslik" title="Düzenle">2019 Yaz
-                                                                    Fuarımızdan Kareler</a></td>
-                                                            <td class=" secili"><a href="fotograflar/8"
-                                                                    class="btn btn-inverse-success btn-sm"
-                                                                    title="Fotoğrafları Gör"><i
-                                                                        class="fa fa-angle-right"></i> Fotoğrafları Gör
-                                                                    [3]</a></td>
-                                                            <td class=" secili text-center">
-                                                                <div class="badge badge-outline-danger">Pasif</div>
+                                                            <td class=" secili"></a></td>
+                                                            <td class=" secili"></td>
+                                                            <td class=" secili ">
+                                                                <div class="badge badge-outline-danger">
+                                                                </div>
                                                             </td>
                                                             <td>
-                                                                <a href=""
-                                                                    class="btn btn-sm btn-danger btn-outline"><i
-                                                                        class="fa fa-trash"></i>
-                                                                    </a>
-                                                                <a href=""
-                                                                    class="btn btn-sm btn-info btn-outline"><i
+                                                                <a href=""><i class="fa fa-trash"></i>
+                                                                </a>
+                                                                <a href="" class="btn btn-sm btn-info btn-outline"><i
                                                                         class="fa fa-pencil-square-o"></i>
-                                                                    </a>
+                                                                </a>
                                                             </td>
                                                         </tr>
                                                     </tbody>

@@ -5,7 +5,7 @@
         </h4>
         <div class="card">
             <div class="card-body">
-                <form class="forms-sample" method="post" action="../_class/yonetim_islem.php"
+                <form class="forms-sample" method="post" action="<?php echo base_url("managers/save"); ?>"
                     enctype="multipart/form-data">
                     <br>
                     <p style="font-style: italic;">Şifre Olarak: <b>123,1234, 123456, 1, admin, user, demo </b> gibi
@@ -33,7 +33,7 @@
                     </div>
                     <div class="form-group row col-md-6">
                         <label>Profil Resmi</label>
-                       
+
                         <div class="input-group col-xs-12">
                             <input type="file" name="firma_footerlogo" class="file-upload-default">
                             <div class="input-group col-xs-12">
@@ -43,12 +43,13 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" name="yonetici_kaydet" class="btn btn-primary btn-icon-text btn-sm">
-                        <i class="mdi mdi-file-check btn-icon-prepend"></i>
-                        KAYDET
-                    </button>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-icon-text btn-sm"> KAYDET </button>
+                        <a href="<?php echo base_url("managers"); ?>"></a>
                 </form>
             </div>
+            </form>
         </div>
     </div>
+</div>
 </div>
