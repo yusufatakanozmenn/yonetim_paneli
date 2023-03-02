@@ -316,8 +316,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Yeni Banka Hesabı Ekle</a></li>
-                        <li><a href="projeler.php">Hesap Listesi</a></li>
+                        <li><a href="<?php echo base_url("banka_account/add_form")?>">Yeni Banka Hesabı Ekle</a></li>
+                        <li><a href="<?php echo base_url("banka_account")?>">Hesap Listesi</a></li>
                     </ul>
                 </li>
 
@@ -328,8 +328,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="projeler.php">Yeni Yönetici Ekle</a></li>
-                        <li><a href="projeler.php">Yönetici Listesi</a></li>
+                        <li><a href="<?php echo base_url("managers/add_form")?>">Yeni Yönetici Ekle</a></li>
+                        <li><a href="<?php echo base_url("managers")?>">Yönetici Listesi</a></li>
                     </ul>
                 </li>
 
