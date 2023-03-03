@@ -3,9 +3,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="widget products-widget">
-                    <h4 class="widget-header">
-                        Arka Plan Resimleri
-                    </h4>
+                    <header class="widget-header">
+                        <h4 class="widget-title">Arka Plan Görselleri</h4>
+                    </header>
                     <hr class="widget-separator">
                     <div class="widget-body">
                         <form class="forms-sample" method="post" enctype="multipart/form-data"
@@ -47,8 +47,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6 col-md-3">
-                                    <div class="white_card ">
+                                <div class="col-md-3">
+                                    <div class="white_card card mb-3">
                                         <div class="thumbnail white">
                                             <a href="javascript:void(0)" class="product">
                                                 <img class="img-responsive"
@@ -64,8 +64,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6 col-md-3">
-                                    <div class="white_card ">
+                                <div class="col-md-3">
+                                    <div class="white_card card mb-3">
                                         <div class="thumbnail white">
                                             <a href="javascript:void(0)" class="product">
                                                 <img class="img-responsive"
@@ -81,8 +81,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6 col-md-3">
-                                    <div class="white_card ">
+                                <div class="col-md-3">
+                                    <div class="white_card card mb-3">
                                         <div class="thumbnail white">
                                             <a href="javascript:void(0)" class="product">
                                                 <img class="img-responsive"
@@ -99,8 +99,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6 col-md-3">
-                                    <div class="white_card ">
+                                <div class="col-md-3">
+                                    <div class="white_card card mb-3">
                                         <div class="thumbnail white">
                                             <a href="javascript:void(0)" class="product">
                                                 <img class="img-responsive"
@@ -116,8 +116,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6 col-md-3">
-                                    <div class="white_card ">
+                                <div class="col-md-3">
+                                    <div class="white_card card mb-3">
                                         <div class="thumbnail white">
                                             <a href="javascript:void(0)" class="product">
                                                 <img class="img-responsive"
@@ -133,8 +133,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6 col-md-3">
-                                    <div class="white_card ">
+                                <div class="col-md-3">
+                                    <div class="white_card card mb-3">
                                         <div class="thumbnail white">
                                             <a href="javascript:void(0)" class="product">
                                                 <img class="img-responsive"
@@ -162,5 +162,5 @@
                 </div>
             </div>
         </div>
-    </section><!-- #dash-content -->
+    </section>
 </div>

@@ -2,10 +2,12 @@
     <section class="app-content">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="m-b-lg">
-                    Sabit Linkler
-                </h4>
-                <div class="card">
+                <div class="widget products-widget">
+                    <header class="widget-header">
+                        <h4 class="widget-title">Sabit Linkler</h4>
+                    </header>
+                    <hr class="widget-separator">
+                    <div class="widget-body">
                     <form class="forms-sample" method="post"
                         action="<?php echo base_url("persistent_links/update/$item->id"); ?>"
                         enctype="multipart/form-data">
@@ -383,11 +385,12 @@
 
 
                     </form>
+                    </div>
                 </div>
 
 
 
-            </div><!-- END column -->
+            </div>
         </div>
-    </section><!-- #dash-content -->
+    </section>
 </div>

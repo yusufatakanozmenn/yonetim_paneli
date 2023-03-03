@@ -1,13 +1,13 @@
 <div class="wrap">
-    <section class="app-content">
-        <div class="row">
-            <div class="col-md-12">
-                <h4 class="m-b-lg">
-                    Bildirim Şablonları
-                </h4>
-
-                <div class="col-md-12">
-                    <div class="card-body">
+	<section class="app-content">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="widget products-widget">
+					<header class="widget-header">
+						<h4 class="widget-title">Bildirim Şablonları</h4>
+					</header>
+					<hr class="widget-separator">
+					<div class="widget-body">
                         <form class="forms-sample" method="post" action="">
                             <div class="card-body">
 
@@ -148,5 +148,5 @@
                 </div>
             </div>
         </div>
-    </section><!-- #dash-content -->
+    </section>
 </div>

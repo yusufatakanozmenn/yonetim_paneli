@@ -2,18 +2,18 @@
     <section class="app-content">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="m-b-lg">
-                    Yeni Dil Ekle
-                </h4>
-
-                <div class="card">
+                <div class="widget products-widget">
+                    <header class="widget-header">
+                        <h4 class="widget-title">Yeni Dil Ekle</h4>
+                    </header>
+                    <hr class="widget-separator">
+                    <div class="widget-body">
                     <form action="../_class/yonetim_islem.php" method="POST">
                         <div class="card-body">
                             <div class="alert alert-info" role="alert">
                                 <i class="mdi mdi-alert-circle"></i>
                                 Yeni dil ekleme/düzenleme ve multilanguage kullanımı nasıl olur detaylı bilgi almak için <a href="" data-toggle="modal" data-target="#exampleModal-2">lütfen tıklayınız.</a>
                             </div>
-                            <!-- Modal starts -->
                             <div class="modal fade" id="exampleModal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel-2" aria-hidden="true">
                                 <div class="modal-dialog modal-lg" role="document">
                                     <div class="modal-content">
@@ -327,9 +327,7 @@
                         </div>
                     </form>
                 </div>
-
-
-
-            </div><!-- END column -->
-        </div>        </section><!-- #dash-content -->
+            </div>
+        </div>
+    </section>
 </div>

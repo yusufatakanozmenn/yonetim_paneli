@@ -1,8 +1,14 @@
-<div class="row">
-    <div class="col-12 grid-margin stretch-card">
-        <div class="card">
-            <div class="card-body">
-                <form class="forms-sample" method="post"
+<div class="wrap">
+    <section class="app-content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="widget products-widget">
+                    <header class="widget-header">
+                        <h4 class="widget-title">SMS Ayarları</h4>
+                    </header>
+                    <hr class="widget-separator">
+                    <div class="widget-body">
+                        <form class="forms-sample" method="post"
                     action="<?php echo base_url("sms_settings/update/$item->id"); ?>" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="postUrl">Post URL</label>
@@ -36,8 +42,9 @@
                         <a href="<?php echo base_url("sms_settings/update"); ?>"></a>
                     </div>
                 </form>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
+    </section>
 </div>

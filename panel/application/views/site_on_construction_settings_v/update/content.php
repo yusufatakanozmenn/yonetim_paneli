@@ -2,14 +2,12 @@
     <section class="app-content">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="m-b-lg">
-                    Ürün Listesi
-                </h4>
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-12 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
+                <div class="widget products-widget">
+                    <header class="widget-header">
+                        <h4 class="widget-title">Site Bakım Modu</h4>
+                    </header>
+                    <hr class="widget-separator">
+                    <div class="widget-body">
                                     <form class="forms-sample" method="post"
                                         action="<?php echo base_url("site_on_construction_settings/update/$item->id"); ?>"
                                         enctype="multipart/form-data">
@@ -67,11 +65,9 @@
                                                 href="<?php echo base_url("site_on_construction_settings/update"); ?>"></a>
                                         </div>
                                     </form>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                </div><!-- END column -->
+                </div>
             </div>
-    </section><!-- #dash-content -->
+        </div>
+    </section>
 </div>

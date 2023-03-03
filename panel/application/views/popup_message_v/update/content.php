@@ -1,11 +1,13 @@
-<main id="app-main">
-    <div class="main-panel">
-        <div class="content-wrapper">
-        </div>
+<div class="wrap">
+    <section class="app-content">
         <div class="row">
-            <div class="col-12 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
+            <div class="col-md-12">
+                <div class="widget products-widget">
+                    <header class="widget-header">
+                        <h4 class="widget-title">Açılır Mesaj</h4>
+                    </header>
+                    <hr class="widget-separator">
+                    <div class="widget-body">
                         <form class="forms-sample" method="post"
                             action="<?php echo base_url("popup_message/update/$item->id"); ?>"
                             enctype="multipart/form-data">
@@ -61,6 +63,5 @@
                 </div>
             </div>
         </div>
-    </div>
-
-</main>
+    </section>
+</div>
