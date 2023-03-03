@@ -66,7 +66,7 @@
                 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-view-dashboard zmdi-hc-lg"></i>
+                        <i class="menu-icon fa fa-sitemap"></i>
                         <span class="menu-text">Site Yönetimi</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -89,7 +89,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-view-dashboard zmdi-hc-lg"></i>
+                        <i class="menu-icon fa fa-globe"></i>
                         <span class="menu-text">Dil Yönetimi</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -104,7 +104,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-puzzle-piece zmdi-hc-lg"></i>
+                        <i class="menu-icon glyphicon glyphicon-list"></i>
                         <span class="menu-text">Menu Yonetimi</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -117,7 +117,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-inbox zmdi-hc-lg"></i>
+                        <i class="menu-icon fa fa-users"></i>
                         <span class="menu-text">Müşteri Yönetimi</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -131,7 +131,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-view-dashboard zmdi-hc-lg"></i>
+                        <i class="menu-icon fa fa-ellipsis-h"></i>
                         <span class="menu-text">Ürün Yönetimi</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -144,7 +144,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-check zmdi-hc-lg"></i>
+                        <i class="menu-icon fa fa-pie-chart"></i>
                         <span class="menu-text">Proje Yönetimi</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -167,7 +167,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-check zmdi-hc-lg"></i>
+                        <i class="menu-icon zmdi zmdi-pages zmdi-hc-lg"></i>
                         <span class="menu-text">Sayfa Yönetimi</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -179,7 +179,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-pin zmdi-hc-lg"></i>
+                        <i class="menu-icon zmdi zmdi-playlist-plus zmdi-hc-lg"></i>
                         <span class="menu-text">Hizmetlerimiz</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -191,7 +191,7 @@
                 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-pin zmdi-hc-lg"></i>
+                        <i class="menu-icon fa fa-question"></i>
                         <span class="menu-text">S.S.S</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -203,7 +203,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-pin zmdi-hc-lg"></i>
+                        <i class="menu-icon fa fa-clone"></i>
                         <span class="menu-text">Referans Yönetimi</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -216,7 +216,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-pin zmdi-hc-lg"></i>
+                        <i class="menu-icon fa fa-folder"></i>
                         <span class="menu-text">Belge Yönetimi</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -228,7 +228,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-check zmdi-hc-lg"></i>
+                        <i class="menu-icon glyphicon glyphicon-link"></i>
                         <span class="menu-text">E-Katalog Yönetimi </span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -240,7 +240,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-check zmdi-hc-lg"></i>
+                        <i class="menu-icon zmdi zmdi-group-work"></i>
                         <span class="menu-text">Ekip Yönetimi</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -323,7 +323,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-check zmdi-hc-lg"></i>
+                        <i class="menu-icon zmdi zmdi-account-circle zmdi-hc-lg"></i>
                         <span class="menu-text">Yöneticiler</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>

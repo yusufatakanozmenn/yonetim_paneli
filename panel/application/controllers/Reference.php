@@ -6,13 +6,16 @@ class Reference extends CI_Controller
     {
         parent::__construct();
         $this->viewFolder = "reference_v";
+        $this->load->model("reference_model");
         
     }
     public function index()
     {
-        $viewData = new stdClass();        
+        $viewData = new stdClass();  
+        $items = $this->reference_model->get_all();
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "list";
+        $viewData->items = $items;
        
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
@@ -26,5 +29,7 @@ class Reference extends CI_Controller
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
+
+
    
 }
