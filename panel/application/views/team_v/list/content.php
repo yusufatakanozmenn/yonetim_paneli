@@ -49,6 +49,14 @@
                                         class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
                                         <div class="row">
                                             <div class="col-sm-12">
+                                                <?php
+			                                    if (empty($items)) { ?>
+                                                <div class="alert alert-info text-center">
+                                                    <p>Burada herhangi bir veri bulunmamaktadır. Eklemek için lütfen <a
+                                                            href="<?php echo base_url("project/new_form"); ?>">tıklayınız</a>
+                                                    </p>
+                                                </div>
+                                                <?php } else { ?>
                                                 <table id="order-listingg"
                                                     class="table table-bordered table-hover dataTable no-footer"
                                                     role="grid" aria-describedby="order-listingg_info"
@@ -56,17 +64,12 @@
                                                     <thead class="headbg">
                                                         <tr role="row">
                                                             <th class="noshort sorting_disabled" style="width: 38.8px;"
-                                                                 data-placement="top"
-                                                                title="Tümünü Seç" rowspan="1" colspan="1" aria-label="
+                                                                data-placement="top" title="Tümünü Seç" rowspan="1"
+                                                                colspan="1" aria-label="
 									
 									
 								">
-                                                                <input id="checkbox-4"
-                                                                    class="select-all checkbox-custom" type="checkbox"
-                                                                    style="width:100px;">
-                                                                <label for="checkbox-4"
-                                                                    class="checkbox-custom-label mb-0"><span
-                                                                        class="checktext"></span></label>
+
                                                             </th>
                                                             <th class="secili sorting" tabindex="0"
                                                                 aria-controls="order-listingg" rowspan="1" colspan="1"
@@ -84,7 +87,7 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody id="sortable" class="ui-sortable">
-                                                        <tr id="item-9" role="row" class="odd">
+                                                        <?php foreach ($items as $item) { ?>                                                       
 
                                                         <tr id="item-13" role="row" class="odd">
                                                             <td>
@@ -94,26 +97,24 @@
                                                                             class="form-check-input checkbox"><i
                                                                             class="input-helper"></i></label></div>
                                                             </td>
-                                                            <td class=" secili"><a href="belge-duzenle/13"
-                                                                    class="renk_baslik" title="Düzenle">ISO -
-                                                                    45001:2018</a></td>
+                                                            <td class=" secili"><?php echo $item->adi; ?></td>
                                                             <td class=" secili text-center">
-                                                                <div class="badge badge-outline-success">Aktif</div>
+                                                                <div class="badge badge-outline-success"><?php echo $item->durum; ?></div>
                                                             </td>
                                                             <td>
-                                                               
-                                                                <a href=""
-                                                                    class="btn btn-sm btn-info btn-outline"><i
+
+                                                                <a href="" class="btn btn-sm btn-info btn-outline"><i
                                                                         class="fa fa-pencil-square-o"></i>
-                                                                    </a> 
-                                                                    <a href=""
-                                                                    class="btn btn-sm btn-danger btn-outline"><i
+                                                                </a>
+                                                                <a href="" class="btn btn-sm btn-danger btn-outline"><i
                                                                         class="fa fa-trash"></i>
-                                                                    </a>
+                                                                </a>
                                                             </td>
                                                         </tr>
+                                                        <?php } ?>
                                                     </tbody>
                                                 </table>
+                                                <?php } ?>
                                                 <div id="order-listingg_processing" class="dataTables_processing card"
                                                     style="display: none;">İşleniyor...</div>
                                             </div>

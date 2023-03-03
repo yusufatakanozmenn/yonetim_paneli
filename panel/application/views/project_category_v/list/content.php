@@ -37,7 +37,7 @@
                     <th>İşlem</th>
                 </thead>
                 <tbody>
-                    <!-- <?php foreach ($items as $item) { ?>
+                    <?php foreach ($items as $item) { ?>
                     <tr>
                         <td>
                             <div class="checkbox checkbox-primary">
@@ -47,9 +47,8 @@
                         </td>
                         <td><?php echo $item->id;?></td>
                         <td><?php echo $item->adi;?></td>
-                        <td><?php echo $item->urun_kodu;?></td>
-                        <td><?php echo $item->fiyat;?></td>
-                        <td><?php echo $item->aciklama;?></td>
+                        <td><?php echo $item->durum;?></td>                    
+                        
                         <td>
                             <input data-url="<?php echo base_url("product/update_status/$item->id");?>" class="isActive"
                                 id="switch-2-2" type="checkbox" data-switchery data-color="#10c469"
@@ -65,7 +64,7 @@
                                 Düzenle</a>
                         </td>
                     </tr>
-                    <?php } ?> -->
+                    <?php } ?>
 
 
                 </tbody>

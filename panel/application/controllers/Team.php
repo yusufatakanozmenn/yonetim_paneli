@@ -6,11 +6,13 @@ class Team extends CI_Controller
     {
         parent::__construct();
         $this->viewFolder = "team_v";
+        $this->load->model("team_model");
         
     }
     public function index()
     {
         $viewData = new stdClass();        
+        
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "list";
        

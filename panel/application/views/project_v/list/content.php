@@ -31,11 +31,9 @@
 							</div>
 						</th>
 						<th>ID</th>
-						<th>Başlık</th>
-						<th>Ürün Kodu</th>
-						<th>Fiyat</th>
-						<th>Açıklama</th>
-						<th>Durumu</th>
+						<th>Katagori</th>
+						<th>Anasayfa</th>
+						<th>Durum</th>						
 						<th>İşlem</th>
 					</thead>
 					<tbody>
@@ -51,27 +49,24 @@
 									<?php echo $item->id; ?>
 								</td>
 								<td>
-									<?php echo $item->adi; ?>
+									<?php echo $item->kategori; ?>
 								</td>
 								<td>
-									<?php echo $item->urun_kodu; ?>
+									<?php echo $item->anasayfa; ?>
 								</td>
 								<td>
-									<?php echo $item->fiyat; ?>
+									<?php echo $item->durum; ?>
 								</td>
 								<td>
-									<?php echo $item->aciklama; ?>
-								</td>
-								<td>
-									<input data-url="<?php echo base_url("product/update_status/$item->id"); ?>" class="isActive"
+									<input data-url="<?php echo base_url("project/update_status/$item->id"); ?>" class="isActive"
 										id="switch-2-2" type="checkbox" data-switchery data-color="#10c469" <?php echo ($item->durum) ? "checked" : ""; ?> />
 
 								</td>
 								<td>
-									<a href="<?php echo base_url("product/delete/$item->id"); ?>"
+									<a href="<?php echo base_url("project/delete/$item->id"); ?>"
 										class="btn btn-sm btn-danger btn-outline"><i class="fa fa-trash"></i>
 										Sil</a>
-									<a href="<?php echo base_url("product/update_form/$item->id"); ?>"
+									<a href="<?php echo base_url("project/update_form/$item->id"); ?>"
 										class="btn btn-sm btn-info btn-outline"><i class="fa fa-pencil-square-o"></i>
 										Düzenle</a>
 								</td>
