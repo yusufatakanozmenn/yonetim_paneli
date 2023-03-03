@@ -6,13 +6,16 @@ class Slider extends CI_Controller
     {
         parent::__construct();
         $this->viewFolder = "slider_v";
+        $this->load->model("slider_model");
         
     }
     public function index()
     {
         $viewData = new stdClass();        
+        $items = $this->slider_model->get_all();
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "list";
+        $viewData->items = $items;
        
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
@@ -26,5 +29,18 @@ class Slider extends CI_Controller
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
-   
+    
+    public function delete($id){
+        $delete = $this->slider_model->delete(
+            array(
+                "id" => $id
+            )
+        );
+        if($delete){
+            redirect(base_url("slider"));
+        }
+        else{
+            echo "Silme İşlemi Gerçekleşmedi";
+        }
+    }
 }
