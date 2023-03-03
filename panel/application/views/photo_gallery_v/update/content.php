@@ -4,42 +4,39 @@
             <div class="col-md-12">
                 <div class="widget products-widget">
                     <header class="widget-header">
-                        <h4 class="widget-title">Yeni Video Ekle</h4>
+                        <h4 class="widget-title">Video Düzenle</h4>
                     </header>
                     <hr class="widget-separator">
                     <div class="widget-body">
                         <form class="forms-sample" method="post"
-                            action="<?php echo base_url("video/save"); ?>" enctype="multipart/form-data">
+                            action="<?php echo base_url("video/update/$item->id"); ?>" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="adi">Başlık</label>
                                 <input type="text" class="form-control form-control-sm" name="adi" id="adi"
-                                    value="">
+                                    value="<?php echo $item->adi ?>">
                             </div>
                             <input id="id" name="id" type="hidden" value="">
-                            <div class="form-group">
-                                <label for="sira">Sıra</label>
-                                <input type="number" class="form-control form-control-sm" min="0" name="sira" id="sira"
-                                    value="">
-                            </div>
-                            <div class="form-group">
-                                <label for="kod">Youtube Video Kodu</label>
-                                <input type="text" class="form-control form-control-sm" name="kod" id="kod"
-                                    value="">
-                            </div>
-
+                          
+                           
                             <div class="form-group">
                                 <label>Kapak Görseli</label>
 
                                 <div class="input-group col-xs-12">
-                                    <input type="file" name="resim" class="file-upload-default">
+                                    <input type="file" name="kapak" class="file-upload-default">
+                                    <div class="input-group col-md-6">
+                                        <div class="col-md-6 col-sm-6">
+                                            <a href="#" class="thumbnail white"><img
+                                                    src="<?php echo base_url('uploads'); ?>/video_v/<?php echo $item->kapak; ?>"
+                                                    alt="..."></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-
                             <div class="form-group">
                                 <label for="maxlength-textarea">İçerik</label>
-                                <textarea id="maxlength-textarea" name="aciklama" class="form-control"
-                                    maxlength="260" rows="4"></textarea>
+                                <textarea id="maxlength-textarea" name="description" class="form-control"
+                                    maxlength="260" rows="4"><?php echo $item->aciklama ?></textarea>
                             </div>
 
                             <div class="card mb-4">
@@ -49,16 +46,16 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="maxlength-textarea">Sayfa Açıklama (description)</label>
-                                        <textarea id="maxlength-textarea" name="description" class="form-control"
-                                            maxlength="260" rows="4"></textarea>
+                                        <textarea id="maxlength-textarea" name="seo" class="form-control"
+                                            maxlength="260" rows="4"><?php echo $item->description ?></textarea>
                                     </div>
 
                                 </div>
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn rounded mw-md btn-success">
-                                    KAYDET </button>
-                                <a href="<?php echo base_url("video/save"); ?>"></a>
+                                    GÜNCELLE </button>
+                                <a href="<?php echo base_url("video/update"); ?>"></a>
                             </div>
                         </form>
                     </div>

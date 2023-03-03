@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-12">
         <h4 class="m-b-lg">
-            Video Listesi
+            Video Galeri Listesi
         </h4>
         <h4>
 
@@ -30,7 +30,8 @@
                                 <label for="checkbox-demo-1"></label>
                             </div>
                         </th>
-                        <th>Adı</th>
+                        <th>Sıra</th>
+                        <th>Başlık</th>
                         <th>Durumu</th>
                         <th>İşlem</th>
                     </thead>
@@ -43,6 +44,8 @@
                                         <label for="checkbox-demo-1"></label>
                                     </div>
                                 </td>
+                                <td name="sira">
+                                    <?php echo $item->sira; ?>
                                 <td name="adi">
                                     <?php echo $item->adi; ?>
                                 </td>
