@@ -105,10 +105,10 @@
                                                         <td class=" secili text-center"><?php echo $item->adres;?></td>
                                                         <td>
 
-                                                            <a href="" class="btn btn-sm btn-info btn-outline"><i
+                                                            <a href="<?php echo base_url("dealer_branch/update/$item->id");?>" class="btn btn-sm btn-info btn-outline"><i
                                                                     class="fa fa-pencil-square-o"></i>
                                                             </a>
-                                                            <a href="" class="btn btn-sm btn-danger btn-outline"><i
+                                                            <a href="<?php echo base_url("dealer_branch/delete/$item->id");?>" class="btn btn-sm btn-danger btn-outline"><i
                                                                     class="fa fa-trash"></i>
                                                             </a>
                                                         </td>
