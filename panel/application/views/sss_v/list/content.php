@@ -46,27 +46,17 @@
                                 <div class="table-responsive">
                                     <div id="order-listingg_wrapper"
                                         class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
-                                        <div class="row">
-                                            <div class="col-sm-12 col-md-6">
-                                                <div class="dataTables_length" id="order-listingg_length"><label>Sayfada
-                                                        <select name="order-listingg_length"
-                                                            aria-controls="order-listingg"
-                                                            class="form-control form-control-sm">
-                                                            <option value="5">5</option>
-                                                            <option value="10">10</option>
-                                                            <option value="15">15</option>
-                                                            <option value="4">Tümü</option>
-                                                        </select> kayıt göster</label></div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-6">
-                                                <div id="order-listingg_filter" class="dataTables_filter">
-                                                    <label>Ara:<input type="search" class="form-control form-control-sm"
-                                                            placeholder="" aria-controls="order-listingg"></label>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                         <div class="row">
                                             <div class="col-sm-12">
+                                                <?php
+                                        if (empty($items)) { ?>
+                                                <div class="alert alert-info text-center">
+                                                    <p>Burada herhangi bir veri bulunmamaktadır. Eklemek için lütfen <a
+                                                            href="<?php echo base_url("product/new_form"); ?>">tıklayınız</a>
+                                                    </p>
+                                                </div>
+                                                <?php } else { ?>
                                                 <table id="order-listingg"
                                                     class="table table-bordered table-hover dataTable no-footer"
                                                     role="grid" aria-describedby="order-listingg_info"
@@ -79,23 +69,14 @@
 									
 									
 								">
-                                                                <input id="checkbox-4"
-                                                                    class="select-all checkbox-custom" type="checkbox"
-                                                                    style="width:100px;">
-                                                                <label for="checkbox-4"
-                                                                    class="checkbox-custom-label mb-0"><span
-                                                                        class="checktext"></span></label>
+
                                                             </th>
                                                             <th class="secili sorting" tabindex="0"
                                                                 aria-controls="order-listingg" rowspan="1" colspan="1"
                                                                 style="width: 847.8px;"
                                                                 aria-label="Başlık: artan sütun sıralamasını aktifleştir">
                                                                 Başlık</th>
-                                                            <th style="width: 69.8px;"
-                                                                class="secili text-center sorting" tabindex="0"
-                                                                aria-controls="order-listingg" rowspan="1" colspan="1"
-                                                                aria-label="Anasayfa: artan sütun sıralamasını aktifleştir">
-                                                                Anasayfa</th>
+                                                           
                                                             <th style="width: 69.8px;"
                                                                 class="secili text-center sorting" tabindex="0"
                                                                 aria-controls="order-listingg" rowspan="1" colspan="1"
@@ -106,6 +87,7 @@
                                                                 colspan="1" aria-label="İşlem">İşlem</th>
                                                         </tr>
                                                     </thead>
+                                                    <?php foreach ($items as $item) { ?>
                                                     <tbody id="sortable" class="ui-sortable">
                                                         <tr id="item-10" role="row" class="even highlight">
                                                             <td>
@@ -116,27 +98,24 @@
                                                                             class="input-helper"></i></label></div>
                                                             </td>
                                                             <td class=" secili"><a href="hizmet-duzenle/10"
-                                                                    class="renk_baslik" title="Düzenle">Dezenfektan
-                                                                    Ürünleri</a></td>
+                                                                    class="renk_baslik" title="Düzenle"><?php echo $item->adi;?></a></td>
+                                                            
                                                             <td class=" secili text-center">
-                                                                <div class="badge badge-outline-danger">Hayır</div>
-                                                            </td>
-                                                            <td class=" secili text-center">
-                                                                <div class="badge badge-outline-danger">Pasif</div>
+                                                                <div class=""><?php echo $item->durum;?></div>
                                                             </td>
                                                             <td>
-                                                                <a href="<?php echo base_url("product/delete/$item->id");?>"
-                                                                    class="btn btn-sm btn-danger btn-outline"><i
+                                                                <a href="<?php echo base_url("sss/delete/$item->id");?>" class="btn btn-sm btn-danger btn-outline"><i
                                                                         class="fa fa-trash"></i>
-                                                                    Sil</a>
-                                                                <a href="<?php echo base_url("product/update_form/$item->id");?>"
-                                                                    class="btn btn-sm btn-info btn-outline"><i
+                                                                </a>
+                                                                <a href="<?php echo base_url("sss/update/$item->id");?>" class="btn btn-sm btn-info btn-outline"><i
                                                                         class="fa fa-pencil-square-o"></i>
-                                                                    Düzenle</a>
+                                                                </a>
                                                             </td>
                                                         </tr>
+                                                        <?php } ?>
                                                     </tbody>
                                                 </table>
+                                                <?php } ?>
                                                 <div id="order-listingg_processing" class="dataTables_processing card"
                                                     style="display: none;">İşleniyor...</div>
                                             </div>
