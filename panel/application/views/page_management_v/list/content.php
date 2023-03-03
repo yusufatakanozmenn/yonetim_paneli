@@ -5,7 +5,7 @@
         </h4>
         <h4>
 
-            <a href="<?php echo base_url("page_management/add")?>" class="btn btn-outline btn-primary btn-sm">
+            <a href="<?php echo base_url("page_management/new_page")?>" class="btn btn-outline btn-primary btn-sm">
                 <i class="fa fa-plus-circle"></i> Yeni Ekle</a>
             <!-- <a href="#" class="btn btn-outline btn-danger btn-sm">
                 <i class="fa fa-trash"></i> Tüm Veriyi Sil</a> -->
@@ -38,7 +38,7 @@
                     <th>İşlem</th>
                 </thead>
                 <tbody>
-                    <!-- <?php foreach ($items as $item) { ?>
+                     <?php foreach ($items as $item) { ?>
                         <tr>
                         <td>
                             <div class="checkbox checkbox-primary">
@@ -48,12 +48,12 @@
                         </td>
                         <td><?php echo $item->id;?></td>
                         <td><?php echo $item->adi;?></td>
-                        <td><?php echo $item->urun_kodu;?></td>
-                        <td><?php echo $item->fiyat;?></td>
-                        <td><?php echo $item->aciklama;?></td>
+                        <td><?php echo $item->seo;?></td>
+                        <td><?php echo $item->anasayfa;?></td>
+                        <td><?php echo $item->durum;?></td>
                         <td>
                             <input
-                            data-url="<?php echo base_url("product/update_status/$item->id");?>"
+                            data-url="<?php echo base_url("page_managment/update_status/$item->id");?>"
                             class="isActive"
                             id="switch-2-2"
                             type="checkbox"
@@ -63,17 +63,14 @@
 
                         </td>
                         <td>
-                            <a href="<?php echo base_url("product/delete/$item->id");?>" class="btn btn-sm btn-danger btn-outline"><i class="fa fa-trash"></i>
-                                Sil</a>
-                            <a href="<?php echo base_url("product/update_form/$item->id");?>" class="btn btn-sm btn-info btn-outline"><i class="fa fa-pencil-square-o"></i>
-                                Düzenle</a>
+                            <a href="<?php echo base_url("page_management/delete/$item->id");?>" class="btn btn-sm btn-danger btn-outline"><i class="fa fa-trash"></i>
+                                </a>
+                            <a href="<?php echo base_url("page_management/update_form/$item->id");?>" class="btn btn-sm btn-info btn-outline"><i class="fa fa-pencil-square-o"></i>
+                                </a>
                         </td>
                     </tr>
                     <?php } ?>
- -->
-
                 </tbody>
-
             </table>
             <?php } ?>
 

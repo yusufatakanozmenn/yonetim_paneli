@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-12">
         <h4 class="m-b-lg">
-            Paket Ekle
+            Sayfa Ekle
         </h4>
         <div class="card">
             <div class="card-body">
