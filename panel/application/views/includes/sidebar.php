@@ -131,7 +131,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon fa fa-ellipsis-h"></i>
+                        <i class="menu-icon fa fa-shopping-basket"></i>
                         <span class="menu-text">Ürün Yönetimi</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -144,7 +144,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon fa fa-pie-chart"></i>
+                        <i class="menu-icon fa fa-building"></i>
                         <span class="menu-text">Proje Yönetimi</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -156,7 +156,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-storage zmdi-hc-lg"></i>
+                        <i class="menu-icon fa fa-gift "></i>
                         <span class="menu-text">Paket Yönetimi</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -203,7 +203,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon fa fa-clone"></i>
+                        <i class="menu-icon fa fa-certificate"></i>
                         <span class="menu-text">Referans Yönetimi</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -252,7 +252,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-check zmdi-hc-lg"></i>
+                        <i class="menu-icon fa fa-map-marker"></i>
                         <span class="menu-text">Bayi & Şube Yönetimi </span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -264,7 +264,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-check zmdi-hc-lg"></i>
+                        <i class="menu-icon fa fa-group"></i>
                         <span class="menu-text">Blog </span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -275,7 +275,7 @@
                 </li>
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-check zmdi-hc-lg"></i>
+                        <i class="menu-icon fa fa-sliders"></i>
                         <span class="menu-text">Slider </span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -287,7 +287,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-check zmdi-hc-lg"></i>
+                        <i class="menu-icon fa fa-photo"></i>
                         <span class="menu-text">Foto Galeri </span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -299,7 +299,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-check zmdi-hc-lg"></i>
+                        <i class="menu-icon fa fa-video-camera"></i>
                         <span class="menu-text">Video Galeri </span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
@@ -311,7 +311,7 @@
 
                 <li class="has-submenu">
                     <a href="javascript:void(0)" class="submenu-toggle">
-                        <i class="menu-icon zmdi zmdi-check zmdi-hc-lg"></i>
+                        <i class="menu-icon fa fa-bank "></i>
                         <span class="menu-text">Banka Hesapları</span>
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>

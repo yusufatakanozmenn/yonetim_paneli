@@ -53,6 +53,7 @@ $(document).ready(function () {
       })
     }
   })
+
   // Mail settings status change
   $(".formIsActive").change(function () {
     let $data = $(this).prop("checked");
@@ -62,6 +63,7 @@ $(document).ready(function () {
       $.post($data_url, { data: $data }, function (response) {})
     }
   })
+
   // Modules list status change
   $(".isActiveModule").change(function(){
     let $data = $(this).prop("checked");
@@ -80,4 +82,34 @@ $(document).ready(function () {
       })
     }
   })
-})
+
+  // Language list status change
+  $(".language_switch").change(function(){
+    let $data = $(this).prop("checked");
+    let $data_url = $(this).data("url");
+    let $language_module_switch = $(this).attr("name");
+
+    if (typeof $data !== "undefined" && typeof $data_url !== "undefined"){
+      $.post($data_url, {data : $data , language_module_switch : $language_module_switch}, function(response){
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Veriler güncellendi!',
+          showConfirmButton: false,
+          timer: 500
+        });
+      })
+    }
+  })
+
+  // Language keywords update  
+  $('.language_value').on('change',function(){
+    let $data_url = $(this).data("url");
+    let $text_key = $(this).attr("name");
+    let $text_value = $(this).attr("value");
+    let $changed_text_value = this.value;
+    $.post($data_url, {text_key : $text_key, changed_text_value : $changed_text_value, text_value : $text_value })
+    $(this).attr("value", $changed_text_value);
+  })
+
+});
