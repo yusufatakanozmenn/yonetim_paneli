@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-12">
         <h4 class="m-b-lg">
-            Yeni Referans Ekle
+            Yeni Belge Ekle
         </h4>
         <div class="row">
             <div class="col-12 grid-margin stretch-card">
