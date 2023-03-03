@@ -3099,3 +3099,12 @@ td.mail-right {
   align-items: center;
   background-color: #fff;
 }
+
+.flag-icon{
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: table-cell;
+  width: 1.33333333em;
+}
