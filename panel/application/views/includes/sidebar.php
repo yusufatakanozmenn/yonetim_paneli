@@ -221,7 +221,7 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="<?php echo base_url("document/add_form")?>">Yeni Belge Ekle</a></li>
+                        <li><a href="<?php echo base_url("document/new_form")?>">Yeni Belge Ekle</a></li>
                         <li><a href="<?php echo base_url("document")?>">Belge listesi </a></li>
                     </ul>
                 </li>
