@@ -6,12 +6,14 @@ class Product_Category extends CI_Controller {
 	{
 		parent::__construct();
 		$this->viewFolder = "product_category_v";
-        $this->load->model("product_model");
+        $this->load->model("product_category_model");
 	}
     public function index(){
         $viewData = new stdClass();
         /** Tablodaki tüm kayıtları getiriyoruz.. */
-        $items = $this->product_model->get_all();
+        $items = $this->product_category_model->get_all(
+            array()
+        );
         /** View'e gönderilecek değişkenler.. */
         $viewData->viewFolder=$this->viewFolder;
         $viewData->subViewFolder="list";
@@ -29,20 +31,20 @@ class Product_Category extends CI_Controller {
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
     }
-
-   public function save(){
-    $this->product_model->add(
-        array(
-            "title" => "Deneme Ürünü",
-            "description" => "Deneme Ürünü Açıklaması",
-            "url" => "deneme-urunu",
-            "rank" => 0,
-            "isActive" => 1,
-            "createdAt" => date("Y-m-d H:i:s")
-        )
+    public function delete($id){
+        $delete = $this->product_category_model->delete(
+            array(
+                "id" => $id
+            )
         );
-   }
-
+        if($delete){
+            redirect(base_url("product_category"));
+        }
+        else{
+            echo "Silme İşlemi Gerçekleşmedi";
+        }
+    }
+  
 
 
 }

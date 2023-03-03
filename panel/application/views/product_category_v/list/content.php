@@ -33,40 +33,44 @@
 
                     <th>Başlık</th>
                     <th>SEF Url</th>
+                    <th>Anasayfa</th>
                     <th>Durumu</th>
                     <th>İşlem</th>
                 </thead>
                 <tbody>
-                    <!-- <?php foreach ($items as $item) { ?>
+                    <?php foreach ($items as $item) { ?>
                     <tr>
                         <td>
                             <div class="checkbox checkbox-primary">
                                 <input type="checkbox" id="checkbox-demo-1" />
                                 <label for="checkbox-demo-1"></label>
                             </div>
-                        </td>
-                        <td><?php echo $item->id;?></td>
+                        </td>                        
                         <td><?php echo $item->adi;?></td>
-                        <td><?php echo $item->urun_kodu;?></td>
-                        <td><?php echo $item->fiyat;?></td>
-                        <td><?php echo $item->aciklama;?></td>
+                        <td><?php echo $item->seo;?></td>
+                        <td><?php echo $item->anasayfa;?></td>
+                        <td><?php echo $item->durum;?></td>                        
                         <td>
-                            <input data-url="<?php echo base_url("product/update_status/$item->id");?>" class="isActive"
-                                id="switch-2-2" type="checkbox" data-switchery data-color="#10c469"
-                                <?php echo ($item->durum) ? "checked" : "";  ?> />
+                            <input 
+                            data-url="<?php echo base_url("product_category/update_status/$item->id");?>"
+                            class="isActive"
+                            id="switch-2-2" 
+                            type="checkbox" 
+                            data-switchery 
+                            data-color="#10c469"
+                            <?php echo ($item->durum) ? "checked" : "";  ?>/>
 
                         </td>
                         <td>
-                            <a href="<?php echo base_url("product/delete/$item->id");?>"
+                            <a href="<?php echo base_url("product_category/delete/$item->id");?>"
                                 class="btn btn-sm btn-danger btn-outline"><i class="fa fa-trash"></i>
                                 Sil</a>
-                            <a href="<?php echo base_url("product/update_form/$item->id");?>"
+                            <a href="<?php echo base_url("product_category/update_form/$item->id");?>"
                                 class="btn btn-sm btn-info btn-outline"><i class="fa fa-pencil-square-o"></i>
                                 Düzenle</a>
                         </td>
                     </tr>
-                    <?php } ?> -->
-
+                    <?php } ?> 
 
                 </tbody>
 
