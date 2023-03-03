@@ -10,7 +10,7 @@
             <!-- <a href="#" class="btn btn-outline btn-danger btn-sm">
                 <i class="fa fa-trash"></i> Tüm Veriyi Sil</a> -->
         </h4>
-    </div><!-- END column -->
+    </div>
     <div class="col-md-12">
         <div class="widget p-lg">
 
