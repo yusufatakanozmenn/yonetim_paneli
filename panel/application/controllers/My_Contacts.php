@@ -14,7 +14,7 @@ class My_Contacts extends CI_Controller {
             array()
         );
         $viewData->viewFolder=$this->viewFolder;
-        $viewData->subViewFolder="update";
+        $viewData->subViewFolder="list";
         $viewData->items=$items;
 
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
@@ -27,7 +27,7 @@ class My_Contacts extends CI_Controller {
             )
         );
         $viewData->viewFolder=$this->viewFolder;
-        $viewData->subViewFolder="update";
+        $viewData->subViewFolder="list";
         $viewData->item=$item;
 
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
