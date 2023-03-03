@@ -47,6 +47,15 @@
 
                                             <div class="row">
                                                 <div class="col-sm-12">
+                                                    <?php
+                                                    if (empty($items)) { ?>
+                                                    <div class="alert alert-info text-center">
+                                                        <p>Burada herhangi bir veri bulunmamaktadır. Eklemek için lütfen
+                                                            <a
+                                                                href="<?php echo base_url("package/new_form"); ?>">tıklayınız</a>
+                                                        </p>
+                                                    </div>
+                                                    <?php } else { ?>
                                                     <table id="order-listingg"
                                                         class="table table-bordered table-hover dataTable no-footer"
                                                         role="grid" aria-describedby="order-listingg_info"
@@ -95,38 +104,39 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                            <?php foreach ($items as $item) { ?>
                                                             <tr role="row" class="odd">
-                                                                <td class="sorting_1">
-                                                                    <div class="form-check mb-0 mt-0"><label
-                                                                            class="form-check-label"><input
-                                                                                type="checkbox" name="id[]" value="1"
-                                                                                class="form-check-input"><i
-                                                                                class="input-helper"></i></label>
+                                                                <td>
+                                                                    <div class="checkbox checkbox-primary">
+                                                                        <input type="checkbox" id="checkbox-demo-1" />
+                                                                        <label for="checkbox-demo-1"></label>
                                                                     </div>
                                                                 </td>
-                                                                <td class=" secili">1</td>
-                                                                <td class=" secili">Alican SERÇE</td>
-                                                                <td class=" secili">alican@demo.com</td>
-                                                                <td class=" secili">05370000000</td>
-                                                                <td class=" secili">19 Eylül 2019, 12:57</td>
+                                                                <td class=" secili"><?php echo $item->id;?></td>
+                                                                <td class=" secili"><?php echo $item->adi;?></td>
+                                                                <td class=" secili"><?php echo $item->email;?></td>
+                                                                <td class=" secili"><?php echo $item->telefon;?></td>
+                                                                <td class=" secili"><?php echo $item->tarih;?></td>
                                                                 <td class=" secili text-center">
                                                                     <div class="badge badge-outline-success">
-                                                                        Aktif</div>
+                                                                        <?php echo $item->durum;?></div>
                                                                 </td>
                                                                 <td>
                                                                     <a href=""
                                                                         class="btn btn-sm btn-info btn-outline"><i
                                                                             class="fa fa-pencil-square-o"></i>
                                                                     </a>
-                                                                    <a href=""
+                                                                    <a href="<?php echo base_url("my_contacts/delete/$item->id");?>"
                                                                         class="btn btn-sm btn-danger btn-outline"><i
                                                                             class="fa fa-trash"></i>
                                                                     </a>
 
                                                                 </td>
                                                             </tr>
+                                                            <?php } ?>
                                                         </tbody>
                                                     </table>
+                                                    <?php } ?>
                                                     <div id="order-listingg_processing"
                                                         class="dataTables_processing card" style="display: none;">
                                                         İşleniyor...</div>
