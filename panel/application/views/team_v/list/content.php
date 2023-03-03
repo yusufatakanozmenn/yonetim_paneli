@@ -11,7 +11,7 @@
                         <div class="row mb-3">
                             <div class="col-lg-12">
                                 <div class="btn-toolbar" role="toolbar">
-                                    <a href="<?php echo base_url("e_catalog/add_form"); ?>"
+                                    <a href="<?php echo base_url("team/add_form"); ?>"
                                         class="btn btn-primary btn-sm mr-1">
                                         <i class="icon-plus font-12"></i> Yeni Belge Ekle
                                     </a>
@@ -53,7 +53,7 @@
 			                                    if (empty($items)) { ?>
                                                 <div class="alert alert-info text-center">
                                                     <p>Burada herhangi bir veri bulunmamaktadır. Eklemek için lütfen <a
-                                                            href="<?php echo base_url("project/new_form"); ?>">tıklayınız</a>
+                                                            href="<?php echo base_url("team/new_form"); ?>">tıklayınız</a>
                                                     </p>
                                                 </div>
                                                 <?php } else { ?>
@@ -65,11 +65,7 @@
                                                         <tr role="row">
                                                             <th class="noshort sorting_disabled" style="width: 38.8px;"
                                                                 data-placement="top" title="Tümünü Seç" rowspan="1"
-                                                                colspan="1" aria-label="
-									
-									
-								">
-
+                                                                colspan="1" aria-label="">
                                                             </th>
                                                             <th class="secili sorting" tabindex="0"
                                                                 aria-controls="order-listingg" rowspan="1" colspan="1"
@@ -87,7 +83,7 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody id="sortable" class="ui-sortable">
-                                                        <?php foreach ($items as $item) { ?>                                                       
+                                                        <?php foreach ($items as $item) { ?>
 
                                                         <tr id="item-13" role="row" class="odd">
                                                             <td>
@@ -98,15 +94,15 @@
                                                                             class="input-helper"></i></label></div>
                                                             </td>
                                                             <td class=" secili"><?php echo $item->adi; ?></td>
-                                                            <td class=" secili text-center">
-                                                                <div class="badge badge-outline-success"><?php echo $item->durum; ?></div>
+                                                            <td class=" secili">
+                                                                <?php echo $item->durum; ?>
                                                             </td>
                                                             <td>
 
-                                                                <a href="" class="btn btn-sm btn-info btn-outline"><i
+                                                                <a href=<?php echo base_url("team/update/$item->id"); ?>"" class="btn btn-sm btn-info btn-outline"><i
                                                                         class="fa fa-pencil-square-o"></i>
                                                                 </a>
-                                                                <a href="" class="btn btn-sm btn-danger btn-outline"><i
+                                                                <a href="<?php echo base_url("team/delete/$item->id"); ?>" class="btn btn-sm btn-danger btn-outline"><i
                                                                         class="fa fa-trash"></i>
                                                                 </a>
                                                             </td>
