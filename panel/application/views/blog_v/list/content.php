@@ -11,7 +11,8 @@
                         <div class="row mb-3">
                             <div class="col-lg-12">
                                 <div class="btn-toolbar" role="toolbar">
-                                    <a href="<?php echo base_url("blog/add_form")?>" class="btn btn-primary btn-sm mr-1">
+                                    <a href="<?php echo base_url("blog/add_form")?>"
+                                        class="btn btn-primary btn-sm mr-1">
                                         <i class="icon-plus font-12"></i> Yeni Blog Ekle </a>
                                     <div class="dropdown mr-1">
                                         <button class="btn btn-primary btn-sm dropdown-toggle" type="button"
@@ -45,7 +46,7 @@
                                 <div class="table-responsive">
                                     <div id="order-listingg_wrapper"
                                         class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
-                                       
+
                                         <div class="row">
                                             <div class="col-sm-12">
                                                 <table id="order-listingg"
@@ -55,17 +56,9 @@
                                                     <thead class="headbg">
                                                         <tr role="row">
                                                             <th class="noshort sorting_disabled" style="width: 38.8px;"
-                                                                data-toggle="tooltip" data-placement="top"
-                                                                title="Tümünü Seç" rowspan="1" colspan="1" aria-label="
-									
-									
-								">
-                                                                <input id="checkbox-4"
-                                                                    class="select-all checkbox-custom" type="checkbox"
-                                                                    style="width:100px;">
-                                                                <label for="checkbox-4"
-                                                                    class="checkbox-custom-label mb-0"><span
-                                                                        class="checktext"></span></label>
+                                                                 data-placement="top"
+                                                                title="Tümünü Seç" rowspan="1" colspan="1"
+                                                                aria-label="">                                                              
                                                             </th>
                                                             <th class="secili sorting" tabindex="0"
                                                                 aria-controls="order-listingg" rowspan="1" colspan="1"
@@ -93,10 +86,32 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody id="sortable" class="ui-sortable">
-                                                        <tr class="odd">
-                                                            <td valign="top" colspan="6" class="dataTables_empty">
-                                                                Tabloda herhangi bir veri mevcut değil</td>
+                                                        <?php foreach ($items as $item) { ?>
+                                                        <td>
+                                                            <div class="form-check mb-0 mt-0"><label
+                                                                    class="form-check-label"><input type="checkbox"
+                                                                        name="id[]" value="<?php echo $item->id;?>"
+                                                                        class="form-check-input checkbox"><i
+                                                                        class="input-helper"></i></label></div>
+                                                        </td>
+                                                        <td class=" secili"><?php echo $item->adi;?></td>
+                                                        <td class=" secili"><?php echo $item->resim;?></td>
+                                                        <td class=" secili"><?php echo $item->anasayfa;?></td>
+                                                        <td class=" secili"><?php echo $item->durum;?></td>
+
+                                                        <td>
+
+                                                            <a href="<?php echo base_url("blog/update/$item->id");?>"
+                                                                class="btn btn-sm btn-info btn-outline"><i
+                                                                    class="fa fa-pencil-square-o"></i>
+                                                            </a>
+                                                            <a href="<?php echo base_url("blog/delete/$item->id");?>"
+                                                                class="btn btn-sm btn-danger btn-outline"><i
+                                                                    class="fa fa-trash"></i>
+                                                            </a>
+                                                        </td>
                                                         </tr>
+                                                        <?php } ?>
                                                     </tbody>
                                                 </table>
                                                 <div id="order-listingg_processing" class="dataTables_processing card"
