@@ -172,7 +172,7 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="<?php echo base_url("page_management/add")?>">Sayfa Ekle</a></li>
+                        <li><a href="<?php echo base_url("page_management/new_page")?>">Sayfa Ekle</a></li>
                         <li><a href="<?php echo base_url("page_management")?>">Sayfa listesi</a></li>
                     </ul>
                 </li>
