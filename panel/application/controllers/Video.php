@@ -56,19 +56,7 @@ class Video extends CI_Controller
         $viewData->item = $item;
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
-    public function delete($id){
-        $delete = $this->video_model->delete(
-            array(
-                "id" => $id
-            )
-        );
-        if($delete){
-            redirect(base_url("video"));
-        }
-        else{
-            echo "Silme İşlemi Gerçekleşmedi";
-        }
-    }
+  
     public function update($id){
         $update = $this->video_model->update(
             array(
@@ -84,6 +72,36 @@ class Video extends CI_Controller
         }
         else{
             echo "Güncelleme İşlemi Gerçekleşmedi";
+        }
+    }
+    public function update_status($id){
+
+        if($id){
+            $isActive = ($this->input->post("data") === "true") ? 1 : 0 ;
+            $insert = $this->video_model->update(
+                array(
+                    "id" => $id
+                ),
+                array(
+                    "durum" => $isActive            
+                )
+                );
+        }else{
+            echo 'Hatali islem';
+        }
+    }
+
+    public function delete($id){
+        $delete = $this->video_model->delete(
+            array(
+                "id" => $id
+            )
+        );
+        if($delete){
+            redirect(base_url("video"));
+        }
+        else{
+            echo "Silme İşlemi Gerçekleşmedi";
         }
     }
 }
