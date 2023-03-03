@@ -316,8 +316,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="<?php echo base_url("banka_account/add_form")?>">Yeni Banka Hesabı Ekle</a></li>
-                        <li><a href="<?php echo base_url("banka_account")?>">Hesap Listesi</a></li>
+                        <li><a href="<?php echo base_url("bank_account/add_form")?>">Yeni Banka Hesabı Ekle</a></li>
+                        <li><a href="<?php echo base_url("bank_account")?>">Hesap Listesi</a></li>
                     </ul>
                 </li>
 

@@ -1,22 +1,23 @@
 <?php
-class Banka_Account extends CI_Controller
+class Bank_Account extends CI_Controller
 {   
     public $viewFolder = "";
     public function __construct()
     {
         parent::__construct();
-        $this->viewFolder = "banka_account_v";
-        $this->load->model("banka_account_model");
+        $this->viewFolder = "bank_account_v";
+        $this->load->model("bank_account_model");
         
     }
     public function index()
     {
-        $viewData = new stdClass();        
+        $viewData = new stdClass();    
         $viewData->viewFolder = $this->viewFolder;
-        $items = $this->banka_account_model->get_all();
+        $items = $this->bank_account_model->get_all();
         $viewData->subViewFolder = "list";
         $viewData->items = $items;
        
+         
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
@@ -28,6 +29,19 @@ class Banka_Account extends CI_Controller
        
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
+    }
+     public function delete($id){
+        $delete = $this->bank_account_model->delete(
+            array(
+                "id" => $id
+            )
+        );
+        if($delete){
+            redirect(base_url("package"));
+        }
+        else{
+            echo "Silme İşlemi Gerçekleşmedi";
+        }
     }
    
 }
