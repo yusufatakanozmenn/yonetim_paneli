@@ -6,12 +6,13 @@
         <h4>
 
             <div class="card">
-                <form action="../_class/yonetim_islem.php" method="POST">
+                <form action="" method="POST">
                     <div class="card-body">
                         <div class="row mb-3">
                             <div class="col-lg-12">
                                 <div class="btn-toolbar" role="toolbar">
-                                    <a href="<?php echo base_url("ourservices/add_form"); ?>" class="btn btn-primary btn-sm mr-1">
+                                    <a href="<?php echo base_url("ourservices/add_form"); ?>"
+                                        class="btn btn-primary btn-sm mr-1">
                                         <i class="icon-plus font-12"></i> Yeni Hizmet Ekle </a>
                                     <div class="dropdown mr-1">
                                         <button class="btn btn-primary btn-sm dropdown-toggle" type="button"
@@ -46,26 +47,15 @@
                                     <div id="order-listingg_wrapper"
                                         class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
                                         <div class="row">
-                                            <div class="col-sm-12 col-md-6">
-                                                <div class="dataTables_length" id="order-listingg_length"><label>Sayfada
-                                                        <select name="order-listingg_length"
-                                                            aria-controls="order-listingg"
-                                                            class="form-control form-control-sm">
-                                                            <option value="5">5</option>
-                                                            <option value="10">10</option>
-                                                            <option value="15">15</option>
-                                                            <option value="4">Tümü</option>
-                                                        </select> kayıt göster</label></div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-6">
-                                                <div id="order-listingg_filter" class="dataTables_filter">
-                                                    <label>Ara:<input type="search" class="form-control form-control-sm"
-                                                            placeholder="" aria-controls="order-listingg"></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
                                             <div class="col-sm-12">
+                                                <?php
+                                                if (empty($items)) { ?>
+                                                <div class="alert alert-info text-center">
+                                                    <p>Burada herhangi bir veri bulunmamaktadır. Eklemek için lütfen <a
+                                                            href="<?php echo base_url("ourservices/new_form"); ?>">tıklayınız</a>
+                                                    </p>
+                                                </div>
+                                                <?php } else { ?>
                                                 <table id="order-listingg"
                                                     class="table table-bordered table-hover dataTable no-footer"
                                                     role="grid" aria-describedby="order-listingg_info"
@@ -74,16 +64,7 @@
                                                         <tr role="row">
                                                             <th class="noshort sorting_disabled" style="width: 38.8px;"
                                                                 data-placement="top" title="Tümünü Seç" rowspan="1"
-                                                                colspan="1" aria-label="
-									
-									
-								">
-                                                                <input id="checkbox-4"
-                                                                    class="select-all checkbox-custom" type="checkbox"
-                                                                    style="width:100px;">
-                                                                <label for="checkbox-4"
-                                                                    class="checkbox-custom-label mb-0"><span
-                                                                        class="checktext"></span></label>
+                                                                colspan="1" aria-label="">
                                                             </th>
                                                             <th class="secili sorting" tabindex="0"
                                                                 aria-controls="order-listingg" rowspan="1" colspan="1"
@@ -105,8 +86,9 @@
                                                                 colspan="1" aria-label="İşlem">İşlem</th>
                                                         </tr>
                                                     </thead>
-                                                    <tbody id="sortable" class="ui-sortable">                                                        
-                                                        <tr id="item-10" role="row" class="even highlight">
+                                                    <tbody id="sortable" class="ui-sortable">
+                                                    <?php foreach ($items as $item) { ?>   
+                                                    <tr id="item-10" role="row" class="even highlight">
                                                             <td>
                                                                 <div class="form-check mb-0 mt-0"><label
                                                                         class="form-check-label"><input type="checkbox"
@@ -115,27 +97,27 @@
                                                                             class="input-helper"></i></label></div>
                                                             </td>
                                                             <td class=" secili"><a href="hizmet-duzenle/10"
-                                                                    class="renk_baslik" title="Düzenle">Dezenfektan
-                                                                    Ürünleri</a></td>
+                                                                    class="renk_baslik" title="Düzenle"><?php echo $item->adi;?></a></td>
+                                                            <td class=" secili"><a href="hizmet-duzenle/10"
+                                                                    class="renk_baslik" title="Düzenle"><?php echo $item->anasayfa;?></a></td>
                                                             <td class=" secili text-center">
-                                                                <div class="badge badge-outline-danger">Hayır</div>
-                                                            </td>
-                                                            <td class=" secili text-center">
-                                                                <div class="badge badge-outline-danger">Pasif</div>
-                                                            </td>
+                                                                <div class="badge badge-outline-danger"><?php echo $item->durum;?></div>
+                                                            </td>                                                           
                                                             <td>
-                                                                <a href=""
-                                                                    class="btn btn-sm btn-danger btn-outline"><i
+                                                                <a href="<?php echo base_url("ourservices/delete/$item->id");?>" class="btn btn-sm btn-danger btn-outline"><i
                                                                         class="fa fa-trash"></i>
-                                                                    </a>
-                                                                <a href=""
-                                                                    class="btn btn-sm btn-info btn-outline"><i
+                                                                </a>
+                                                                <a href="<?php echo base_url("ourservices/delete/$item->id");?>" class="btn btn-sm btn-info btn-outline"><i
                                                                         class="fa fa-pencil-square-o"></i>
-                                                                    </a>
+                                                                </a>
                                                             </td>
                                                         </tr>
+                                                        <?php } ?>
+
                                                     </tbody>
                                                 </table>
+                                                <?php } ?>
+
                                                 <div id="order-listingg_processing" class="dataTables_processing card"
                                                     style="display: none;">İşleniyor...</div>
                                             </div>
