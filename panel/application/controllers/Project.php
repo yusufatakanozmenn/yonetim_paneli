@@ -6,12 +6,12 @@ class Project extends CI_Controller {
 	{
 		parent::__construct();
 		$this->viewFolder = "project_v";
-        $this->load->model("product_model");
+        $this->load->model("project_model");
 	}
     public function index(){
         $viewData = new stdClass();
         /** Tablodaki tüm kayıtları getiriyoruz.. */
-        $items = $this->product_model->get_all();
+        $items = $this->project_model->get_all();
         /** View'e gönderilecek değişkenler.. */
         $viewData->viewFolder=$this->viewFolder;
         $viewData->subViewFolder="list";
@@ -30,11 +30,7 @@ class Project extends CI_Controller {
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
     }
 
-   public function save(){
-    $this->product_model->add(
-        array()
-        );
-   }
+  
 
 
 
