@@ -37,5 +37,6 @@
 
 
 <?php $this->load->view('includes/include_script'); ?>
+<link rel="stylesheet" href="<?php echo base_url("assets")?>/assets/css/style.css">
 </body>
 </html>
