@@ -5,7 +5,7 @@
         </h4>
         <h4>
 
-            <a href="<?php echo base_url("package_Add")?>" class="btn btn-outline btn-primary btn-sm">
+            <a href="<?php echo base_url("package/new_form")?>" class="btn btn-outline btn-primary btn-sm">
                 <i class="fa fa-plus-circle"></i> Yeni Ekle</a>
             <!-- <a href="#" class="btn btn-outline btn-danger btn-sm">
                 <i class="fa fa-trash"></i> Tüm Veriyi Sil</a> -->
@@ -24,12 +24,6 @@
 
             <table class="table table-hover table-striped">
                 <thead>
-                    <th>
-                        <div class="checkbox checkbox-primary">
-                            <input type="checkbox" id="checkbox-demo-1" />
-                            <label for="checkbox-demo-1"></label>
-                        </div>
-                    </th>                    
                     <th>Başlık</th>
                     <th>Tutar</th>
                     <th>Periyod</th>                    
@@ -39,41 +33,30 @@
                 <tbody>
                     <?php foreach ($items as $item) { ?>
                         <tr>
-                        <td>
-                            <div class="checkbox checkbox-primary">
-                                <input type="checkbox" id="checkbox-demo-1" />
-                                <label for="checkbox-demo-1"></label>
-                            </div>
-                        </td>
                         <td><?php echo $item->adi;?></td>
                         <td><?php echo $item->fiyat;?></td>
                         <td><?php echo $item->periyod;?></td>                        
                         <td>
                             <input
-                            data-url="<?php echo base_url("product/update_status/$item->id");?>"
+                            data-url="<?php echo base_url("package/update_status/$item->id");?>"
                             class="isActive"
                             id="switch-2-2"
                             type="checkbox"
                             data-switchery
                             data-color="#10c469"
                             <?php echo ($item->durum) ? "checked" : "";  ?>/>
-
                         </td>
                         <td>
                             <a href="<?php echo base_url("package/delete/$item->id");?>" class="btn btn-sm btn-danger btn-outline"><i class="fa fa-trash"></i>
                                 Sil</a>
-                            <a href="" class="btn btn-sm btn-info btn-outline"><i class="fa fa-pencil-square-o"></i>
+                            <a href="<?php echo base_url("package/update_form/$item->id");?>" class="btn btn-sm btn-info btn-outline"><i class="fa fa-pencil-square-o"></i>
                                 Düzenle</a>
                         </td>
                     </tr>
                     <?php } ?>
-
-
                 </tbody>
-
             </table>
             <?php } ?>
-
         </div><!-- .widget -->
     </div><!-- END column -->
 </div>
