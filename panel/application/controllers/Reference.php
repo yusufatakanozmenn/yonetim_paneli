@@ -49,7 +49,7 @@ class Reference extends CI_Controller
 
     public function update($id){
         
-        $insert = $this->reference->update(
+        $insert = $this->reference_model->update(
             array(
                 "id" => $id
             ),

@@ -1,152 +1,220 @@
 <div class="wrap">
-	<section class="app-content">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="widget products-widget">
-					<header class="widget-header">
-						<h4 class="widget-title">Bildirim Şablonları</h4>
-					</header>
-					<hr class="widget-separator">
-					<div class="widget-body">
-                        <form class="forms-sample" method="post" action="">
-                            <div class="card-body">
+    <section class="app-content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="widget products-widget">
+                    <header class="widget-header">
+                        <label class="badge badge-primary" style="font-size:1rem;">
+                            <?php echo $item->sablon_adi; ?>
+                        </label>
+                    </header>
+                    <hr class="widget-separator">
+                    <div class="widget-body">
+                        <form class="forms-sample" method="post"
+                            action="<?php echo base_url("popup_message/update/$item->id"); ?>"
+                            enctype="multipart/form-data">
 
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="table-responsive">
-                                            <div id="order-listingg_wrapper"
-                                                class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
-                                               
-                                                <div class="row">
-                                                    <div class="col-sm-12">
-                                                        <table id="order-listingg"
-                                                            class="table table-bordered table-hover dataTable no-footer"
-                                                            role="grid" aria-describedby="order-listingg_info"
-                                                            style="width: 991px;">
-                                                            <thead class="headbg">
-                                                                <tr role="row">
-                                                                    <th class="sorting_asc" rowspan="1" colspan="1"
-                                                                        style="width: 298.8px;" aria-label="Bildirim">
-                                                                        Bildirim</th>
-                                                                    <th class="sorting" tabindex="0"
-                                                                        aria-controls="order-listingg" rowspan="1"
-                                                                        colspan="1" style="width: 466.8px;"
-                                                                        aria-label="Konu: artan sütun sıralamasını aktifleştir">
-                                                                        Konu</th>
-                                                                    <th style="width: 114.6px;"
-                                                                        class="text-center sorting_disabled" rowspan="1"
-                                                                        colspan="1" aria-label="İşlem">İşlem</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr role="row" class="odd">
-                                                                    <td class="sorting_1">E-bülten</td>
-                                                                    <td>E-Bülten kaydınızı aldık.</td>
-                                                                    <td class=" text-center"><a href="sablon-duzenle/16"
-                                                                            class="btn btn-inverse-primary btn-sm"
-                                                                            title="Düzenle"><i
-                                                                                class="ti-pencil-alt"></i> Düzenle</a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr role="row" class="even">
-                                                                    <td class="sorting_1">İletişim Formu</td>
-                                                                    <td>Mesajınızı Aldık!</td>
-                                                                    <td class=" text-center"><a href="sablon-duzenle/1"
-                                                                            class="btn btn-inverse-primary btn-sm"
-                                                                            title="Düzenle"><i
-                                                                                class="ti-pencil-alt"></i> Düzenle</a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr role="row" class="odd">
-                                                                    <td class="sorting_1">İnsan Kaynakları</td>
-                                                                    <td>İnsan Kaynakları kaydınızı aldık.</td>
-                                                                    <td class=" text-center"><a href="sablon-duzenle/12"
-                                                                            class="btn btn-inverse-primary btn-sm"
-                                                                            title="Düzenle"><i
-                                                                                class="ti-pencil-alt"></i> Düzenle</a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr role="row" class="even">
-                                                                    <td class="sorting_1">Panel Şifre Sıfırlama</td>
-                                                                    <td>Yönetim Parola Hatırlatma</td>
-                                                                    <td class=" text-center"><a href="sablon-duzenle/10"
-                                                                            class="btn btn-inverse-primary btn-sm"
-                                                                            title="Düzenle"><i
-                                                                                class="ti-pencil-alt"></i> Düzenle</a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr role="row" class="odd">
-                                                                    <td class="sorting_1">Sipariş Formu</td>
-                                                                    <td>Sipariş Talebinizi Aldık!</td>
-                                                                    <td class=" text-center"><a href="sablon-duzenle/15"
-                                                                            class="btn btn-inverse-primary btn-sm"
-                                                                            title="Düzenle"><i
-                                                                                class="ti-pencil-alt"></i> Düzenle</a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr role="row" class="even">
-                                                                    <td class="sorting_1">Teklif Formu</td>
-                                                                    <td>Teklif Formu</td>
-                                                                    <td class=" text-center"><a href="sablon-duzenle/14"
-                                                                            class="btn btn-inverse-primary btn-sm"
-                                                                            title="Düzenle"><i
-                                                                                class="ti-pencil-alt"></i> Düzenle</a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr role="row" class="odd">
-                                                                    <td class="sorting_1">Yorum Gönder</td>
-                                                                    <td>Yorum Geldi!</td>
-                                                                    <td class=" text-center"><a href="sablon-duzenle/9"
-                                                                            class="btn btn-inverse-primary btn-sm"
-                                                                            title="Düzenle"><i
-                                                                                class="ti-pencil-alt"></i> Düzenle</a>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                        <div id="order-listingg_processing"
-                                                            class="dataTables_processing card" style="display: none;">
-                                                            İşleniyor...</div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-12 col-md-5">
-                                                        <div class="dataTables_info" id="order-listingg_info"
-                                                            role="status" aria-live="polite">7 kayıttan 1 - 7 arasındaki
-                                                            kayıtlar gösteriliyor</div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-md-7">
-                                                        <div class="dataTables_paginate paging_simple_numbers"
-                                                            id="order-listingg_paginate">
-                                                            <ul class="pagination">
-                                                                <li class="paginate_button page-item previous disabled"
-                                                                    id="order-listingg_previous"><a href="#"
-                                                                        aria-controls="order-listingg" data-dt-idx="0"
-                                                                        tabindex="0" class="page-link">Önceki</a></li>
-                                                                <li class="paginate_button page-item active"><a href="#"
-                                                                        aria-controls="order-listingg" data-dt-idx="1"
-                                                                        tabindex="0" class="page-link">1</a></li>
-                                                                <li class="paginate_button page-item next disabled"
-                                                                    id="order-listingg_next"><a href="#"
-                                                                        aria-controls="order-listingg" data-dt-idx="2"
-                                                                        tabindex="0" class="page-link">Sonraki</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="form-group">
+                                <div class="card-header">
+                                    Üye'ye E-Posta Gönder
+                                </div>
+                                <div class="form-group">
+                                    <input data-url="<?php echo base_url(""); ?>" class="isActiveModule" id="switch-2-2"
+                                        name="alan1" type="checkbox" data-switchery data-color="#10c469" <?php echo ($item->ubildirim) ? "checked" : ""; ?> />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="card-header">
+                                    Üye'ye SMS Gönder
+                                </div>
+                                <div class="form-group">
+                                    <input data-url="<?php echo base_url(""); ?>" class="isActiveModule" id="switch-2-2"
+                                        name="alan1" type="checkbox" data-switchery data-color="#10c469" <?php echo ($item->sbildirim) ? "checked" : ""; ?> />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="card-header">
+                                    Yönetici'ye E-Posta Gönder
+                                </div>
+                                <div class="form-group">
+                                    <input data-url="<?php echo base_url(""); ?>" class="isActiveModule" id="switch-2-2"
+                                        name="alan1" type="checkbox" data-switchery data-color="#10c469" <?php echo ($item->abildirim) ? "checked" : ""; ?> />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="card-header">
+                                    Yönetici'ye SMS Gönder
+                                </div>
+                                <div class="form-group">
+                                    <input data-url="<?php echo base_url(""); ?>" class="isActiveModule" id="switch-2-2"
+                                        name="alan1" type="checkbox" data-switchery data-color="#10c469" <?php echo ($item->ysbildirim) ? "checked" : ""; ?> />
                                 </div>
                             </div>
 
+                            <div class="form-group">
+                                <label for="adi">E-Posta Konu Başlığı (Üye)</label>
+                                <input type="text" class="form-control form-control-sm" name="adi" id="adi"
+                                    plaseholder="Mesaj Adı" value="<?php echo $item->konu; ?>">
+                            </div>
 
+                            <div class="form-group">
+                                <label for="url">E-Posta Konu Başlığı (Yönetici)</label>
+                                <input type="text" class="form-control form-control-sm" name="url" id="url"
+                                    placeholder="Mesaj Url" value="<?php echo $item->konu2; ?>">
+                            </div>
+                            <div class="form-group sbildirim">
+                                <label>Üye'ye Gidecek SMS</label>
+                                <textarea name="icerik" class="form-control" id="icerik4" rows="9"></textarea>
+                            </div>
 
-                            <!-- .row -->
+                            <div class="form-group ysbildirim">
+                                <label for="icerik4">Yönetici'ye Gidecek SMS</label>
+                                <textarea name="icerik4" class="form-control" id="icerik4" rows="9"></textarea>
+                            </div>
+                            <div class="alert alert-info" role="alert">
+                                Değişkenler : <strong>{email},{tarih},{ip},{logo},{domain}</strong> Belirtilen
+                                değişkenleri
+                                içerik'de istediğiniz yere koyarak bildirim'de belirtilmesini sağlayabilirsiniz.
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn rounded mw-md btn-success">
+                                    GÜNCELLE </button>
+                            </div>
+
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+</div>
+
+
+<div class="row">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <label class="badge badge-primary" style="font-size:15px;">E-bülten</label>
+                <form class="forms-sample" method="post" action="../_class/yonetim_islem.php"
+                    enctype="multipart/form-data">
+                    <input id="id" name="id" type="hidden" value="16">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Üye'ye E-Posta Gönder
+                        </div>
+                        <div class="card-body m-0 p-0 pl-3">
+                            <div class="form-check form-check-success d-inline-block mr-2">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="ubildirim" id="ubildirim_sec1"
+                                        value="1" checked="">
+                                    Aktif
+                                    <i class="input-helper"></i></label>
+                            </div>
+                            <div class="form-check form-check-danger d-inline-block mr-2">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="ubildirim" id="ubildirim_sec2"
+                                        value="0">
+                                    Pasif
+                                    <i class="input-helper"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Üye'ye SMS Gönder
+                        </div>
+                        <div class="card-body m-0 p-0 pl-3">
+                            <div class="form-check form-check-success d-inline-block mr-2">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="sbildirim" id="sbildirim_sec1"
+                                        value="1" checked="">
+                                    Aktif
+                                    <i class="input-helper"></i></label>
+                            </div>
+                            <div class="form-check form-check-danger d-inline-block mr-2">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="sbildirim" id="sbildirim_sec2"
+                                        value="0" checked="">
+                                    Pasif
+                                    <i class="input-helper"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Yönetici'ye E-Posta Gönder
+                        </div>
+                        <div class="card-body m-0 p-0 pl-3">
+                            <div class="form-check form-check-success d-inline-block mr-2">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="abildirim" id="abildirim_sec1"
+                                        value="1" checked="">
+                                    Aktif
+                                    <i class="input-helper"></i></label>
+                            </div>
+                            <div class="form-check form-check-danger d-inline-block mr-2">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="abildirim" id="abildirim_sec2"
+                                        value="0">
+                                    Pasif
+                                    <i class="input-helper"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            Yönetici'ye SMS Gönder
+                        </div>
+                        <div class="card-body m-0 p-0 pl-3">
+                            <div class="form-check form-check-success d-inline-block mr-2">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="ysbildirim" id="ysbildirim_sec1"
+                                        value="1" checked="">
+                                    Aktif
+                                    <i class="input-helper"></i></label>
+                            </div>
+                            <div class="form-check form-check-danger d-inline-block mr-2">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="ysbildirim" id="ysbildirim_sec2"
+                                        value="0" checked="">
+                                    Pasif
+                                    <i class="input-helper"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ubildirim">
+                        <label for="konu">E-Posta Konu Başlığı (Üye)</label>
+                        <input type="text" class="form-control form-control-sm" name="konu" id="konu"
+                            value="E-Bülten kaydınızı aldık.">
+                    </div>
+                    <div class="form-group abildirim">
+                        <label for="konu2">E-Posta Konu Başlığı (Yönetici)</label>
+                        <input type="text" class="form-control form-control-sm" name="konu2" id="konu2"
+                            value="Web sitenizden ebülten bildirimi var!">
+                    </div>
+
+
+                    <div class="form-group sbildirim" style="display: none;">
+                        <label for="icerik3">Üye'ye Gidecek SMS</label>
+                        <textarea name="icerik3" class="form-control" id="icerik3" rows="9"></textarea>
+                    </div>
+
+                    <div class="form-group ysbildirim" style="display: none;">
+                        <label for="icerik4">Yönetici'ye Gidecek SMS</label>
+                        <textarea name="icerik4" class="form-control" id="icerik4" rows="9"></textarea>
+                    </div>
+                    <div class="alert alert-info" role="alert">
+                        Değişkenler : <strong>{email},{tarih},{ip},{logo},{domain}</strong> Belirtilen değişkenleri
+                        içerik'de istediğiniz yere koyarak bildirim'de belirtilmesini sağlayabilirsiniz.
+                    </div>
+                    <button type="submit" name="sablon_guncelle" class="btn btn-success btn-icon-text btn-sm">
+                        <i class="mdi mdi-reload  btn-icon-prepend"></i>
+                        KAYDET
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
 </div>

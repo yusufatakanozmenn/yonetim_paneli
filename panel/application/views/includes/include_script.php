@@ -19,6 +19,8 @@
 <script src="<?php echo base_url("assets"); ?>/assets/js/fullcalendar.js"></script>
 <script src="<?php echo base_url("assets"); ?>/assets/js/custom.js"></script>
 <script src="<?php echo base_url("assets"); ?>/assets/js/file-upload.js"></script>
+<script src="<?php echo base_url("assets"); ?>/assets/js/tinymce.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.all.min.js"></script>
+
 
 
