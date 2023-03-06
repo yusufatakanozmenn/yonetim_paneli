@@ -5,7 +5,7 @@
         </h4>
         <div class="card">
             <div class="card-body">
-                <form class="forms-sample" method="post" action="../_class/yonetim_islem.php"
+                <form class="forms-sample" method="post" action="<?php echo base_url('ourservices/save')?>"
                     enctype="multipart/form-data">
                     <input id="id" name="id" type="hidden" value="">
                     <div class="form-group">
