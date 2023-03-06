@@ -5,17 +5,18 @@
         </h4>
         <div class="card">
             <div class="card-body">
-                <form class="forms-sample" method="post" action="<?php echo base_url("ourservices/save"); ?>"
-                    enctype="multipart/form-data">
-                    <input id="id" name="id" type="hidden" value="">
+                <form class="forms-sample" method="post"
+                    action="<?php echo base_url("ourservices/update/$item->id"); ?>" enctype="multipart/form-data">
+                    <input id="id" name="id" type="hidden" value="<?=$item->id?>">
                     <div class="form-group">
                         <label for="sira">Sıra</label>
                         <input type="number" class="form-control form-control-sm" min="0" name="sira" id="sira"
-                            value="">
+                            value="<?=$item->sira?>">
                     </div>
                     <div class="form-group">
                         <label for="adi">Başlık</label>
-                        <input type="text" class="form-control form-control-sm" name="adi" id="adi" value="">
+                        <input type="text" class="form-control form-control-sm" name="adi" id="adi"
+                            value="<?=$item->adi?>">
                     </div>
                     <!--
 					<div class="form-group">
@@ -37,14 +38,15 @@
 
                         <div class="form-group ">
                             <label class="switch">
-                                <input type="checkbox" name="durum" id="durum" value="1" checked="">
+                                <input type="checkbox" name="durum" id="durum" value="<?=$item->durum?>" checked="">
                                 <span class="slider"></span>
                             </label>
                             <label class="d-inline-block" style="line-height: 34px;" for="durum">Durum</label>
                         </div>
                         <div class="form-group ">
                             <label class="switch">
-                                <input type="checkbox" name="anasayfa" id="anasayfa" value="1" checked="">
+                                <input type="checkbox" name="anasayfa" id="anasayfa" value="<?=$item->anasayfa?>"
+                                    checked="">
                                 <span class="slider"></span>
                             </label>
 
@@ -78,19 +80,20 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="maxlength-textarea">Sayfa Açıklama (description)</label>
-                                <textarea id="maxlength-textarea" name="aciklama" class="form-control"
-                                    maxlength="260" rows="4"></textarea>
+                                <textarea id="maxlength-textarea" name="aciklama" value="<?=$item->aciklama?>" class="form-control" maxlength="260"
+                                    rows="4"></textarea>
                             </div>
 
                         </div>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-success btn-icon-text btn-sm"> GÖNDER </button>
+                        <button type="submit" class="btn btn-success btn-icon-text btn-sm"> Güncelle </button>
                         <a href="<?php echo base_url("ourservices"); ?>"></a>
-                    </div>
                 </form>
             </div>
+            </form>
         </div>
-
     </div>
+
+</div>
 </div>

@@ -29,6 +29,66 @@ class Slider extends CI_Controller
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
+    public function save()
+    {
+        $insert = $this->slider_model->add(
+            array(
+                "sira" => $this->input->post("sira"),
+                "adi" => $this->input->post("adi"),
+                "url" => $this->input->post("url"),
+                "sekme"=> $this->input->post("sekme"),                
+                "durum" => $this->input->post("durum"),
+                "aciklama" => $this->input->post("aciklama"),
+                "video" => $this->input->post("video"),
+                "tarih" => date("Y-m-d H:i:s"),
+                
+            )
+        );
+        if($insert){
+            redirect(base_url("slider"));
+
+        }
+        else{
+            echo "Kayıt Eklenemedi";
+        }
+    }
+    public function update_form($id){
+        $viewData = new stdClass();
+        $item = $this->slider_model->get(
+            array(
+                "id" => $id
+            )
+        );
+        $viewData->viewFolder = $this->viewFolder;
+        $viewData->subViewFolder = "update";
+        $viewData->item = $item;
+        $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
+    }
+    public function update($id){
+        $update = $this->slider_model->update(
+            array(
+                "id" => $id
+            ),
+            array(
+                "sira" => $this->input->post("sira"),
+                "adi" => $this->input->post("adi"),
+                "url" => $this->input->post("url"),
+                "sekme"=> $this->input->post("sekme"),                
+                "durum" => $this->input->post("durum"),
+                "aciklama" => $this->input->post("aciklama"),
+                "video" => $this->input->post("video"),
+                "tarih" => date("Y-m-d H:i:s"),
+            )
+        );
+        if($update){
+            redirect(base_url("slider"));
+        }
+        else{
+            echo "Güncelleme İşlemi Gerçekleşmedi";
+        }
+    }
+
+
     public function update_status($id){
 
         if($id){
