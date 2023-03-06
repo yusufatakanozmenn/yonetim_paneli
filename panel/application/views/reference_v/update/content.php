@@ -14,17 +14,17 @@
                                     <form class="forms-sample" method="post"
                                         action="<?php echo base_url("reference/update/$item->id"); ?>"
                                         enctype="multipart/form-data">
-                                        <input id="id" name="id" type="hidden" value="">
+                                        <input id="id" name="id" type="hidden" value="<?=$item->id?>">
 
                                         <div class="form-group">
                                             <label for="adi">Başlık</label>
                                             <input type="text" class="form-control form-control-sm" name="adi" id="adi"
-                                                value="">
+                                                value="<?=$item->adi?>">
                                         </div>
                                         <div class="form-group">
                                             <label for="sira">Sıra</label>
                                             <input type="text" class="form-control form-control-sm" name="sira"
-                                                id="sira" value="">
+                                                id="sira" value="<?=$item->sira?>">
                                         </div>
 
                                         <div class="form-group row col-md-6">
@@ -65,33 +65,9 @@
                                                         class="input-helper"></i></label>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label>İçerik</label>
-                                            <textarea name="aciklama" class="m-0" data-plugin="summernote"
-                                                data-options="{height: 250}"></textarea>
-                                        </div>
+                                    
 
-                                        <div class="" id="seo-ayarlari" role="tabpanel"
-                                            aria-labelledby="contact-tab-vertical">
-
-                                            <div class="form-group">
-                                                <label for="maxlength-textarea">SEO Açıklama (Description)</label>
-                                                <textarea id="maxlength-textarea" name="description"
-                                                    class="form-control" maxlength="260" rows="2"></textarea>
-                                            </div>
-
-                                        </div>
-
-
-                                        <script>
-                                            function degistir() {
-                                                if (document.getElementById("detay").checked) {
-                                                    document.getElementById("divimiz").style.display = "block";
-                                                } else {
-                                                    document.getElementById("divimiz").style.display = "none";
-                                                }
-                                            };
-                                        </script>
+                                                                      
 
                                         <div class="form-group">
                                             <button type="submit" class="btn rounded mw-md btn-success">

@@ -29,6 +29,23 @@ class Reference extends CI_Controller
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
+    public function save()
+    {
+        $insert = $this->reference_model->add(
+            array(
+                "sira" => $this->input->post("sira"),                
+                "adi" => $this->input->post("adi"),
+                
+            )
+        );
+        if($insert){
+            redirect(base_url("reference"));
+
+        }
+        else{
+            echo "Kayıt Eklenemedi";
+        }
+    }
     public function update_form($id){
 
         $viewData = new stdClass();
@@ -54,27 +71,20 @@ class Reference extends CI_Controller
                 "id" => $id
             ),
             array(
-                "adi" => $this->input->post("adi"),
                 "sira" => $this->input->post("sira"),
-                "seo" => $this->input->post("urun_kodu"),
-                "fiyat" => $this->input->post("fiyat"),
-                "ifiyat" => $this->input->post("ifiyat"),
-                "stok" => $this->input->post("stok"),
-                "kategori" => $this->input->post("kategori"),
-                "spot" => $this->input->post("spot"),
-                "aciklama" => $this->input->post("aciklama"),
-                "seo" => $this->input->post("seo"),
+                "adi" => $this->input->post("adi"),               
                 
             )
             );
 
         if ($insert){
-            redirect(base_url("product"));
+            redirect(base_url("reference"));
         }
         else{
             echo "Kayit eklenemedi";
         }
     }
+
     public function update_status_homepage($id)
     {
 

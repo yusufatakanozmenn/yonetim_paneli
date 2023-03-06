@@ -8,7 +8,7 @@
                     </header>
                     <hr class="widget-separator">
                     <div class="widget-body">
-                        <form class="forms-sample" method="post" action="../_class/yonetim_islem.php"
+                        <form class="forms-sample" method="post" action="<?php echo base_url("reference/save"); ?>"
                             enctype="multipart/form-data">
                             <input id="id" name="id" type="hidden" value="">
                             <div class="form-group">
@@ -39,28 +39,20 @@
                                     Gözüksün mü ?</label>
                             
                             </div>
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <div class="form-check">
                                     <label class="form-check-label">
                                         <input type="checkbox" id="detay" name="detay" class="form-check-input"
                                             onchange="degistir()">Detay Sayfası Gösterilsin mi ?<i
                                             class="input-helper"></i><i class="input-helper"></i></label>
                                 </div>
-                            </div>
-                            <script>
-                                function degistir() {
-                                    if (document.getElementById("detay").checked) {
-                                        document.getElementById("divimiz").style.display = "block";
-                                    } else {
-                                        document.getElementById("divimiz").style.display = "none";
-                                    }
-                                };
-                            </script>
+                            </div> -->                         
 
-                            <button type="submit" name="referans_ekle" class="btn btn-primary btn-icon-text btn-sm">
-                                <i class="mdi mdi-file-check btn-icon-prepend"></i>
-                                KAYDET
-                            </button>
+                            <div class="form-group">
+                                    <button type="submit" class="btn btn-success btn-icon-text btn-sm"> KAYDET </button>
+                                    <a href="<?php echo base_url("reference"); ?>"></a>
+
+                                </div>
                         </form>
                     </div>
                 </div>
