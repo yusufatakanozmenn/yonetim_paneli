@@ -5,7 +5,7 @@
         </h4>
         <h4>
 
-            <a href="<?php echo base_url("document/add_form"); ?>" class="btn btn-outline btn-primary btn-sm">
+            <a href="<?php echo base_url("document/new_form"); ?>" class="btn btn-outline btn-primary btn-sm">
                 <i class="fa fa-plus-circle"></i> Yeni Ekle</a>
             <!-- <a href="#" class="btn btn-outline btn-danger btn-sm">
                 <i class="fa fa-trash"></i> Tüm Veriyi Sil</a> -->
