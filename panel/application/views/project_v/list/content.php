@@ -31,7 +31,7 @@
                         </div>
                     </th>
                     <th>ID</th>
-                    <th>Katagori</th>
+                    <th>Kategori</th>
                     <th>Anasayfa</th>
                     <th>Durum</th>
                     <th>İşlem</th>

@@ -14,31 +14,33 @@
                                 <input type="text" class="form-control form-control-sm" min="0" name="adi" id="adi"
                                     value="">
                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="sira">Sıra</label>
-                                    <input type="number" class="form-control form-control-sm" name="sira" id="sira"
-                                        value="">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="sira">Sıra</label>
+                                        <input type="number" class="form-control form-control-sm" name="sira" id="sira"
+                                            value="">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label>Ürün Kodu</label>
-                                    <input type="text" class="form-control form-control-sm" name="urun_kodu"
-                                        id="urun_kodu" value="">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Ürün Kodu</label>
+                                        <input type="text" class="form-control form-control-sm" name="urun_kodu"
+                                            id="urun_kodu" value="">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label>Fiyat</label>
-                                    <input type="text" class="form-control form-control-sm" name="fiyat" value="">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Fiyat</label>
+                                        <input type="text" class="form-control form-control-sm" name="fiyat" value="">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <!-- /.form-group -->
-                                <div class="form-group">
-                                    <label>İndirimli Fiyat</label>
-                                    <input type="text" class="form-control form-control-sm" name="ifiyat" value="">
+                                <div class="col-sm-6">
+
+                                    <div class="form-group">
+                                        <label>İndirimli Fiyat</label>
+                                        <input type="text" class="form-control form-control-sm" name="ifiyat" value="">
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -48,7 +50,7 @@
                                     <option value="1">Tükendi</option>
                                 </select>
                             </div>
-                            <!-- /.form-group -->
+
                             <div class="form-group">
                                 <label for="secenek">Kategori</label>
                                 <select class="js-example-basic-multiple form-control-sm select2-hidden-accessible"
@@ -126,11 +128,11 @@
                                     <textarea id="maxlength-textarea" name="description" class="form-control"
                                         maxlength="260" rows="2"></textarea>
                                 </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-success btn-icon-text btn-sm"> GÖNDER </button>
-                                    <a href="<?php echo base_url("product"); ?>"></a>
-
-                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn rounded mw-md btn-success "> KAYDET </button>
+                                <a href="<?php echo base_url("product"); ?>"></a>
+                            </div>
                         </form>
 
                     </div>
