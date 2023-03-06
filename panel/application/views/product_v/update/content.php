@@ -4,46 +4,49 @@
         <form action="<?php echo base_url("product/update/$item->id"); ?>" method="post">
             <div class="form-group">
                 <label for="adi">Başlık</label>
-                <input type="text" class="form-control form-control-sm" min="0" name="adi" id="adi" value="<?=$item->adi?>">
+                <input type="text" class="form-control form-control-sm" min="0" name="adi" id="adi"
+                    value="<?= $item->adi ?>">
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
                     <label for="sira">Sıra</label>
-                    <input type="number" class="form-control form-control-sm" name="sira" id="sira" value="<?=$item->sira?>">
+                    <input type="number" class="form-control form-control-sm" name="sira" id="sira"
+                        value="<?= $item->sira ?>">
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
                     <label>Ürün Kodu</label>
-                    <input type="text" class="form-control form-control-sm" name="urun_kodu" id="urun_kodu" value="<?=$item->urun_kodu?>">
+                    <input type="text" class="form-control form-control-sm" name="urun_kodu" id="urun_kodu"
+                        value="<?= $item->urun_kodu ?>">
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
                     <label>Fiyat</label>
-                    <input type="text" class="form-control form-control-sm" name="fiyat" value="<?=$item->fiyat?>">
+                    <input type="text" class="form-control form-control-sm" name="fiyat" value="<?= $item->fiyat ?>">
                 </div>
             </div>
             <div class="col-sm-6">
                 <!-- /.form-group -->
                 <div class="form-group">
                     <label>İndirimli Fiyat</label>
-                    <input type="text" class="form-control form-control-sm" name="ifiyat" value="<?=$item->ifiyat?>">
+                    <input type="text" class="form-control form-control-sm" name="ifiyat" value="<?= $item->ifiyat ?>">
                 </div>
             </div>
             <div class="form-group">
                 <label for="stok">Stok</label>
                 <select class="form-control w-100" name="stok" id="stok" required="">
-                    <?php if($item->stok){
+                    <?php if ($item->stok) {
                         echo '<option value="1" selected >Stokta Var</option>';
                         echo '<option value="0" >Tükendi</option>';
 
-                    }else{
+                    } else {
                         echo '<option value="1" >Stokta Var</option>';
                         echo '<option value="0" selected >Tükendi</option>';
-                    }  ?>
-            
-                 
+                    } ?>
+
+
                 </select>
             </div>
             <!-- /.form-group -->
@@ -97,12 +100,12 @@
                 <label for="spot">Spot Metin <i class="icon-info text-info" data-toggle="popover"
                         data-content="Spot metin, içeriğinizi özetleyen bir ya da iki cümlelik metindir. 180 karakteri geçmemesi gerekmektedir.  Spot metinde de tamamen BÜYÜK harften kaçınmalı ve çift tırnak kullanılmamalıdır."
                         data-trigger="hover" data-original-title="Spot Metin"></i></label>
-                <textarea id="spot" name="spot" class="form-control" rows="4"><?=$item->spot?></textarea>
+                <textarea id="spot" name="spot" class="form-control" rows="4"><?= $item->spot ?></textarea>
             </div>
             <div class="form-group">
                 <label>Açıklama</label>
-                <textarea name="aciklama" class="m-0" data-plugin="summernote"
-                    data-options="{height: 250}"><?=$item->aciklama?></textarea>
+                <div id="summernote" name="aciklama"><?= $item->aciklama ?></div>
+                
             </div>
 
     </div>
@@ -119,7 +122,7 @@
         <div class="form-group">
             <label for="maxlength-textarea">SEO Açıklama (Description)</label>
             <textarea id="maxlength-textarea" name="seo" class="form-control" maxlength="260"
-                rows="2"><?=$item->seo?></textarea>
+                rows="2"><?= $item->seo ?></textarea>
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-success btn-icon-text btn-sm"> GÖNDER </button>
@@ -130,4 +133,3 @@
     </div>
 
 </div>
-

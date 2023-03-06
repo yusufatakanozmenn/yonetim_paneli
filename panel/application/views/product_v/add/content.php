@@ -93,8 +93,8 @@
             </div>
             <div class="form-group">
                 <label>Açıklama</label>
-                <textarea name="aciklama" class="m-0" data-plugin="summernote"
-                    data-options="{height: 250}"></textarea>
+                <div id="summernote" name="aciklama"></div>
+
             </div>
 
     </div>

@@ -1,5 +1,13 @@
 $(document).ready(function () {
 
+  $('#summernote').summernote({
+    placeholder:'',
+    tabsize: 2,
+    height: 300
+  });
+
+
+
   // Api settings update button
   $(".update-btn").click(function () {
     event.preventDefault();
