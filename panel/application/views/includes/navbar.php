@@ -45,10 +45,10 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                    <a href="<?php echo base_url("")?>" class="dropdown-toggle" data-toggle="dropdown" role="button"
                         aria-haspopup="true" aria-expanded="false"><i
                             class="zmdi zmdi-hc-lg zmdi-notifications"></i></a>
-                    <div class="media-group dropdown-menu animated flipInY">
+                    <!-- <div class="media-group dropdown-menu animated flipInY">
                         <a href="javascript:void(0)" class="media-group-item">
                             <div class="media">
                                 <div class="media-left">
@@ -62,7 +62,7 @@
                                     <small class="media-meta">Active now</small>
                                 </div>
                             </div>
-                        </a><!-- .media-group-item -->
+                        </a>
 
                         <a href="javascript:void(0)" class="media-group-item">
                             <div class="media">
@@ -77,7 +77,7 @@
                                     <small class="media-meta">2 hours ago</small>
                                 </div>
                             </div>
-                        </a><!-- .media-group-item -->
+                        </a>
 
                         <a href="javascript:void(0)" class="media-group-item">
                             <div class="media">
@@ -92,7 +92,7 @@
                                     <small class="media-meta">idle 5 min ago</small>
                                 </div>
                             </div>
-                        </a><!-- .media-group-item -->
+                        </a>
 
                         <a href="javascript:void(0)" class="media-group-item">
                             <div class="media">
@@ -107,34 +107,33 @@
                                     <small class="media-meta">idle 5 min ago</small>
                                 </div>
                             </div>
-                        </a><!-- .media-group-item -->
-                    </div>
+                        </a>
+                    </div> -->
                 </li>
 
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button"
                         aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-hc-lg zmdi-settings"></i></a>
                     <ul class="dropdown-menu animated flipInY">
-                        <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-account-box"></i>My
-                                Profile</a></li>
-                        <li><a href="javascript:void(0)"><i
-                                    class="zmdi m-r-md zmdi-hc-lg zmdi-balance-wallet"></i>Balance</a></li>
-                        <li><a href="javascript:void(0)"><i
-                                    class="zmdi m-r-md zmdi-hc-lg zmdi-phone-msg"></i>Connection<span
-                                    class="label label-primary">3</span></a></li>
-                        <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-info"></i>privacy</a>
-                        </li>
-                    </ul>
+                        <li><a href="<?php echo base_url("managers")?>"><i
+                                    class="zmdi m-r-md zmdi-hc-lg zmdi-account-box"></i>
+                                Profil</a></li>
+                        <li><a href="<?php echo base_url("messages")?>"><i class=" m-r-md fa fa-comments"></i>
+                                Mesajlar</a></li>
+                        <li><a href="<?php echo base_url("language")?>"><i class="m-r-md fa fa-language"></i>Dil
+                                Yönetimi</a></li>
                 </li>
-                <li>
-                                    <a href="logout.html">
-                                        <span class="m-r-xs"><i class="fa fa-power-off"></i></span>
-                                        <span>Çıkış</span>
-                                    </a>
-                                </li>
+            </ul>
+            </li>
+            <li>
+                <a href="logout.html">
+                    <span class="m-r-xs"><i class="fa fa-power-off"></i></span>
+                    <span>Çıkış</span>
+                </a>
+            </li>
 
 
-                <!-- <li class="dropdown">
+            <!-- <li class="dropdown">
                     <a href="javascript:void(0)" class="side-panel-toggle" data-toggle="class" data-target="#side-panel"
                         data-class="open" role="button"><i class="zmdi zmdi-hc-lg zmdi-apps"></i></a>
                 </li> -->
