@@ -5,39 +5,39 @@
         </h4>
         <div class="card">
             <div class="card-body">
-                <form class="forms-sample" method="post" action="<?php echo base_url("dealer_branch/save"); ?>"
+                <form class="forms-sample" method="post" action="<?php echo base_url("dealer_branch/update/$item->id"); ?>"
                     enctype="multipart/form-data">
                     <input id="id" name="id" type="hidden" value="">
                     <input id="ilceid" name="ilceid" type="hidden" value="">
                     <div class="form-group">
                         <label for="sira">Sıra</label>
-                        <input type="text" class="form-control form-control-sm" name="sira" id="sira" value="">
+                        <input type="text" class="form-control form-control-sm" name="sira" id="sira" value="<?=$item->sira?>">
                     </div>
                     <div class="form-group">
                         <label for="adi">Firma / Şube Adı</label>
-                        <input type="text" class="form-control form-control-sm" name="adi" id="adi" value="">
+                        <input type="text" class="form-control form-control-sm" name="adi" id="adi" value="<?=$item->adi?>">
                     </div>
 
                     <div class="form-group">
                         <label for="adres">Adres</label>
-                        <input type="text" class="form-control form-control-sm" name="adres" id="adres" value="">
+                        <input type="text" class="form-control form-control-sm" name="adres" id="adres" value="<?=$item->adres?>">
                     </div>
 
                     <div class="form-group row mb-0">
                         <div class="form-group col-md-4">
                             <label for="telefon">Telefon</label>
                             <input type="text" class="form-control form-control-sm" name="telefon" id="telefon"
-                                value="">
+                                value="<?=$item->telefon?>">
                         </div>
 
                         <div class="form-group col-md-4">
                             <label for="gsm">GSM</label>
-                            <input type="text" class="form-control form-control-sm" name="gsm" id="gsm" value="">
+                            <input type="text" class="form-control form-control-sm" name="gsm" id="gsm" value="<?=$item->gsm?>">
                         </div>
 
                         <div class="form-group col-md-4">
                             <label for="email">E-Posta</label>
-                            <input type="email" class="form-control form-control-sm" name="email" id="email" value="">
+                            <input type="email" class="form-control form-control-sm" name="email" id="email" value="<?=$item->email?>">
                         </div>
                     </div>
 
@@ -45,7 +45,7 @@
                         <div class="form-group col-md-6">
                             <label for="il">Şehir</label>
                             <select class="js-example-basic-single form-control-sm select2-hidden-accessible" name="il"
-                                id="il" required="" style="width:100%" tabindex="-1" aria-hidden="true">
+                                id="il" required="" style="width:100%" tabindex="-1" aria-hidden="true" >
                                 <option value="">-Seçiniz-</option>
                                 <option value="1">Adana</option>
                                 <option value="2">Adiyaman</option>
@@ -133,8 +133,8 @@
                                         class="select2-selection select2-selection--single" role="combobox"
                                         aria-haspopup="true" aria-expanded="false" tabindex="0"
                                         aria-labelledby="select2-il-container"><span class="select2-selection__rendered"
-                                            id="select2-il-container" title="-Seçiniz-"></span><span
-                                            class="select2-selection__arrow" role="presentation"><b
+                                            id="select2-il-container" title=""></span><span
+                                            class="select2-selection__arrow"  role="presentation"><b
                                                 role="presentation"></b></span></span></span><span
                                     class="dropdown-wrapper" aria-hidden="true"></span></span>
                         </div>                       
@@ -149,11 +149,10 @@
                         <label class="d-inline-block" style="line-height: 34px;" for="durum">Durum</label>
                     </div>
 
-                    <div class="form-group">
-                                    <button type="submit" class="btn btn-success btn-icon-text btn-sm"> GÖNDER </button>
-                                    <a href="<?php echo base_url("dealer_branch"); ?>"></a>
-
-                                </div>
+                    <button type="submit" name="bayi_ekle" class="btn btn-primary btn-icon-text btn-sm">
+                        <i class="mdi mdi-file-check btn-icon-prepend"></i>
+                        KAYDET
+                    </button>
                 </form>
             </div>
         </div>
