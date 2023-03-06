@@ -336,7 +336,7 @@
 
                 <li>
                     <a href="<?php echo base_url("messages")?>">
-                        <i class="menu-icon zmdi zmdi-language-javascript zmdi-hc-lg"></i>
+                        <i class="menu-icon fa fa-comments"></i>
                         <span class="menu-text">Mesajlar</span>
                     </a>
                 </li>
@@ -357,7 +357,7 @@
 
                 <li>
                     <a href="<?php echo base_url("notebook")?>">
-                        <i class="menu-icon zmdi zmdi-language-javascript zmdi-hc-lg"></i>
+                        <i class="menu-icon fa fa-calendar"></i>
                         <span class="menu-text">Not Defteri</span>
                     </a>
                 </li>
