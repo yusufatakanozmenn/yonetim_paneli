@@ -37,31 +37,39 @@ class Video extends CI_Controller
 
         $upload_image = $this->upload->do_upload("resim");
         $image_name = basename($_FILES["resim"]["name"]);
+
         if ($upload_image) {
-
-            $insert = $this->video_model->add(
+            $this->video_model->add(
+                array("id" => 1),
                 array(
-                    "adi" => $this->input->post("adi"),
-                    "sira" => $this->input->post("sira"),
-                    "kod" => $this->input->post("kod"),
-                    "aciklama" => $this->input->post("aciklama"),
-                    "description" => $this->input->post("description"),
-                    "seo"=>convertToSEO($this->input->post("adi")),
-                    "keywords" => $this->input->post("description"),
-                    "tarih" => date("Y-m-d H:i:s"),
                     "resim" => $image_name,
-                    "dil" => 1,
-                    "durum" => 1,
-
                 )
             );
-            if ($insert) {
-                redirect(base_url("video"));
-
-            } else {
-                echo "Kayıt Eklenemedi";
-            }
         }
+
+
+        $insert = $this->video_model->add(
+            array(
+                "adi" => $this->input->post("adi"),
+                "sira" => $this->input->post("sira"),
+                "kod" => $this->input->post("kod"),
+                "aciklama" => $this->input->post("aciklama"),
+                "description" => $this->input->post("description"),
+                "seo" => convertToSEO($this->input->post("adi")),
+                "keywords" => $this->input->post("description"),
+                "tarih" => date("Y-m-d H:i:s"),
+                "dil" => 1,
+                "durum" => 1,
+
+            )
+        );
+        if ($insert) {
+            redirect(base_url("video"));
+
+        } else {
+            echo "Kayıt Eklenemedi";
+        }
+
     }
     public function update_form($id)
     {
@@ -88,27 +96,34 @@ class Video extends CI_Controller
         $image_name = basename($_FILES["resim"]["name"]);
 
         if ($upload_image) {
-            $update = $this->video_model->update(
+            $this->video_model->update(
+                array("id" => 1),
                 array(
-                    "id" => $id
-                ),
-                array(
-                    "adi" => $this->input->post("adi"),
-                    "sira" => $this->input->post("sira"),
-                    "kod" => $this->input->post("kod"),
-                    "aciklama" => $this->input->post("description"),
-                    "seo" => $this->input->post("seo"),
-                    "keywords" => $this->input->post("description"),
-                    "tarih" => date("Y-m-d H:i:s"),
                     "resim" => $image_name,
                 )
             );
-            if ($update) {
-                redirect(base_url("video"));
-            } else {
-                echo "Güncelleme İşlemi Gerçekleşmedi";
-            }
         }
+
+        $update = $this->video_model->update(
+            array(
+                "id" => $id
+            ),
+            array(
+                "adi" => $this->input->post("adi"),
+                "sira" => $this->input->post("sira"),
+                "kod" => $this->input->post("kod"),
+                "aciklama" => $this->input->post("description"),
+                "seo" => convertToSEO($this->input->post("adi")),
+                "keywords" => $this->input->post("description"),
+                "tarih" => date("Y-m-d H:i:s"),
+            )
+        );
+        if ($update) {
+            redirect(base_url("video"));
+        } else {
+            echo "Güncelleme İşlemi Gerçekleşmedi";
+        }
+
     }
     public function update_status($id)
     {

@@ -49,7 +49,9 @@
                                     <?php echo $item->adi; ?>
                                 </td>
                                 <td name="adi">
-                                    <?php echo $item->adi; ?>
+                                    <a href="<?php echo base_url("photo_gallery/photo_list/$item->id"); ?>"
+                                        class="btn btn-outline btn-success btn-sm" title="Fotoğrafları Gör"><i
+                                            class="fa fa-angle-right"></i> Fotoğrafları Gör []</a>
                                 </td>
                                 <td name="durum"> <input
                                         data-url="<?php echo base_url("photo_gallery/update_status/$item->id"); ?>"
@@ -71,31 +73,10 @@
                 </table>
 
             <?php } ?>
-            <div class="row">
-                <div class="col-sm-12 col-md-5">
-                    <div class="dataTables_info" id="order-listingg_info" role="status" aria-live="polite">5 kayıttan 1
-                        - 5 arasındaki kayıtlar gösteriliyor
-                    </div>
-
-                    <div class="col-sm-12 col-md-7">
-                        <div class="dataTables_paginate paging_simple_numbers" id="order-listingg_paginate">
-                            <ul class="pagination">
-                                <li class="paginate_button page-item previous disabled" id="order-listingg_previous"><a
-                                        href="#" aria-controls="order-listingg" data-dt-idx="0" tabindex="0"
-                                        class="page-link">Önceki</a></li>
-                                <li class="paginate_button page-item active"><a href="#" aria-controls="order-listingg"
-                                        data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-                                <li class="paginate_button page-item next disabled" id="order-listingg_next"><a href="#"
-                                        aria-controls="order-listingg" data-dt-idx="2" tabindex="0"
-                                        class="page-link">Sonraki</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
 
-        </div><!-- .widget -->
 
-    </div><!-- END column -->
+        </div>
+
+    </div>
 </div>
