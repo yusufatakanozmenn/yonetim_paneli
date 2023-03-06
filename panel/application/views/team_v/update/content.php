@@ -12,11 +12,11 @@
                             <input id="id" name="id" type="hidden" value="">
                             <div class="form-group">
                                 <label for="sira">Sıra</label>
-                                <input type="text" class="form-control form-control-sm" name="sira" id="sira" value="">
+                                <input type="text" class="form-control form-control-sm" name="sira" id="sira" value="<?=$item->sira?>">
                             </div>
                             <div class="form-group">
                                 <label for="adi">Başlık</label>
-                                <input type="text" class="form-control form-control-sm" name="adi" id="adi" value="">
+                                <input type="text" class="form-control form-control-sm" name="adi" id="adi" value="<?=$item->adi?>">
                             </div>
                             <div class="card-body">
                                 <div class="row">
@@ -25,36 +25,24 @@
                                         <label for="twitter">Twitter Sayfa URL</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control" name="twitter" id="twitter"
-                                                value="">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-sm btn-twitter" type="button">
-                                                    <i class="mdi mdi-twitter"></i>
-                                                </button>
-                                            </div>
+                                                value="<?=$item->twitter?>">
+                                           
                                         </div>
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="instagram">Instagram Sayfa URL</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control" name="instagram" id="instagram"
-                                                value="">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-sm btn-instagram" type="button">
-                                                    <i class="mdi mdi-instagram"></i>
-                                                </button>
-                                            </div>
+                                                value="<?=$item->instagram?>">
+                                           
                                         </div>
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="linkedin">LinkedIn Sayfa URL</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control" name="linkedin" id="linkedin"
-                                                value="">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-sm btn-linkedin" type="button">
-                                                    <i class="mdi mdi-linkedin"></i>
-                                                </button>
-                                            </div>
+                                                value="<?=$item->linkedin?>">
+                                           
                                         </div>
                                     </div>
 
@@ -89,7 +77,7 @@
                         <div class="card-body">
                             <div class="form-group mb-2">
                                 <label class="switch">
-                                    <input type="checkbox" name="durum" id="durum" value="1" checked="">
+                                    <input type="checkbox" name="durum" id="durum" value="<?=$item->durum?>" checked="">
                                     <span class="slider"></span>
                                 </label>
                                 <label class="d-inline-block" style="line-height: 34px;" for="durum">Durum</label>

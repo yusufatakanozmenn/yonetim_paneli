@@ -54,24 +54,7 @@
                             ?</label>
                     </div>
                     </div>
-                    <div class="wrap">
-
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="widget">
-                                    <header class="widget-header">
-                                        <h4 class="widget-title">Summernote</h4>
-                                    </header><!-- .widget-header -->
-                                    <hr class="widget-separator">
-                                    <div class="widget-body">
-                                        <div class="m-0" data-plugin="summernote" data-options="{height: 250}">Hello
-                                            Summernote</div>
-                                    </div><!-- .widget-body -->
-                                </div><!-- .widget -->
-                            </div><!-- END column -->
-                        </div>
-
-                    </div><!-- .wrap -->
+                    <div id="summernote"></div>
                     <div class="card mb-4">
                         <div class="card-header">
                             SEO AYARLARI
