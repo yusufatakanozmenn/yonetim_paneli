@@ -55,10 +55,7 @@
                         </td>
                     </tr>
                     <?php } ?>
-
-
                 </tbody>
-
             </table>
             <?php } ?>
 
