@@ -5,7 +5,7 @@
         </h4>
         <div class="card">
             <div class="card-body">
-                <form class="forms-sample" method="post" action="<?php echo base_url("ourservices/save"); ?>"
+                <form class="forms-sample" method="post" action="../_class/yonetim_islem.php"
                     enctype="multipart/form-data">
                     <input id="id" name="id" type="hidden" value="">
                     <div class="form-group">
@@ -25,52 +25,36 @@
 					
 					-->
                     <div class="form-group">
-                        <div class="card-header">
+                    <div class="card-header">
                             Hizmet Resimleri
                         </div>
-                        <input type="file" name="hizmetler" class="file-upload-default">
+                        <input type="file" name="firma_footerlogo" class="file-upload-default">
                         <div class="input-group col-xs-12">
                             <div class="col-md-6 col-sm-6">
-                                <a href="#" class="thumbnail white"><img src="" alt="..."></a>
+                                <a href="#" class="thumbnail white"><img
+                                        src=""
+                                        alt="..."></a>
                             </div>
                         </div>
-
-                        <div class="form-group ">
-                            <label class="switch">
-                                <input type="checkbox" name="durum" id="durum" value="1" checked="">
-                                <span class="slider"></span>
-                            </label>
-                            <label class="d-inline-block" style="line-height: 34px;" for="durum">Durum</label>
-                        </div>
-                        <div class="form-group ">
-                            <label class="switch">
-                                <input type="checkbox" name="anasayfa" id="anasayfa" value="1" checked="">
-                                <span class="slider"></span>
-                            </label>
-
-                            <label class="d-inline-block" style="line-height: 34px;" for="anasayfa">Anasayfa'da Gözüksün
-                                mü
-                                ?</label>
-                        </div>
+                    
+                    <div class="form-group ">
+                        <label class="switch">
+                            <input type="checkbox" name="durum" id="durum" value="1" checked="">
+                            <span class="slider"></span>
+                        </label>
+                        <label class="d-inline-block" style="line-height: 34px;" for="durum">Durum</label>
                     </div>
-                    <!-- <div class="wrap">
+                    <div class="form-group ">
+                        <label class="switch">
+                            <input type="checkbox" name="anasayfa" id="anasayfa" value="1" checked="">
+                            <span class="slider"></span>
+                        </label>
 
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="widget">
-                                    <header class="widget-header">
-                                        <h4 class="widget-title">Summernote</h4>
-                                    </header>.widget-header 
-                                    <hr class="widget-separator">
-                                    <div class="widget-body">
-                                        <div class="m-0" data-plugin="summernote" data-options="{height: 250}">Hello
-                                            Summernote</div>
-                                    </div>.widget-body 
-                                </div> .widget 
-                            </div> END column 
-                        </div>
-
-                    </div>.wrap -->
+                        <label class="d-inline-block" style="line-height: 34px;" for="anasayfa">Anasayfa'da Gözüksün mü
+                            ?</label>
+                    </div>
+                    </div>
+                    <div id="summernote"></div>
                     <div class="card mb-4">
                         <div class="card-header">
                             SEO AYARLARI
@@ -78,16 +62,16 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="maxlength-textarea">Sayfa Açıklama (description)</label>
-                                <textarea id="maxlength-textarea" name="aciklama" class="form-control"
+                                <textarea id="maxlength-textarea" name="description" class="form-control"
                                     maxlength="260" rows="4"></textarea>
                             </div>
 
                         </div>
                     </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-success btn-icon-text btn-sm"> GÖNDER </button>
-                        <a href="<?php echo base_url("ourservices"); ?>"></a>
-                    </div>
+                    <button type="submit" name="hizmet_ekle" class="btn btn-primary btn-icon-text btn-sm">
+                        <i class="mdi mdi-file-check btn-icon-prepend"></i>
+                        KAYDET
+                    </button>
                 </form>
             </div>
         </div>
