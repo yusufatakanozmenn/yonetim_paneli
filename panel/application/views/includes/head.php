@@ -5,5 +5,4 @@
 <link rel="shortcut icon" sizes="196x196" href="<?php echo base_url("assets");?>/assets/images/logo.png">
 <title>Infinity - Bootstrap Admin Template</title>
 
-<?php $this->load->view('includes/include_style');
-?>
+<?php $this->load->view('includes/include_style');?>
