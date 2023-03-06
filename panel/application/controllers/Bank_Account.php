@@ -37,10 +37,26 @@ class Bank_Account extends CI_Controller
             )
         );
         if($delete){
-            redirect(base_url("package"));
+            redirect(base_url("bank_account"));
         }
         else{
             echo "Silme İşlemi Gerçekleşmedi";
+        }
+    }
+    public function update_status($id){
+
+        if($id){
+            $isActive = ($this->input->post("data") === "true") ? 1 : 0 ;
+            $insert = $this->bank_account_model->update(
+                array(
+                    "id" => $id
+                ),
+                array(
+                    "durum" => $isActive            
+                )
+                );
+        }else{
+            echo 'Hatali islem';
         }
     }
    
