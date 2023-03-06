@@ -38,6 +38,22 @@ class Sss extends CI_Controller
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
+    public function update_status($id){
+
+        if($id){
+            $isActive = ($this->input->post("data") === "true") ? 1 : 0 ;
+            $insert = $this->sss_model->update(
+                array(
+                    "id" => $id
+                ),
+                array(
+                    "durum" => $isActive            
+                )
+                );
+        }else{
+            echo 'Hatali islem';
+        }
+    }
     public function delete($id){
         $delete = $this->sss_model->delete(
             array(

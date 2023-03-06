@@ -32,6 +32,22 @@ class My_Contacts extends CI_Controller {
 
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
     }
+    public function update_status($id){
+
+        if($id){
+            $isActive = ($this->input->post("data") === "true") ? 1 : 0 ;
+            $insert = $this->product_model->update(
+                array(
+                    "id" => $id
+                ),
+                array(
+                    "durum" => $isActive            
+                )
+                );
+        }else{
+            echo 'Hatali islem';
+        }
+    }
     public function delete($id){
         $delete = $this->my_contacts_model->delete(
             array(
