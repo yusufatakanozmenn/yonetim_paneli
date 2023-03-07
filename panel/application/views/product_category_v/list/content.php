@@ -23,31 +23,17 @@
 
             <table class="table table-hover table-striped">
                 <thead>
-                <th>
-                        <div class="checkbox checkbox-primary">
-                            <input type="checkbox" id="checkbox-demo-1" />
-                            <label for="checkbox-demo-1"></label>
-                        </div>
-                    </th>
-
                     <th>Başlık</th>
-                    <th>SEF Url</th>
+                    <th>SEO Url</th>
                     <th>Anasayfa</th>
                     <th>Durumu</th>
                     <th>İşlem</th>
                 </thead>
                 <tbody>
                     <?php foreach ($items as $item) { ?>
-                        <tr>
-                        <td>
-                            <div class="checkbox checkbox-primary">
-                                <input type="checkbox" id="checkbox-demo-1" />
-                                <label for="checkbox-demo-1"></label>
-                            </div>
-                        </td>                        
+                        <tr>                       
                         <td><?php echo $item->adi;?></td>
                         <td><?php echo $item->seo;?></td>
-                        
                         <td><input 
                             data-url="<?php echo base_url("product_category/update_status_homepage/$item->id");?>"
                             class="isActive"

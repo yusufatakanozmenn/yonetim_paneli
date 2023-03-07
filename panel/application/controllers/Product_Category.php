@@ -7,13 +7,12 @@ class Product_Category extends CI_Controller {
 		parent::__construct();
 		$this->viewFolder = "product_category_v";
         $this->load->model("product_category_model");
+        $this->load->helper("tools_helper");
 	}
     public function index(){
         $viewData = new stdClass();
         /** Tablodaki tüm kayıtları getiriyoruz.. */
-        $items = $this->product_category_model->get_all(
-            array()
-        );
+        $items = $this->product_category_model->get_all();
         /** View'e gönderilecek değişkenler.. */
         $viewData->viewFolder=$this->viewFolder;
         $viewData->subViewFolder="list";
@@ -49,6 +48,30 @@ class Product_Category extends CI_Controller {
 
     }
 
+    public function add_new(){
+        $insert = $this->product_category_model->add(
+
+            array(
+                "ustid" => $this->input->post("ustid"),
+                "adi" => $this->input->post("adi"),
+                "seo" => convertToSEO($this->input->post("adi")),
+                "sira" => $this->input->post("sira"),
+                "kapak" => $this->input->post("kapak"),
+                "description" => $this->input->post("description"), 
+                "durum" => 1,             
+                "anasayfa" => 1,
+                "tarih" => date("Y-m-d H:i:s"),
+             
+            )
+            );
+
+        if ($insert){
+            redirect(base_url("product_category"));
+        }
+        else{
+            echo "Kayit eklenemedi";
+        }
+    }
     public function update($id){
         
         $insert = $this->product_category_model->update(
@@ -56,22 +79,17 @@ class Product_Category extends CI_Controller {
                 "id" => $id
             ),
             array(
+                "ustid" => $this->input->post("ustid"),
                 "adi" => $this->input->post("adi"),
+                "seo" => convertToSEO($this->input->post("adi")),
                 "sira" => $this->input->post("sira"),
-                "seo" => $this->input->post("urun_kodu"),
-                "fiyat" => $this->input->post("fiyat"),
-                "ifiyat" => $this->input->post("ifiyat"),
-                "stok" => $this->input->post("stok"),
-                "kategori" => $this->input->post("kategori"),
-                "spot" => $this->input->post("spot"),
-                "aciklama" => $this->input->post("aciklama"),
-                "seo" => $this->input->post("seo"),
-                
+                "kapak" => $this->input->post("kapak"),
+                "description" => $this->input->post("description"),              
             )
             );
 
         if ($insert){
-            redirect(base_url("product"));
+            redirect(base_url("product_category"));
         }
         else{
             echo "Kayit eklenemedi";

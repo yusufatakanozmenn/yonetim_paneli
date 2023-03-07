@@ -11,18 +11,16 @@
                         <form class="forms-sample" method="post"
                             action="<?php echo base_url("product_category/update/$item->id"); ?>"
                             enctype="multipart/form-data">
-                            <input id="id" name="id" type="hidden" value="">
                             <div class="form-group">
                                 <label for="ustid">Üst Kategori Seç</label>
                                 <select class="form-control form-control-sm" name="ustid"
-                                    value="<?php echo $item->pbirim ?>">
-                                    <option selected style="display:none;">
-                                        <?php echo $item->pbirim ?>
+                                    value="<?php echo $item->ustid ?>">
+                                    <option selected style="display:none;" <?php echo $item->ustid ?>>
+                                        <?php echo $item->adi ?>
                                     </option>
-                                    <option>
+                                    <option value="0">
                                         Üst Kategori
                                     </option>
-                                    <option>Ürünler</option>
                                 </select>
                             </div>
 
