@@ -7,18 +7,18 @@
             <div class="col-md-12 grid-margin">
                 <div class="card">
                     <div class="card-body">
-                        <form class="forms-sample" method="post" action="<?php echo base_url('blog/save')?>" enctype="multipart/form-data">
-                            <input id="id" name="id" type="hidden" value="">
+                        <form class="forms-sample" method="post" action="<?php echo base_url("blog/update/$item->id"); ?>" enctype="multipart/form-data">
+                            <input id="id" name="id" type="hidden" value="<?=$item->id?>">
                             <div class="form-group">
                                 <label for="sira">Sıra</label>
                                 <input type="number" class="form-control form-control-sm" min="0" name="sira" id="sira"
-                                    value="">
+                                    value="<?=$item->sira?>">
                             </div>
                             <div class="form-group">
                                 <label for="adi">Başlık <i class="icon-info text-info" data-toggle="popover"
                                         data-content="Proje adında tamamen BÜYÜK harf kullanmayın. 70 karakterden uzun başlıkları Google indexlemede göstermez ve değerlendirmez. Bu nedenle uzun başlıklar kullanmaktan kaçının. Başlıklarda çift tırnak kesinlikle kullanmayın."
                                         data-trigger="hover" data-original-title="Başlık"></i></label>
-                                <input type="text" class="form-control form-control-sm" name="adi" id="adi" value="">
+                                <input type="text" class="form-control form-control-sm" name="adi" id="adi" value="<?=$item->adi?>">
                             </div>
 
                             <div class="form-group">
@@ -27,7 +27,7 @@
                                         data-content="Haber içeriğinizin haber detay görseli alanında görsel yerine, haberin videosunu gösterebilirsiniz. Bunun için Youtube'a yüklediğiniz videonuzun sadece ID numarasını bu alana yapıştırmanız yeterlidir. (Ör: https://www.youtube.com/watch?v=TqeSxMdnEQE adresindeki videonun ID'si v= sorasındaki ID numarasıdır. TqeSxMdnEQE eklenmesi yeterlidir.)"
                                         data-trigger="hover" data-original-title="YouTube Video ID"></i></label>
                                 <input type="text" class="form-control form-control-sm" name="videoid" id="videoid"
-                                    value="">
+                                    value="<?=$item->videoid?>">
                             </div>
 
                             <div class="row">
@@ -36,7 +36,7 @@
                                             data-content="İçeriğin ilk eklendiği tarihtir. Sistem ekleme sırasında otomatik olarak verir. Dilerseniz tarihi değiştirebilirsiniz."
                                             data-trigger="hover" data-original-title="Yayın Tarihi"></i></label>
                                     <div class="input-group">
-                                        <input type="text" autocomplete="off" name="tarih" value=""
+                                        <input type="text" autocomplete="off" name="tarih" value="<?=$item->tarih?>"
                                             class="form-control form-control-sm date-timepicker">
                                         <span class="input-group-addon input-group-append border-left"
                                             style="height: 35px;">
@@ -50,7 +50,7 @@
                                             data-content="İçeriğinizde güncelleme yaptıysanız takvim simgesine tıklayarak güncelleme tarihini belirtmeniz gerekir. İlk içerik girişinde yayın tarih ve saatiyle aynı seçilmesinde yarar vardır."
                                             data-trigger="hover" data-original-title="Güncelleme Tarihi"></i></label>
                                     <div class="input-group">
-                                        <input type="text" autocomplete="off" name="tarihg" value=""
+                                        <input type="text" autocomplete="off" name="tarihg" value="<?=$item->tarihg?>"
                                             class="form-control form-control-sm date-timepicker">
                                         <span class="input-group-addon input-group-append border-left"
                                             style="height: 35px;">
@@ -74,21 +74,21 @@
                     </div>
                     <div class="form-group mb-2">
                         <label class="switch">
-                            <input type="checkbox" name="durum" id="durum" value="1" checked="">
+                            <input type="checkbox" name="durum" id="durum" value="<?=$item->durum?>" checked="">
                             <span class="slider"></span>
                         </label>
                         <label class="d-inline-block" style="line-height: 34px;" for="durum">Durum</label>
                     </div>
                     <div class="form-group mb-2">
                         <label class="switch">
-                            <input type="checkbox" name="anasayfa" id="anasayfa" value="1" checked="">
+                            <input type="checkbox" name="anasayfa" id="anasayfa" value="<?=$item->anasayfa?>" checked="">
                             <span class="slider"></span>
                         </label>               
                         <div class="form-group">
                             <label for="spot">Spot Metin <i class="icon-info text-info" data-toggle="popover"
                                     data-content="Spot metin, içeriğinizi özetleyen bir ya da iki cümlelik metindir. 180 karakteri geçmemesi gerekmektedir.  Spot metinde de tamamen BÜYÜK harften kaçınmalı ve çift tırnak kullanılmamalıdır."
                                     data-trigger="hover" data-original-title="Spot Metin"></i></label>
-                            <textarea id="spot" name="spot" class="form-control" rows=""></textarea>
+                            <textarea id="spot" name="spot" class="form-control" rows="<?=$item->spot?>"></textarea>
                         </div>
 
                         <div class="card mb-4">
@@ -96,7 +96,7 @@
                                 <div class="form-group">
                                     <label for="maxlength-textarea">SEO Açıklama (Description)</label>
                                     <textarea id="maxlength-textarea" name="description" class="form-control"
-                                        maxlength="260" rows=""></textarea>
+                                        maxlength="260" rows="<?=$item->description?>"></textarea>
                                 </div>
                                 <!-- <div class="form-group mb-0">
                                         <label for="tags">SEO Kelimeler (Keywords) <small>(Kelimenin sonuna virgül

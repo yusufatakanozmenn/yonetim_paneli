@@ -20,6 +20,70 @@ class Blog extends CI_Controller
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
+    public function save(){
+        $insert = $this->blog_model->add(
+            array(
+                "adi" => $this->input->post("adi"),
+                "videoid" => $this->input->post("videoid"),
+                "sira" => $this->input->post("sira"),
+                "durum" => $this->input->post("durum"),
+                "tarih" => $this->input->post("tarih"),
+                "tarihg"=>$this->input->post("tarihg"),
+                "durum" => $this->input->post("durum"),
+                "spot" => $this->input->post("spot"),
+                "description" => $this->input->post("description"),
+            )
+        );
+        if($insert){
+            redirect(base_url("blog"));
+        }
+        else{
+            echo "Kayıt Eklenemedi";
+        }
+    }
+    public function update($id){
+        $update = $this->blog_model->update(
+            array(
+                "id" => $id
+            ),
+            array(
+                "adi" => $this->input->post("adi"),
+                "videoid" => $this->input->post("videoid"),
+                "sira" => $this->input->post("sira"),
+                "durum" => $this->input->post("durum"),
+                "tarih" => $this->input->post("tarih"),
+                "tarihg"=>$this->input->post("tarihg"),
+                "durum" => $this->input->post("durum"),
+                "spot" => $this->input->post("spot"),
+                "description" => $this->input->post("description"),
+            )
+        );
+        if($update){
+            redirect(base_url("blog"));
+        }
+        else{
+            echo "Kayıt Eklenemedi";
+        }
+    }
+    public function update_form(){
+        $viewData = new stdClass();        
+        $item = $this->blog_model->get(
+            array(
+                "id" => $id
+            )
+        );
+        $viewData->viewFolder = $this->viewFolder;
+        $items = $this->blog_model->get_all(
+            array(
+                "id" => $id
+            )
+        );
+        $viewData->subViewFolder = "update";
+        $viewData->item = $item;
+       
+
+        $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
+    }
     public function add_form()
     {
         $viewData = new stdClass();        
