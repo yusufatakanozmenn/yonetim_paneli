@@ -53,6 +53,22 @@ class Project extends CI_Controller
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
 
+    public function update_status($id){
+
+        if($id){
+            $isActive = ($this->input->post("data") === "true") ? 1 : 0 ;
+            $insert = $this->project_model->update(
+                array(
+                    "id" => $id
+                ),
+                array(
+                    "durum" => $isActive            
+                )
+                );
+        }else{
+            echo 'Hatali islem';
+        }
+    }
     public function save()
     {
         $config["allowed_types"] = "jpg|jpeg|png|svg|webp";

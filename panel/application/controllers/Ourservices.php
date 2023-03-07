@@ -53,6 +53,23 @@ class Ourservices extends CI_Controller
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
     
+    public function update_status($id){
+
+        if($id){
+            $isActive = ($this->input->post("data") === "true") ? 1 : 0 ;
+            $insert = $this->ourservices_model->update(
+                array(
+                    "id" => $id
+                ),
+                array(
+                    "durum" => $isActive            
+                )
+                );
+        }else{
+            echo 'Hatali islem';
+        }
+    }
+    
     public function update($id){
         $update = $this->ourservices_model->update(
             array(

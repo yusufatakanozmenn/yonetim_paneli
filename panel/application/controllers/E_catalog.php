@@ -98,6 +98,7 @@ class E_catalog extends CI_Controller
             echo 'Hatali islem';
         }
     }
+ 
 
 
     public function delete($id){

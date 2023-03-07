@@ -8,7 +8,7 @@
                 <div class="card">
                     <div class="card-body">
                         <form class="forms-sample" method="post"
-                            action="<?php echo base_url("team/save"); ?>" enctype="multipart/form-data">
+                            action="<?php echo base_url("team/update/$item->id"); ?>" enctype="multipart/form-data">
                             <input id="id" name="id" type="hidden" value="">
                             <div class="form-group">
                                 <label for="sira">Sıra</label>
