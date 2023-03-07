@@ -88,7 +88,7 @@
                             <label for="spot">Spot Metin <i class="icon-info text-info" data-toggle="popover"
                                     data-content="Spot metin, içeriğinizi özetleyen bir ya da iki cümlelik metindir. 180 karakteri geçmemesi gerekmektedir.  Spot metinde de tamamen BÜYÜK harften kaçınmalı ve çift tırnak kullanılmamalıdır."
                                     data-trigger="hover" data-original-title="Spot Metin"></i></label>
-                            <textarea id="spot" name="spot" class="form-control" rows="<?=$item->spot?>"></textarea>
+                            <textarea id="spot" name="spot" class="form-control" rows=""><?=$item->spot?></textarea>
                         </div>
 
                         <div class="card mb-4">
@@ -96,7 +96,7 @@
                                 <div class="form-group">
                                     <label for="maxlength-textarea">SEO Açıklama (Description)</label>
                                     <textarea id="maxlength-textarea" name="description" class="form-control"
-                                        maxlength="260" rows="<?=$item->description?>"></textarea>
+                                        maxlength="260" rows=""><?=$item->description?></textarea>
                                 </div>
                                 <!-- <div class="form-group mb-0">
                                         <label for="tags">SEO Kelimeler (Keywords) <small>(Kelimenin sonuna virgül

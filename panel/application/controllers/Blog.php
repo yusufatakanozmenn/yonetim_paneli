@@ -29,7 +29,6 @@ class Blog extends CI_Controller
                 "durum" => $this->input->post("durum"),
                 "tarih" => $this->input->post("tarih"),
                 "tarihg"=>$this->input->post("tarihg"),
-                "durum" => $this->input->post("durum"),
                 "spot" => $this->input->post("spot"),
                 "description" => $this->input->post("description"),
             )
@@ -53,7 +52,6 @@ class Blog extends CI_Controller
                 "durum" => $this->input->post("durum"),
                 "tarih" => $this->input->post("tarih"),
                 "tarihg"=>$this->input->post("tarihg"),
-                "durum" => $this->input->post("durum"),
                 "spot" => $this->input->post("spot"),
                 "description" => $this->input->post("description"),
             )
@@ -65,7 +63,7 @@ class Blog extends CI_Controller
             echo "Kayıt Eklenemedi";
         }
     }
-    public function update_form(){
+    public function update_form($id){
         $viewData = new stdClass();        
         $item = $this->blog_model->get(
             array(
@@ -73,11 +71,6 @@ class Blog extends CI_Controller
             )
         );
         $viewData->viewFolder = $this->viewFolder;
-        $items = $this->blog_model->get_all(
-            array(
-                "id" => $id
-            )
-        );
         $viewData->subViewFolder = "update";
         $viewData->item = $item;
        
