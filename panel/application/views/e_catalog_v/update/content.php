@@ -7,16 +7,16 @@
             <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <form class="forms-sample" method="post" action="<?php echo base_url('e_catalog/save')?>"
+                        <form class="forms-sample" method="post" action="<?php echo base_url("e_catalog/update/$item->id")?>"
                             enctype="multipart/form-data">
                             <input id="id" name="id" type="hidden" value="">
                             <div class="form-group">
                                 <label for="sira">Sıra</label>
-                                <input type="text" class="form-control form-control-sm" name="sira" id="sira" value="">
+                                <input type="text" class="form-control form-control-sm" name="sira" id="sira" value="<?=$item->sira?>">
                             </div>
                             <div class="form-group">
                                 <label for="adi">Başlık</label>
-                                <input type="text" class="form-control form-control-sm" name="adi" id="adi" value="">
+                                <input type="text" class="form-control form-control-sm" name="adi" id="adi" value="<?=$item->adi?>">
                             </div>
 
                             <div class="form-group row col-md-4">

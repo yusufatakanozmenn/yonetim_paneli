@@ -30,6 +30,56 @@ class E_catalog extends CI_Controller
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
+    public function save()
+    {
+        $insert = $this->e_catalog_model->add(
+            array(
+                "adi" => $this->input->post("adi"),               
+                "sira" => $this->input->post("sira"),
+                "durum" => $this->input->post("durum"),
+            )
+        );
+        if($insert){
+            redirect(base_url("e_catalog"));
+        }
+        else{
+            echo "Kayıt Eklenemedi";
+        }
+    }
+    public function update_form($id)
+    {
+        $viewData = new stdClass();        
+        $item = $this->e_catalog_model->get(
+            array(
+                "id" => $id
+            )
+        );
+        $viewData->viewFolder = $this->viewFolder;
+        $viewData->subViewFolder = "update";
+        $viewData->item = $item;
+       
+
+        $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
+    }
+    public function update($id)
+    {
+        $update = $this->e_catalog_model->update(
+            array(
+                "id" => $id
+            ),
+            array(
+                "adi" => $this->input->post("adi"),               
+                "sira" => $this->input->post("sira"),
+                "durum" => $this->input->post("durum"),
+            )
+        );
+        if($update){
+            redirect(base_url("e_catalog"));
+        }
+        else{
+            echo "Kayıt Güncellenemedi";
+        }
+    }
    
 
     public function update_status($id){
