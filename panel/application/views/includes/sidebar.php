@@ -355,12 +355,12 @@
                     </a>
                 </li> -->
 
-                <li>
+                <!-- <li>
                     <a href="<?php echo base_url("notebook")?>">
                         <i class="menu-icon fa fa-calendar"></i>
                         <span class="menu-text">Not Defteri</span>
                     </a>
-                </li>
+                </li> -->
 
 
             </ul><!-- .app-menu -->
