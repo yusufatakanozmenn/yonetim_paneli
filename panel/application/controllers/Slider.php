@@ -39,9 +39,7 @@ class Slider extends CI_Controller
                 "sekme"=> $this->input->post("sekme"),                
                 "durum" => $this->input->post("durum"),
                 "aciklama" => $this->input->post("aciklama"),
-                "video" => $this->input->post("video"),
-                "tarih" => date("Y-m-d H:i:s"),
-                
+                "video" => $this->input->post("video"),                
             )
         );
         if($insert){
@@ -76,8 +74,7 @@ class Slider extends CI_Controller
                 "sekme"=> $this->input->post("sekme"),                
                 "durum" => $this->input->post("durum"),
                 "aciklama" => $this->input->post("aciklama"),
-                "video" => $this->input->post("video"),
-                "tarih" => date("Y-m-d H:i:s"),
+                "video" => $this->input->post("video"),                
             )
         );
         if($update){

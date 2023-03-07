@@ -53,7 +53,7 @@
             </div>
             <div class="form-group">
                 <label for="adi">Açıklama</label>
-                <textarea class="form-control" name="aciklama"></textarea>
+                <textarea class="form-control" name="aciklama"><?=$item->aciklama?></textarea>
             </div>
 
             <div class="form-group">
