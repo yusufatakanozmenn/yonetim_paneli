@@ -94,6 +94,7 @@ class Sss extends CI_Controller
             echo 'Hatali islem';
         }
     }
+  
     
     public function delete($id){
         $delete = $this->sss_model->delete(

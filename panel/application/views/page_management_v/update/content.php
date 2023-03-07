@@ -5,17 +5,17 @@
         </h4>
         <div class="card">
             <div class="card-body">
-                <form class="forms-sample" method="post" action="<?php echo base_url('page_management/save')?>"
+                <form class="forms-sample" method="post" action="<?php echo base_url("page_management/update/$item->id")?>"
                     enctype="multipart/form-data">
                     <input id="id" name="id" type="hidden" value="">
                     <div class="form-group">
                         <label for="sira">Sıra</label>
                         <input type="number" class="form-control form-control-sm" min="0" name="sira" id="sira"
-                            value="">
+                            value="<?=$item->id?>">
                     </div>
                     <div class="form-group">
                         <label for="adi">Başlık</label>
-                        <input type="text" class="form-control form-control-sm" name="adi" id="adi" value="">
+                        <input type="text" class="form-control form-control-sm" name="adi" id="adi" value="<?=$item->adi?>">
                     </div>
                     <!--
 					<div class="form-group">
@@ -49,13 +49,13 @@
                                         aria-labelledby="select2-sayfa-container" aria-owns="select2-sayfa-results"
                                         aria-activedescendant="select2-sayfa-result-e2sb-0"><span
                                             class="select2-selection__rendered" id="select2-sayfa-container"
-                                            title="Genel">Genel</span><span class="select2-selection__arrow"
+                                            title="Genel">genel</span><span class="select2-selection__arrow"
                                             role="presentation"><b role="presentation"></b></span></span></span><span
                                     class="dropdown-wrapper" aria-hidden="true"></span></span>
                         </div>
                         <div class="form-group ">
                             <label class="switch">
-                                <input type="checkbox" name="durum" id="durum" value="1" checked="">
+                                <input type="checkbox" name="durum" id="durum" value="<?=$item->durum?>" checked="">
                                 <span class="slider"></span>
                             </label>
                             <label class="d-inline-block" style="line-height: 34px;" for="durum">Durum</label>
@@ -79,7 +79,7 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="maxlength-textarea">Sayfa Açıklama (description)</label>
-                                <textarea id="maxlength-textarea" name="description" class="form-control"
+                                <textarea id="maxlength-textarea" name="aciklama"  class="form-control"
                                     maxlength="260" rows="4"></textarea>
                             </div>
 

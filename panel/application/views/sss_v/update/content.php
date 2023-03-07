@@ -5,9 +5,9 @@
         </h4>
         <div class="card">
             <div class="card-body">
-                <form class="forms-sample" method="post" action="<?php echo base_url("sss/update/$item->id"); ?>"
+                <form class="forms-sample" method="post" action="<?php echo base_url("sss/update/$item->id")?>"
                     enctype="multipart/form-data">
-                    <input id="id" name="id" type="hidden" value="">
+                    <input id="id" name="id" type="hidden" value="<?= $item->id ?>">
                     <div class="form-group">
                         <label for="sira">Sıra</label>
                         <input type="number" class="form-control form-control-sm" min="0" name="sira" id="sira"
