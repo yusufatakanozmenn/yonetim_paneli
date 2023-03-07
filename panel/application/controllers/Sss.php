@@ -73,7 +73,16 @@ class Sss extends CI_Controller
     {
         $viewData = new stdClass();        
         $viewData->viewFolder = $this->viewFolder;
+
+        $item = $this->sss_model->get(
+            array(
+                "id"    => $id,
+            )
+        );
+
         $viewData->subViewFolder = "update";
+        $viewData->item = $item;
+
        
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
