@@ -7,14 +7,13 @@ class Page_Management extends CI_Controller {
 		parent::__construct();
 		$this->viewFolder = "page_management_v";
         $this->load->model("pages_model");
+        $this->load->helper("tools_helper");
        
 	}
     public function index(){
         $viewData = new stdClass();
         /** Tablodaki tüm kayıtları getiriyoruz.. */    
-        $items = $this->pages_model->get_all(
-            array()
-        );   
+        $items = $this->pages_model->get_all();   
         /** View'e gönderilecek değişkenler.. */
         $viewData->viewFolder=$this->viewFolder;
         $viewData->subViewFolder="list";  
@@ -33,11 +32,13 @@ class Page_Management extends CI_Controller {
     public function save(){
         $insert = $this->pages_model->add(
             array(
-                "id" => $this->input->post("id"),
                 "adi" => $this->input->post("adi"),
+                "seo" => convertToSEO($this->input->post("adi")),
                 "sayfa" => $this->input->post("sayfa"),                
-               "durum" => $this->input->post("durum"),  
-               "aciklama" => $this->input->post("aciklama"),         
+                "aciklama" => $this->input->post("aciklama"),
+                "durum" => 1,  
+                "anasayfa" => 1, 
+                "tarih" => date("Y-m-d H:i:s"),
             )
         );
         if($insert){
@@ -61,16 +62,16 @@ class Page_Management extends CI_Controller {
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
-    public function update(){
+    public function update($id){
         $update = $this->pages_model->update(
             array(
-                "id" => $this->input->post("id")
+                "id" => $id
             ),
             array(
                 "adi" => $this->input->post("adi"),
+                "seo" => convertToSEO($this->input->post("adi")),
                 "sayfa" => $this->input->post("sayfa"),                
-               "durum" => $this->input->post("durum"),  
-               "aciklama" => $this->input->post("aciklama"), 
+                "aciklama" => $this->input->post("aciklama"),
             )
         );
         if($update){
@@ -80,32 +81,17 @@ class Page_Management extends CI_Controller {
             echo "Güncelleme İşlemi Gerçekleşmedi";
         }
     }
-    public function update_home($id){
-
-        if($id){
-            $isActive = ($this->input->post("data") === "true") ? 1 : 0 ;
-            $insert = $this->pages_model->update(
-                array(
-                    "id" => $id
-                ),
-                array(
-                    "durum" => $isActive            
-                )
-                );
-        }else{
-            echo 'Hatali islem';
-        }
-    }
     public function update_status($id){
 
         if($id){
             $isActive = ($this->input->post("data") === "true") ? 1 : 0 ;
+            $db_name = $this->input->post("db_name");
             $insert = $this->pages_model->update(
                 array(
                     "id" => $id
                 ),
                 array(
-                    "durum" => $isActive            
+                    $db_name => $isActive            
                 )
                 );
         }else{

@@ -24,12 +24,6 @@
 
             <table class="table table-hover table-striped">
                 <thead>
-                    <th>
-                        <div class="checkbox checkbox-primary">
-                            <input type="checkbox" id="checkbox-demo-1" />
-                            <label for="checkbox-demo-1"></label>
-                        </div>
-                    </th>
                     <th>ID</th>
                     <th>Başlık</th>
                     <th>Bağlantı Sayfası</th>
@@ -40,32 +34,24 @@
                 <tbody>
                      <?php foreach ($items as $item) { ?>
                         <tr>
-                        <td>
-                            <div class="checkbox checkbox-primary">
-                                <input type="checkbox" id="checkbox-demo-1" />
-                                <label for="checkbox-demo-1"></label>
-                            </div>
-                        </td>
                         <td><?php echo $item->id;?></td>
                         <td><?php echo $item->adi;?></td>
                         <td><?php echo $item->seo;?></td>                               
                         <td>
-                            <input data-url="<?php echo base_url("page_management/update_home/$item->id");?>"
-                                class="isActive" id="switch-2-2" type="checkbox" data-switchery data-color="#10c469"
+                            <input data-url="<?php echo base_url("page_management/update_status/$item->id");?>"
+                                class="isActive" id="anasayfa" type="checkbox" data-switchery data-color="#10c469"
                                 <?php echo ($item->anasayfa) ? "checked" : "";  ?> />
-
                         </td>
                         <td>
                             <input data-url="<?php echo base_url("page_management/update_status/$item->id");?>"
-                                class="isActive" id="switch-2-2" type="checkbox" data-switchery data-color="#10c469"
+                                class="isActive" id="durum" type="checkbox" data-switchery data-color="#10c469"
                                 <?php echo ($item->durum) ? "checked" : "";  ?> />
-
                         </td>
                         <td>
-                            <a href="<?php echo base_url("page_management/delete/$item->id");?>" class="btn btn-sm btn-danger btn-outline"><i class="fa fa-trash"></i>
-                                </a>
-                            <a href="<?php echo base_url("page_management/update_form/$item->id");?>" class="btn btn-sm btn-info btn-outline"><i class="fa fa-pencil-square-o"></i>
-                                </a>
+                            <a href="<?php echo base_url("page_management/delete/$item->id");?>" class="btn btn-sm btn-danger "><i class="fa fa-trash"></i>
+                                Sil</a>
+                            <a href="<?php echo base_url("page_management/update_form/$item->id");?>" class="btn btn-sm btn-info "><i class="fa fa-pencil-square-o"></i>
+                                Düzenle</a>
                         </td>
                     </tr>
                     <?php } ?>
