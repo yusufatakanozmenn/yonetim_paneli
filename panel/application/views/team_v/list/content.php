@@ -24,32 +24,33 @@
 
             <table class="table table-hover table-striped">
                 <thead>
-                    <th>
-                        <div class="checkbox checkbox-primary">
-                            <input type="checkbox" id="checkbox-demo-1" />
-                            <label for="checkbox-demo-1"></label>
-                        </div>
-                    </th>
-                   
+                    <th>ID</th>                  
                     <th>Adı Soyadı</th>                  
+                    <th>Anasayfa</th>
                     <th>Durumu</th>
                     <th>İşlem</th>
                 </thead>
                 <tbody>
                     <?php foreach ($items as $item) { ?>
-                        <tr>
-                        <td>
-                            <div class="checkbox checkbox-primary">
-                                <input type="checkbox" id="checkbox-demo-1" />
-                                <label for="checkbox-demo-1"></label>
-                            </div>
-                        </td>                       
+                        <tr>                      
+                        <td><?php echo $item->id;?></td>                      
                         <td><?php echo $item->adi;?></td>                      
                         <td>
                             <input 
                             data-url="<?php echo base_url("team/update_status/$item->id");?>"
                             class="isActive"
-                            id="switch-2-2" 
+                            id="anasayfa" 
+                            type="checkbox" 
+                            data-switchery 
+                            data-color="#10c469"
+                            <?php echo ($item->anasayfa) ? "checked" : "";  ?>/>
+
+                        </td>
+                        <td>
+                            <input 
+                            data-url="<?php echo base_url("team/update_status/$item->id");?>"
+                            class="isActive"
+                            id="durum" 
                             type="checkbox" 
                             data-switchery 
                             data-color="#10c469"

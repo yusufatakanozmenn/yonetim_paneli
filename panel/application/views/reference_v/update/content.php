@@ -27,7 +27,7 @@
                                                 id="sira" value="<?=$item->sira?>">
                                         </div>
 
-                                        <div class="form-group row col-md-6">
+                                        <div class="form-group">
                                             <label>Kapak Görseli</label>
                                             <div class="form-group">
                                                 <input type="file" name="firma_footerlogo" class="file-upload-default">
@@ -38,18 +38,18 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card mb-4">
+                                        <div class="card">
                                             <div class="card-body">
                                                 <div class="form-group">
                                                     <label for="maxlength-textarea">Açıklama</label>
-                                                    <textarea id="aciklama" name="aciklama" class="form-control"
+                                                    <textarea id="summernote" name="aciklama" class="form-control"
                                                         maxlength="260" rows="4"><?=$item->aciklama?></textarea>
                                                 </div>
                                             </div>
                                             <div class="card-body">
                                                 <div class="form-group">
                                                     <label for="maxlength-textarea">Seo</label>
-                                                    <textarea id="seo" name="seo" class="form-control" maxlength="260"
+                                                    <textarea id="seo" name="seo" class="form-control"  maxlength="260"
                                                         rows="4"><?=$item->seo?></textarea>
                                                 </div>
                                             </div>

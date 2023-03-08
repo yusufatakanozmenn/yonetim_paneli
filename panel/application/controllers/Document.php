@@ -46,7 +46,8 @@ class Document extends CI_Controller
                     "adi" => $this->input->post("adi"),
                     "sira" => $this->input->post("sira"),                  
                     "durum" => $this->input->post("durum"),  
-                    "seo" => $this->input->post("seo"),                 
+                    "seo" => $this->input->post("seo"),
+                    "tarih" => date("Y-m-d H:i:s"),                
                 )
             );
             if($insert){

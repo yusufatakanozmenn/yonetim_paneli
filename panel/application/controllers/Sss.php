@@ -28,7 +28,7 @@ class Sss extends CI_Controller
                 "adi" => $this->input->post("adi"),               
                 "seo" => $this->input->post("seo"),              
                 "aciklama" => $this->input->post("aciklama"),              
-                "durum" => $this->input->post("durum"),                      
+                "durum" => 1,                      
             )
         );
         if($insert){
@@ -49,7 +49,6 @@ class Sss extends CI_Controller
                 "adi" => $this->input->post("adi"),               
                 "seo" => $this->input->post("seo"),              
                 "aciklama" => $this->input->post("aciklama"),              
-                "durum" => $this->input->post("durum"),                      
             )
         );
         if($update){

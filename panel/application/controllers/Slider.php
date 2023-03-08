@@ -89,13 +89,14 @@ class Slider extends CI_Controller
     public function update_status($id){
 
         if($id){
+            $db_name = $this->input->post("db_name");
             $isActive = ($this->input->post("data") === "true") ? 1 : 0 ;
             $insert = $this->slider_model->update(
                 array(
                     "id" => $id
                 ),
                 array(
-                    "durum" => $isActive            
+                    $db_name => $isActive            
                 )
                 );
         }else{

@@ -19,15 +19,10 @@
                                 <input type="text" class="form-control form-control-sm" name="adi" id="adi" value="">
                             </div>
 
-                            <div class="form-group row col-md-6">
-                                <label>Kapak Görseli</label>
+                            <div class="form-group ">
+                                <label>Dokuman</label>
                                 <div class="form-group">
                                     <input type="file" name="kapak_gorsel" class="file-upload-default">
-                                    <div class="input-group col-xs-12">
-                                        <div class="col-md-6 col-sm-6">
-                                            <a href="#" class="thumbnail white"><img src="" alt="..."></a>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <div class="card-body">

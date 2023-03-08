@@ -37,6 +37,8 @@ class Reference extends CI_Controller
                 "adi" => $this->input->post("adi"),
                 "aciklama" => $this->input->post("aciklama"),
                 "seo" => $this->input->post("seo"),
+                "anasayfa" =>1,
+                "durum" =>1,
                 
             )
         );

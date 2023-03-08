@@ -23,26 +23,14 @@
             <?php } else { ?>
 
             <table class="table table-hover table-striped">
-                <thead>
-                    <th>
-                        <div class="checkbox checkbox-primary">
-                            <input type="checkbox" id="checkbox-demo-1" />
-                            <label for="checkbox-demo-1"></label>
-                        </div>
-                    </th>                  
+                <thead>                 
                     <th>Başlık</th>                   
                     <th>Durumu</th>
                     <th>İşlem</th>
                 </thead>
                 <tbody>
                     <?php foreach ($items as $item) { ?>
-                        <tr>
-                        <td>
-                            <div class="checkbox checkbox-primary">
-                                <input type="checkbox" id="checkbox-demo-1" />
-                                <label for="checkbox-demo-1"></label>
-                            </div>
-                        </td>                       
+                        <tr>                      
                         <td><?php echo $item->adi;?></td>                      
                         <td>
                             <input 

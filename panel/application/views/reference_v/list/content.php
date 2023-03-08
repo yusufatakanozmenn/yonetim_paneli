@@ -23,12 +23,6 @@
 
             <table class="table table-hover table-striped">
                 <thead>
-                    <th>
-                        <div class="checkbox checkbox-primary">
-                            <input type="checkbox" id="checkbox-demo-1" />
-                            <label for="checkbox-demo-1"></label>
-                        </div>
-                    </th>
                     <th>ID</th>
                     <th>Başlık</th>
                     <th>Anasayfa</th>
@@ -38,19 +32,13 @@
                 <tbody>
                     <?php foreach ($items as $item) { ?>
                         <tr>
-                        <td>
-                            <div class="checkbox checkbox-primary">
-                                <input type="checkbox" id="checkbox-demo-1" />
-                                <label for="checkbox-demo-1"></label>
-                            </div>
-                        </td>
                         <td><?php echo $item->id;?></td>
                         <td><?php echo $item->adi;?></td>
                         
                         <td><input 
                             data-url="<?php echo base_url("reference/update_status_homepage/$item->id");?>"
                             class="isActive"
-                            id="switch-2-2" 
+                            id="anasayfa" 
                             type="checkbox" 
                             data-switchery 
                             data-color="#10c469"
@@ -59,7 +47,7 @@
                             <input 
                             data-url="<?php echo base_url("reference/update_status_durum/$item->id");?>"
                             class="isActive"
-                            id="switch-2-2" 
+                            id="durum" 
                             type="checkbox" 
                             data-switchery 
                             data-color="#10c469"

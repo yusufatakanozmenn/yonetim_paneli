@@ -24,12 +24,6 @@
 
             <table class="table table-hover table-striped">
                 <thead>
-                    <th>
-                        <div class="checkbox checkbox-primary">
-                            <input type="checkbox" id="checkbox-demo-1" />
-                            <label for="checkbox-demo-1"></label>
-                        </div>
-                    </th>
                     <th>ID</th>
                     <th>Başlık</th>
                     <th>Fotoğraflar</th>
@@ -40,24 +34,18 @@
                 <tbody>
                     <?php foreach ($items as $item) { ?>
                     <tr>
-                        <td>
-                            <div class="checkbox checkbox-primary">
-                                <input type="checkbox" id="checkbox-demo-1" />
-                                <label for="checkbox-demo-1"></label>
-                            </div>
-                        </td>
                         <td><?php echo $item->id;?></td>
                         <td><?php echo $item->adi;?></td>
                         <td><?php echo $item->resim;?></td>
                         <td>
                             <input data-url="<?php echo base_url("blog/update_status/$item->id");?>" class="isActive"
-                                id="switch-2-2" type="checkbox" data-switchery data-color="#10c469"
+                                id="anasayfa" type="checkbox" data-switchery data-color="#10c469"
                                 <?php echo ($item->anasayfa) ? "checked" : "";  ?> />
 
                         </td>
                         <td>
                             <input data-url="<?php echo base_url("blog/update_status/$item->id");?>" class="isActive"
-                                id="switch-2-2" type="checkbox" data-switchery data-color="#10c469"
+                                id="durum" type="checkbox" data-switchery data-color="#10c469"
                                 <?php echo ($item->durum) ? "checked" : "";  ?> />
 
                         </td>

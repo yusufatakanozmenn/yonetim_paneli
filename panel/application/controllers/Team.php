@@ -111,12 +111,13 @@ class Team extends CI_Controller
 
         if($id){
             $isActive = ($this->input->post("data") === "true") ? 1 : 0 ;
+            $db_name = $this->input->post("db_name");
             $insert = $this->team_model->update(
                 array(
                     "id" => $id
                 ),
                 array(
-                    "durum" => $isActive            
+                    $db_name => $isActive            
                 )
                 );
         }else{

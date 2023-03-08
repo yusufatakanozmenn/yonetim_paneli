@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-12">
         <h4 class="m-b-lg">
-            Yeni Belge Ekle
+             Belge Güncelle
         </h4>
         <div class="row">
             <div class="col-12 grid-margin stretch-card">
@@ -21,15 +21,10 @@
                                     value="<?=$item->adi?>">
                             </div>
 
-                            <div class="form-group row col-md-6">
+                            <div class="form-group ">
                                 <label>Kapak Görseli</label>
                                 <div class="form-group">
-                                    <input type="file" name="kapak_gorsel" class="file-upload-default">
-                                    <div class="input-group col-xs-12">
-                                        <div class="col-md-6 col-sm-6">
-                                            <a href="#" class="thumbnail white"><img src="" alt="..."></a>
-                                        </div>
-                                    </div>
+                                    <input type="file"  name="kapak_gorsel" class="file-upload-default">                    
                                 </div>
                             </div>
                             <div class="card-body">

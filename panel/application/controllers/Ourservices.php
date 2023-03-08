@@ -7,6 +7,7 @@ class Ourservices extends CI_Controller
         parent::__construct();
         $this->viewFolder = "ourservices_v";
         $this->load->model("ourservices_model");
+        $this->load->helper("tools_helper");
         
     }
     public function index()
@@ -58,12 +59,13 @@ class Ourservices extends CI_Controller
 
         if($id){
             $isActive = ($this->input->post("data") === "true") ? 1 : 0 ;
+            $db_name = $this->input->post("db_name");
             $insert = $this->ourservices_model->update(
                 array(
                     "id" => $id
                 ),
                 array(
-                    "durum" => $isActive            
+                    $db_name => $isActive            
                 )
                 );
         }else{
@@ -79,6 +81,7 @@ class Ourservices extends CI_Controller
             array(
                 "sira" => $this->input->post("sira"),
                 "adi" => $this->input->post("adi"),
+                "seo" => $this->input->post("seo"),
                 "aciklama" => $this->input->post("aciklama"),
             )
         );
