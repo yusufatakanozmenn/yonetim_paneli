@@ -11,7 +11,7 @@
                     <hr class="widget-separator">
                     <div class="widget-body">
                         <form class="forms-sample" method="post"
-                            action="<?php echo base_url("popup_message/update/$item->id"); ?>"
+                            action="<?php echo base_url("notification_templates/update_form/$item->id"); ?>"
                             enctype="multipart/form-data">
 
                             <div class="form-group">

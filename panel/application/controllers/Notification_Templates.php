@@ -21,6 +21,7 @@ class Notification_Templates extends CI_Controller
 
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
+  
     public function update_form($id)
     {
         $viewData = new stdClass();
