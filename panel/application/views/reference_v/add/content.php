@@ -31,14 +31,23 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label class="d-inline-block" style="line-height: 34px;" for="durum">Durum</label>
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="maxlength-textarea">Açıklama</label>
+                                        <textarea id="aciklama" name="aciklama" class="form-control" maxlength="260"
+                                            rows="4"></textarea>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="maxlength-textarea">Seo</label>
+                                        <textarea id="seo" name="seo" class="form-control" maxlength="260"
+                                            rows="4"></textarea>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group ">
-                                <label class="d-inline-block" style="line-height: 34px;" for="anasayfa">Anasayfa'da
-                                    Gözüksün mü ?</label>
-                            
-                            </div>
+
                             <!-- <div class="form-group">
                                 <div class="form-check">
                                     <label class="form-check-label">
@@ -46,13 +55,13 @@
                                             onchange="degistir()">Detay Sayfası Gösterilsin mi ?<i
                                             class="input-helper"></i><i class="input-helper"></i></label>
                                 </div>
-                            </div> -->                         
+                            </div> -->
 
                             <div class="form-group">
-                                    <button type="submit" class="btn btn-success btn-icon-text btn-sm"> KAYDET </button>
-                                    <a href="<?php echo base_url("reference"); ?>"></a>
+                                <button type="submit" class="btn btn-success btn-icon-text btn-sm"> KAYDET </button>
+                                <a href="<?php echo base_url("reference"); ?>"></a>
 
-                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>

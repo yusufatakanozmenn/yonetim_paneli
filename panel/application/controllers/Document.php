@@ -31,7 +31,9 @@ class Document extends CI_Controller
     public function save(){
         $this->load->library("form_validation");
         $this->form_validation->set_rules("adi", "Adı", "required|trim");
-        $this->form_validation->set_rules("sira", "Sıra", "required|trim");      
+        $this->form_validation->set_rules("sira", "Sıra", "required|trim"); 
+        $this->form_validation->set_rules("durum", "Durum", "required|trim");
+        $this->form_validation->set_rules("seo", "seo", "required|trim");     
         $this->form_validation->set_message(
             array(
                 "required" => "<b>{field}</b> alanı doldurulmalıdır."
@@ -43,7 +45,8 @@ class Document extends CI_Controller
                 array(
                     "adi" => $this->input->post("adi"),
                     "sira" => $this->input->post("sira"),                  
-                    "durum" => $this->input->post("durum"),                   
+                    "durum" => $this->input->post("durum"),  
+                    "seo" => $this->input->post("seo"),                 
                 )
             );
             if($insert){
