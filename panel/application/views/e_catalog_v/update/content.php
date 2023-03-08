@@ -57,9 +57,8 @@
                                             rows="4"><?=$item->seo?></textarea>
                                     </div>
                                 </div>
-                            </div>
-                            
-                          
+                            </div>                       
+               
 
                             <button type="submit" name="referans_ekle" class="btn btn-primary btn-icon-text btn-sm">
                                 <i class="mdi mdi-file-check btn-icon-prepend"></i>
