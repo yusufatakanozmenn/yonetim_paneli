@@ -37,6 +37,7 @@ class E_catalog extends CI_Controller
                 "adi" => $this->input->post("adi"),               
                 "sira" => $this->input->post("sira"),
                 "durum" => $this->input->post("durum"),
+                "seo" => $this->input->post("seo"),
             )
         );
         if($insert){
@@ -71,6 +72,7 @@ class E_catalog extends CI_Controller
                 "adi" => $this->input->post("adi"),               
                 "sira" => $this->input->post("sira"),
                 "durum" => $this->input->post("durum"),
+                "seo" => $this->input->post("seo"),
             )
         );
         if($update){

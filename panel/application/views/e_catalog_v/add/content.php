@@ -41,6 +41,16 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="card mb-4">                                
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="maxlength-textarea">Seo</label>
+                                        <textarea id="seo" name="seo" class="form-control" maxlength="260"
+                                            rows="4"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="form-group mb-2">
                                 <label class="switch">
                                     <input type="checkbox" name="durum" id="durum" value="1" checked="">

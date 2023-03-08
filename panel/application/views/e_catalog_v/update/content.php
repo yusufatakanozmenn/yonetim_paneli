@@ -41,6 +41,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="form-group mb-2">
                                 <label class="switch">
                                     <input type="checkbox" name="durum" id="durum" value="1" checked="">
@@ -48,17 +49,17 @@
                                 </label>
                                 <label class="d-inline-block" style="line-height: 34px;" for="durum">Durum</label>
                             </div>
+                            <div class="card mb-4">                                
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="maxlength-textarea">Seo</label>
+                                        <textarea id="seo" name="seo" class="form-control" maxlength="260"
+                                            rows="4"><?=$item->seo?></textarea>
+                                    </div>
+                                </div>
+                            </div>
                             
                           
-                            <script>
-                            function degistir() {
-                                if (document.getElementById("detay").checked) {
-                                    document.getElementById("divimiz").style.display = "block";
-                                } else {
-                                    document.getElementById("divimiz").style.display = "none";
-                                }
-                            };
-                            </script>
 
                             <button type="submit" name="referans_ekle" class="btn btn-primary btn-icon-text btn-sm">
                                 <i class="mdi mdi-file-check btn-icon-prepend"></i>
