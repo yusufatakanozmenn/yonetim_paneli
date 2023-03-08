@@ -21,13 +21,7 @@
                         <label for="url">Slayt URL</label>
                         <input type="text" class="form-control form-control-sm" name="url" id="url" value="">
                     </div>
-                    <div class="form-group">
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="checkbox" name="sekme" class="form-check-input">Tıklandığında yeni sekmeye
-                                gitsin mi ?<i class="input-helper"></i><i class="input-helper"></i></label>
-                        </div>
-                    </div>
+
                     <div class="form-group row col-md-6">
                         <label>Slayt Görseli Seçiniz (Önerilen Ölçüler: 1920x760)</label>
                         <div class="input-group col-xs-12">
@@ -43,14 +37,7 @@
                         </div>
                     </div>
             </div>
-            <div class="form-group">
-                <label class="d-block" for="durum">Durum</label>
-                <label class="switch">
-                    <input type="checkbox" name="durum" id="durum" value="" checked="">
-                    <span class="slider"></span>
-                </label>
 
-            </div>
             <div class="form-group">
                 <label for="adi">Açıklama</label>
                 <textarea class="form-control" name="aciklama"></textarea>
@@ -60,6 +47,20 @@
                 <label for="video">Varsa Video Embed Video ID <a href="images/embed.png" target="_blank"
                         class="hoverZoomLink">Neresi ?</a></label>
                 <input type="text" class="form-control form-control-sm" name="video" id="video" value="">
+            </div>
+            <div class="form-group">
+                <label class="d-block" for="durum">Durum</label>
+                <label class="switch">
+                    <input type="checkbox" name="durum" id="durum" value="" checked="">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="sekme" class="form-check-input">Tıklandığında yeni sekmeye
+                        gitsin mi ?<i class="input-helper"></i><i class="input-helper"></i></label>
+                </div>
             </div>
 
             <div class="form-group">
