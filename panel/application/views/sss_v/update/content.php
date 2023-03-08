@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-12">
         <h4 class="m-b-lg">
-            Yeni Soru Ekle
+            Soru Düzenle
         </h4>
         <div class="card">
             <div class="card-body">
@@ -36,35 +36,22 @@
                             </div>
                         </div>
 
-                        <div class="form-group ">
-                            <label class="switch">
-                                <input type="checkbox" name="durum" id="durum" value="<?= $item->durum ?>" checked="">
-                                <span class="slider"></span>
-                            </label>
-                            <label class="d-inline-block" style="line-height: 34px;" for="durum">Durum</label>
-                        </div>
+                     
                        
                     </div>
-                    <div class="card-body">
-                        <div name="aciklama" id="summernote">
-                            <label for="maxlength-textarea">Açıklama</label>
-                            <textarea id="maxlength-textarea" value="<?= $item->aciklama ?>" class="form-control"
-                                maxlength="260" rows="4"></textarea>
-                        </div>
-
-                    </div>
-                    <div id="summernote"></div>
                     <div class="card mb-4">
-                        <div class="card-header">
-                            SEO AYARLARI
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="maxlength-textarea">Açıklama</label>
+                                <textarea id="aciklama" name="aciklama" class="form-control" maxlength="260"
+                                    rows="4"><?= $item->aciklama ?></textarea>
+                            </div>
                         </div>
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="maxlength-textarea">Sayfa Açıklama (description)</label>
-                                <textarea id="maxlength-textarea" name="description" value="<?= $item->seo ?>"
-                                    class="form-control" maxlength="260" rows="4"></textarea>
+                                <label for="maxlength-textarea">Seo</label>
+                                <textarea id="seo" name="seo" class="form-control" maxlength="260" rows="4"><?= $item->seo?></textarea>
                             </div>
-
                         </div>
                     </div>
                     <div class="form-group">
