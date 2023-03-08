@@ -48,18 +48,17 @@
                         </td>
                         <td><?php echo $item->id;?></td>
                         <td><?php echo $item->adi;?></td>
-                        <td><?php echo $item->seo;?></td>
-                        <td><?php echo $item->anasayfa;?></td>
-                        <td><?php echo $item->durum;?></td>
+                        <td><?php echo $item->seo;?></td>                               
                         <td>
-                            <input
-                            data-url="<?php echo base_url("page_managment/update_status/$item->id");?>"
-                            class="isActive"
-                            id="switch-2-2"
-                            type="checkbox"
-                            data-switchery
-                            data-color="#10c469"
-                            <?php echo ($item->durum) ? "checked" : "";  ?>/>
+                            <input data-url="<?php echo base_url("page_management/update_home/$item->id");?>"
+                                class="isActive" id="switch-2-2" type="checkbox" data-switchery data-color="#10c469"
+                                <?php echo ($item->anasayfa) ? "checked" : "";  ?> />
+
+                        </td>
+                        <td>
+                            <input data-url="<?php echo base_url("page_management/update_status/$item->id");?>"
+                                class="isActive" id="switch-2-2" type="checkbox" data-switchery data-color="#10c469"
+                                <?php echo ($item->durum) ? "checked" : "";  ?> />
 
                         </td>
                         <td>

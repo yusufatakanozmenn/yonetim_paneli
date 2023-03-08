@@ -29,6 +29,7 @@ class Ourservices extends CI_Controller
                 "sira" => $this->input->post("sira"),
                 "adi" => $this->input->post("adi"),
                 "aciklama" => $this->input->post("aciklama"),
+                "seo" => $this->input->post("seo"),
             )
         );
         if($insert){

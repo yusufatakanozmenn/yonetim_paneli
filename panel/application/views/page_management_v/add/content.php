@@ -47,9 +47,7 @@
                                         class="select2-selection select2-selection--single" role="combobox"
                                         aria-haspopup="true" aria-expanded="true" tabindex="0"
                                         aria-labelledby="select2-sayfa-container" aria-owns="select2-sayfa-results"
-                                        aria-activedescendant="select2-sayfa-result-e2sb-0"><span
-                                            class="select2-selection__rendered" id="select2-sayfa-container"
-                                            title="Genel">Genel</span><span class="select2-selection__arrow"
+                                        aria-activedescendant="select2-sayfa-result-e2sb-0"><span class="select2-selection__arrow"
                                             role="presentation"><b role="presentation"></b></span></span></span><span
                                     class="dropdown-wrapper" aria-hidden="true"></span></span>
                         </div>

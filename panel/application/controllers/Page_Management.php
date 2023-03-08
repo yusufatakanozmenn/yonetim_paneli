@@ -80,6 +80,38 @@ class Page_Management extends CI_Controller {
             echo "Güncelleme İşlemi Gerçekleşmedi";
         }
     }
+    public function update_home($id){
+
+        if($id){
+            $isActive = ($this->input->post("data") === "true") ? 1 : 0 ;
+            $insert = $this->pages_model->update(
+                array(
+                    "id" => $id
+                ),
+                array(
+                    "durum" => $isActive            
+                )
+                );
+        }else{
+            echo 'Hatali islem';
+        }
+    }
+    public function update_status($id){
+
+        if($id){
+            $isActive = ($this->input->post("data") === "true") ? 1 : 0 ;
+            $insert = $this->pages_model->update(
+                array(
+                    "id" => $id
+                ),
+                array(
+                    "durum" => $isActive            
+                )
+                );
+        }else{
+            echo 'Hatali islem';
+        }
+    }
     public function delete($id){
         $delete = $this->pages_model->delete(
             array(

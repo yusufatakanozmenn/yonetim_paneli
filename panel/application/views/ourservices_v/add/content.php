@@ -37,35 +37,21 @@
                             </div>
                         </div>
                     
-                    <div class="form-group ">
-                        <label class="switch">
-                            <input type="checkbox" name="durum" id="durum" value="1" checked="">
-                            <span class="slider"></span>
-                        </label>
-                        <label class="d-inline-block" style="line-height: 34px;" for="durum">Durum</label>
                     </div>
-                    <div class="form-group ">
-                        <label class="switch">
-                            <input type="checkbox" name="anasayfa" id="anasayfa" value="1" checked="">
-                            <span class="slider"></span>
-                        </label>
-
-                        <label class="d-inline-block" style="line-height: 34px;" for="anasayfa">Anasayfa'da Gözüksün mü
-                            ?</label>
-                    </div>
-                    </div>
-                    <div id="summernote"></div>
                     <div class="card mb-4">
-                        <div class="card-header">
-                            SEO AYARLARI
+                    <div class="card-body">
+                            <div class="form-group">
+                                <label for="maxlength-textarea">Açıklama</label>
+                                <textarea id="aciklama" name="aciklama" class="form-control"
+                                    maxlength="260" rows="4"></textarea>
+                            </div>
                         </div>
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="maxlength-textarea">Sayfa Açıklama (description)</label>
-                                <textarea id="maxlength-textarea" name="description" class="form-control"
+                                <label for="maxlength-textarea">Seo</label>
+                                <textarea id="seo" name="seo" class="form-control"
                                     maxlength="260" rows="4"></textarea>
                             </div>
-
                         </div>
                     </div>
                     <button type="submit" name="hizmet_ekle" class="btn btn-primary btn-icon-text btn-sm">
