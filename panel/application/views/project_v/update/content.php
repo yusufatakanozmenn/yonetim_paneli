@@ -4,11 +4,11 @@
             <div class="col-md-12">
                 <div class="widget products-widget">
                     <header class="widget-header">
-                        <h4 class="widget-title">Yeni Proje Ekle</h4>
+                        <h4 class="widget-title">Proje Düzenle</h4>
                     </header>
                     <hr class="widget-separator">
                     <div class="widget-body">
-                        <form action="<?php ?>" method="post">
+                        <form action="<?php echo base_url("/project/update/$item->id") ?>" method="post">
 
                             <div class="form-group">
                                 <label for="sira">Sıra</label>
@@ -69,7 +69,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Listeleme Görseli</label>
+                                <label>Kapak Görseli</label>
                                 <input type="file" name="kapak" class="file-upload-default">
                             </div>
                             <div class="form-group">

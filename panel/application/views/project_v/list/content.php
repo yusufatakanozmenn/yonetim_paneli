@@ -5,7 +5,7 @@
         </h4>
         <h4>
 
-            <a href="<?php echo base_url("project/new_form"); ?>" class="btn btn-outline btn-primary btn-sm">
+            <a href="<?php echo base_url("project/new_form"); ?>" class="btn btn-primary btn-sm">
                 <i class="fa fa-plus-circle"></i> Yeni Ekle</a>
             <!-- <a href="#" class="btn btn-outline btn-danger btn-sm">
 				<i class="fa fa-trash"></i> Tüm Veriyi Sil</a> -->
@@ -24,13 +24,8 @@
 
             <table class="table table-hover table-striped">
                 <thead>
-                    <th>
-                        <div class="checkbox checkbox-primary">
-                            <input type="checkbox" id="checkbox-demo-1" />
-                            <label for="checkbox-demo-1"></label>
-                        </div>
-                    </th>
                     <th>ID</th>
+                    <th>Proje Adı</th>
                     <th>Kategori</th>
                     <th>Anasayfa</th>
                     <th>Durum</th>
@@ -40,33 +35,30 @@
                     <?php foreach ($items as $item) { ?>
                     <tr>
                         <td>
-                            <div class="checkbox checkbox-primary">
-                                <input type="checkbox" id="checkbox-demo-1" />
-                                <label for="checkbox-demo-1"></label>
-                            </div>
+                            <?php echo $item->id; ?>
                         </td>
                         <td>
-                            <?php echo $item->id; ?>
+                            <?php echo $item->adi; ?>
                         </td>
                         <td>
                             <?php echo $item->kategori; ?>
                         </td>
                         <td>
                             <input data-url="<?php echo base_url("project/update_status/$item->id");?>"
-                                class="isActive" id="switch-2-2" type="checkbox" data-switchery data-color="#10c469"
+                                class="isActive" id="anasayfa" type="checkbox" data-switchery data-color="#10c469"
                                 <?php echo ($item->anasayfa) ? "checked" : "";  ?> />
 
                         </td>
                         <td>
                             <input data-url="<?php echo base_url("project/update_status/$item->id");?>"
-                                class="isActive" id="switch-2-2" type="checkbox" data-switchery data-color="#10c469"
+                                class="isActive" id="durum" type="checkbox" data-switchery data-color="#10c469"
                                 <?php echo ($item->durum) ? "checked" : "";  ?> />
 
                         </td>
 						<td>
-                            <a href="<?php echo base_url("project/delete/$item->id");?>" class="btn btn-sm btn-danger btn-outline"><i class="fa fa-trash"></i>
+                            <a href="<?php echo base_url("project/delete/$item->id");?>" class="btn btn-sm btn-danger "><i class="fa fa-trash"></i>
                                 Sil</a>
-                            <a href="<?php echo base_url("project/update_form/$item->id");?>" class="btn btn-sm btn-info btn-outline"><i class="fa fa-pencil-square-o"></i>
+                            <a href="<?php echo base_url("project/update_form/$item->id");?>" class="btn btn-sm btn-info "><i class="fa fa-pencil-square-o"></i>
                                 Düzenle</a>
                         </td>
                     </tr>
