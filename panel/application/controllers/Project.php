@@ -57,12 +57,13 @@ class Project extends CI_Controller
 
         if($id){
             $isActive = ($this->input->post("data") === "true") ? 1 : 0 ;
+            $db_name = $this->input->post("db_name");
             $insert = $this->project_model->update(
                 array(
                     "id" => $id
                 ),
                 array(
-                    "durum" => $isActive            
+                    $db_name => $isActive            
                 )
                 );
         }else{
@@ -79,17 +80,18 @@ class Project extends CI_Controller
         $upload_kapak = $this->upload->do_upload("kapak");
         $upload_image = $this->upload->do_upload("resim");
 
-        $kapak_name = basename($_FILES["kapak"]["name"]);
-        $image_name = basename($_FILES["resim"]["name"]);
-
+        
         if ($upload_kapak) {
+            $kapak_name = basename($_FILES["kapak"]["name"]);
             $this->project_model->add(
                 array(
                     "kapak" => $kapak_name,
-                )
-            );
+                    )
+                );
+                
         }
         if ($upload_image) {
+            $image_name = basename($_FILES["resim"]["name"]);
             $this->project_model->add_foto(
                 array(
                     "pid" => $this->input->post("sira"),
@@ -141,10 +143,10 @@ class Project extends CI_Controller
         $upload_kapak = $this->upload->do_upload("kapak");
         $upload_image = $this->upload->do_upload("resim");
 
-        $kapak_name = basename($_FILES["kapak"]["name"]);
-        $image_name = basename($_FILES["resim"]["name"]);
+        
 
         if ($upload_kapak) {
+            $kapak_name = basename($_FILES["kapak"]["name"]);
             $this->project_model->update(
                 array(
                     "kapak" => $kapak_name,
@@ -152,6 +154,7 @@ class Project extends CI_Controller
             );
         }
         if ($upload_image) {
+            $image_name = basename($_FILES["resim"]["name"]);
             $this->project_model->update_foto(
                 array("pid" => $item->sira),
                 array(
@@ -180,6 +183,12 @@ class Project extends CI_Controller
                 "tarihg" => $this->input->post("tarihg"),
             )
         );
+
+        if($update){
+            redirect(base_url("project"));
+        }else{
+            echo "Hatali islem";
+        }
     }
 
 
