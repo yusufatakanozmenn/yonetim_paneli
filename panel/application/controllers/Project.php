@@ -53,6 +53,20 @@ class Project extends CI_Controller
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
 
+    public function delete($id){
+        $delete = $this->project_model->delete(
+            array(
+                "id" => $id
+            )
+        );
+        if($delete){
+            redirect(base_url("project"));
+        }
+        else{
+            echo "Silme İşlemi Gerçekleşmedi";
+        }
+    }
+
     public function save()
     {
         $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
@@ -95,7 +109,7 @@ class Project extends CI_Controller
                 "spot" => $this->input->post("spot"),
                 "durum" => 1,
                 "anasayfa" => 1,
-                "tarih" => $this->input->post("tarih"),
+                "tarih" => date("Y-m-d H:i:s"),
                 "tarihg" => $this->input->post("tarihg"),
                 "dil" => 1,
             )
@@ -161,12 +175,27 @@ class Project extends CI_Controller
                 "videoid" => $this->input->post("videoid"),
                 "spot" => $this->input->post("spot"),
                 "tarih" => $this->input->post("tarih"),
-                "tarihg" => $this->input->post("tarihg"),
-            )
+                "tarihg" => date("Y-m-d H:i:s"),            )
         );
     }
 
+    public function update_status($id){
 
+        if($id){
+            $isActive = ($this->input->post("data") === "true") ? 1 : 0 ;
+            $db_name = $this->input->post("db_name");
+            $insert = $this->project_model->update(
+                array(
+                    "id" => $id
+                ),
+                array(
+                    $db_name => $isActive,        
+                )
+                );
+        }else{
+            echo 'Hatali islem';
+        }
+    }
 
 
 

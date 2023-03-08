@@ -48,9 +48,10 @@ $(document).ready(function () {
   $(".isActive").change(function () {
     let $data = $(this).prop("checked");
     let $data_url = $(this).data("url");
+    let $db_name = this.id;
 
     if (typeof $data !== "undefined" && typeof $data_url !== "undefined") {
-      $.post($data_url, { data: $data }, function (response) {
+      $.post($data_url, { data : $data , db_name : $db_name}, function (response) {
         Swal.fire({
           position: 'center',
           icon: 'success',
