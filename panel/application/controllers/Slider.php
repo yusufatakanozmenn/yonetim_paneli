@@ -70,8 +70,6 @@ class Slider extends CI_Controller
         $this->form_validation->set_rules("url", " Url", "required|trim");
         $this->form_validation->set_rules("aciklama", " Açıklama", "required|trim");
         $this->form_validation->set_rules("video", " Video", "required|trim");
-        $this->form_validation->set_rules("durum", " Durum", "required|trim");
-        $this->form_validation->set_rules("sekme", " Sekme", "required|trim");
         $this->form_validation->set_message(
             array(
                 "required" => "<b>{field}</b> alanı doldurulmalıdır."
@@ -90,7 +88,7 @@ class Slider extends CI_Controller
         $slider_img_name = basename($_FILES["resim"]["name"]);
 
         if ($validate) {
-            $update = $this->Slider_model->update(
+            $update = $this->slider_model->update(
                 array(
                     "id" => $id
                 ),
@@ -98,8 +96,6 @@ class Slider extends CI_Controller
                     "sira" => $this->input->post("sira"),
                     "adi" => $this->input->post("adi"),
                     "url" => $this->input->post("url"),
-                    "sekme"=> $this->input->post("sekme"),                
-                    "durum" => $this->input->post("durum"),
                     "aciklama" => $this->input->post("aciklama"),
                     "video" => $this->input->post("video"),                
                     "resim" => $slider_img_name,
@@ -117,9 +113,10 @@ class Slider extends CI_Controller
                     "title" => "İşlem Başarısız",
                     "text" => "Kayıt güncellenemedi",
                     "type" => "error"
-                );redirect(base_url("product"));
+                );
             }
-            $this->session->set_flashdata("alert", $alert);           
+            $this->session->set_flashdata("alert", $alert);  
+            redirect(base_url("slider"));         
         }
     }
 

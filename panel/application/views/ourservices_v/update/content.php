@@ -20,19 +20,19 @@
                     </div>
                    
                     <div class="card-body">
-                                        <div class="form-group">
-                                            <label>Hizmet Resmi</label>
-                                            <input type="file" name="resim" class="file-upload-default">
-                                            <div class="input-group col-xs-6">
-                                                <div class="col-md-4 col-sm-4">
-                                                    <a href="#" class="thumbnail white">
-                                                        <img src="<?php echo base_url('uploads'); ?>/ourservices_v/<?php echo $item->resim; ?>"
-                                                            alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="form-group">
+                            <label>Hizmet Resmi</label>
+                            <input type="file" name="resim" class="file-upload-default">
+                            <div class="input-group col-xs-6">
+                                <div class="col-md-4 col-sm-4">
+                                    <a href="#" class="thumbnail white">
+                                        <img src="<?php echo base_url('uploads'); ?>/ourservices_v/<?php echo $item->resim; ?>"
+                                            alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                    <div class="wrap">
                  
                    <div class="card mb-4">

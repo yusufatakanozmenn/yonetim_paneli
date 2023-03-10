@@ -7,7 +7,6 @@
             <div class="card-body">
                 <form class="forms-sample" method="post" action="<?php echo base_url("slider/update/$item->id"); ?>"
                     enctype="multipart/form-data">
-                    <input id="id" name="id" type="hidden" value="">
                     <div class="form-group">
                         <label for="sira">Slayt Sıra Nosu</label>
                         <input type="number" class="form-control form-control-sm" name="sira" id="sira" min="0"
@@ -54,7 +53,7 @@
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-success btn-icon-text btn-sm"> GÖNDER </button>
-                <a href="<?php echo base_url("slider"); ?>"></a>
+                <a href="<?php echo base_url("slider"); ?>" class="btn btn-danger btn-sm">IPTAL</a>
                 </form>
             </div>
 
