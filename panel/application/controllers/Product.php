@@ -42,6 +42,7 @@ class Product extends CI_Controller
                 "anasayfa" => $this->input->post("anasayfa"),
                 "yeni" => $this->input->post("yeni"),
                 "stok" => $this->input->post("kategori"),
+                
                 "tarih" => date("Y-m-d H:i:s"),
                 "dil" => 0,
             )

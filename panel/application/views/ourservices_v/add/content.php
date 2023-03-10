@@ -28,8 +28,8 @@
                     <div class="card-header">
                             Hizmet Resimleri
                         </div>
-                        <input type="file" name="firma_footerlogo" class="file-upload-default">
-                        <div class="input-group col-xs-12">
+                        <input type="file" name="resim" class="file-upload-default">
+                        <div class="input-group col-xs-6">
                             <div class="col-md-6 col-sm-6">
                                 <a href="#" class="thumbnail white"><img
                                         src=""

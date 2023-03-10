@@ -31,6 +31,7 @@ class Ourservices extends CI_Controller
                 "adi" => $this->input->post("adi"),
                 "aciklama" => $this->input->post("aciklama"),
                 "seo" => $this->input->post("seo"),
+                "resim" => $this->input->post("resim"),
             )
         );
         if($insert){
@@ -73,25 +74,64 @@ class Ourservices extends CI_Controller
         }
     }
     
-    public function update($id){
-        $update = $this->ourservices_model->update(
-            array(
-                "id" => $id
-            ),
-            array(
-                "sira" => $this->input->post("sira"),
-                "adi" => $this->input->post("adi"),
-                "seo" => $this->input->post("seo"),
-                "aciklama" => $this->input->post("aciklama"),
-            )
+   
+     public function update($id)
+     {
+        $this->load->library("form_validation");
+         //kurallar yazılır
+        $this->form_validation->set_rules("adi", "adi", "required|trim");
+        $this->form_validation->set_rules("sira", "sira", "required|trim");
+        $this->form_validation->set_rules("aciklama", "aciklama", "required|trim");         
+        $this->form_validation->set_rules("seo", "seo", "required|trim");
+        $this->form_validation->set_message(
+             array(
+                 "required" => "<b>{field}</b> alanı doldurulmalıdır."
+             )
         );
-        if($update){
-            redirect(base_url("ourservices"));
-        }
-        else{
-            echo "Güncelleme İşlemi Gerçekleşmedi";
-        }
-    }
+        $validate = $this->form_validation->run();
+
+
+        $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
+        $config["upload_path"] = "uploads/$this->viewFolder/";
+
+        $this->load->library("upload", $config);
+
+        $upload_logo = $this->upload->do_upload("resim");
+
+        $ourservices_img_name = basename($_FILES["resim"]["name"]);
+
+        if ($validate) {
+             $update = $this->ourservices_model->update(
+                 array(
+                     "id" => $id
+                 ),
+                 array(
+                    "sira" => $this->input->post("sira"),
+                    "adi" => $this->input->post("adi"),
+                    "seo" => $this->input->post("seo"),
+                    "aciklama" => $this->input->post("aciklama"),
+                    "resim" => $ourservices_img_name,
+
+                 )
+             );
+            if ($update) {
+                 $alert = array(
+                     "title" => "İşlem Başarılı",
+                     "text" => "Kayıt başarıyla güncellendi",
+                     "type" => "success"
+                 );
+             } else {
+                 $alert = array(
+                     "title" => "İşlem Başarısız",
+                     "text" => "Kayıt güncellenemedi",
+                     "type" => "error"
+                 );
+             }
+             $this->session->set_flashdata("alert", $alert);
+             redirect(base_url("oursevices"));
+         }
+     }
+    
     
     public function add_form()
     {
