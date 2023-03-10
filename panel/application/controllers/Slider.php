@@ -100,7 +100,6 @@ class Slider extends CI_Controller
                     "video" => $this->input->post("video"),                
                     "resim" => $slider_img_name,
                     // deneme
-
                 ) 
             );
             if ($update) {

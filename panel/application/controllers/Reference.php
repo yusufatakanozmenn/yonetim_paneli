@@ -39,6 +39,7 @@ class Reference extends CI_Controller
                 "seo" => $this->input->post("seo"),
                 "anasayfa" =>1,
                 "durum" =>1,
+                "tarih" => date("Y-m-d H:i:s"),
                 
             )
         );
@@ -104,6 +105,7 @@ class Reference extends CI_Controller
                     "aciklama" => $this->input->post("aciklama"),
                     "seo" => $this->input->post("seo"),               
                     "resim" => $reference_img_name,
+                    "tarih" => date("Y-m-d H:i:s"),
 
                 ) 
             );

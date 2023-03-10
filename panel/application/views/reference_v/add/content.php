@@ -35,7 +35,7 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="maxlength-textarea">Açıklama</label>
-                                        <textarea id="aciklama" name="aciklama" class="form-control" maxlength="260"
+                                        <textarea id="summernote" name="aciklama" class="form-control" maxlength="260"
                                             rows="4"></textarea>
                                     </div>
                                 </div>
