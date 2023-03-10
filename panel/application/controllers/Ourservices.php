@@ -128,7 +128,7 @@ class Ourservices extends CI_Controller
                  );
              }
              $this->session->set_flashdata("alert", $alert);
-             redirect(base_url("oursevices"));
+             redirect(base_url("ourservices"));
          }
      }
     
