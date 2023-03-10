@@ -25,16 +25,20 @@
             <table class="table table-hover table-striped">
                 <thead>
                     <th>ID</th>
+                    <th>Resim</th>
                     <th>Başlık</th>
                     <th>Anasayfa</th>
                     <th>Durum</th>
-                    <!-- <th>Durumu</th>
-                    <th>İşlem</th> -->
                 </thead>
                 <tbody>
                     <?php foreach ($items as $item) { ?>
                         <tr>
                         <td><?php echo $item->id;?></td>
+                        <td>
+                            <a href="#" class="thumbnail white">
+                                <img src="<?php echo base_url('uploads'); ?>/ourservices_v/<?php echo $item->resim; ?>"
+                                    alt="">
+                            </a>
                         <td><?php echo $item->adi;?></td>
                         <td>
                             <input 
