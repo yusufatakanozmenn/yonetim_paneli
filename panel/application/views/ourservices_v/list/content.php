@@ -39,6 +39,7 @@
                                 <img src="<?php echo base_url('uploads'); ?>/ourservices_v/<?php echo $item->resim; ?>"
                                     alt="">
                             </a>
+                        </td>
                         <td><?php echo $item->adi;?></td>
                         <td>
                             <input 

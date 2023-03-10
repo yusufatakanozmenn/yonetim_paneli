@@ -63,25 +63,63 @@ class Slider extends CI_Controller
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
     public function update($id){
-        $update = $this->slider_model->update(
+        $this->load->library("form_validation");
+        //kurallar yazılır
+        $this->form_validation->set_rules("adi", "adi", "required|trim");
+        $this->form_validation->set_rules("sira", " sira", "required|trim");
+        $this->form_validation->set_rules("url", " Url", "required|trim");
+        $this->form_validation->set_rules("aciklama", " Açıklama", "required|trim");
+        $this->form_validation->set_rules("video", " Video", "required|trim");
+        $this->form_validation->set_rules("durum", " Durum", "required|trim");
+        $this->form_validation->set_rules("sekme", " Sekme", "required|trim");
+        $this->form_validation->set_message(
             array(
-                "id" => $id
-            ),
-            array(
-                "sira" => $this->input->post("sira"),
-                "adi" => $this->input->post("adi"),
-                "url" => $this->input->post("url"),
-                "sekme"=> $this->input->post("sekme"),                
-                "durum" => $this->input->post("durum"),
-                "aciklama" => $this->input->post("aciklama"),
-                "video" => $this->input->post("video"),                
+                "required" => "<b>{field}</b> alanı doldurulmalıdır."
             )
         );
-        if($update){
-            redirect(base_url("slider"));
-        }
-        else{
-            echo "Güncelleme İşlemi Gerçekleşmedi";
+        $validate = $this->form_validation->run();
+
+
+        $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
+        $config["upload_path"] = "uploads/$this->viewFolder/";
+
+        $this->load->library("upload", $config);
+
+        $upload_logo = $this->upload->do_upload("resim");
+
+        $slider_img_name = basename($_FILES["resim"]["name"]);
+
+        if ($validate) {
+            $update = $this->Slider_model->update(
+                array(
+                    "id" => $id
+                ),
+                array(
+                    "sira" => $this->input->post("sira"),
+                    "adi" => $this->input->post("adi"),
+                    "url" => $this->input->post("url"),
+                    "sekme"=> $this->input->post("sekme"),                
+                    "durum" => $this->input->post("durum"),
+                    "aciklama" => $this->input->post("aciklama"),
+                    "video" => $this->input->post("video"),                
+                    "resim" => $slider_img_name,
+
+                ) 
+            );
+            if ($update) {
+                $alert = array(
+                    "title" => "İşlem Başarılı",
+                    "text" => "Kayıt başarıyla güncellendi",
+                    "type" => "success"
+                );
+            } else {
+                $alert = array(
+                    "title" => "İşlem Başarısız",
+                    "text" => "Kayıt güncellenemedi",
+                    "type" => "error"
+                );redirect(base_url("product"));
+            }
+            $this->session->set_flashdata("alert", $alert);           
         }
     }
 
