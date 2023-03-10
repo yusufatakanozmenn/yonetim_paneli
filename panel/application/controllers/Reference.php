@@ -70,24 +70,58 @@ class Reference extends CI_Controller
 
     public function update($id){
         
-        $insert = $this->reference_model->update(
+        $this->load->library("form_validation");
+        //kurallar yazılır
+        $this->form_validation->set_rules("adi", "adi", "required|trim");
+        $this->form_validation->set_rules("sira", " sira", "required|trim");       
+        $this->form_validation->set_rules("aciklama", " Açıklama", "required|trim");
+        $this->form_validation->set_rules("seo", " seo", "required|trim");
+        $this->form_validation->set_message(
             array(
-                "id" => $id
-            ),
-            array(
-                "sira" => $this->input->post("sira"),
-                "adi" => $this->input->post("adi"),
-                "aciklama" => $this->input->post("aciklama"),
-                "seo" => $this->input->post("seo"),                
-                
+                "required" => "<b>{field}</b> alanı doldurulmalıdır."
             )
-            );
+        );
+        $validate = $this->form_validation->run();
 
-        if ($insert){
-            redirect(base_url("reference"));
-        }
-        else{
-            echo "Kayit eklenemedi";
+
+        $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
+        $config["upload_path"] = "uploads/$this->viewFolder/";
+
+        $this->load->library("upload", $config);
+
+        $upload_logo = $this->upload->do_upload("resim");
+
+        $reference_img_name = basename($_FILES["resim"]["name"]);
+
+        if ($validate) {
+            $update = $this->reference_model->update(
+                array(
+                    "id" => $id
+                ),
+                array(
+                    "sira" => $this->input->post("sira"),
+                    "adi" => $this->input->post("adi"),
+                    "aciklama" => $this->input->post("aciklama"),
+                    "seo" => $this->input->post("seo"),               
+                    "resim" => $reference_img_name,
+
+                ) 
+            );
+            if ($update) {
+                $alert = array(
+                    "title" => "İşlem Başarılı",
+                    "text" => "Kayıt başarıyla güncellendi",
+                    "type" => "success"
+                );
+            } else {
+                $alert = array(
+                    "title" => "İşlem Başarısız",
+                    "text" => "Kayıt güncellenemedi",
+                    "type" => "error"
+                );
+            }
+            $this->session->set_flashdata("alert", $alert);  
+            redirect(base_url("reference"));         
         }
     }
 

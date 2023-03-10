@@ -38,7 +38,7 @@
                         <td><?php echo $item->adi;?></td>
                         <td>
                             <a href="#" class="thumbnail white">
-                                <img src="<?php echo base_url('uploads'); ?>/slider_v/<?php echo $item->resim; ?>"
+                                <img style="width: 50px;" src="<?php echo base_url('uploads'); ?>/slider_v/<?php echo $item->resim; ?>"
                                     alt="">
                             </a>
                         </td>

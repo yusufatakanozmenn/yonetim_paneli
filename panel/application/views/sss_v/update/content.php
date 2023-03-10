@@ -18,27 +18,7 @@
                         <input type="text" class="form-control form-control-sm" name="adi" id="adi"
                             value="<?= $item->adi ?>">
                     </div>
-                    <!--
-					<div class="form-group">
-						<label for="icon">Hizmet İcon <a target="_blank" href="https://fontawesome.com/icons?d=gallery">İconlar</a></label>
-						<input type="text" class="form-control form-control-sm" name="icon" id="icon" value="" />
-					</div>
-					
-					-->
-                    <div class="form-group">
-                        <div class="card-header">
-                            Hizmet Resimleri
-                        </div>
-                        <input type="file" name="firma_footerlogo" class="file-upload-default">
-                        <div class="input-group col-xs-12">
-                            <div class="col-md-6 col-sm-6">
-                                <a href="#" class="thumbnail white"><img src="" alt="..."></a>
-                            </div>
-                        </div>
-
-                     
-                       
-                    </div>
+                  
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="form-group">

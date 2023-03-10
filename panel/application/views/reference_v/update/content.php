@@ -27,13 +27,16 @@
                                                 id="sira" value="<?=$item->sira?>">
                                         </div>
 
-                                        <div class="form-group">
-                                            <label>Kapak Görseli</label>
+                                        <div class="card-body">
                                             <div class="form-group">
-                                                <input type="file" name="firma_footerlogo" class="file-upload-default">
-                                                <div class="input-group col-xs-12">
-                                                    <div class="col-md-6 col-sm-6">
-                                                        <a href="#" class="thumbnail white"><img src="" alt="..."></a>
+                                                <label>Kapak Görseli</label>
+                                                <input type="file" name="resim" class="file-upload-default">
+                                                <div class="input-group col-xs-6">
+                                                    <div class="col-md-4 col-sm-4">
+                                                        <a href="#" class="thumbnail white">
+                                                            <img src="<?php echo base_url('uploads'); ?>/reference_v/<?php echo $item->resim; ?>"
+                                                                alt="">
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -49,7 +52,7 @@
                                             <div class="card-body">
                                                 <div class="form-group">
                                                     <label for="maxlength-textarea">Seo</label>
-                                                    <textarea id="seo" name="seo" class="form-control"  maxlength="260"
+                                                    <textarea id="seo" name="seo" class="form-control" maxlength="260"
                                                         rows="4"><?=$item->seo?></textarea>
                                                 </div>
                                             </div>
