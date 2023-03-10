@@ -62,17 +62,7 @@
                             </div>
                     </div>
 
-                    <div class="form-group row col-md-4">
-                        <label>Kapak Görseli</label>
-                        <div class="form-group">
-                            <input type="file" name="firma_footerlogo" class="file-upload-default">
-                            <div class="input-group col-xs-12">
-                                <div class="col-md-6 col-sm-6">
-                                    <a href="#" class="thumbnail white"><img src="" alt="..."></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   
                     <div class="form-group row col-md-4">
                         <label>Dosya</label>
                         <div class="form-group">

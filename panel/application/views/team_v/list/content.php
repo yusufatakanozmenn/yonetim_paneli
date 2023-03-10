@@ -24,7 +24,8 @@
 
             <table class="table table-hover table-striped">
                 <thead>
-                    <th>ID</th>                  
+                    <th>ID</th>    
+                    <th>Resim</th>              
                     <th>Adı Soyadı</th>                  
                     <th>Anasayfa</th>
                     <th>Durumu</th>
@@ -33,7 +34,13 @@
                 <tbody>
                     <?php foreach ($items as $item) { ?>
                         <tr>                      
-                        <td><?php echo $item->id;?></td>                      
+                        <td><?php echo $item->id;?></td>    
+                        <td>
+                            <a href="#" class="thumbnail white w-50">
+                                <img style="width:50px; height:50px;" src="<?php echo base_url('uploads'); ?>/team_v/<?php echo $item->resim; ?>"
+                                    alt="">
+                            </a>
+                        </td>                  
                         <td><?php echo $item->adi;?></td>                      
                         <td>
                             <input 
