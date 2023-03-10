@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-12">
         <h4 class="m-b-lg">
-          Slider Güncelle
+            Slider Güncelle
         </h4>
         <div class="card">
             <div class="card-body">
@@ -24,20 +24,21 @@
                             value="<?=$item->url?>">
                     </div>
 
-                    <div class="form-group ">
-                        <label>Slayt Görseli Seçiniz (Önerilen Ölçüler: 1920x760)</label>
-                        <div class="input-group col-xs-12">
-                            <div class="form-group">
-                                <input type="file"  name="firma_footerlogo" class="file-upload-default">
-                                <div class="input-group col-xs-12">
-                                    <div class="col-md-6 col-sm-6">
-                                        <a href="#" class="thumbnail white"><img src="" alt="..."></a>
-                                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Slider Görseli</label>
+                            <input type="file" name="resim" class="file-upload-default">
+                            <div class="input-group col-xs-6">
+                                <div class="col-md-4 col-sm-4">
+                                    <a href="#" class="thumbnail white">
+                                        <img src="<?php echo base_url('uploads'); ?>/slider_v/<?php echo $item->resim; ?>"
+                                            alt="">
+                                    </a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
+
             </div>
 
             <div class="form-group">

@@ -36,7 +36,12 @@
                         <tr>
                         <td><?php echo $item->id;?></td>
                         <td><?php echo $item->adi;?></td>
-                        <td><?php echo $item->resim;?></td>                       
+                        <td>
+                            <a href="#" class="thumbnail white">
+                                <img src="<?php echo base_url('uploads'); ?>/slider_v/<?php echo $item->resim; ?>"
+                                    alt="">
+                            </a>
+                        </td>
                         <td>
                             <input 
                             data-url="<?php echo base_url("slider/update_status/$item->id");?>"
