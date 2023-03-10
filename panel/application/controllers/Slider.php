@@ -99,6 +99,7 @@ class Slider extends CI_Controller
                     "aciklama" => $this->input->post("aciklama"),
                     "video" => $this->input->post("video"),                
                     "resim" => $slider_img_name,
+                    // deneme
 
                 ) 
             );
