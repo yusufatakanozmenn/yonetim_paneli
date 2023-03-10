@@ -28,7 +28,7 @@
                         <label>Slayt Görseli Seçiniz (Önerilen Ölçüler: 1920x760)</label>
                         <div class="input-group col-xs-12">
                             <div class="form-group">
-                                <input type="file" disabled name="firma_footerlogo" class="file-upload-default">
+                                <input type="file"  name="firma_footerlogo" class="file-upload-default">
                                 <div class="input-group col-xs-12">
                                     <div class="col-md-6 col-sm-6">
                                         <a href="#" class="thumbnail white"><img src="" alt="..."></a>

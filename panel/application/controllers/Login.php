@@ -1,4 +1,4 @@
-<?php
+<?php /* 
 class Login extends CI_Controller
 {
     public $viewFolder = "";
@@ -64,3 +64,4 @@ class Login extends CI_Controller
 
 
 }
+*/
