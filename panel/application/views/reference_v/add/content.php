@@ -23,7 +23,7 @@
                             <div class="form-group">
                                 <label>Kapak Görseli</label>
                                 <div class="form-group">
-                                    <input type="file" name="firma_footerlogo" class="file-upload-default">
+                                    <input type="file" name="resim" class="file-upload-default">
                                     <div class="input-group col-xs-12">
                                         <div class="col-md-3 col-sm-6">
                                             <a href="#" class="thumbnail white"><img src="" alt="..."></a>

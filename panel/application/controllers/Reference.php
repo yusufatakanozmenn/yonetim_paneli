@@ -31,11 +31,23 @@ class Reference extends CI_Controller
     }
     public function save()
     {
-        //resim kaydetme işlemi
-        $config["allowed_types"] = "jpg|jpeg|png";
-        $config["upload_path"]   = "uploads/$this->viewFolder/";
+        $this->load->library("form_validation");
+        //kurallar yazılır
+        $this->form_validation->set_rules("adi", "adi", "required|trim");
+        $this->form_validation->set_rules("sira", " sira", "required|trim");
+        $this->form_validation->set_rules("aciklama", " Açıklama", "required|trim");
+        $this->form_validation->set_rules("seo", " seo", "required|trim");
+        $this->form_validation->set_message(
+            array(
+                "required" => "<b>{field}</b> alanı doldurulmalıdır."
+            )
+        );
+        $validate = $this->form_validation->run();
+        $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
+        $config["upload_path"] = "uploads/$this->viewFolder/";
         $this->load->library("upload", $config);
-        $upload = $this->upload->do_upload("resim");
+        $upload_logo = $this->upload->do_upload("resim");
+        $reference_img_name = basename($_FILES["resim"]["name"]);
 
         $insert = $this->reference_model->add(
             array(
@@ -46,12 +58,11 @@ class Reference extends CI_Controller
                 "anasayfa" =>1,
                 "durum" =>1,
                 "tarih" => date("Y-m-d H:i:s"),
-                "resim" => $upload ? $this->upload->data("resim") : "default.png",                
-            )
+                "resim" => $reference_img_name,               
+            )  
         );
         if($insert){
             redirect(base_url("reference"));
-
         }
         else{
             echo "Kayıt Eklenemedi";

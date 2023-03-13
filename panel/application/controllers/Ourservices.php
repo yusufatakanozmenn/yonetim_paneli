@@ -23,16 +23,43 @@ class Ourservices extends CI_Controller
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
+    public function add()
+    {
+        $viewData = new stdClass();        
+        $viewData->viewFolder = $this->viewFolder;
+        $viewData->subViewFolder = "add";
+       
+
+        $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
+    }
     public function save()
     {
+        $this->load->library("form_validation");
+        //kurallar yazılır
+        $this->form_validation->set_rules("adi", "adi", "required|trim");
+        $this->form_validation->set_rules("sira", " sira", "required|trim");
+        $this->form_validation->set_rules("aciklama", " Açıklama", "required|trim");
+        $this->form_validation->set_rules("seo", " seo", "required|trim");
+        $this->form_validation->set_message(
+            array(
+                "required" => "<b>{field}</b> alanı doldurulmalıdır."
+            )
+        );
+        $validate = $this->form_validation->run();
+        $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
+        $config["upload_path"] = "uploads/$this->viewFolder/";
+        $this->load->library("upload", $config);
+        $upload_logo = $this->upload->do_upload("resim");
+        $ourservices_img_name = basename($_FILES["resim"]["name"]);
+
         $insert = $this->ourservices_model->add(
             array(
                 "sira" => $this->input->post("sira"),
                 "adi" => $this->input->post("adi"),
                 "aciklama" => $this->input->post("aciklama"),
-                "seo" => $this->input->post("seo"),
-                "resim" => $this->input->post("resim"),
-            )
+                "seo" => $this->input->post("seo"),    
+                "resim" => $ourservices_img_name,               
+            )  
         );
         if($insert){
             redirect(base_url("ourservices"));

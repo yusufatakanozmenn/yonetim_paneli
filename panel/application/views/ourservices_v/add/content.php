@@ -25,39 +25,37 @@
 					
 					-->
                     <div class="form-group">
-                    <div class="card-header">
+                        <div class="card-header">
                             Hizmet Resimleri
                         </div>
                         <input type="file" name="resim" class="file-upload-default">
                         <div class="input-group col-xs-6">
                             <div class="col-md-6 col-sm-6">
-                                <a href="#" class="thumbnail white"><img
-                                        src=""
-                                        alt="..."></a>
+                                <a href="#" class="thumbnail white"><img src="" alt="..."></a>
                             </div>
                         </div>
-                    
+
                     </div>
                     <div class="card mb-4">
-                    <div class="card-body">
+                        <div class="card-body">
                             <div class="form-group">
                                 <label for="maxlength-textarea">Açıklama</label>
-                                <textarea id="aciklama" name="aciklama" class="form-control"
-                                    maxlength="260" rows="4"></textarea>
+                                <textarea id="aciklama" name="aciklama" class="form-control" maxlength="260"
+                                    rows="4"></textarea>
                             </div>
                         </div>
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="maxlength-textarea">Seo</label>
-                                <textarea id="seo" name="seo" class="form-control"
-                                    maxlength="260" rows="4"></textarea>
+                                <textarea id="seo" name="seo" class="form-control" maxlength="260" rows="4"></textarea>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" name="hizmet_ekle" class="btn btn-primary btn-icon-text btn-sm">
-                        <i class="mdi mdi-file-check btn-icon-prepend"></i>
-                        KAYDET
-                    </button>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-icon-text btn-sm"> GÖNDER </button>
+                        <a href="<?php echo base_url("ourservices"); ?>"></a>
+
+                    </div>
                 </form>
             </div>
         </div>
