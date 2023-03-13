@@ -87,41 +87,64 @@ class Video extends CI_Controller
 
     public function update($id)
     {
-        $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
-        $config["upload_path"] = "uploads/$this->viewFolder/";
+        $this->load->library("form_validation");
+        //kurallar yazılır
+       $this->form_validation->set_rules("adi", "adi", "required|trim");
+       $this->form_validation->set_rules("sira", "sira", "required|trim");
+       $this->form_validation->set_rules("aciklama", "aciklama", "required|trim");   
+       $this->form_validation->set_rules("description", "description", "required|trim");
+       $this->form_validation->set_rules("kod", "kod", "required|trim");             
+       $this->form_validation->set_rules("seo", "seo", "required|trim");
+       
+       $this->form_validation->set_message(
+            array(
+                "required" => "<b>{field}</b> alanı doldurulmalıdır."
+            )
+       );
+       $validate = $this->form_validation->run();
 
-        $this->load->library("upload", $config);
 
-        $upload_image = $this->upload->do_upload("resim");
-        $image_name = basename($_FILES["resim"]["name"]);
+       $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
+       $config["upload_path"] = "uploads/$this->viewFolder/";
 
-        if ($upload_image) {
-            $this->video_model->update(
-                array("id" => 1),
+       $this->load->library("upload", $config);
+
+       $upload_logo = $this->upload->do_upload("resim");
+
+       $video_img_name = basename($_FILES["resim"]["name"]);
+
+       if ($validate) {
+            $update = $this->video_model->update(
                 array(
-                    "resim" => $image_name,
+                    "id" => $id
+                ),
+                array(
+                    "adi" => $this->input->post("adi"),
+                    "sira" => $this->input->post("sira"),
+                    "kod" => $this->input->post("kod"),
+                    "aciklama" => $this->input->post("description"),
+                    "seo" => convertToSEO($this->input->post("adi")),
+                    "keywords" => $this->input->post("description"),
+                    "tarih" => date("Y-m-d H:i:s"),
+                    "resim" => $video_img_name,
+
                 )
             );
-        }
-
-        $update = $this->video_model->update(
-            array(
-                "id" => $id
-            ),
-            array(
-                "adi" => $this->input->post("adi"),
-                "sira" => $this->input->post("sira"),
-                "kod" => $this->input->post("kod"),
-                "aciklama" => $this->input->post("description"),
-                "seo" => convertToSEO($this->input->post("adi")),
-                "keywords" => $this->input->post("description"),
-                "tarih" => date("Y-m-d H:i:s"),
-            )
-        );
-        if ($update) {
+           if ($update) {
+                $alert = array(
+                    "title" => "İşlem Başarılı",
+                    "text" => "Kayıt başarıyla güncellendi",
+                    "type" => "success"
+                );
+            } else {
+                $alert = array(
+                    "title" => "İşlem Başarısız",
+                    "text" => "Kayıt güncellenemedi",
+                    "type" => "error"
+                );
+            }
+            $this->session->set_flashdata("alert", $alert);
             redirect(base_url("video"));
-        } else {
-            echo "Güncelleme İşlemi Gerçekleşmedi";
         }
 
     }
