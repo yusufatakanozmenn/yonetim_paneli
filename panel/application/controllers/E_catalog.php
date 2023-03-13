@@ -63,23 +63,21 @@ class E_catalog extends CI_Controller
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
     public function update($id)
-    {
-        $update = $this->e_catalog_model->update(
-            array(
-                "id" => $id
-            ),
-            array(
+    {        
+        //resim upload
+        $config["allowed_types"] = "jpg|jpeg|png";
+        $config["upload_path"]   = "uploads/$this->viewFolder/";
+        $this->load->library("upload", $config);
+        $upload = $this->upload->do_upload("resim");
+        if($upload){
+            $uploaded_file = $this->upload->data("file_name");
+            $data = array(
                 "adi" => $this->input->post("adi"),               
                 "sira" => $this->input->post("sira"),
                 "durum" => $this->input->post("durum"),
                 "seo" => $this->input->post("seo"),
-            )
-        );
-        if($update){
-            redirect(base_url("e_catalog"));
-        }
-        else{
-            echo "Kayıt Güncellenemedi";
+                "resim" => $uploaded_file,
+            );
         }
     }
    

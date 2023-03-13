@@ -94,8 +94,8 @@ class Video extends CI_Controller
        $this->form_validation->set_rules("aciklama", "aciklama", "required|trim");   
        $this->form_validation->set_rules("description", "description", "required|trim");
        $this->form_validation->set_rules("kod", "kod", "required|trim");             
-       $this->form_validation->set_rules("seo", "seo", "required|trim");
-       
+       $this->form_validation->set_rules("seo", "seo", "required|trim");   
+       $this->form_validation->set_rules("resim", "resim", "required|trim");    
        $this->form_validation->set_message(
             array(
                 "required" => "<b>{field}</b> alanı doldurulmalıdır."
@@ -112,7 +112,6 @@ class Video extends CI_Controller
        $upload_logo = $this->upload->do_upload("resim");
 
        $video_img_name = basename($_FILES["resim"]["name"]);
-
        if ($validate) {
             $update = $this->video_model->update(
                 array(
