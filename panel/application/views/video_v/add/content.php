@@ -27,13 +27,16 @@
                                     value="">
                             </div>
 
-                            <div class="form-group">
-                                <label>Kapak Görseli</label>
-
-                                <div class="input-group col-xs-12">
-                                    <input type="file" name="resim" class="file-upload-default">
+                            <div class="col-lg-4">
+                                    <div class="input-group col-xs-12">
+                                        <input type="file" name="resim" class="file-upload-default">
+                                        <div class="input-group col-xs-12">
+                                            <div class="col-md-6 col-sm-6">
+                                                <a href="#" class="thumbnail white"><img src="" alt="..."></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
 
 
                             <div class="form-group">
