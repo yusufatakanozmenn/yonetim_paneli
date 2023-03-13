@@ -28,46 +28,45 @@
                             </div>
 
                             <div class="card-body">
-                        <div class="form-group">
-                            <label>Kapak Görseli</label>
-                            <input type="file" name="resim" class="file-upload-default">
-                            <div class="input-group col-xs-6">
-                                <div class="col-md-4 col-sm-4">
-                                    <a href="#" class="thumbnail white">
-                                        <img src="<?php echo base_url('uploads'); ?>/video_v/<?php echo $item->resim; ?>"
-                                            alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   <div class="wrap">
-
-
-                            <div class="form-group">
-                                <label for="maxlength-textarea">İçerik</label>
-                                <textarea id="maxlength-textarea" name="description" class="form-control"
-                                    maxlength="260" rows="4"><?php echo $item->aciklama ?></textarea>
-                            </div>
-
-                            <div class="card mb-4">
-                                <div class="card-header">
-                                    SEO AYARLARI
-                                </div>
-                                <div class="card-body">
-                                    <div class="form-group">
-                                        <label for="maxlength-textarea">Sayfa Açıklama (description)</label>
-                                        <textarea id="maxlength-textarea" name="seo" class="form-control"
-                                            maxlength="260" rows="4"><?php echo $item->description ?></textarea>
+                                <div class="form-group">
+                                    <label>Kapak Görseli</label>
+                                    <input type="file" name="resim" class="file-upload-default">
+                                    <div class="input-group col-xs-6">
+                                        <div class="col-md-4 col-sm-4">
+                                            <a href="#" class="thumbnail white">
+                                                <img src="<?php echo base_url('uploads'); ?>/video_v/<?php echo $item->resim; ?>"
+                                                    alt="">
+                                            </a>
+                                        </div>
                                     </div>
-
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn rounded mw-md btn-success">
-                                    GÜNCELLE </button>
-                                <a href="<?php echo base_url("video/update"); ?>"></a>
-                            </div>
+
+                            <div class="wrap">
+                                <div class="form-group">
+                                    <label for="maxlength-textarea">İçerik</label>
+                                    <textarea id="maxlength-textarea" name="description" class="form-control"
+                                        maxlength="260" rows="4"><?php echo $item->aciklama ?></textarea>
+                                </div>
+
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        SEO AYARLARI
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="maxlength-textarea">Sayfa Açıklama (description)</label>
+                                            <textarea id="maxlength-textarea" name="seo" class="form-control"
+                                                maxlength="260" rows="4"><?php echo $item->description ?></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn rounded mw-md btn-success">
+                                        GÜNCELLE </button>
+                                    <a href="<?php echo base_url("video/update"); ?>"></a>
+                                </div>
                         </form>
                     </div>
                 </div>

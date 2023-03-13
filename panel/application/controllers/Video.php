@@ -127,7 +127,6 @@ class Video extends CI_Controller
                     "keywords" => $this->input->post("description"),
                     "tarih" => date("Y-m-d H:i:s"),
                     "resim" => $video_img_name,
-
                 )
             );
            if ($update) {
@@ -146,11 +145,9 @@ class Video extends CI_Controller
             $this->session->set_flashdata("alert", $alert);
             redirect(base_url("video"));
         }
-
     }
     public function update_status($id)
     {
-
         if ($id) {
             $isActive = ($this->input->post("data") === "true") ? 1 : 0;
             $insert = $this->video_model->update(

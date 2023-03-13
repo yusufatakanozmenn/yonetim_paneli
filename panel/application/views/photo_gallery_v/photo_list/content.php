@@ -53,9 +53,8 @@
                                                     </div>
 
                                                     <a href="javascript:void(0)" class="product">
-                                                        <img class="img-responsive"
-                                                            src="<?php echo base_url('uploads'); ?>/photo_gallery_v/<?php ?>"
-                                                            alt="...">
+                                                        <img src="<?php echo base_url("uploads/$viewFolder/$item->kapak"); ?>"
+                                                            alt="" class="img-responsive">
                                                     </a>
                                                     <div class="caption">
                                                         <div class="card-header">
