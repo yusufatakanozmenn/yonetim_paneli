@@ -9,34 +9,33 @@
                     <hr class="widget-separator">
                     <div class="widget-body">
                         <form class="forms-sample" method="post"
-                            action="<?php echo base_url("photo_gallery/update/$item->id"); ?>" enctype="multipart/form-data">
+                            action="<?php echo base_url("photo_gallery/update/$item->id"); ?>"
+                            enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="adi">Başlık</label>
                                 <input type="text" class="form-control form-control-sm" name="adi" id="adi"
                                     value="<?php echo $item->adi ?>">
                             </div>
                             <input id="id" name="id" type="hidden" value="">
-                          
-                           
-                            <div class="form-group">
-                                <label>Kapak Görseli</label>
 
-                                <div class="input-group col-xs-12">
-                                    <input type="file" name="kapak" class="file-upload-default">
-                                    <div class="input-group col-md-6">
-                                        <div class="col-md-6 col-sm-6">
-                                            <a href="#" class="thumbnail white"><img
-                                                    src="<?php echo base_url('uploads'); ?>/photo_gallery_v/<?php echo $item->kapak; ?>"
-                                                    alt="..."></a>
-                                        </div>
+
+                            <div class="form-group">
+                                <label>Galeri Kapak</label>
+                                <input type="file" name="resim" class="file-upload-default">
+                                <div class="input-group col-xs-6">
+                                    <div class="col-md-4 col-sm-4">
+                                        <a href="#" class="thumbnail white">
+                                            <img src="<?php echo base_url('uploads'); ?>/photo_gallery_v/<?php echo $item->resim; ?>"
+                                                alt="">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="maxlength-textarea">İçerik</label>
-                                <textarea id="maxlength-textarea" name="aciklama" class="form-control"
-                                    maxlength="260" rows="4"><?php echo $item->aciklama ?></textarea>
+                                <textarea id="maxlength-textarea" name="aciklama" class="form-control" maxlength="260"
+                                    rows="4"><?php echo $item->aciklama ?></textarea>
                             </div>
 
                             <div class="card mb-4">

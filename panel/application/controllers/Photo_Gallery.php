@@ -42,66 +42,29 @@ class Photo_Gallery extends CI_Controller
         $viewData->subViewFolder = "update";
         $viewData->item = $item;
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
-    }
-    public function photo_list($id)
-    {
-        $viewData = new stdClass();
-        $item = $this->photo_gallery_model->get_(
-            array(
-                "resimid" => $id
-            )
-        );
-        $item1 = $this->photo_gallery_model->get(
-            array(
-                "id" => $id
-            )
-        );
-        $viewData->viewFolder = $this->viewFolder;
-        $viewData->subViewFolder = "photo_list";
-        $viewData->item = $item;
-        $viewData->item1 = $item1;
-        $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
-    }
-
-    public function upload_photo(){
-        $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
-        $config["upload_path"] = "uploads/$this->viewFolder/";
-
-        $this->load->library("upload", $config);
-
-        $upload_image = $this->upload->do_upload("kapak");
-        $image_name = basename($_FILES["kapak"]["name"]);
-
-        if ($upload_image) {
-            $this->photo_gallery_model->add(
-                array("id" => 1),
-                array(
-                    "kapak" => $image_name,
-                )
-            );
-        }
-    }
+    } 
+   
 
     //foto galeri ekleme
     public function save()
     {
+        $this->load->library("form_validation");
+        //kurallar yazılır
+        $this->form_validation->set_rules("adi", "adi", "required|trim");
+        $this->form_validation->set_rules("aciklama", "aciklama", "required|trim");
+        $this->form_validation->set_rules("description", "description", "required|trim");
+        $this->form_validation->set_rules("seo", "seo", "required|trim");
+        $this->form_validation->set_message(
+            array(
+                "required" => "<b>{field}</b> alanı doldurulmalıdır."
+            )
+        );
+        $validate = $this->form_validation->run();
         $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
         $config["upload_path"] = "uploads/$this->viewFolder/";
-
         $this->load->library("upload", $config);
-
-        $upload_image = $this->upload->do_upload("kapak");
-        $image_name = basename($_FILES["kapak"]["name"]);
-
-        if ($upload_image) {
-            $this->photo_gallery_model->add(
-                array("id" => 1),
-                array(
-                    "kapak" => $image_name,
-                )
-            );
-        }
-
+        $upload_logo = $this->upload->do_upload("resim");
+        $photo_img_name = basename($_FILES["resim"]["name"]);
         $insert = $this->photo_gallery_model->add(
             array(
                 "adi" => $this->input->post("adi"),
@@ -111,56 +74,56 @@ class Photo_Gallery extends CI_Controller
                 "keywords" => $this->input->post("adi"),
                 "tarih" => date("Y-m-d H:i:s"),
                 "dil" => 1,
-                "durum" => 1,
+                "durum" => 1,               
+                "resim" => $photo_img_name,                    
             )
         );
-        if ($insert) {
+        if($insert){
             redirect(base_url("photo_gallery"));
-
-        } else {
+        }
+        else{
             echo "Kayıt Eklenemedi";
         }
 
     }
     public function update($id)
     {
+        $this->load->library("form_validation");
+        //kurallar yazılır
+        $this->form_validation->set_rules("adi", "adi", "required|trim");
+        $this->form_validation->set_rules("aciklama", "aciklama", "required|trim");
+        $this->form_validation->set_rules("description", "description", "required|trim");
+        $this->form_validation->set_rules("seo", "seo", "required|trim");
+        $this->form_validation->set_message(
+            array(
+                "required" => "<b>{field}</b> alanı doldurulmalıdır."
+            )
+        );
+        $validate = $this->form_validation->run();
         $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
         $config["upload_path"] = "uploads/$this->viewFolder/";
-
         $this->load->library("upload", $config);
-
-        $upload_image = $this->upload->do_upload("kapak");
-        $image_name = basename($_FILES["kapak"]["name"]);
-        if ($upload_image) {
-            $this->photo_gallery_model->update(
-                array("id" => 1),
-                array(
-                    "kapak" => $image_name,
-                )
-            );
-        }
-
-
-        $update = $this->photo_gallery_model->update(
-            array(
-                "id" => $id
-            ),
+        $upload_logo = $this->upload->do_upload("resim");
+        $photo_img_name = basename($_FILES["resim"]["name"]);
+        $insert = $this->photo_gallery_model->add(
             array(
                 "adi" => $this->input->post("adi"),
                 "aciklama" => $this->input->post("aciklama"),
                 "description" => $this->input->post("description"),
-                "seo" => convertToSEO($this->input->post("adi")),
-                "keywords" => $this->input->post("description"),
+                "seo" => convertToSEO($this->input->post("description")),
+                "keywords" => $this->input->post("adi"),
                 "tarih" => date("Y-m-d H:i:s"),
-
+                "dil" => 1,
+                "durum" => 1,               
+                "resim" => $photo_img_name,                    
             )
         );
-        if ($update) {
+        if($insert){
             redirect(base_url("photo_gallery"));
-        } else {
-            echo "Güncelleme İşlemi Gerçekleşmedi";
         }
-
+        else{
+            echo "Kayıt Eklenemedi";
+        }
     }
     public function update_status($id)
     {

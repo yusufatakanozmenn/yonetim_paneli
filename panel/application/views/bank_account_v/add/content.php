@@ -60,8 +60,7 @@
                         <div class="col-lg-3 text-right">
                             <label class="col-form-label font-weight-bold" for="resim">Banka Logo</label>
                         </div>
-                        <div class="col-lg-4">
-                            
+                        <div class="col-lg-4">                            
                             <div class="input-group col-xs-12">
                             <input type="file" name="resim" class="file-upload-default">
                                     <div class="input-group col-xs-12">
