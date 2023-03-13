@@ -146,7 +146,6 @@ class Video extends CI_Controller
             $this->session->set_flashdata("alert", $alert);
             redirect(base_url("video"));
         }
-
     }
     public function update_status($id)
     {

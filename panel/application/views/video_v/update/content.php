@@ -66,7 +66,7 @@
                             <div class="form-group">
                                 <button type="submit" class="btn rounded mw-md btn-success">
                                     GÜNCELLE </button>
-                                <a href="<?php echo base_url("video/update"); ?>"></a>
+                                <a href="<?php echo base_url("video"); ?>" class="btn rounded btn-danger">IPTAL</a>
                             </div>
                         </form>
                     </div>
