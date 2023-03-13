@@ -31,6 +31,12 @@ class Reference extends CI_Controller
     }
     public function save()
     {
+        //resim kaydetme işlemi
+        $config["allowed_types"] = "jpg|jpeg|png";
+        $config["upload_path"]   = "uploads/$this->viewFolder/";
+        $this->load->library("upload", $config);
+        $upload = $this->upload->do_upload("resim");
+
         $insert = $this->reference_model->add(
             array(
                 "sira" => $this->input->post("sira"),                
@@ -40,7 +46,7 @@ class Reference extends CI_Controller
                 "anasayfa" =>1,
                 "durum" =>1,
                 "tarih" => date("Y-m-d H:i:s"),
-                
+                "resim" => $upload ? $this->upload->data("resim") : "default.png",                
             )
         );
         if($insert){
