@@ -59,19 +59,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group row ">
-                                <label>Listeleme Görseli</label>
-                                <div class="form-group">
-                                    <input type="file" name="firma_footerlogo" disabled class="file-upload-default">
+                            <div class="col-lg-4">
                                     <div class="input-group col-xs-12">
-                                        <div class=" col-sm-6">
-                                            <a href="#" class="thumbnail white"><img src="" alt="..."></a>
+                                        <input type="file" name="resim" class="file-upload-default">
+                                        <div class="input-group col-xs-12">
+                                            <div class="col-md-6 col-sm-6">
+                                                <a href="#" class="thumbnail white"><img src="" alt="..."></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
-                            </div>
-                    </div>
+                    
                     <div class="form-group mb-2">
                         <div class="form-group">
                             <label for="spot">Spot Metin <i class="icon-info text-info" data-toggle="popover"
@@ -89,20 +87,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group mb-2">
-                        <label class="switch">
-                            <input type="checkbox" name="durum" id="durum" value="1" checked="">
-                            <span class="slider"></span>
-                        </label>
-                        <label class="d-inline-block" style="line-height: 34px;" for="durum">Durum</label>
-                    </div>
-                    <div class="form-group mb-2">
-                        <label class="switch">
-                            <input type="checkbox" name="anasayfa" id="anasayfa" value="1" checked="">
-                            <span class="slider"></span>
-                        </label>
-                        <label class="d-inline-block" style="line-height: 34px;" for="durum">Anasayfa</label>
                     </div>
                     <button type="submit" name="haber_ekle" class="btn btn-primary btn-icon-text btn-sm">
                         <i class="mdi mdi-file-check btn-icon-prepend"></i>

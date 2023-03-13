@@ -21,6 +21,27 @@ class Blog extends CI_Controller
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
     public function save(){
+        $this->load->library("form_validation");
+        //kurallar yazılır
+        $this->form_validation->set_rules("adi", "adi", "required|trim");
+        $this->form_validation->set_rules("videoid", "videoid", "required|trim");
+        $this->form_validation->set_rules("sira", "sira", "required|trim");
+        $this->form_validation->set_rules("durum", "durum", "required|trim");
+        $this->form_validation->set_rules("tarih", "tarih", "required|trim");
+        $this->form_validation->set_rules("tarihg", "tarihg", "required|trim");
+        $this->form_validation->set_rules("spot", "spot", "required|trim");
+        $this->form_validation->set_rules("description", "description", "required|trim");
+        $this->form_validation->set_message(
+            array(
+                "required" => "<b>{field}</b> alanı doldurulmalıdır."
+            )
+        );
+        $validate = $this->form_validation->run();
+        $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
+        $config["upload_path"] = "uploads/$this->viewFolder/";
+        $this->load->library("upload", $config);
+        $upload_logo = $this->upload->do_upload("resim");
+        $blog_img_name = basename($_FILES["resim"]["name"]);
         $insert = $this->blog_model->add(
             array(
                 "adi" => $this->input->post("adi"),
@@ -30,7 +51,8 @@ class Blog extends CI_Controller
                 "tarih" => $this->input->post("tarih"),
                 "tarihg"=>$this->input->post("tarihg"),
                 "spot" => $this->input->post("spot"),
-                "description" => $this->input->post("description"),
+                "description" => $this->input->post("description"),        
+                "resim" => $blog_img_name,                    
             )
         );
         if($insert){
@@ -40,11 +62,32 @@ class Blog extends CI_Controller
             echo "Kayıt Eklenemedi";
         }
     }
+
+
+    
     public function update($id){
-        $update = $this->blog_model->update(
+        $this->load->library("form_validation");
+        //kurallar yazılır
+        $this->form_validation->set_rules("adi", "adi", "required|trim");
+        $this->form_validation->set_rules("videoid", "videoid", "required|trim");
+        $this->form_validation->set_rules("sira", "sira", "required|trim");
+        $this->form_validation->set_rules("durum", "durum", "required|trim");
+        $this->form_validation->set_rules("tarih", "tarih", "required|trim");
+        $this->form_validation->set_rules("tarihg", "tarihg", "required|trim");
+        $this->form_validation->set_rules("spot", "spot", "required|trim");
+        $this->form_validation->set_rules("description", "description", "required|trim");
+        $this->form_validation->set_message(
             array(
-                "id" => $id
-            ),
+                "required" => "<b>{field}</b> alanı doldurulmalıdır."
+            )
+        );
+        $validate = $this->form_validation->run();
+        $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
+        $config["upload_path"] = "uploads/$this->viewFolder/";
+        $this->load->library("upload", $config);
+        $upload_logo = $this->upload->do_upload("resim");
+        $blog_img_name = basename($_FILES["resim"]["name"]);
+        $update = $this->blog_model->add(
             array(
                 "adi" => $this->input->post("adi"),
                 "videoid" => $this->input->post("videoid"),
@@ -53,7 +96,8 @@ class Blog extends CI_Controller
                 "tarih" => $this->input->post("tarih"),
                 "tarihg"=>$this->input->post("tarihg"),
                 "spot" => $this->input->post("spot"),
-                "description" => $this->input->post("description"),
+                "description" => $this->input->post("description"),        
+                "resim" => $blog_img_name,                    
             )
         );
         if($update){

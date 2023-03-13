@@ -59,17 +59,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group row ">
+                            
+                            <div class="form-group">
                                 <label>Listeleme Görseli</label>
-                                <div class="form-group">
-                                    <input type="file" name="firma_footerlogo" class="file-upload-default">
-                                    <div class="input-group col-xs-12">
-                                        <div class=" col-sm-6">
-                                            <a href="#" class="thumbnail white"><img src="" alt="..."></a>
-                                        </div>
+                                <input type="file" name="resim" class="file-upload-default">
+                                <div class="input-group col-xs-6">
+                                    <div class="col-md-4 col-sm-4">
+                                        <a href="#" class="thumbnail white">
+                                            <img src="<?php echo base_url('uploads'); ?>/blog_v/<?php echo $item->resim; ?>"
+                                                alt="">
+                                        </a>
                                     </div>
                                 </div>
-
                             </div>
                     </div>
                     <div class="form-group mb-2">              

@@ -36,7 +36,13 @@
                     <tr>
                         <td><?php echo $item->id;?></td>
                         <td><?php echo $item->adi;?></td>
-                        <td><?php echo $item->resim;?></td>
+                        <td>
+                            <a href="#" class="thumbnail white">
+                                <img style="width: 50px;"
+                                    src="<?php echo base_url('uploads'); ?>/blog_v/<?php echo $item->resim; ?>"
+                                    alt="">
+                            </a>
+                        </td>
                         <td>
                             <input data-url="<?php echo base_url("blog/update_status/$item->id");?>" class="isActive"
                                 id="anasayfa" type="checkbox" data-switchery data-color="#10c469"
