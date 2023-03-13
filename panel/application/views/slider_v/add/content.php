@@ -22,17 +22,18 @@
                         <input type="text" class="form-control form-control-sm" name="url" id="url" value="">
                     </div>
 
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label>Slider Görseli</label>
+                    <div class="form-group row mb-0">
+                        <div class="col-lg-3 text-right">
+                            <label class="col-form-label font-weight-bold" for="resim">Slider Görsel</label>
+                        </div>
+                        <div class="col-lg-4">                            
+                            <div class="input-group col-xs-12">
                             <input type="file" name="resim" class="file-upload-default">
-                            <div class="input-group col-xs-6">
-                                <div class="col-md-4 col-sm-4">
-                                    <a href="#" class="thumbnail white">
-                                        <img src=""
-                                            alt="">
-                                    </a>
-                                </div>
+                                    <div class="input-group col-xs-12">
+                                        <div class="col-md-6 col-sm-6">
+                                            <a href="#" class="thumbnail white"><img src="" alt="..."></a>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
                     </div>

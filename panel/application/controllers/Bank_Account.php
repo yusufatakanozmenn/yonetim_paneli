@@ -25,8 +25,7 @@ class Bank_Account extends CI_Controller
     {
         $viewData = new stdClass();        
         $viewData->viewFolder = $this->viewFolder;
-        $viewData->subViewFolder = "add";
-       
+        $viewData->subViewFolder = "add";       
 
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
@@ -42,33 +41,91 @@ class Bank_Account extends CI_Controller
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
     public function update($id){
-        $update = $this->bank_account_model->update(
+        $this->load->library("form_validation");
+        //kurallar yazılır
+       $this->form_validation->set_rules("banka", "banka", "required|trim");
+       $this->form_validation->set_rules("iban", "iban", "required|trim");
+       $this->form_validation->set_rules("hesap", "hesap", "required|trim");         
+       $this->form_validation->set_rules("sube", "sube", "required|trim");
+       $this->form_validation->set_rules("hnumara", "hnumara", "required|trim");
+       $this->form_validation->set_message(
             array(
-                "id" => $id
-            ),
-            array(
+                "required" => "<b>{field}</b> alanı doldurulmalıdır."
+            )
+       );
+       $validate = $this->form_validation->run();
+
+
+       $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
+       $config["upload_path"] = "uploads/$this->viewFolder/";
+
+       $this->load->library("upload", $config);
+
+       $upload_logo = $this->upload->do_upload("resim");
+
+       $bank_img_name = basename($_FILES["resim"]["name"]);
+
+       if ($validate) {
+            $update = $this->bank_account_model->update(
+                array(
+                    "id" => $id
+                ),
+                array(
                 "banka" => $this->input->post("banka"),
                 "iban" => $this->input->post("iban"),
                 "hesap" => $this->input->post("hesap"),
                 "sube" => $this->input->post("sube"),
-                "hnumara" => $this->input->post("hnumara") 
-            )
-        );
-        if($update){
+                "hnumara" => $this->input->post("hnumara"),
+                "resim" => $bank_img_name,
+
+                )
+            );
+           if ($update) {
+                $alert = array(
+                    "title" => "İşlem Başarılı",
+                    "text" => "Kayıt başarıyla güncellendi",
+                    "type" => "success"
+                );
+            } else {
+                $alert = array(
+                    "title" => "İşlem Başarısız",
+                    "text" => "Kayıt güncellenemedi",
+                    "type" => "error"
+                );
+            }
+            $this->session->set_flashdata("alert", $alert);
             redirect(base_url("bank_account"));
-        }
-        else{
-            echo "Kayıt Güncellenemedi";
         }
     }
     public function save(){
+        $this->load->library("form_validation");
+        //kurallar yazılır
+         $this->form_validation->set_rules("banka", "banka", "required|trim");
+            $this->form_validation->set_rules("iban", "iban", "required|trim");
+            $this->form_validation->set_rules("hesap", "hesap", "required|trim");
+            $this->form_validation->set_rules("sube", "sube", "required|trim");
+            $this->form_validation->set_rules("hnumara", "hnumara", "required|trim");
+            $this->form_validation->set_message(
+                array(
+                    "required" => "<b>{field}</b> alanı doldurulmalıdır."
+                )
+            );
+            $validate = $this->form_validation->run();
+            $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
+            $config["upload_path"] = "uploads/$this->viewFolder/";
+            $this->load->library("upload", $config);
+            $upload_logo = $this->upload->do_upload("resim");
+            $bank_img_name = basename($_FILES["resim"]["name"]);
+
         $insert = $this->bank_account_model->add(
             array(
                 "banka" => $this->input->post("banka"),
                 "iban" => $this->input->post("iban"),
                 "hesap" => $this->input->post("hesap"),
                 "sube" => $this->input->post("sube"),
-                "hnumara" => $this->input->post("hnumara")                       
+                "hnumara" => $this->input->post("hnumara"),
+                "resim" => $bank_img_name,                
+                     
             )
         );
         if($insert){

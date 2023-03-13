@@ -292,7 +292,7 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="<?php echo base_url("photo_gallery/add_form")?>">Yeni Fotoğraf Ekle</a></li>
+                        <li><a href="<?php echo base_url("photo_gallery/new_form")?>">Yeni Fotoğraf Ekle</a></li>
                         <li><a href="<?php echo base_url("photo_gallery")?>">Galeri Listesi</a></li>
                     </ul>
                 </li>

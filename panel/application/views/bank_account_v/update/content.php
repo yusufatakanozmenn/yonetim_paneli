@@ -32,7 +32,8 @@
                             <label class="col-form-label font-weight-bold" for="sube">Şube Kodu - Şube Adı</label>
                         </div>
                         <div class="col-lg-9">
-                            <input type="text" class="form-control form-control-sm" name="sube" id="sube" value="<?=$item->sube?>">
+                            <input type="text" class="form-control form-control-sm" name="sube" id="sube"
+                                value="<?=$item->sube?>">
                         </div>
                     </div>
                     <div class="form-group row mb-0">
@@ -60,23 +61,21 @@
                         <div class="col-lg-9">
                         </div>
                     </div>
-                    <div class="form-group row mb-0">
-                        <div class="col-lg-3 text-right">
-                            <label class="col-form-label font-weight-bold" for="resim">Banka Logo</label>
-                        </div>
-                        <div class="col-lg-4">
 
-                            <div class="input-group col-xs-12">
-                                <input type="file" name="firma_footerlogo" class="file-upload-default">
-                                <div class="input-group col-xs-12">
-                                    <div class="col-md-6 col-sm-6">
-                                        <a href="#" class="thumbnail white"><img src="" alt="..."></a>
-                                    </div>
-                                </div>
+                    <div class="form-group">
+                        <label>Hizmet Resmi</label>
+                        <input type="file" name="resim" class="file-upload-default">
+                        <div class="input-group col-xs-6">
+                            <div class="col-md-4 col-sm-4">
+                                <a href="#" class="thumbnail white">
+                                    <img src="<?php echo base_url('uploads'); ?>/bank_account_v/<?php echo $item->resim; ?>"
+                                        alt="">
+                                </a>
                             </div>
                         </div>
                     </div>
-                   
+
+
 
                     <div class="form-group row">
                         <div class="col-lg-3 text-right">

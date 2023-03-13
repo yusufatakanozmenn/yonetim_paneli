@@ -30,7 +30,28 @@ class Slider extends CI_Controller
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
     public function save()
-    {
+    {            
+        $this->load->library("form_validation");
+        //kurallar yazılır
+        $this->form_validation->set_rules("adi", "adi", "required|trim");
+        $this->form_validation->set_rules("sira", " sira", "required|trim");
+        $this->form_validation->set_rules("url", " Url", "required|trim");
+        $this->form_validation->set_rules("aciklama", " Açıklama", "required|trim");
+        $this->form_validation->set_rules("video", " Video", "required|trim");
+        $this->form_validation->set_rules("sekme", " Sekme", "required|trim");
+        $this->form_validation->set_rules("durum", " Durum", "required|trim");
+        $this->form_validation->set_message(
+            array(
+                "required" => "<b>{field}</b> alanı doldurulmalıdır."
+            )
+        );
+        $validate = $this->form_validation->run();
+        $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
+        $config["upload_path"] = "uploads/$this->viewFolder/";
+        $this->load->library("upload", $config);
+        $upload_logo = $this->upload->do_upload("resim");
+        $slider_img_name = basename($_FILES["resim"]["name"]);
+
         $insert = $this->slider_model->add(
             array(
                 "sira" => $this->input->post("sira"),
@@ -39,17 +60,18 @@ class Slider extends CI_Controller
                 "sekme"=> $this->input->post("sekme"),                
                 "durum" => $this->input->post("durum"),
                 "aciklama" => $this->input->post("aciklama"),
-                "video" => $this->input->post("video"),                
-            )
+                "video" => $this->input->post("video"),    
+                "resim" => $slider_img_name,               
+            )  
         );
         if($insert){
             redirect(base_url("slider"));
-
         }
         else{
             echo "Kayıt Eklenemedi";
         }
     }
+
     public function update_form($id){
         $viewData = new stdClass();
         $item = $this->slider_model->get(
