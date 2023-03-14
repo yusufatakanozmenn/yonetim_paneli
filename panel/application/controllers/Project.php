@@ -15,12 +15,10 @@ class Project extends CI_Controller
         $viewData = new stdClass();
         /** Tablodaki tüm kayıtları getiriyoruz.. */
         $items = $this->project_model->get_all();
-        $item1 = $this->project_model->get_all_foto();
         /** View'e gönderilecek değişkenler.. */
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "list";
         $viewData->items = $items;
-        $viewData->item1 = $item1;
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
 
@@ -38,19 +36,14 @@ class Project extends CI_Controller
     {
         $viewData = new stdClass();
         $item = $this->project_model->get(
-            array
-            (
+            array(
                 "id" => $id
             )
         );
-        $item1 = $this->project_model->get_all_foto();
-        /** View'e gönderilecek değişkenler.. */
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "update";
         $viewData->item = $item;
-        $viewData->item1 = $item1;
-
-        $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
+        $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);;
     }
 
     public function update_status($id){
@@ -70,39 +63,38 @@ class Project extends CI_Controller
             echo 'Hatali islem';
         }
     }
+
+
     public function save()
     {
-        $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
-        $config["upload_path"] = "uploads/$this->viewFolder/";
-
-        $this->load->library("upload", $config);
-
-        $upload_kapak = $this->upload->do_upload("kapak");
-        $upload_image = $this->upload->do_upload("resim");
-
-        
-        if ($upload_kapak) {
-            $kapak_name = basename($_FILES["kapak"]["name"]);
-            $this->project_model->add(
-                array(
-                    "kapak" => $kapak_name,
-                    )
-                );
-                
-        }
-        if ($upload_image) {
-            $image_name = basename($_FILES["resim"]["name"]);
-            $this->project_model->add_foto(
-                array(
-                    "pid" => $this->input->post("sira"),
-                    "resim" => $image_name,
-                )
-            );
-        }
-
-        $insert = $this->project_model->add(
+        $this->load->library("form_validation");
+        //kurallar yazılır
+        $this->form_validation->set_rules("adi", "adi", "required|trim");
+        $this->form_validation->set_rules("sira", " sira", "required|trim");
+        $this->form_validation->set_rules("aciklama", "aciklama", "required|trim");
+        $this->form_validation->set_rules("description", "description", "required|trim");
+        $this->form_validation->set_rules("keywords", "keywords", "required|trim");
+        $this->form_validation->set_rules("seo", "seo", "required|trim");
+        $this->form_validation->set_rules("kategori", "kategori", "required|trim");
+        $this->form_validation->set_rules("videoid", "videoid", "required|trim");
+        $this->form_validation->set_rules("spot", "spot", "required|trim");
+        $this->form_validation->set_rules("tarih", "tarih", "required|trim");
+        $this->form_validation->set_rules("tarihg", "tarihg", "required|trim");
+        //hata mesajları
+        $this->form_validation->set_message(
             array(
-                "sira" => $this->input->post("sira"),
+                "required" => "<b>{field}</b> alanı doldurulmalıdır."
+            )                                              
+        );                                              
+        $validate = $this->form_validation->run();                                              
+        $config["allowed_types"] = "jpg|jpeg|png|svg|webp";                                              
+        $config["upload_path"] = "uploads/$this->viewFolder/";                                              
+        $this->load->library("upload", $config);                                              
+        $upload_logo = $this->upload->do_upload("resim");                                              
+        $project_img_name = basename($_FILES["resim"]["name"]);                                              
+        $insert = $this->project_model->add(                                              
+            array(                                              
+                "sira" => $this->input->post("sira"),                                              
                 "adi" => $this->input->post("adi"),
                 "aciklama" => $this->input->post("aciklama"),
                 "description" => $this->input->post("description"),
@@ -111,84 +103,81 @@ class Project extends CI_Controller
                 "kategori" => $this->input->post("kategori"),
                 "videoid" => $this->input->post("videoid"),
                 "spot" => $this->input->post("spot"),
-                "durum" => 1,
-                "anasayfa" => 1,
                 "tarih" => $this->input->post("tarih"),
-                "tarihg" => $this->input->post("tarihg"),
-                "dil" => 1,
-            )
+                "tarihg" => $this->input->post("tarihg"),   
+                "resim" => $project_img_name,               
+            )  
         );
-        if ($insert) {
+        if($insert){
             redirect(base_url("project"));
-
-        } else {
+        }
+        else{
             echo "Kayıt Eklenemedi";
         }
     }
 
     public function update($id)
     {
-        $item = $this->project_model->get(
-            array
-            (
-                "id" => $id
+        $this->load->library("form_validation");
+        //kurallar yazılır
+        $this->form_validation->set_rules("adi", "adi", "required|trim");
+        $this->form_validation->set_rules("sira", " sira", "required|trim");
+        $this->form_validation->set_rules("aciklama", "aciklama", "required|trim");
+        $this->form_validation->set_rules("description", "description", "required|trim");
+        $this->form_validation->set_rules("keywords", "keywords", "required|trim");
+        $this->form_validation->set_rules("seo", "seo", "required|trim");
+        $this->form_validation->set_rules("kategori", "kategori", "required|trim");
+        $this->form_validation->set_rules("videoid", "videoid", "required|trim");
+        $this->form_validation->set_rules("spot", "spot", "required|trim");
+        $this->form_validation->set_rules("tarih", "tarih", "required|trim");
+        $this->form_validation->set_rules("tarihg", "tarihg", "required|trim");
+        //hata mesajları
+        $this->form_validation->set_message(
+            array(
+                "required" => "<b>{field}</b> alanı doldurulmalıdır."
             )
         );
-
+        $validate = $this->form_validation->run();
         $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
         $config["upload_path"] = "uploads/$this->viewFolder/";
-
         $this->load->library("upload", $config);
-
-        $upload_kapak = $this->upload->do_upload("kapak");
-        $upload_image = $this->upload->do_upload("resim");
-
-        
-
-        if ($upload_kapak) {
-            $kapak_name = basename($_FILES["kapak"]["name"]);
-            $this->project_model->update(
-                array(
-                    "kapak" => $kapak_name,
-                )
-            );
-        }
-        if ($upload_image) {
-            $image_name = basename($_FILES["resim"]["name"]);
-            $this->project_model->update_foto(
-                array("pid" => $item->sira),
-                array(
-
-                    "resim" => $image_name,
-                )
-            );
-        }
-
-
+        $upload_logo = $this->upload->do_upload("resim");
+        $project_img_name = basename($_FILES["resim"]["name"]);       
         $update = $this->project_model->update(
             array(
                 "id" => $id
             ),
             array(
-                "sira" => $this->input->post("sira"),
-                "adi" => $this->input->post("adi"),
-                "aciklama" => $this->input->post("aciklama"),
-                "description" => $this->input->post("description"),
-                "keywords" => $this->input->post("description"),
-                "seo" => convertToSEO($this->input->post("description")),
-                "kategori" => $this->input->post("kategori"),
-                "videoid" => $this->input->post("videoid"),
-                "spot" => $this->input->post("spot"),
-                "tarih" => $this->input->post("tarih"),
-                "tarihg" => $this->input->post("tarihg"),
-            )
+            "sira" => $this->input->post("sira"),
+            "adi" => $this->input->post("adi"),
+            "aciklama" => $this->input->post("aciklama"),
+            "description" => $this->input->post("description"),
+            "keywords" => $this->input->post("description"),
+            "seo" => convertToSEO($this->input->post("description")),
+            "kategori" => $this->input->post("kategori"),
+            "videoid" => $this->input->post("videoid"),
+            "spot" => $this->input->post("spot"),
+            "tarih" => $this->input->post("tarih"),
+            "tarihg" => $this->input->post("tarihg"),   
+            "resim" => $project_img_name,               
+            ) 
         );
-
-        if($update){
-            redirect(base_url("project"));
-        }else{
-            echo "Hatali islem";
+        if ($update) {
+            $alert = array(
+                "title" => "İşlem Başarılı",
+                "text" => "Kayıt başarıyla güncellendi",
+                "type" => "success"
+            );
+        } else {
+            $alert = array(
+                "title" => "İşlem Başarısız",
+                "text" => "Kayıt güncellenemedi",
+                "type" => "error"
+            );
         }
+        $this->session->set_flashdata("alert", $alert);  
+        redirect(base_url("project"));         
+       
     }
 
 

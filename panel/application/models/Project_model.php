@@ -30,27 +30,5 @@ class Project_model extends CI_Model
         return $this->db->where($where)->delete($this->tableName);
     }
 
-    //fotograf getirme
-    public function get_foto($where = array())
-    {
-        return $this->db->where($where)->get($this->tableName1)->row();
-    }
-    /** Tüm Kayıtları bana getirecek olan metot.. */
-    public function get_all_foto($where = array())
-    {
-        return $this->db->where($where)->get($this->tableName1)->result();
-    }
-    public function add_foto($data = array())
-    {
-        return $this->db->insert($this->tableName1, $data);
-    }
-    public function update_foto($where = array(), $data = array())
-    {
-        return $this->db->where($where)->update($this->tableName1, $data);
-    }
-    public function delete_foto($where = array())
-    {
-        return $this->db->where($where)->delete($this->tableName1);
-    }
 
 }
