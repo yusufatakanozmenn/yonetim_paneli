@@ -30,6 +30,26 @@ class Page_Management extends CI_Controller {
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index",$viewData);
     }
     public function save(){
+        $this->load->library("form_validation");
+        //kurallar yazılır
+        $this->form_validation->set_rules("adi", "adi", "required|trim");
+        $this->form_validation->set_rules("seo", " seo", "required|trim");
+        $this->form_validation->set_rules("sayfa", " sayfa", "required|trim");
+        $this->form_validation->set_rules("aciklama", " aciklama", "required|trim");
+        $this->form_validation->set_rules("sekme", " Sekme", "required|trim");
+        $this->form_validation->set_rules("anasayfa", " anasayfa", "required|trim");
+        $this->form_validation->set_message(
+            array(
+                "required" => "<b>{field}</b> alanı doldurulmalıdır."
+            )
+        );
+        $validate = $this->form_validation->run();
+        $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
+        $config["upload_path"] = "uploads/$this->viewFolder/";
+        $this->load->library("upload", $config);
+        $upload_logo = $this->upload->do_upload("resim");
+        $page_img_name = basename($_FILES["resim"]["name"]);
+
         $insert = $this->pages_model->add(
             array(
                 "adi" => $this->input->post("adi"),
@@ -39,7 +59,8 @@ class Page_Management extends CI_Controller {
                 "durum" => 1,  
                 "anasayfa" => 1, 
                 "tarih" => date("Y-m-d H:i:s"),
-            )
+                "resim" => $page_img_name,               
+            )  
         );
         if($insert){
             redirect(base_url("page_management"));
@@ -63,23 +84,54 @@ class Page_Management extends CI_Controller {
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
     public function update($id){
+        $this->load->library("form_validation");
+        //kurallar yazılır
+        $this->form_validation->set_rules("adi", "adi", "required|trim");
+        $this->form_validation->set_rules("seo", " seo", "required|trim");
+        $this->form_validation->set_rules("sayfa", " sayfa", "required|trim");
+        $this->form_validation->set_rules("aciklama", " aciklama", "required|trim");
+        $this->form_validation->set_rules("sekme", " Sekme", "required|trim");
+        $this->form_validation->set_rules("anasayfa", " anasayfa", "required|trim");
+        $this->form_validation->set_message(
+            array(
+                "required" => "<b>{field}</b> alanı doldurulmalıdır."
+            )
+        );
+        $validate = $this->form_validation->run();   
+        $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
+        $config["upload_path"] = "uploads/$this->viewFolder/";    
+        $this->load->library("upload", $config);    
+        $upload_logo = $this->upload->do_upload("resim");    
+        $page_img_name = basename($_FILES["resim"]["name"]);       
         $update = $this->pages_model->update(
             array(
                 "id" => $id
             ),
             array(
-                "adi" => $this->input->post("adi"),
-                "seo" => convertToSEO($this->input->post("adi")),
-                "sayfa" => $this->input->post("sayfa"),                
-                "aciklama" => $this->input->post("aciklama"),
-            )
+            "adi" => $this->input->post("adi"),
+            "seo" => convertToSEO($this->input->post("adi")),
+            "sayfa" => $this->input->post("sayfa"),                
+            "aciklama" => $this->input->post("aciklama"),            
+            "resim" => $page_img_name,
+                // deneme
+            ) 
         );
-        if($update){
-            redirect(base_url("page_management"));
+        if ($update) {
+            $alert = array(
+                "title" => "İşlem Başarılı",
+                "text" => "Kayıt başarıyla güncellendi",
+                "type" => "success"
+            );
+        } else {
+            $alert = array(
+                "title" => "İşlem Başarısız",
+                "text" => "Kayıt güncellenemedi",
+                "type" => "error"
+            );
         }
-        else{
-            echo "Güncelleme İşlemi Gerçekleşmedi";
-        }
+        $this->session->set_flashdata("alert", $alert);  
+        redirect(base_url("page_management"));        
+        
     }
     public function update_status($id){
 

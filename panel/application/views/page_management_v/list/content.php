@@ -25,6 +25,7 @@
             <table class="table table-hover table-striped">
                 <thead>
                     <th>ID</th>
+                    <th>Fotoğraflar</th>
                     <th>Başlık</th>
                     <th>Bağlantı Sayfası</th>
                     <th>Anasayfa</th>                    
@@ -35,6 +36,12 @@
                      <?php foreach ($items as $item) { ?>
                         <tr>
                         <td><?php echo $item->id;?></td>
+                        <td>
+                            <a href="#" class="thumbnail white">
+                                <img style="width: 50px;" src="<?php echo base_url('uploads'); ?>/page_management_v/<?php echo $item->resim; ?>"
+                                    alt="">
+                            </a>
+                        </td>
                         <td><?php echo $item->adi;?></td>
                         <td><?php echo $item->seo;?></td>                               
                         <td>

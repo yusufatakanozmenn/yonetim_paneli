@@ -11,10 +11,19 @@
                         <label for="adi">Başlık</label>
                         <input type="text" class="form-control form-control-sm" name="adi" id="adi" value="">
                     </div>
-                    <div class="form-group">
-                        <div class="card-header">
-                            Hizmet Resimleri
-                            <input type="file" disabled name="resim" class="file-upload-default">
+                    <div class="form-group row mb-0">
+                        <div class="col-lg-3 text-right">
+                            <label class="col-form-label font-weight-bold" for="resim">Sayfa Görsel</label>
+                        </div>
+                        <div class="col-lg-4">                            
+                            <div class="input-group col-xs-12">
+                            <input type="file" name="resim" class="file-upload-default">
+                                    <div class="input-group col-xs-12">
+                                        <div class="col-md-6 col-sm-6">
+                                            <a href="#" class="thumbnail white"><img src="" alt="..."></a>
+                                        </div>
+                                    </div>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group ">
