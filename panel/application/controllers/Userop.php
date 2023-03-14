@@ -4,6 +4,8 @@ class Userop extends CI_Controller{
     public function __construct(){
         parent::__construct();
         $this->viewFolder = "users_v";
+
+        $this->load->model("user_model");
     }
 
     public function login(){
@@ -32,11 +34,51 @@ class Userop extends CI_Controller{
         // Form validation calistirilir...
 
         if ($this->form_validation->run() == FALSE){
+            $viewData = new stdClass();
 
-            redirect(base_url("login"));
+            $viewData->viewFolder = $this->viewFolder;
+            $viewData->subViewFolder = "login";
+            $viewData->form_error = true;
+
+            $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
 
         }else{
-            redirect(base_url("dashboard"));
+            $user = $this->user_model->get(
+                array(
+                    "email" => $this->input->post("email"),
+                    "sifre" => md5($this->input->post("sifre")),
+
+                )
+            );
+            if ($user){
+                
+                $alert = array(
+                    "title" => "İşlem Başarılı",
+                    "text" => "Hoşgeldiniz",
+                    "type" => "success",
+                    
+                );
+                $this->session->set_userdata("user", $user);
+                $this->session->set_flashdata("alert", $alert);
+                redirect(base_url());
+
+               
+            }else{
+                $alert = array(
+                    "title" => "İşlem Başarısız",
+                    "text" => "Giriş Yapılamadı",
+                    "type" => "error",
+                    
+                );
+                $viewData = new stdClass();
+
+                $viewData->viewFolder = $this->viewFolder;
+                $viewData->subViewFolder = "login";
+                $viewData->form_error = true;
+    
+                $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
+
+            }
 
         }
     }

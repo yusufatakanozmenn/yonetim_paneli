@@ -22,8 +22,7 @@
             </div>
 
             <div class="form-group">
-                <input id="sign-in-password" type="password" class="form-control" placeholder="Şifre"
-                    name="sifre">
+                <input id="sign-in-password" type="password" class="form-control" placeholder="Şifre" name="sifre">
                 <?php if (isset($form_error)) { ?>
                     <small class="pull-right input-form-error">
                         <?php echo form_error("sifre"); ?>

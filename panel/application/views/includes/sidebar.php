@@ -328,8 +328,8 @@
                         <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
                     </a>
                     <ul class="submenu">
-                        <li><a href="<?php echo base_url("managers/add_form")?>">Yeni Yönetici Ekle</a></li>
-                        <li><a href="<?php echo base_url("managers")?>">Yönetici Listesi</a></li>
+                        <li><a href="<?php echo base_url("users/new_form")?>">Yeni Yönetici Ekle</a></li>
+                        <li><a href="<?php echo base_url("users")?>">Yönetici Listesi</a></li>
                     </ul>
                 </li>
 
