@@ -5,6 +5,9 @@ class Package extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		if (!get_active_user()){
+			redirect(base_url("login"));
+		}
 		$this->viewFolder = "package_v";
         $this->load->model("package_model");
         $this->load->helper("tools_helper");

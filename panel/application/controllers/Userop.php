@@ -47,14 +47,23 @@ class Userop extends CI_Controller{
                 array(
                     "email" => $this->input->post("email"),
                     "sifre" => md5($this->input->post("sifre")),
-
+                    "durum" => 1,
                 )
             );
             if ($user){
-                
+                $this->user_model->update(
+                    array(
+                        "email" => $this->input->post("email"),
+                        "sifre" => md5($this->input->post("sifre")),
+                        "durum" => 1,
+                    ),
+                    array(
+                        "son_giris" => date("Y-m-d H:i:s"),
+                    )                    
+                );
                 $alert = array(
                     "title" => "İşlem Başarılı",
-                    "text" => "Hoşgeldiniz",
+                    "text" => "$user->isim Hoşgeldiniz",
                     "type" => "success",
                     
                 );

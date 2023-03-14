@@ -6,6 +6,9 @@ class Contact_Settings extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        if (!get_active_user()){
+			redirect(base_url("login"));
+		}
         $this->viewFolder = "contact_settings_v";
         $this->load->model("Contact_Settings_model");
     }

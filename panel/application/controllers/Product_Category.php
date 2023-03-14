@@ -5,6 +5,9 @@ class Product_Category extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		if (!get_active_user()){
+			redirect(base_url("login"));
+		}
 		$this->viewFolder = "product_category_v";
         $this->load->model("product_category_model");
         $this->load->helper("tools_helper");

@@ -5,6 +5,9 @@ class Dealer_Branch extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        if (!get_active_user()){
+			redirect(base_url("login"));
+		}
         $this->viewFolder = "dealer_branch_v";
         $this->load->model("dealer_branch_model");
         
