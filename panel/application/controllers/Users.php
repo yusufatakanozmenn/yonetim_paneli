@@ -67,14 +67,13 @@ class Users extends CI_Controller
         $validate = $this->form_validation->run();
 
         if($validate){
-            $options = ['cost' => 15];
             $insert = $this->user_model->add(
                 array(
                     "kadi"     => $this->input->post("kadi"),
                     "isim"     => $this->input->post("isim"),
                     "email"    => $this->input->post("email"),
                     // "sifre"    => md5($this->input->post("sifre")),
-                    "sifre"    => password_hash($this->input->post("sifre"), PASSWORD_BCRYPT, $options),
+                    "sifre"    => md5($this->input->post("sifre")),
                     "durum"    => 1,
                     "tarih"    => date("Y-m-d H:i:s")
                 )
@@ -269,7 +268,6 @@ class Users extends CI_Controller
         $validate = $this->form_validation->run();
 
         if($validate){
-
             // Upload Süreci...
             $update = $this->user_model->update(
                 array("id" => $id),
