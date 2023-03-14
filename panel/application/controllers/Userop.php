@@ -70,14 +70,8 @@ class Userop extends CI_Controller{
                     "type" => "error",
                     
                 );
-                $viewData = new stdClass();
-
-                $viewData->viewFolder = $this->viewFolder;
-                $viewData->subViewFolder = "login";
-                $viewData->form_error = true;
-    
-                $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
-
+                $this->session->set_flashdata("alert", $alert);
+                redirect(base_url("login"));
             }
 
         }
