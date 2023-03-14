@@ -54,9 +54,7 @@
             <div class="form-group">
                 <button type="submit" class="btn btn-success btn-icon-text btn-sm"> GÖNDER </button>
                 <a href="<?php echo base_url("slider"); ?>" class="btn btn-danger btn-sm">IPTAL</a>
-                </form>
             </div>
-
             </form>
         </div>
     </div>
