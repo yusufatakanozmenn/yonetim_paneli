@@ -1,3 +1,4 @@
+<?php $user = get_active_user();?>
 <aside id="menubar" class="menubar light">
     <div class="app-user">
         <div class="media">
@@ -9,8 +10,8 @@
             </div>
             <div class="media-body">
                 <div class="foldable">
-                    <h5><a href="javascript:void(0)" class="username">Alva Grup</a></h5>
-                    <ul>
+                    <h5><a href="javascript:void(0)" class="username"><?=$user->isim?></a></h5>
+                    <!-- <ul>
                         <li class="dropdown">
                             <a href="javascript:void(0)" class="dropdown-toggle usertitle" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
@@ -45,7 +46,7 @@
                                 </li>
                             </ul>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div><!-- .media-body -->
         </div><!-- .media -->
