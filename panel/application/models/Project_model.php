@@ -30,5 +30,19 @@ class Project_model extends CI_Model
         return $this->db->where($where)->delete($this->tableName);
     }
 
+    public function get_all_image($where = array())
+    {
+        return $this->db->where($where)->get($this->tableName1)->result();
+    }
+    public function add_image($data = array())
+    {
+        return $this->db->insert($this->tableName1, $data);
+    }
+    public function delete_image($where = array())
+    {
+        return $this->db->where($where)->delete($this->tableName1);
+    }
+    
+
 
 }

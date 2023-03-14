@@ -46,7 +46,7 @@ class Project extends CI_Controller
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "update";
         $viewData->item = $item;
-        $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);;
+        $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
 
     public function update_status($id){
@@ -179,8 +179,22 @@ class Project extends CI_Controller
             );
         }
         $this->session->set_flashdata("alert", $alert);  
-        redirect(base_url("project"));         
+        redirect(base_url("project"));       
        
+    }
+    //tablename1 den fotoragraflar çekilir
+    public function image_form($id){
+        $viewData = new stdClass();
+        $item = $this->project_model->get_all_image(
+            array(
+                "id" => $id
+            )
+        );
+        $viewData->viewFolder = $this->viewFolder;
+        $viewData->subViewFolder = "image";
+        $viewData->item = $item;
+        $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
+
     }
 
 

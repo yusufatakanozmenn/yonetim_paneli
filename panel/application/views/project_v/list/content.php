@@ -67,6 +67,8 @@
                                 Sil</a>
                             <a href="<?php echo base_url("project/update_form/$item->id");?>" class="btn btn-sm btn-info "><i class="fa fa-pencil-square-o"></i>
                                 Düzenle</a>
+                                <a href="<?php echo base_url("project/image_form/$item->id");?>" class="btn btn-sm btn-dark "><i class="fa fa-image"></i>
+                                Fotoğraflar</a>
                         </td>
                     </tr>
                     <?php } ?>

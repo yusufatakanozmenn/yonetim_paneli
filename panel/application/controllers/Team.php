@@ -131,39 +131,38 @@ class Team extends CI_Controller
 
         $team_img_name = basename($_FILES["resim"]["name"]);
 
-        if ($validate) {
-            $update = $this->team_model->update(
-                array(
-                    "id" => $id
-                ),
-                array(
-                    "sira" => $this->input->post("sira"),
-                    "adi" => $this->input->post("adi"),
-                    "twitter" => $this->input->post("twitter"),
-                    "facebook" => $this->input->post("facebook"),
-                    "instagram" => $this->input->post("instagram"),
-                    "linkedin" => $this->input->post("linkedin"),
-                    "durum" => $this->input->post("durum"),        
-                    "resim" => $team_img_name,
-                
-                ) 
+        
+        $update = $this->team_model->update(
+            array(
+                "id" => $id
+            ),
+            array(
+                "sira" => $this->input->post("sira"),
+                "adi" => $this->input->post("adi"),
+                "twitter" => $this->input->post("twitter"),
+                "facebook" => $this->input->post("facebook"),
+                "instagram" => $this->input->post("instagram"),
+                "linkedin" => $this->input->post("linkedin"),
+                "durum" => $this->input->post("durum"),        
+                "resim" => $team_img_name,                
+            ) 
+        );
+        if ($update) {
+            $alert = array(
+                "title" => "İşlem Başarılı",
+                "text" => "Kayıt başarıyla güncellendi",
+                "type" => "success"
             );
-            if ($update) {
-                $alert = array(
-                    "title" => "İşlem Başarılı",
-                    "text" => "Kayıt başarıyla güncellendi",
-                    "type" => "success"
-                );
-            } else {
-                $alert = array(
-                    "title" => "İşlem Başarısız",
-                    "text" => "Kayıt güncellenemedi",
-                    "type" => "error"
-                );
-            }
+        } else {
+            $alert = array(
+                "title" => "İşlem Başarısız",
+                "text" => "Kayıt güncellenemedi",
+                "type" => "error"
+            );
+        }
             $this->session->set_flashdata("alert", $alert);  
             redirect(base_url("team"));         
-        }
+        
     }
     public function update_status($id){
 
