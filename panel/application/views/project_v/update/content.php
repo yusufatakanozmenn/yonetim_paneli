@@ -26,7 +26,7 @@
                                     <label for="kategori">Kategori</label>
                                     <select class="form-control form-control-sm" id="kategori" name="kategori" value="">
                                         <option selected style="display:none;">
-                                        <?php echo $item->kategori; ?>
+                                            <?php echo $item->kategori; ?>
                                         </option>
                                         <option>
                                             KOSGEB Desteği
@@ -68,26 +68,36 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label>Kapak Görseli</label>
-                                <input type="file" name="kapak" class="file-upload-default">
-                            </div>
-                            <div class="form-group">
-                                <label>Fotoğraflar</label>
-                                <input type="file" name="resim" multiple="" class="file-upload-default">
+                            <div class="form-group row mb-0">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label>Proje Görsel</label>
+                                        <input type="file" name="resim" class="file-upload-default">
+                                        <div class="input-group col-xs-6">
+                                            <div class="col-md-4 col-sm-4">
+                                                <a href="#" class="thumbnail white">
+                                                    <img src="<?php echo base_url('uploads'); ?>/project_v/<?php echo $item->resim; ?>"
+                                                        alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="spot">Spot Metin <i class="icon-info text-info" data-toggle="popover"
                                         data-content="Spot metin, içeriğinizi özetleyen bir ya da iki cümlelik metindir. 180 karakteri geçmemesi gerekmektedir.  Spot metinde de tamamen BÜYÜK harften kaçınmalı ve çift tırnak kullanılmamalıdır."
                                         data-trigger="hover" data-original-title="Spot Metin"></i></label>
-                                <textarea id="spot" name="spot" class="form-control" rows="4"><?php echo $item->spot ?></textarea>
+                                <textarea id="spot" name="spot" class="form-control"
+                                    rows="4"><?php echo $item->spot ?></textarea>
                             </div>
 
                             <div class="form-group">
                                 <label for="aciklama">İçerik <i class="icon-info text-info" data-toggle="popover"
                                         data-content="İçerik" data-trigger="hover"
                                         data-original-title="Spot Metin"></i></label>
-                                <textarea id="aciklama" name="aciklama" class="form-control" rows="4"><?php echo $item->aciklama ?></textarea>
+                                <textarea id="aciklama" name="aciklama" class="form-control"
+                                    rows="4"><?php echo $item->aciklama ?></textarea>
                             </div>
 
                             <div class="" id="seo-ayarlari" role="tabpanel" aria-labelledby="contact-tab-vertical">

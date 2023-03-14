@@ -68,13 +68,20 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label>Listeleme Görseli</label>
-                                <input type="file" name="kapak" class="file-upload-default">
-                            </div>
-                            <div class="form-group">
-                                <label>Fotoğraflar</label>
-                                <input type="file" name="resim" multiple="" class="file-upload-default">
+                            <div class="form-group row mb-0">
+                                <div class="col-lg-12 ">
+                                    <label class="col-form-label font-weight-bold" for="resim">Proje Görsel</label>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="input-group col-xs-12">
+                                        <input type="file" name="resim" class="file-upload-default">
+                                        <div class="input-group col-xs-12">
+                                            <div class="col-md-12 col-sm-12">
+                                                <a href="#" class="thumbnail white"><img src="" alt="..."></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="spot">Spot Metin <i class="icon-info text-info" data-toggle="popover"
