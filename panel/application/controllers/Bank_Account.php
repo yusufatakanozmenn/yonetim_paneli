@@ -5,6 +5,9 @@ class Bank_Account extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        if (!get_active_user()){
+			redirect(base_url("login"));
+		}
         $this->viewFolder = "bank_account_v";
         $this->load->model("bank_account_model");
         

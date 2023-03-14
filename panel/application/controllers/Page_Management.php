@@ -5,6 +5,9 @@ class Page_Management extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		if (!get_active_user()){
+			redirect(base_url("login"));
+		}
 		$this->viewFolder = "page_management_v";
         $this->load->model("pages_model");
         $this->load->helper("tools_helper");

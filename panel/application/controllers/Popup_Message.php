@@ -6,6 +6,9 @@ class Popup_Message extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        if (!get_active_user()){
+			redirect(base_url("login"));
+		}
         $this->viewFolder = "popup_message_v";
         $this->load->model("Popup_Message_model");
 

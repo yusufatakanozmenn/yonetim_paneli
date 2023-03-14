@@ -5,6 +5,9 @@ class Send_Bulk_Sms extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		if (!get_active_user()){
+			redirect(base_url("login"));
+		}
 		$this->viewFolder = "send_bulk_sms_v";
 	}
     public function index(){

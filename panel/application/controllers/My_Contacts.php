@@ -5,6 +5,9 @@ class My_Contacts extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		if (!get_active_user()){
+			redirect(base_url("login"));
+		}
 		$this->viewFolder = "my_contacts_v";
         $this->load->model("my_contacts_model");
 	}

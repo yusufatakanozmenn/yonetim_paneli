@@ -5,6 +5,9 @@ class Managers extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        if (!get_active_user()){
+			redirect(base_url("login"));
+		}
         $this->viewFolder = "managers_v";
         $this->load->model("managers_model");
 
