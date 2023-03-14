@@ -9,6 +9,9 @@ class Userop extends CI_Controller{
     }
 
     public function login(){
+        if (get_active_user()){
+			redirect(base_url());
+		}
         $viewData = new stdClass();
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "login";
@@ -17,6 +20,9 @@ class Userop extends CI_Controller{
     }
 
     public function do_login(){
+        if (get_active_user()){
+			redirect(base_url());
+		}
         $this->load->library("form_validation");
 
         $this->form_validation->set_rules("email", "E-posta", "required|trim|valid_email");
@@ -84,5 +90,10 @@ class Userop extends CI_Controller{
             }
 
         }
+    }
+
+    public function logout(){
+        $this->session->unset_userdata("user");
+        redirect(base_url("login"));
     }
 }

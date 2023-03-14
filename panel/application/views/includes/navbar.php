@@ -115,7 +115,7 @@
                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button"
                         aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-hc-lg zmdi-settings"></i></a>
                     <ul class="dropdown-menu animated flipInY">
-                        <li><a href="<?php echo base_url("managers")?>"><i
+                        <li><a href="<?php echo base_url("users")?>"><i
                                     class="zmdi m-r-md zmdi-hc-lg zmdi-account-box"></i>
                                 Profil</a></li>
                         <li><a href="<?php echo base_url("messages")?>"><i class=" m-r-md fa fa-comments"></i>
@@ -126,7 +126,7 @@
             </ul>
             </li>
             <li>
-                <a href="logout.html">
+                <a href="<?php echo base_url("logout")?>">
                     <span class="m-r-xs"><i class="fa fa-power-off"></i></span>
                     <span>Çıkış</span>
                 </a>

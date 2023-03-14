@@ -1,4 +1,5 @@
-<aside id="menubar" class="menubar light">
+<?php 
+/*<aside id="menubar" class="menubar light">
     <div class="app-user">
         <div class="media">
             <div class="media-left">
@@ -151,3 +152,4 @@
         </div><!-- .menubar-scroll-inner -->
     </div><!-- .menubar-scroll -->
 </aside>
+*/
