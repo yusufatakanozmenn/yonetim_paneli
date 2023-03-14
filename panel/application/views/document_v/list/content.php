@@ -24,14 +24,21 @@
 
             <table class="table table-hover table-striped">
                 <thead>                 
-                    <th>Başlık</th>                   
+                    <th>Başlık</th> 
+                    <th>Fotoğraflar</th>                       
                     <th>Durumu</th>
                     <th>İşlem</th>
                 </thead>
                 <tbody>
                     <?php foreach ($items as $item) { ?>
                         <tr>                      
-                        <td><?php echo $item->adi;?></td>                      
+                        <td><?php echo $item->adi;?></td>
+                        <td>
+                            <a href="#" class="thumbnail white">
+                                <img style="width: 50px; height: 50px;" src="<?php echo base_url('uploads'); ?>/document_v/<?php echo $item->resim; ?>"
+                                    alt="">
+                            </a>
+                        </td>
                         <td>
                             <input 
                             data-url="<?php echo base_url("document/update_status/$item->id");?>"

@@ -21,12 +21,20 @@
                                     value="<?=$item->adi?>">
                             </div>
 
-                            <div class="form-group ">
-                                <label>Kapak Görseli</label>
-                                <div class="form-group">
-                                    <input type="file"  name="kapak_gorsel" class="file-upload-default">                    
+                            <div class="card-body">
+                        <div class="form-group">
+                            <label>Kapak Görseli</label>
+                            <input type="file" name="resim" class="file-upload-default">
+                            <div class="input-group col-xs-6">
+                                <div class="col-md-4 col-sm-4">
+                                    <a href="#" class="thumbnail white">
+                                        <img src="<?php echo base_url('uploads'); ?>/document_v/<?php echo $item->resim; ?>"
+                                            alt="">
+                                    </a>
                                 </div>
                             </div>
+                        </div>
+                    </div>
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="maxlength-textarea">Seo</label>
@@ -44,6 +52,7 @@
                             <div class="form-group">
                                 <button type="submit" class="btn btn-success btn-icon-text btn-sm"> Kaydet </button>
                                 <a href="<?php echo base_url("document"); ?>"></a>
+                                <a href="<?php echo base_url("document"); ?>" class="btn btn-danger btn-sm">IPTAL</a>
                             </div>
                         </form>
                     </div>

@@ -19,10 +19,19 @@
                                 <input type="text" class="form-control form-control-sm" name="adi" id="adi" value="">
                             </div>
 
-                            <div class="form-group ">
-                                <label>Dokuman</label>
-                                <div class="form-group">
-                                    <input type="file" name="kapak_gorsel" class="file-upload-default">
+                            <div class="form-group row mb-0">
+                                <div class="col-lg-12 text-left">
+                                    <label class="col-form-label font-weight-bold" for="resim">Kapak Görsel</label>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="input-group col-xs-8">
+                                        <input type="file" name="resim" class="file-upload-default">
+                                        <div class="input-group col-xs-12">
+                                            <div class="col-md-6 col-sm-6">
+                                                <a href="#" class="thumbnail white"><img src="" alt="..."></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="card-body">
@@ -32,13 +41,13 @@
                                         rows="4"></textarea>
                                 </div>
                             </div>
-                            <div class="form-group mb-2">
+                            <!-- <div class="form-group mb-2">
                                 <label class="switch">
                                     <input type="checkbox" name="durum" id="durum" value="1" checked="">
                                     <span class="slider"></span>
                                 </label>
                                 <label class="d-inline-block" style="line-height: 34px;" for="durum">Durum</label>
-                            </div>
+                            </div> -->
                             <div class="form-group">
                                 <button type="submit" class="btn btn-success btn-icon-text btn-sm"> Kaydet </button>
                                 <a href="<?php echo base_url("document"); ?>"></a>

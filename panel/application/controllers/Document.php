@@ -40,30 +40,28 @@ class Document extends CI_Controller
             )
         );
         $validate = $this->form_validation->run();
-        if($validate){
-            $insert = $this->document_model->add(
-                array(
-                    "adi" => $this->input->post("adi"),
-                    "sira" => $this->input->post("sira"),                  
-                    "durum" => $this->input->post("durum"),  
-                    "seo" => $this->input->post("seo"),
-                    "tarih" => date("Y-m-d H:i:s"),                
-                )
-            );
-            if($insert){
-                redirect(base_url("document"));
-            }
-            else{
-                echo "Kayit eklenemedi";
-            }
+        $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
+        $config["upload_path"] = "uploads/$this->viewFolder/";
+        $this->load->library("upload", $config);
+        $upload_logo = $this->upload->do_upload("resim");
+        $document_img_name = basename($_FILES["resim"]["name"]);       
+        $insert = $this->document_model->add(
+            array(
+                "adi" => $this->input->post("adi"),
+                "sira" => $this->input->post("sira"),                  
+                "durum"=>"1" , 
+                "seo" => $this->input->post("seo"),
+                "tarih" => date("Y-m-d H:i:s"),   
+                "resim" => $document_img_name,             
+            )
+        );
+        if($insert){
+            redirect(base_url("document"));
         }
         else{
-            $viewData = new stdClass();
-            $viewData->viewFolder = $this->viewFolder;
-            $viewData->subViewFolder = "add";
-            $viewData->form_error = true;
-            $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
+            echo "Kayit eklenemedi";
         }
+        
     }
     public function update_form($id){
         $viewData = new stdClass();
@@ -78,22 +76,57 @@ class Document extends CI_Controller
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
     }
     public function update($id){
-        $insert=$this->document_model->update(
+        $this->load->library("form_validation");
+        $this->form_validation->set_rules("adi", "Adı", "required|trim");
+        $this->form_validation->set_rules("sira", "Sıra", "required|trim"); 
+        $this->form_validation->set_rules("durum", "Durum", "required|trim");
+        $this->form_validation->set_rules("seo", "seo", "required|trim");     
+        $this->form_validation->set_message(
             array(
-                "id" => $id
-            ),
-            array(
-                "adi" => $this->input->post("adi"),
-                "sira" => $this->input->post("sira"),                
-                "durum" => $this->input->post("durum"),               
+                "required" => "<b>{field}</b> alanı doldurulmalıdır."
             )
         );
-        if ($insert){
-            redirect(base_url("document"));
-        }
-        else{
-            echo "Kayit eklenemedi";
-        }
+        $validate = $this->form_validation->run();
+
+
+        $config["allowed_types"] = "jpg|jpeg|png|svg|webp";
+        $config["upload_path"] = "uploads/$this->viewFolder/";
+
+        $this->load->library("upload", $config);
+
+        $upload_logo = $this->upload->do_upload("resim");
+
+        $document_img_name = basename($_FILES["resim"]["name"]);
+
+       
+            $update = $this->document_model->update(
+                array(
+                    "id" => $id
+                ),
+                array(
+                "adi" => $this->input->post("adi"),
+                "sira" => $this->input->post("sira"),                  
+                "durum"=>"1" , 
+                "seo" => $this->input->post("seo"),
+                "tarih" => date("Y-m-d H:i:s"),   
+                "resim" => $document_img_name,     
+                ) 
+            );
+            if ($update) {
+                $alert = array(
+                    "title" => "İşlem Başarılı",
+                    "text" => "Kayıt başarıyla güncellendi",
+                    "type" => "success"
+                );
+            } else {
+                $alert = array(
+                    "title" => "İşlem Başarısız",
+                    "text" => "Kayıt güncellenemedi",
+                    "type" => "error"
+                );
+            }
+            $this->session->set_flashdata("alert", $alert);  
+            redirect(base_url("document"));         
        
     }
     public function update_status($id){
