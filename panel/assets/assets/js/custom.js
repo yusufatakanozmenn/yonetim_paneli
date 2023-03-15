@@ -6,7 +6,7 @@ $(document).ready(function () {
     height: 300
   });
 
-
+$(".sortable").sortable();
 
   // Api settings update button
   $(".update-btn").click(function () {
