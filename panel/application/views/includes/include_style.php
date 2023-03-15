@@ -2,9 +2,9 @@
 <link rel="stylesheet" href="<?php echo base_url("assets");?>/libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.css">
 <!-- build:css ../assets/css/app.min.css -->
 <link rel="stylesheet" href="<?php echo base_url("assets");?>/libs/bower/animate.css/animate.min.css">
-<link rel="stylesheet" href="<?php echo base_url("assets");?>/libs/bower/fullcalendar/dist/fullcalendar.min.css">
+<!-- <link rel="stylesheet" href="<?php // echo base_url("assets");?>/libs/bower/fullcalendar/dist/fullcalendar.min.css"> -->
 <link rel="stylesheet" href="<?php echo base_url("assets");?>/libs/bower/perfect-scrollbar/css/perfect-scrollbar.css">
-<link rel="stylesheet" href="<?php echo base_url("assets");?>/libs/bower/bootstrap-daterangepicker/daterangepicker.css">
+<!-- <link rel="stylesheet" href="<?php // echo base_url("assets");?>/libs/bower/bootstrap-daterangepicker/daterangepicker.css"> -->
 <link rel="stylesheet" href="<?php echo base_url("assets");?>/assets/css/bootstrap.css">
 <link rel="stylesheet" href="<?php echo base_url("assets");?>/assets/css/core.css">
 <link rel="stylesheet" href="<?php echo base_url("assets");?>/assets/css/app.css">
