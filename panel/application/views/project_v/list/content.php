@@ -25,7 +25,6 @@
             <table class="table table-hover table-striped">
                 <thead>
                     <th>ID</th>
-                    <th>Fotoğraflar</th>                  
                     <th>Proje Adı</th>
                     <th>Kategori</th>
                     <th>Anasayfa</th>
@@ -37,12 +36,6 @@
                     <tr>
                         <td>
                             <?php echo $item->id; ?>
-                        </td>
-                        <td>
-                            <a href="#" class="thumbnail white">
-                                <img style="width: 50px;" src="<?php echo base_url('uploads'); ?>/project_v/<?php echo $item->resim; ?>"
-                                    alt="">
-                            </a>
                         </td>
                         <td>
                             <?php echo $item->adi; ?>
