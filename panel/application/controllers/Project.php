@@ -11,6 +11,7 @@ class Project extends CI_Controller
 		}
         $this->viewFolder = "project_v";
         $this->load->model("project_model");
+        $this->load->model("project_image_model");
         $this->load->helper("tools_helper");
     }
     public function index()
@@ -184,21 +185,86 @@ class Project extends CI_Controller
     }
     //tablename1 den fotoragraflar çekilir
     public function image_form($id){
+
         $viewData = new stdClass();
-        $item = $this->project_model->get_all_image(
-            array(
-                "id" => $id
-            )
-        );
+
+        /** View'e gönderilecek Değişkenlerin Set Edilmesi.. */
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "image";
-        $viewData->item = $item;
-        $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
+
+        $viewData->item = $this->project_model->get(
+            array(
+                "id"    => $id
+            )
+        );
+
+        $viewData->item_images = $this->project_image_model->get_all(
+            array(
+                "pid"    => $id
+            )
+        );
+
+        $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/index", $viewData);
+    }
+
+    public function image_upload($id){
+
+        $file_name = convertToSEO(pathinfo($_FILES["file"]["name"], PATHINFO_FILENAME)) . "." . pathinfo($_FILES["file"]["name"], PATHINFO_EXTENSION);
+
+        $config["allowed_types"] = "jpg|jpeg|png|webp";
+        $config["upload_path"]   = "uploads/$this->viewFolder/";
+        $config["file_name"] = $file_name;
+
+        $this->load->library("upload", $config);
+
+        $upload = $this->upload->do_upload("file");
+
+        if($upload){
+
+            $uploaded_file = $this->upload->data("file_name");
+
+           $this->project_image_model->add(
+                array(
+                    "resim"  => $uploaded_file,
+                    "pid"    => $id
+                )
+            );
+
+        } else {
+            echo "islem basarisiz";
+        }
 
     }
 
+    public function image_delete($id,$resim){
+        $file_path = FCPATH."uploads/project_v/$resim";
+        if (file_exists($file_path)){
+            unlink($file_path);
+            $this->project_image_model->delete(
+                array(
+                    "resim" => $resim
+                )
+                );
+            $alert = array(
+                "title" => "Başarılı!",
+                "text"  => "Ürün başarılı şekilde silindi.",
+                "type"  => "success"
+            );
+            $this->session->set_flashdata("alert", $alert);
+            redirect(base_url("project/image_form/$id"));
+        }else{
+            $alert = array(
+                "title" => "Hata!!!",
+                "text"  => "Ürün bulunamadı!",
+                "type"  => "error"
+            );
+            $this->session->set_flashdata("alert", $alert);
+            redirect(base_url("project"));
+            die();
+        }
 
 
 
+    }
 
 }
