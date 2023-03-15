@@ -32,6 +32,7 @@
                     </th>
                     <th>ID</th>
                     <th>Başlık</th>
+                    <th>Ürün Resmi</th>
                     <th>Ürün Kodu</th>
                     <th>Fiyat</th>
                     <th>Açıklama</th>
@@ -49,6 +50,12 @@
                         </td>
                         <td><?php echo $item->id;?></td>
                         <td><?php echo $item->adi;?></td>
+                        <td>
+                            <a href="#" class="thumbnail white w-50">
+                                <img style="width:50px; height:50px;" src="<?php echo base_url('uploads'); ?>/product_v/<?php echo $item->resim; ?>"
+                                    alt="">
+                            </a>
+                        </td>
                         <td><?php echo $item->urun_kodu;?></td>
                         <td><?php echo $item->fiyat;?></td>
                         <td><?php echo $item->aciklama;?></td>
