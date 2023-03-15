@@ -235,6 +235,19 @@ class Project extends CI_Controller
         }
 
     }
+    public function delete($id){
+        $delete = $this->project_model->delete(
+            array(
+                "id" => $id
+            )
+        );
+        if($delete){
+            redirect(base_url("project"));
+        }
+        else{
+            echo "Silme İşlemi Gerçekleşmedi";
+        }
+    }
 
     public function image_delete($id,$resim){
         $file_path = FCPATH."uploads/project_v/$resim";
