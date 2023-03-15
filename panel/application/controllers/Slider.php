@@ -112,7 +112,7 @@ class Slider extends CI_Controller
 
         $slider_img_name = basename($_FILES["resim"]["name"]);
 
-        if ($validate) {
+       
             $update = $this->slider_model->update(
                 array(
                     "id" => $id
@@ -142,7 +142,7 @@ class Slider extends CI_Controller
             }
             $this->session->set_flashdata("alert", $alert);  
             redirect(base_url("slider"));         
-        }
+      
     }
 
 
