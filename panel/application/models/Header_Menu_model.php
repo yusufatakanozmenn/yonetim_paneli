@@ -9,8 +9,8 @@ class Header_Menu_model extends CI_Model {
         return $this->db->where($where)->get($this->tableName)->row();
     }
     /** Tüm Kayıtları bana getirecek olan metot.. */
-    public function get_all($where = array()){
-        return $this->db->where($where)->get($this->tableName)->result();
+    public function get_all($where = array(), $order = "menu_sira ASC"){
+        return $this->db->where($where)->order_by($order)->get($this->tableName)->result();
     }
     public function add($data = array()){
         return $this->db->insert($this->tableName, $data);
