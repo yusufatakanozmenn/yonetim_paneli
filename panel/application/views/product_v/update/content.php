@@ -1,7 +1,8 @@
 <div class="col-sm-12" style="padding: 10px;">
 
     <div class="" id="urun-bilgileri" role="tabpanel" aria-labelledby="home-tab-vertical">
-        <form action="<?php echo base_url("product/update/$item->id"); ?>" method="post">
+        <form class="forms-sample" method="post" action="<?php echo base_url('product/save')?>"
+            enctype="multipart/form-data">
             <div class="form-group">
                 <label for="adi">Başlık</label>
                 <input type="text" class="form-control form-control-sm" min="0" name="adi" id="adi"
@@ -65,58 +66,38 @@
                         class="dropdown-wrapper" aria-hidden="true"></span></span>
             </div>
 
-            <div class="form-group row col-md-6">
-                <label>Listeleme Görseli</label>
-                <input type="file" name="resim" class="file-upload-default">
-                <div class="input-group col-xs-12">
-
+            <div class="form-group row mb-0">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Listeleme Görseli</label>
+                        <input type="file" name="resim" class="file-upload-default">
+                        <div class="input-group col-xs-6">
+                            <div class="col-md-4 col-sm-4">
+                                <a href="#" class="thumbnail white">
+                                    <img src="<?php echo base_url('uploads'); ?>/product_v/<?php echo $item->resim; ?>"
+                                        alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="form-group row col-md-6">
-                <label>Fotoğraflar</label>
-                <input type="file" name="resimler[]" multiple="" class="file-upload-default">
-                <div class="input-group col-xs-12">
-
-                </div>
-            </div>
-            <div class="form-group row col-md-6">
-                <label>Teknik Döküman</label>
-                <input type="file" name="dokuman" class="file-upload-default">
-                <div class="input-group col-xs-12">
-
-                </div>
-            </div>
-            <div class="form-group row col-md-6">
-                <label>E-Katalog</label>
-                <input type="file" name="katalog" class="file-upload-default">
-                <div class="input-group col-xs-12">
-
-                </div>
-            </div>
-
 
 
             <div class="form-group">
                 <label for="spot">Spot Metin <i class="icon-info text-info" data-toggle="popover"
                         data-content="Spot metin, içeriğinizi özetleyen bir ya da iki cümlelik metindir. 180 karakteri geçmemesi gerekmektedir.  Spot metinde de tamamen BÜYÜK harften kaçınmalı ve çift tırnak kullanılmamalıdır."
                         data-trigger="hover" data-original-title="Spot Metin"></i></label>
-                <textarea id="spot" name="spot" class="form-control" rows="4"><?= $item->spot ?></textarea>
+                <textarea id="spot" name="spot" class="form-control" rows="4"><?= $item->spot ?><?= $item->spot ?></textarea>
             </div>
             <div class="form-group">
                 <label>Açıklama</label>
                 <div id="summernote" name="aciklama"><?= $item->aciklama ?></div>
-                
+
             </div>
 
     </div>
-    <div class="" id="urun-ozellikleri" role="tabpanel" aria-labelledby="contact-tab-vertical">
-
-        <div class="tab-pane" id="ozellikler">
-            <div id="secyaz"></div>
-        </div>
-
-    </div>
-
+    
     <div class="" id="seo-ayarlari" role="tabpanel" aria-labelledby="contact-tab-vertical">
 
         <div class="form-group">
@@ -127,6 +108,8 @@
         <div class="form-group">
             <button type="submit" class="btn btn-success btn-icon-text btn-sm"> GÖNDER </button>
             <a href="<?php echo base_url("product"); ?>"></a>
+            <a href="<?php echo base_url("product"); ?>" class="btn btn-danger btn-sm">IPTAL</a>
+
             </form>
         </div>
 

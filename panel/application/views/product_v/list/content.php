@@ -24,12 +24,6 @@
 
             <table class="table table-hover table-striped">
                 <thead>
-                    <th>
-                        <div class="checkbox checkbox-primary">
-                            <input type="checkbox" id="checkbox-demo-1" />
-                            <label for="checkbox-demo-1"></label>
-                        </div>
-                    </th>
                     <th>ID</th>
                     <th>Başlık</th>
                     <th>Ürün Resmi</th>
@@ -41,18 +35,13 @@
                 </thead>
                 <tbody>
                     <?php foreach ($items as $item) { ?>
-                        <tr>
-                        <td>
-                            <div class="checkbox checkbox-primary">
-                                <input type="checkbox" id="checkbox-demo-1" />
-                                <label for="checkbox-demo-1"></label>
-                            </div>
-                        </td>
+                    <tr>
                         <td><?php echo $item->id;?></td>
                         <td><?php echo $item->adi;?></td>
                         <td>
                             <a href="#" class="thumbnail white w-50">
-                                <img style="width:50px; height:50px;" src="<?php echo base_url('uploads'); ?>/product_v/<?php echo $item->resim; ?>"
+                                <img style="width:50px; height:50px;"
+                                    src="<?php echo base_url('uploads'); ?>/product_v/<?php echo $item->resim; ?>"
                                     alt="">
                             </a>
                         </td>
@@ -60,21 +49,21 @@
                         <td><?php echo $item->fiyat;?></td>
                         <td><?php echo $item->aciklama;?></td>
                         <td>
-                            <input 
-                            data-url="<?php echo base_url("product/update_status/$item->id");?>"
-                            class="isActive"
-                            id="switch-2-2" 
-                            type="checkbox" 
-                            data-switchery 
-                            data-color="#10c469"
-                            <?php echo ($item->durum) ? "checked" : "";  ?>/>
+                            <input data-url="<?php echo base_url("product/update_status/$item->id");?>" class="isActive"
+                                id="switch-2-2" type="checkbox" data-switchery data-color="#10c469"
+                                <?php echo ($item->durum) ? "checked" : "";  ?> />
 
                         </td>
                         <td>
-                            <a href="<?php echo base_url("product/delete/$item->id");?>" class="btn btn-sm btn-danger btn-outline"><i class="fa fa-trash"></i>
+                            <a href="<?php echo base_url("product/delete/$item->id");?>"
+                                class="btn btn-sm btn-danger btn-outline"><i class="fa fa-trash"></i>
                                 Sil</a>
-                            <a href="<?php echo base_url("product/update_form/$item->id");?>" class="btn btn-sm btn-info btn-outline"><i class="fa fa-pencil-square-o"></i>
+                            <a href="<?php echo base_url("product/update_form/$item->id");?>"
+                                class="btn btn-sm btn-info btn-outline"><i class="fa fa-pencil-square-o"></i>
                                 Düzenle</a>
+                            <a href="<?php echo base_url("product/image_form/$item->id");?>"
+                                class="btn btn-sm btn-dark "><i class="fa fa-image"></i>
+                                Fotoğraflar</a>
                         </td>
                     </tr>
                     <?php } ?>
