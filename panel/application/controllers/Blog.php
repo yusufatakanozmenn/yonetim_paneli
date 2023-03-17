@@ -90,7 +90,8 @@ class Blog extends CI_Controller
         $this->load->library("upload", $config);
         $upload_logo = $this->upload->do_upload("resim");
         $blog_img_name = basename($_FILES["resim"]["name"]);
-        $update = $this->blog_model->add(
+        $update = $this->blog_model->update(
+            array("id"=>$id),
             array(
                 "adi" => $this->input->post("adi"),
                 "videoid" => $this->input->post("videoid"),
