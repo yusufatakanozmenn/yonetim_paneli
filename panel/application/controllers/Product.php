@@ -51,7 +51,8 @@ class Product extends CI_Controller
         $config["allowed_types"] = "jpg|jpeg|png|svg|webp";                                              
         $config["upload_path"] = "uploads/$this->viewFolder/";                                              
         $this->load->library("upload", $config);                                              
-        $upload_logo = $this->upload->do_upload("resim");                                              
+        $upload_logo = $this->upload->do_upload("resim"); 
+        $data = $this->upload->data();                                          
         $product_img_name = basename($_FILES["resim"]["name"]);                                              
         $insert = $this->product_model->add(                                              
             array(                                              
@@ -64,13 +65,13 @@ class Product extends CI_Controller
                 "seo" => $this->input->post("seo"),
                 "spot" => $this->input->post("spot"),
                 "aciklama" => $this->input->post("aciklama"),
-                "durum" => $this->input->post("durum"),
+                "durum" => 1,
                 "anasayfa" => $this->input->post("anasayfa"),
                 "yeni" => $this->input->post("yeni"),
                 "stok" => $this->input->post("kategori"),                
                 "tarih" => date("Y-m-d H:i:s"),
                 "dil" => 0,
-                "resim" => $product_img_name,               
+                "resim" => $data["file_name"],               
             )  
         );
         if($insert){
