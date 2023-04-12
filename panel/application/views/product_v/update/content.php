@@ -1,7 +1,7 @@
 <div class="col-sm-12" style="padding: 10px;">
 
     <div class="" id="urun-bilgileri" role="tabpanel" aria-labelledby="home-tab-vertical">
-        <form class="forms-sample" method="post" action="<?php echo base_url('product/save')?>"
+        <form class="forms-sample" method="post" action="<?php echo base_url("/product/update/$item->id") ?>"
             enctype="multipart/form-data">
             <div class="form-group">
                 <label for="adi">Başlık</label>
@@ -106,8 +106,8 @@
                 rows="2"><?= $item->seo ?></textarea>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-success btn-icon-text btn-sm"> GÖNDER </button>
-            <a href="<?php echo base_url("product"); ?>"></a>
+            <button type="submit" class="btn rounded mw-md btn-success "> GÜNCELLE </button>
+            <a href="<?php echo base_url("product/update"); ?>"></a>
             <a href="<?php echo base_url("product"); ?>" class="btn btn-danger btn-sm">IPTAL</a>
 
             </form>
